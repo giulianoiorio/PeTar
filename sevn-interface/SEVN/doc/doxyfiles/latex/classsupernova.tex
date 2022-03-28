@@ -1,0 +1,470 @@
+\hypertarget{classsupernova}{}\doxysection{supernova Class Reference}
+\label{classsupernova}\index{supernova@{supernova}}
+
+
+{\ttfamily \#include $<$supernova.\+h$>$}
+
+Inheritance diagram for supernova\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsupernova}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsupernova_a9e8a524469623cb437871b4efd6cb44e}{supernova}} (\mbox{\hyperlink{class_star}{Star}} $\ast$s=nullptr)
+\item 
+virtual \mbox{\hyperlink{classsupernova_a42c7c49c2cf85a540ca6bc7a3cc32b7c}{$\sim$supernova}} ()
+\item 
+void \mbox{\hyperlink{classsupernova_a82621281b90ad1674746f7669469920c}{main}} (\mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\item 
+virtual \mbox{\hyperlink{classsupernova}{supernova}} $\ast$ \mbox{\hyperlink{classsupernova_ace9f35290de8925287b355f7aae1f773}{instance}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\item 
+virtual std\+::string \mbox{\hyperlink{classsupernova_aae854ae2865c69c6b69aa793e724a17c}{name}} ()
+\item 
+double \mbox{\hyperlink{classsupernova_a3640adb555576f05fa896d1bc1f8a1c8}{get\+\_\+fallback\+\_\+frac}} () const
+\item 
+double \mbox{\hyperlink{classsupernova_a5f088d1e9cbce64a22bddb51a3f6f04c}{get\+\_\+pisncorrection}} () const
+\item 
+double \mbox{\hyperlink{classsupernova_ad78083b7aabfd6012d0c7156fedea959}{get\+\_\+\+M\+\_\+neutrinos}} () const
+\item 
+double \mbox{\hyperlink{classsupernova_a9480a10710b8b4d706798251e7678b63}{get\+\_\+\+Mremnant}} () const
+\item 
+double \mbox{\hyperlink{classsupernova_a303039a1454376f98db44ccc8f558c23}{get\+\_\+\+Average\+Remnant}} () const
+\item 
+double \mbox{\hyperlink{classsupernova_ab00046b841ea92441ddab961600432cb}{get\+\_\+\+Average\+Ejected}} () const
+\item 
+double \mbox{\hyperlink{classsupernova_a0ba404e280bf7618669b6bfd7ad914c1}{get\+\_\+\+Mejected}} () const
+\item 
+double \mbox{\hyperlink{classsupernova_afb9b34f2ced5acd4b271e14dc2ff8b99}{get\+\_\+\+Lremnant}} () const
+\item 
+double \mbox{\hyperlink{classsupernova_ab26a06b79f312c02a400ea7cec0c05df}{get\+\_\+\+Rremnant}} () const
+\item 
+double \mbox{\hyperlink{classsupernova_a9809edb0596248c571044a609f407c70}{get\+\_\+remnant\+\_\+type}} () const
+\item 
+double \mbox{\hyperlink{classsupernova_a5f80fd82b489e036a5a4e82323eac8c5}{get\+\_\+\+Inertia}} () const
+\item 
+double \mbox{\hyperlink{classsupernova_a5458553c32067c67491a38b7db17ebe6}{get\+\_\+\+Spin}} () const
+\item 
+virtual void \mbox{\hyperlink{classsupernova_a33488665b1a91340653cec32f2a7135d}{explosion\+\_\+\+S\+NI}} (\mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\item 
+void \mbox{\hyperlink{classsupernova_a627872ac5ec6308831861a4bc03b6374}{crem\+\_\+transition\+\_\+to\+\_\+\+NS}} (\mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em Crem transition. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsupernova_a9b7191803096d6bf3dc23a429c7ca14b}{crem\+\_\+transition\+\_\+to\+\_\+\+BH}} (\mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classsupernova}{supernova}} $\ast$ \mbox{\hyperlink{classsupernova_a4741e8561220ace7431651a310efd09a}{Instance}} (std\+::string const \&\mbox{\hyperlink{classsupernova_aae854ae2865c69c6b69aa793e724a17c}{name}}, \mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsupernova_a206091d9bcccbc74a2858645c283f048}{Register}} (\mbox{\hyperlink{classsupernova}{supernova}} $\ast$ptr, const std\+::string \&\+\_\+name)
+\item 
+virtual void \mbox{\hyperlink{classsupernova_a3f9dd4c9349d4f8598927fc2a2cb5ca5}{explosion}} (\mbox{\hyperlink{class_star}{Star}} $\ast$s)=0
+\item 
+double \mbox{\hyperlink{classsupernova_a12cf80e8d53f9f0276eb66e8d057b24e}{corrections}} (const double mass, \mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\item 
+double \mbox{\hyperlink{classsupernova_a10d253dafa27ef3a585baf131657bdbc}{pisn}} (const double mass, \mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\item 
+double \mbox{\hyperlink{classsupernova_a23f9882edf0505ae5fb9eced259b73bf}{neutrino\+\_\+mass\+\_\+loss}} (const double mass, \mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\item 
+void \mbox{\hyperlink{classsupernova_a7c39354eabe74e7ef6c780f161325595}{set\+\_\+\+Average\+\_\+for\+\_\+\+Unified}} (\mbox{\hyperlink{class_star}{Star}} $\ast$s, double default\+\_\+\+Average\+\_\+\+Mremnant, double default\+\_\+\+Average\+\_\+\+Mejected)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classsupernova_ac3939da4275dba435d64099875f42ff7}{fallback\+\_\+frac}}
+\item 
+double \mbox{\hyperlink{classsupernova_a53c8cd04e83de52c5b2a0f0718209843}{M\+\_\+neutrinos}}
+\item 
+double \mbox{\hyperlink{classsupernova_a3c4813c7127705ed06159f0a0644e4e4}{pisn\+\_\+correction}}
+\item 
+double \mbox{\hyperlink{classsupernova_a555c18bf79503c6d8a11265f84ed48ea}{mproto}}
+\item 
+double \mbox{\hyperlink{classsupernova_a629362e8ea1b7ffc8dfed5000caae654}{Mremnant}}
+\item 
+double \mbox{\hyperlink{classsupernova_a832c3504c79d2e29a2c1092db742c7ea}{Lremnant}}
+\item 
+double \mbox{\hyperlink{classsupernova_ae6e5c71a942f4ef69efd38dfc0528de3}{Rremnant}}
+\item 
+double \mbox{\hyperlink{classsupernova_aa8377500c32e2d750cd446fbf3f70c40}{remnant\+\_\+type}}
+\item 
+double \mbox{\hyperlink{classsupernova_a1b86a714cd7af44e11e04db8560dc973}{Inertia}}
+\item 
+double \mbox{\hyperlink{classsupernova_a784f915217b118f3f1f23dc83b359cae}{Spin}}
+\item 
+double \mbox{\hyperlink{classsupernova_a11c36829508ef0ef9c66254baae0fa3b}{Mejected}}
+\item 
+double \mbox{\hyperlink{classsupernova_ad23daa4ad50906de1139c24bcc955b6b}{Average\+\_\+ejected}}
+\item 
+double \mbox{\hyperlink{classsupernova_ad7567d6f9473c113ab73843ab2d56dfb}{Average\+\_\+remnant}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsupernova_a73cbb800bdc37a7f78f2b34631cccc22}{W\+Dformation}} (\mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\item 
+void \mbox{\hyperlink{classsupernova_a40513a1817a93ebdfa879e7d1932262f}{E\+C\+SN}} (\mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\item 
+void \mbox{\hyperlink{classsupernova_a308aecc1a743dfd89129206a7dcdb9ab}{remnant\+\_\+properties}} (\mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\item 
+void \mbox{\hyperlink{classsupernova_a6708f8359dcabd8d603fc8226940493e}{set\+\_\+remnant\+\_\+properties}} (\mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::map$<$ std\+::string, \mbox{\hyperlink{classsupernova}{supernova}} $\ast$ $>$ \& \mbox{\hyperlink{classsupernova_a9c51af5c2fd90b82443869332d3f45b5}{Get\+Static\+Map}} ()
+\item 
+static std\+::vector$<$ int $>$ \& \mbox{\hyperlink{classsupernova_a4bc503126d09acf3ab230566d4880870}{Get\+Used}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsevnstd_1_1_sevn_logging}{Sevn\+Logging}} \mbox{\hyperlink{classsupernova_aff304960a50ea1e16135167e3b8e140c}{svlog}}
+\item 
+\mbox{\hyperlink{class_kicks}{Kicks}} $\ast$ \mbox{\hyperlink{classsupernova_a40f1aea1f5992f36220e503a8d985731}{kick}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsupernova_a9e8a524469623cb437871b4efd6cb44e}\label{classsupernova_a9e8a524469623cb437871b4efd6cb44e}} 
+\index{supernova@{supernova}!supernova@{supernova}}
+\index{supernova@{supernova}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{supernova()}{supernova()}}
+{\footnotesize\ttfamily supernova\+::supernova (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsupernova_a42c7c49c2cf85a540ca6bc7a3cc32b7c}\label{classsupernova_a42c7c49c2cf85a540ca6bc7a3cc32b7c}} 
+\index{supernova@{supernova}!````~supernova@{$\sim$supernova}}
+\index{````~supernova@{$\sim$supernova}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{$\sim$supernova()}{~supernova()}}
+{\footnotesize\ttfamily virtual supernova\+::$\sim$supernova (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsupernova_a12cf80e8d53f9f0276eb66e8d057b24e}\label{classsupernova_a12cf80e8d53f9f0276eb66e8d057b24e}} 
+\index{supernova@{supernova}!corrections@{corrections}}
+\index{corrections@{corrections}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{corrections()}{corrections()}}
+{\footnotesize\ttfamily double supernova\+::corrections (\begin{DoxyParamCaption}\item[{const double}]{mass,  }\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsupernova_a9b7191803096d6bf3dc23a429c7ca14b}\label{classsupernova_a9b7191803096d6bf3dc23a429c7ca14b}} 
+\index{supernova@{supernova}!crem\_transition\_to\_BH@{crem\_transition\_to\_BH}}
+\index{crem\_transition\_to\_BH@{crem\_transition\_to\_BH}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{crem\_transition\_to\_BH()}{crem\_transition\_to\_BH()}}
+{\footnotesize\ttfamily void supernova\+::crem\+\_\+transition\+\_\+to\+\_\+\+BH (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Transform the remnant to a BH 1-\/Change remnant type
+
+2-\/Change Mremnant
+
+3-\/Change other properties\mbox{\Hypertarget{classsupernova_a627872ac5ec6308831861a4bc03b6374}\label{classsupernova_a627872ac5ec6308831861a4bc03b6374}} 
+\index{supernova@{supernova}!crem\_transition\_to\_NS@{crem\_transition\_to\_NS}}
+\index{crem\_transition\_to\_NS@{crem\_transition\_to\_NS}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{crem\_transition\_to\_NS()}{crem\_transition\_to\_NS()}}
+{\footnotesize\ttfamily void supernova\+::crem\+\_\+transition\+\_\+to\+\_\+\+NS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Crem transition. 
+
+Transform the remnant to a NS 1-\/Change remnant type
+
+2-\/Change Mremnant
+
+3-\/Change other properties\mbox{\Hypertarget{classsupernova_a40513a1817a93ebdfa879e7d1932262f}\label{classsupernova_a40513a1817a93ebdfa879e7d1932262f}} 
+\index{supernova@{supernova}!ECSN@{ECSN}}
+\index{ECSN@{ECSN}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{ECSN()}{ECSN()}}
+{\footnotesize\ttfamily void supernova\+::\+E\+C\+SN (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsupernova_a3f9dd4c9349d4f8598927fc2a2cb5ca5}\label{classsupernova_a3f9dd4c9349d4f8598927fc2a2cb5ca5}} 
+\index{supernova@{supernova}!explosion@{explosion}}
+\index{explosion@{explosion}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{explosion()}{explosion()}}
+{\footnotesize\ttfamily virtual void supernova\+::explosion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classdisabled_ae311db15d1ef9f3b717970f83950d751}{disabled}}, \mbox{\hyperlink{classcompactness_ac7777230e6b58e8127d7745b99cccc98}{compactness}}, \mbox{\hyperlink{classrapid_ac0898a7b6c5b030ca831cad59ad2c74b}{rapid}}, and \mbox{\hyperlink{classdelayed_a68b66dcedda738841f620b16f159f223}{delayed}}.
+
+\mbox{\Hypertarget{classsupernova_a33488665b1a91340653cec32f2a7135d}\label{classsupernova_a33488665b1a91340653cec32f2a7135d}} 
+\index{supernova@{supernova}!explosion\_SNI@{explosion\_SNI}}
+\index{explosion\_SNI@{explosion\_SNI}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{explosion\_SNI()}{explosion\_SNI()}}
+{\footnotesize\ttfamily void supernova\+::explosion\+\_\+\+S\+NI (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classsupernova_ab00046b841ea92441ddab961600432cb}\label{classsupernova_ab00046b841ea92441ddab961600432cb}} 
+\index{supernova@{supernova}!get\_AverageEjected@{get\_AverageEjected}}
+\index{get\_AverageEjected@{get\_AverageEjected}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{get\_AverageEjected()}{get\_AverageEjected()}}
+{\footnotesize\ttfamily double supernova\+::get\+\_\+\+Average\+Ejected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsupernova_a303039a1454376f98db44ccc8f558c23}\label{classsupernova_a303039a1454376f98db44ccc8f558c23}} 
+\index{supernova@{supernova}!get\_AverageRemnant@{get\_AverageRemnant}}
+\index{get\_AverageRemnant@{get\_AverageRemnant}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{get\_AverageRemnant()}{get\_AverageRemnant()}}
+{\footnotesize\ttfamily double supernova\+::get\+\_\+\+Average\+Remnant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsupernova_a3640adb555576f05fa896d1bc1f8a1c8}\label{classsupernova_a3640adb555576f05fa896d1bc1f8a1c8}} 
+\index{supernova@{supernova}!get\_fallback\_frac@{get\_fallback\_frac}}
+\index{get\_fallback\_frac@{get\_fallback\_frac}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{get\_fallback\_frac()}{get\_fallback\_frac()}}
+{\footnotesize\ttfamily double supernova\+::get\+\_\+fallback\+\_\+frac (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsupernova_a5f80fd82b489e036a5a4e82323eac8c5}\label{classsupernova_a5f80fd82b489e036a5a4e82323eac8c5}} 
+\index{supernova@{supernova}!get\_Inertia@{get\_Inertia}}
+\index{get\_Inertia@{get\_Inertia}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{get\_Inertia()}{get\_Inertia()}}
+{\footnotesize\ttfamily double supernova\+::get\+\_\+\+Inertia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsupernova_afb9b34f2ced5acd4b271e14dc2ff8b99}\label{classsupernova_afb9b34f2ced5acd4b271e14dc2ff8b99}} 
+\index{supernova@{supernova}!get\_Lremnant@{get\_Lremnant}}
+\index{get\_Lremnant@{get\_Lremnant}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{get\_Lremnant()}{get\_Lremnant()}}
+{\footnotesize\ttfamily double supernova\+::get\+\_\+\+Lremnant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsupernova_ad78083b7aabfd6012d0c7156fedea959}\label{classsupernova_ad78083b7aabfd6012d0c7156fedea959}} 
+\index{supernova@{supernova}!get\_M\_neutrinos@{get\_M\_neutrinos}}
+\index{get\_M\_neutrinos@{get\_M\_neutrinos}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{get\_M\_neutrinos()}{get\_M\_neutrinos()}}
+{\footnotesize\ttfamily double supernova\+::get\+\_\+\+M\+\_\+neutrinos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsupernova_a0ba404e280bf7618669b6bfd7ad914c1}\label{classsupernova_a0ba404e280bf7618669b6bfd7ad914c1}} 
+\index{supernova@{supernova}!get\_Mejected@{get\_Mejected}}
+\index{get\_Mejected@{get\_Mejected}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{get\_Mejected()}{get\_Mejected()}}
+{\footnotesize\ttfamily double supernova\+::get\+\_\+\+Mejected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsupernova_a9480a10710b8b4d706798251e7678b63}\label{classsupernova_a9480a10710b8b4d706798251e7678b63}} 
+\index{supernova@{supernova}!get\_Mremnant@{get\_Mremnant}}
+\index{get\_Mremnant@{get\_Mremnant}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{get\_Mremnant()}{get\_Mremnant()}}
+{\footnotesize\ttfamily double supernova\+::get\+\_\+\+Mremnant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsupernova_a5f088d1e9cbce64a22bddb51a3f6f04c}\label{classsupernova_a5f088d1e9cbce64a22bddb51a3f6f04c}} 
+\index{supernova@{supernova}!get\_pisncorrection@{get\_pisncorrection}}
+\index{get\_pisncorrection@{get\_pisncorrection}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{get\_pisncorrection()}{get\_pisncorrection()}}
+{\footnotesize\ttfamily double supernova\+::get\+\_\+pisncorrection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsupernova_a9809edb0596248c571044a609f407c70}\label{classsupernova_a9809edb0596248c571044a609f407c70}} 
+\index{supernova@{supernova}!get\_remnant\_type@{get\_remnant\_type}}
+\index{get\_remnant\_type@{get\_remnant\_type}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{get\_remnant\_type()}{get\_remnant\_type()}}
+{\footnotesize\ttfamily double supernova\+::get\+\_\+remnant\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsupernova_ab26a06b79f312c02a400ea7cec0c05df}\label{classsupernova_ab26a06b79f312c02a400ea7cec0c05df}} 
+\index{supernova@{supernova}!get\_Rremnant@{get\_Rremnant}}
+\index{get\_Rremnant@{get\_Rremnant}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{get\_Rremnant()}{get\_Rremnant()}}
+{\footnotesize\ttfamily double supernova\+::get\+\_\+\+Rremnant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsupernova_a5458553c32067c67491a38b7db17ebe6}\label{classsupernova_a5458553c32067c67491a38b7db17ebe6}} 
+\index{supernova@{supernova}!get\_Spin@{get\_Spin}}
+\index{get\_Spin@{get\_Spin}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{get\_Spin()}{get\_Spin()}}
+{\footnotesize\ttfamily double supernova\+::get\+\_\+\+Spin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsupernova_a9c51af5c2fd90b82443869332d3f45b5}\label{classsupernova_a9c51af5c2fd90b82443869332d3f45b5}} 
+\index{supernova@{supernova}!GetStaticMap@{GetStaticMap}}
+\index{GetStaticMap@{GetStaticMap}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{GetStaticMap()}{GetStaticMap()}}
+{\footnotesize\ttfamily static std\+::map$<$std\+::string, \mbox{\hyperlink{classsupernova}{supernova}} $\ast$$>$\& supernova\+::\+Get\+Static\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsupernova_a4bc503126d09acf3ab230566d4880870}\label{classsupernova_a4bc503126d09acf3ab230566d4880870}} 
+\index{supernova@{supernova}!GetUsed@{GetUsed}}
+\index{GetUsed@{GetUsed}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{GetUsed()}{GetUsed()}}
+{\footnotesize\ttfamily static std\+::vector$<$int$>$\& supernova\+::\+Get\+Used (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsupernova_ace9f35290de8925287b355f7aae1f773}\label{classsupernova_ace9f35290de8925287b355f7aae1f773}} 
+\index{supernova@{supernova}!instance@{instance}}
+\index{instance@{instance}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classsupernova}{supernova}}$\ast$ supernova\+::instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classsupernova_a4741e8561220ace7431651a310efd09a}\label{classsupernova_a4741e8561220ace7431651a310efd09a}} 
+\index{supernova@{supernova}!Instance@{Instance}}
+\index{Instance@{Instance}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsupernova}{supernova}} $\ast$ supernova\+::\+Instance (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{name,  }\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classsupernova_a82621281b90ad1674746f7669469920c}\label{classsupernova_a82621281b90ad1674746f7669469920c}} 
+\index{supernova@{supernova}!main@{main}}
+\index{main@{main}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily void supernova\+::main (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsupernova_aae854ae2865c69c6b69aa793e724a17c}\label{classsupernova_aae854ae2865c69c6b69aa793e724a17c}} 
+\index{supernova@{supernova}!name@{name}}
+\index{name@{name}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily virtual std\+::string supernova\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classdisabled_a6c43d795658e9e093f23281ce616b9c8}{disabled}}, \mbox{\hyperlink{classcompactness_a49e46714a1a659c8f9d5d4c2b9663f17}{compactness}}, \mbox{\hyperlink{classrapid_a8ce3a57f51512eb43f49fbb5a935f13b}{rapid}}, and \mbox{\hyperlink{classdelayed_acd02951639edb43696da74139ce87583}{delayed}}.
+
+\mbox{\Hypertarget{classsupernova_a23f9882edf0505ae5fb9eced259b73bf}\label{classsupernova_a23f9882edf0505ae5fb9eced259b73bf}} 
+\index{supernova@{supernova}!neutrino\_mass\_loss@{neutrino\_mass\_loss}}
+\index{neutrino\_mass\_loss@{neutrino\_mass\_loss}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{neutrino\_mass\_loss()}{neutrino\_mass\_loss()}}
+{\footnotesize\ttfamily double supernova\+::neutrino\+\_\+mass\+\_\+loss (\begin{DoxyParamCaption}\item[{const double}]{mass,  }\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsupernova_a10d253dafa27ef3a585baf131657bdbc}\label{classsupernova_a10d253dafa27ef3a585baf131657bdbc}} 
+\index{supernova@{supernova}!pisn@{pisn}}
+\index{pisn@{pisn}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{pisn()}{pisn()}}
+{\footnotesize\ttfamily double supernova\+::pisn (\begin{DoxyParamCaption}\item[{const double}]{mass,  }\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsupernova_a206091d9bcccbc74a2858645c283f048}\label{classsupernova_a206091d9bcccbc74a2858645c283f048}} 
+\index{supernova@{supernova}!Register@{Register}}
+\index{Register@{Register}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily void supernova\+::\+Register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsupernova}{supernova}} $\ast$}]{ptr,  }\item[{const std\+::string \&}]{\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsupernova_a308aecc1a743dfd89129206a7dcdb9ab}\label{classsupernova_a308aecc1a743dfd89129206a7dcdb9ab}} 
+\index{supernova@{supernova}!remnant\_properties@{remnant\_properties}}
+\index{remnant\_properties@{remnant\_properties}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{remnant\_properties()}{remnant\_properties()}}
+{\footnotesize\ttfamily void supernova\+::remnant\+\_\+properties (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+1-\/Set Mremnant e Mejected
+
+2-\/Set other properties\+: R,L,\mbox{\hyperlink{class_spin}{Spin}},\mbox{\hyperlink{class_inertia}{Inertia}}.\mbox{\Hypertarget{classsupernova_a7c39354eabe74e7ef6c780f161325595}\label{classsupernova_a7c39354eabe74e7ef6c780f161325595}} 
+\index{supernova@{supernova}!set\_Average\_for\_Unified@{set\_Average\_for\_Unified}}
+\index{set\_Average\_for\_Unified@{set\_Average\_for\_Unified}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{set\_Average\_for\_Unified()}{set\_Average\_for\_Unified()}}
+{\footnotesize\ttfamily void supernova\+::set\+\_\+\+Average\+\_\+for\+\_\+\+Unified (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s,  }\item[{double}]{default\+\_\+\+Average\+\_\+\+Mremnant,  }\item[{double}]{default\+\_\+\+Average\+\_\+\+Mejected }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Set the member Average\+\_\+ejected and Average\+\_\+remnant. These are used in the \mbox{\hyperlink{class_unified}{Unified}} Sn model 
+\begin{DoxyParams}{Parameters}
+{\em s} & Pointer to the star \\
+\hline
+{\em default\+\_\+\+Average\+\_\+\+Mremnant} & default Average\+\_\+\+Mremnant for this SN model \\
+\hline
+{\em default\+\_\+\+Average\+\_\+\+Mejected} & default Average\+\_\+\+Mejected for this SN model \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsupernova_a6708f8359dcabd8d603fc8226940493e}\label{classsupernova_a6708f8359dcabd8d603fc8226940493e}} 
+\index{supernova@{supernova}!set\_remnant\_properties@{set\_remnant\_properties}}
+\index{set\_remnant\_properties@{set\_remnant\_properties}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{set\_remnant\_properties()}{set\_remnant\_properties()}}
+{\footnotesize\ttfamily void supernova\+::set\+\_\+remnant\+\_\+properties (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Set remannt properties as R, L, \mbox{\hyperlink{class_spin}{Spin}} and \mbox{\hyperlink{class_inertia}{Inertia}}. It uses the protected member Mremnant 
+\begin{DoxyParams}{Parameters}
+{\em s} & Pointer to the star \\
+\hline
+\end{DoxyParams}
+1-\/Define some local quantities
+
+\mbox{\hyperlink{class_lambda}{Lambda}} functions\mbox{\Hypertarget{classsupernova_a73cbb800bdc37a7f78f2b34631cccc22}\label{classsupernova_a73cbb800bdc37a7f78f2b34631cccc22}} 
+\index{supernova@{supernova}!WDformation@{WDformation}}
+\index{WDformation@{WDformation}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{WDformation()}{WDformation()}}
+{\footnotesize\ttfamily void supernova\+::\+W\+Dformation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsupernova_ad23daa4ad50906de1139c24bcc955b6b}\label{classsupernova_ad23daa4ad50906de1139c24bcc955b6b}} 
+\index{supernova@{supernova}!Average\_ejected@{Average\_ejected}}
+\index{Average\_ejected@{Average\_ejected}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{Average\_ejected}{Average\_ejected}}
+{\footnotesize\ttfamily double supernova\+::\+Average\+\_\+ejected\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsupernova_ad7567d6f9473c113ab73843ab2d56dfb}\label{classsupernova_ad7567d6f9473c113ab73843ab2d56dfb}} 
+\index{supernova@{supernova}!Average\_remnant@{Average\_remnant}}
+\index{Average\_remnant@{Average\_remnant}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{Average\_remnant}{Average\_remnant}}
+{\footnotesize\ttfamily double supernova\+::\+Average\+\_\+remnant\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsupernova_ac3939da4275dba435d64099875f42ff7}\label{classsupernova_ac3939da4275dba435d64099875f42ff7}} 
+\index{supernova@{supernova}!fallback\_frac@{fallback\_frac}}
+\index{fallback\_frac@{fallback\_frac}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{fallback\_frac}{fallback\_frac}}
+{\footnotesize\ttfamily double supernova\+::fallback\+\_\+frac\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsupernova_a1b86a714cd7af44e11e04db8560dc973}\label{classsupernova_a1b86a714cd7af44e11e04db8560dc973}} 
+\index{supernova@{supernova}!Inertia@{Inertia}}
+\index{Inertia@{Inertia}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{Inertia}{Inertia}}
+{\footnotesize\ttfamily double supernova\+::\+Inertia\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsupernova_a40f1aea1f5992f36220e503a8d985731}\label{classsupernova_a40f1aea1f5992f36220e503a8d985731}} 
+\index{supernova@{supernova}!kick@{kick}}
+\index{kick@{kick}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{kick}{kick}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_kicks}{Kicks}}$\ast$ supernova\+::kick\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsupernova_a832c3504c79d2e29a2c1092db742c7ea}\label{classsupernova_a832c3504c79d2e29a2c1092db742c7ea}} 
+\index{supernova@{supernova}!Lremnant@{Lremnant}}
+\index{Lremnant@{Lremnant}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{Lremnant}{Lremnant}}
+{\footnotesize\ttfamily double supernova\+::\+Lremnant\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsupernova_a53c8cd04e83de52c5b2a0f0718209843}\label{classsupernova_a53c8cd04e83de52c5b2a0f0718209843}} 
+\index{supernova@{supernova}!M\_neutrinos@{M\_neutrinos}}
+\index{M\_neutrinos@{M\_neutrinos}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{M\_neutrinos}{M\_neutrinos}}
+{\footnotesize\ttfamily double supernova\+::\+M\+\_\+neutrinos\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsupernova_a11c36829508ef0ef9c66254baae0fa3b}\label{classsupernova_a11c36829508ef0ef9c66254baae0fa3b}} 
+\index{supernova@{supernova}!Mejected@{Mejected}}
+\index{Mejected@{Mejected}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{Mejected}{Mejected}}
+{\footnotesize\ttfamily double supernova\+::\+Mejected\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsupernova_a555c18bf79503c6d8a11265f84ed48ea}\label{classsupernova_a555c18bf79503c6d8a11265f84ed48ea}} 
+\index{supernova@{supernova}!mproto@{mproto}}
+\index{mproto@{mproto}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{mproto}{mproto}}
+{\footnotesize\ttfamily double supernova\+::mproto\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsupernova_a629362e8ea1b7ffc8dfed5000caae654}\label{classsupernova_a629362e8ea1b7ffc8dfed5000caae654}} 
+\index{supernova@{supernova}!Mremnant@{Mremnant}}
+\index{Mremnant@{Mremnant}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{Mremnant}{Mremnant}}
+{\footnotesize\ttfamily double supernova\+::\+Mremnant\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsupernova_a3c4813c7127705ed06159f0a0644e4e4}\label{classsupernova_a3c4813c7127705ed06159f0a0644e4e4}} 
+\index{supernova@{supernova}!pisn\_correction@{pisn\_correction}}
+\index{pisn\_correction@{pisn\_correction}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{pisn\_correction}{pisn\_correction}}
+{\footnotesize\ttfamily double supernova\+::pisn\+\_\+correction\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsupernova_aa8377500c32e2d750cd446fbf3f70c40}\label{classsupernova_aa8377500c32e2d750cd446fbf3f70c40}} 
+\index{supernova@{supernova}!remnant\_type@{remnant\_type}}
+\index{remnant\_type@{remnant\_type}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{remnant\_type}{remnant\_type}}
+{\footnotesize\ttfamily double supernova\+::remnant\+\_\+type\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsupernova_ae6e5c71a942f4ef69efd38dfc0528de3}\label{classsupernova_ae6e5c71a942f4ef69efd38dfc0528de3}} 
+\index{supernova@{supernova}!Rremnant@{Rremnant}}
+\index{Rremnant@{Rremnant}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{Rremnant}{Rremnant}}
+{\footnotesize\ttfamily double supernova\+::\+Rremnant\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsupernova_a784f915217b118f3f1f23dc83b359cae}\label{classsupernova_a784f915217b118f3f1f23dc83b359cae}} 
+\index{supernova@{supernova}!Spin@{Spin}}
+\index{Spin@{Spin}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{Spin}{Spin}}
+{\footnotesize\ttfamily double supernova\+::\+Spin\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsupernova_aff304960a50ea1e16135167e3b8e140c}\label{classsupernova_aff304960a50ea1e16135167e3b8e140c}} 
+\index{supernova@{supernova}!svlog@{svlog}}
+\index{svlog@{svlog}!supernova@{supernova}}
+\doxysubsubsection{\texorpdfstring{svlog}{svlog}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsevnstd_1_1_sevn_logging}{Sevn\+Logging}} supernova\+::svlog\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/star/procs/\mbox{\hyperlink{supernova_8h}{supernova.\+h}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/src/star/procs/\mbox{\hyperlink{supernova_8cpp}{supernova.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,177 @@
+\hypertarget{class_lambda}{}\doxysection{Lambda Class Reference}
+\label{class_lambda}\index{Lambda@{Lambda}}
+
+
+{\ttfamily \#include $<$property.\+h$>$}
+
+Inheritance diagram for Lambda\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_lambda}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lambda_a566fbe140e17276968e3c1cd5cb6f3f1}{Lambda}} (bool reg=true)
+\item 
+\mbox{\hyperlink{class_lambda}{Lambda}} $\ast$ \mbox{\hyperlink{class_lambda_a299b078acb884b48d833e2c1052bd409}{Instance}} () override
+\item 
+std\+::string \mbox{\hyperlink{class_lambda_af3a89c38c8124f2e674284a64740906f}{name}} () override
+\item 
+std\+::string \mbox{\hyperlink{class_lambda_a1df4f3cfc1be8e4cc933c22eac12c6cb}{units}} () override
+\item 
+void \mbox{\hyperlink{class_lambda_a818e89096f380a5d77153c4cdff93be8}{evolve\+\_\+remnant}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+double \mbox{\hyperlink{class_lambda_a31804a1fe5153ba4e95d374778161674}{get}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} const \mbox{\hyperlink{class_star}{Star}} $\ast$s=N\+U\+LL) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{class_lambda_ac819e6b8462ccdffd8b301f2dfcc3d56}{ID}}
+\item 
+static \mbox{\hyperlink{class_lambda}{Lambda}} \mbox{\hyperlink{class_lambda_a1ddada0bbdec6cb0dfc94acf36ca1443}{\+\_\+lambda}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_lambda_a2b002db892cc74dcec51c4ab60d52a97}{estimate\+\_\+lambda}} (const \mbox{\hyperlink{class_star}{Star}} $\ast$star)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_lambda_af2f392ca7041621d9cc60a6be1d7eaf9}{estimate\+\_\+lambda\+\_\+\+Claeys14}} (const \mbox{\hyperlink{class_star}{Star}} $\ast$star)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_lambda_a566fbe140e17276968e3c1cd5cb6f3f1}\label{class_lambda_a566fbe140e17276968e3c1cd5cb6f3f1}} 
+\index{Lambda@{Lambda}!Lambda@{Lambda}}
+\index{Lambda@{Lambda}!Lambda@{Lambda}}
+\doxysubsubsection{\texorpdfstring{Lambda()}{Lambda()}}
+{\footnotesize\ttfamily Lambda\+::\+Lambda (\begin{DoxyParamCaption}\item[{bool}]{reg = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_lambda_a2b002db892cc74dcec51c4ab60d52a97}\label{class_lambda_a2b002db892cc74dcec51c4ab60d52a97}} 
+\index{Lambda@{Lambda}!estimate\_lambda@{estimate\_lambda}}
+\index{estimate\_lambda@{estimate\_lambda}!Lambda@{Lambda}}
+\doxysubsubsection{\texorpdfstring{estimate\_lambda()}{estimate\_lambda()}}
+{\footnotesize\ttfamily double Lambda\+::estimate\+\_\+lambda (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_star}{Star}} $\ast$}]{star }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Estimate the lambda for a given star. The binding energy of an envelope is \mbox{\hyperlink{class_ebind}{Ebind}} = Integrate$^\wedge$\+Mtot\+\_\+\+Mcore dM -\/ G M(r)/r + alpha\+\_\+th$\ast$U, where U is the internal energy and alpha\+\_\+th a fraction of internal energy used to unbound the envelope. For simplicity we can write Ebind\+\_\+s = -\/G Mtot Menv / lambda R, where lambda is the factor for which Ebind\+\_\+s=\mbox{\hyperlink{class_ebind}{Ebind}}. Usually, the lambda is taken between two extrema\+: lambda\+\_\+g obtained considering only the gravitational energy (alpha\+\_\+th=0) and lambda\+\_\+b obtained consider a fully efficiency of the internal energy in unbounding the envelope (alpha\+\_\+th=1). The implementation depends on the Common envelope models and common envelope parameters 
+\begin{DoxyParams}{Parameters}
+{\em star} & \mbox{\hyperlink{class_star}{Star}} for which we want to estimate the binding energy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lambda_af2f392ca7041621d9cc60a6be1d7eaf9}\label{class_lambda_af2f392ca7041621d9cc60a6be1d7eaf9}} 
+\index{Lambda@{Lambda}!estimate\_lambda\_Claeys14@{estimate\_lambda\_Claeys14}}
+\index{estimate\_lambda\_Claeys14@{estimate\_lambda\_Claeys14}!Lambda@{Lambda}}
+\doxysubsubsection{\texorpdfstring{estimate\_lambda\_Claeys14()}{estimate\_lambda\_Claeys14()}}
+{\footnotesize\ttfamily double Lambda\+::estimate\+\_\+lambda\+\_\+\+Claeys14 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_star}{Star}} $\ast$}]{star }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Estimate lambda following Claeys et al. 2014 (Appendix A) 
+\begin{DoxyParams}{Parameters}
+{\em star} & \mbox{\hyperlink{class_star}{Star}} for which we want to estimate the binding energy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Initial checks
+
+Start Estimate
+
+The final lambda depends on the \mbox{\hyperlink{class_mass}{Mass}} of the convective envelope. We don\textquotesingle{}t have at moment a defined way to estimate it and we assume that the Envelope in MS is radiative and in all the others phase is fully convective. Notice that we have now Parsec tables with this information Mconv\+\_\+env=Qconv$\ast$\+Mass,
+
+Estimate lam2 (needed only for Mcenv$<$1)
+
+Estimate lam1 (needed only for Mcenv$>$0)
+
+Estimate ionization contribution //\+Eq. A6
+
+Final lambda\+\_\+ce estimate //\+Eq. A1\mbox{\Hypertarget{class_lambda_a818e89096f380a5d77153c4cdff93be8}\label{class_lambda_a818e89096f380a5d77153c4cdff93be8}} 
+\index{Lambda@{Lambda}!evolve\_remnant@{evolve\_remnant}}
+\index{evolve\_remnant@{evolve\_remnant}!Lambda@{Lambda}}
+\doxysubsubsection{\texorpdfstring{evolve\_remnant()}{evolve\_remnant()}}
+{\footnotesize\ttfamily void Lambda\+::evolve\+\_\+remnant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_j_i_t___property_ad127668660669a13d602be2cf09c7b61}{J\+I\+T\+\_\+\+Property}}.
+
+\mbox{\Hypertarget{class_lambda_a31804a1fe5153ba4e95d374778161674}\label{class_lambda_a31804a1fe5153ba4e95d374778161674}} 
+\index{Lambda@{Lambda}!get@{get}}
+\index{get@{get}!Lambda@{Lambda}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily double Lambda\+::get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} const \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Estimate the lambda for a given star. The binding energy of an envelope is \mbox{\hyperlink{class_ebind}{Ebind}} = Integrate$^\wedge$\+Mtot\+\_\+\+Mcore dM -\/ G M(r)/r + alpha\+\_\+th$\ast$U, where U is the internal energy and alpha\+\_\+th a fraction of internal energy used to unbound the envelope. For simplicity we can write Ebind\+\_\+s = -\/G Mtot Menv / lambda R, where lambda is the factor for which Ebind\+\_\+s=\mbox{\hyperlink{class_ebind}{Ebind}}. Usually, the lambda is taken between two extrema\+: lambda\+\_\+g obtained considering only the gravitational energy (alpha\+\_\+th=0) and lambda\+\_\+b obtained consider a fully efficiency of the internal energy in unbounding the envelope (alpha\+\_\+th=1). The implementation depends on the Common envelope models and common envelope parameters 
+\begin{DoxyParams}{Parameters}
+{\em star} & \mbox{\hyperlink{class_star}{Star}} for which we want to estimate the binding energy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+J\+IT properties 
+
+Reimplemented from \mbox{\hyperlink{class_property_ae019306144cf0c61bd52ed4a8334a29d}{Property}}.
+
+\mbox{\Hypertarget{class_lambda_a299b078acb884b48d833e2c1052bd409}\label{class_lambda_a299b078acb884b48d833e2c1052bd409}} 
+\index{Lambda@{Lambda}!Instance@{Instance}}
+\index{Instance@{Instance}!Lambda@{Lambda}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_lambda}{Lambda}}$\ast$ Lambda\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a378a68a95da682a4247a4809e28a4d0c}{Property}}.
+
+\mbox{\Hypertarget{class_lambda_af3a89c38c8124f2e674284a64740906f}\label{class_lambda_af3a89c38c8124f2e674284a64740906f}} 
+\index{Lambda@{Lambda}!name@{name}}
+\index{name@{name}!Lambda@{Lambda}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string Lambda\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_j_i_t___property_a0dd4f19e87cb3632e050c432ebe1ca11}{J\+I\+T\+\_\+\+Property}}.
+
+\mbox{\Hypertarget{class_lambda_a1df4f3cfc1be8e4cc933c22eac12c6cb}\label{class_lambda_a1df4f3cfc1be8e4cc933c22eac12c6cb}} 
+\index{Lambda@{Lambda}!units@{units}}
+\index{units@{units}!Lambda@{Lambda}}
+\doxysubsubsection{\texorpdfstring{units()}{units()}}
+{\footnotesize\ttfamily std\+::string Lambda\+::units (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_ab890f984beaf68c49152cfec3943a784}{Property}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_lambda_a1ddada0bbdec6cb0dfc94acf36ca1443}\label{class_lambda_a1ddada0bbdec6cb0dfc94acf36ca1443}} 
+\index{Lambda@{Lambda}!\_lambda@{\_lambda}}
+\index{\_lambda@{\_lambda}!Lambda@{Lambda}}
+\doxysubsubsection{\texorpdfstring{\_lambda}{\_lambda}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_lambda}{Lambda}} Lambda\+::\+\_\+lambda\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_lambda_ac819e6b8462ccdffd8b301f2dfcc3d56}\label{class_lambda_ac819e6b8462ccdffd8b301f2dfcc3d56}} 
+\index{Lambda@{Lambda}!ID@{ID}}
+\index{ID@{ID}!Lambda@{Lambda}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily size\+\_\+t Lambda\+::\+ID\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/star/\mbox{\hyperlink{property_8h}{property.\+h}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/src/star/\mbox{\hyperlink{property_8cpp}{property.\+cpp}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/\mbox{\hyperlink{static__main_8h}{static\+\_\+main.\+h}}\end{DoxyCompactItemize}

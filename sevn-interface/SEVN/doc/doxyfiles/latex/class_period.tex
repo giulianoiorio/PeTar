@@ -1,0 +1,140 @@
+\hypertarget{class_period}{}\doxysection{Period Class Reference}
+\label{class_period}\index{Period@{Period}}
+
+
+{\ttfamily \#include $<$Binary\+Property.\+h$>$}
+
+Inheritance diagram for Period\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_period}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_period_a2e1027936a1dab490f62f8a7288b53ea}{Period}} (bool reg=true)
+\item 
+std\+::string \mbox{\hyperlink{class_period_a3e3fa382d468313d24a65748409ce4b9}{name}} () override
+\item 
+std\+::string \mbox{\hyperlink{class_period_aed1b580ba9d11bbdcc49c1c24a718069}{units}} () override
+\item 
+\mbox{\hyperlink{class_period}{Period}} $\ast$ \mbox{\hyperlink{class_period_a4fa5d3a64e8cf9bf88b2f2a1042f0827}{Instance}} () override
+\item 
+int \mbox{\hyperlink{class_period_ad34497a3c3ec49b5864066b6954c7a52}{evolve}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar) override
+\item 
+int \mbox{\hyperlink{class_period_a5bdd3944233b0a160c988e5383873fed}{get\+ID}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{class_period_aa223b330e2d40d99618e9a3afebda0c5}{ID}}
+\item 
+static \mbox{\hyperlink{class_period}{Period}} \mbox{\hyperlink{class_period_a25d1d09165e9c838dc55bec0c15563ce}{\+\_\+period}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_period_a74e13fd22c44eb0ef0175ebc574f6c48}{calc\+\_\+period}} (const double \&a, const double \&Mtot)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_period_a2e1027936a1dab490f62f8a7288b53ea}\label{class_period_a2e1027936a1dab490f62f8a7288b53ea}} 
+\index{Period@{Period}!Period@{Period}}
+\index{Period@{Period}!Period@{Period}}
+\doxysubsubsection{\texorpdfstring{Period()}{Period()}}
+{\footnotesize\ttfamily Period\+::\+Period (\begin{DoxyParamCaption}\item[{bool}]{reg = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_period_a74e13fd22c44eb0ef0175ebc574f6c48}\label{class_period_a74e13fd22c44eb0ef0175ebc574f6c48}} 
+\index{Period@{Period}!calc\_period@{calc\_period}}
+\index{calc\_period@{calc\_period}!Period@{Period}}
+\doxysubsubsection{\texorpdfstring{calc\_period()}{calc\_period()}}
+{\footnotesize\ttfamily double Period\+::calc\+\_\+period (\begin{DoxyParamCaption}\item[{const double \&}]{a,  }\item[{const double \&}]{Mtot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Estimate the binary period (Kepler Third Law) 
+\begin{DoxyParams}{Parameters}
+{\em a} & \mbox{\hyperlink{class_semimajor}{Semimajor}} axis in Rsun \\
+\hline
+{\em Mtot} & Total mass of the binary (M1+\+M2) in Msun \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_period}{Period}} in years 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_period_ad34497a3c3ec49b5864066b6954c7a52}\label{class_period_ad34497a3c3ec49b5864066b6954c7a52}} 
+\index{Period@{Period}!evolve@{evolve}}
+\index{evolve@{evolve}!Period@{Period}}
+\doxysubsubsection{\texorpdfstring{evolve()}{evolve()}}
+{\footnotesize\ttfamily int Period\+::evolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_binary_property_aea2550f81b0bfcdd589ab929e8a53652}{Binary\+Property}}.
+
+\mbox{\Hypertarget{class_period_a5bdd3944233b0a160c988e5383873fed}\label{class_period_a5bdd3944233b0a160c988e5383873fed}} 
+\index{Period@{Period}!getID@{getID}}
+\index{getID@{getID}!Period@{Period}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily int Period\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_binary_property_af6cdf0352d0477830655ae5c9785bb74}{Binary\+Property}}.
+
+\mbox{\Hypertarget{class_period_a4fa5d3a64e8cf9bf88b2f2a1042f0827}\label{class_period_a4fa5d3a64e8cf9bf88b2f2a1042f0827}} 
+\index{Period@{Period}!Instance@{Instance}}
+\index{Instance@{Instance}!Period@{Period}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_period}{Period}}$\ast$ Period\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_binary_property_ad5d3f8314a5b68fbf8f66e23542f1683}{Binary\+Property}}.
+
+\mbox{\Hypertarget{class_period_a3e3fa382d468313d24a65748409ce4b9}\label{class_period_a3e3fa382d468313d24a65748409ce4b9}} 
+\index{Period@{Period}!name@{name}}
+\index{name@{name}!Period@{Period}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string Period\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_binary_property_a9804b0b1727df8fd494bb78f709128c9}{Binary\+Property}}.
+
+\mbox{\Hypertarget{class_period_aed1b580ba9d11bbdcc49c1c24a718069}\label{class_period_aed1b580ba9d11bbdcc49c1c24a718069}} 
+\index{Period@{Period}!units@{units}}
+\index{units@{units}!Period@{Period}}
+\doxysubsubsection{\texorpdfstring{units()}{units()}}
+{\footnotesize\ttfamily std\+::string Period\+::units (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_binary_property_a4b1b5f28d77ddff373f767e7e577b04f}{Binary\+Property}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_period_a25d1d09165e9c838dc55bec0c15563ce}\label{class_period_a25d1d09165e9c838dc55bec0c15563ce}} 
+\index{Period@{Period}!\_period@{\_period}}
+\index{\_period@{\_period}!Period@{Period}}
+\doxysubsubsection{\texorpdfstring{\_period}{\_period}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_period}{Period}} Period\+::\+\_\+period\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_period_aa223b330e2d40d99618e9a3afebda0c5}\label{class_period_aa223b330e2d40d99618e9a3afebda0c5}} 
+\index{Period@{Period}!ID@{ID}}
+\index{ID@{ID}!Period@{Period}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily size\+\_\+t Period\+::\+ID\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/binstar/\mbox{\hyperlink{_binary_property_8h}{Binary\+Property.\+h}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/src/binstar/\mbox{\hyperlink{_binary_property_8cpp}{Binary\+Property.\+cpp}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/\mbox{\hyperlink{static__main_8h}{static\+\_\+main.\+h}}\end{DoxyCompactItemize}

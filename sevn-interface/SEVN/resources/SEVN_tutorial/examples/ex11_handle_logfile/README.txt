@@ -1,0 +1,2 @@
+This example shows how to use RegEX to collect information in the logfile, in particular it shows how to get the module of the SN kicks for each SN explosion.
+The output files are stored in ../sevn_outputs_example/sevn_output_single 

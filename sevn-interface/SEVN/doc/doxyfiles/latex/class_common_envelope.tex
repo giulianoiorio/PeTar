@@ -1,0 +1,379 @@
+\hypertarget{class_common_envelope}{}\doxysection{Common\+Envelope Class Reference}
+\label{class_common_envelope}\index{CommonEnvelope@{CommonEnvelope}}
+
+
+{\ttfamily \#include $<$Processes.\+h$>$}
+
+Inheritance diagram for Common\+Envelope\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_common_envelope}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_common_envelope_a84736626f749ceef7e95fd0ef3604cfd}{Common\+Envelope}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_i_o}{IO}} $\ast$\+\_\+io=nullptr, bool reg=true)
+\item 
+\mbox{\hyperlink{class_common_envelope}{Common\+Envelope}} $\ast$ \mbox{\hyperlink{class_common_envelope_a3c6a7179e18da25ac91300ab2a1bdd28}{Instance}} (\mbox{\hyperlink{class_i_o}{IO}} $\ast$\+\_\+io) override
+\item 
+std\+::string \mbox{\hyperlink{class_common_envelope_a3617bf6c39b0855db3e8f13773a64d3d}{name}} () override
+\item 
+int \mbox{\hyperlink{class_common_envelope_a3b6ff6639dc9cf62f9734ba467e050da}{special\+\_\+evolve}} (\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{class_common_envelope_a808fef970eadca2e0fe88bcaecb6fb76}{ID}}
+\item 
+static \mbox{\hyperlink{class_common_envelope}{Common\+Envelope}} \mbox{\hyperlink{class_common_envelope_ae1508067d4dffa6a669716c46509c370}{\+\_\+commonenvelope}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_common_envelope_aee574d1d758ca8b51425bc52fdc20f56}{init}} (\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar)
+\item 
+int \mbox{\hyperlink{class_common_envelope_ae40c8707bb3b69f5a77294ed5b11f6f7}{whoisprimary}} (\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar)
+\item 
+double \mbox{\hyperlink{class_common_envelope_aa700c2a754aaba4e1badafe1034e61dd}{final\+\_\+mass\+\_\+after\+\_\+coalescence}} ()
+\item 
+int \mbox{\hyperlink{class_common_envelope_aac9df956649d693b94b60a86434f2159}{main\+\_\+coalesce}} (\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar)
+\item 
+int \mbox{\hyperlink{class_common_envelope_a0ec6677560c7f79d5ae74a946d42c7ff}{coalesce}} (\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar)
+\item 
+int \mbox{\hyperlink{class_common_envelope_a0dfa62e3cad406c60c216276ddd25922}{coalesce\+\_\+with\+\_\+binding\+Energy}} (\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar)
+\item 
+int \mbox{\hyperlink{class_common_envelope_a6e99a2fda4065f9a5907b44e4d13ff35}{lose\+\_\+the\+\_\+envelope}} (\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar)
+\item 
+double \mbox{\hyperlink{class_common_envelope_ac10f0f0c1e8f4dc2d0cfac2e60602792}{hurley\+\_\+rm\+\_\+x}} (double Z)
+\item 
+double \mbox{\hyperlink{class_common_envelope_a93466c27e954e1a8c73aea6bb23b6eff}{hurley\+\_\+final\+\_\+mass}} (const double Ebindf, const double toll=1e-\/3, const double maxit=100)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_star}{Star}} $\ast$ \mbox{\hyperlink{class_common_envelope_af9611b9d0ab8a0ddc0a5dd0ba4cd3853}{primary}}
+\item 
+\mbox{\hyperlink{class_star}{Star}} $\ast$ \mbox{\hyperlink{class_common_envelope_a61f9c0643d17b46ca2ac4f545891fe57}{secondary}}
+\item 
+double \mbox{\hyperlink{class_common_envelope_a7da0c04854edd7c078cc843f857575f5}{lambda}}
+\item 
+double \mbox{\hyperlink{class_common_envelope_af04f5387336333f773bbe8f73e72583b}{alpha}}
+\item 
+double \mbox{\hyperlink{class_common_envelope_a885a766daef78f29ddf3db2e4f8d91f1}{a\+\_\+fin}}
+\item 
+double \mbox{\hyperlink{class_common_envelope_ad56d3906238c3e420f9b251a97eaab1b}{ecc\+\_\+fin}}
+\item 
+double \mbox{\hyperlink{class_common_envelope_ab19c177c1f25bc3b4a115e229fe8d0d6}{M\+\_\+env\+\_\+primary}}
+\item 
+double \mbox{\hyperlink{class_common_envelope_a60a938d138543f822780032de5deb326}{M\+\_\+core\+\_\+primary}}
+\item 
+double \mbox{\hyperlink{class_common_envelope_a7f4ab792029896ea0aae1c4f5168c58a}{R\+\_\+core\+\_\+primary}}
+\item 
+double \mbox{\hyperlink{class_common_envelope_ada59b047c75ba3df241f252fecbb5d6c}{M\+\_\+env\+\_\+secondary}}
+\item 
+double \mbox{\hyperlink{class_common_envelope_a10fb8d9d58bb51559349ef2946d06c96}{M\+\_\+core\+\_\+secondary}}
+\item 
+double \mbox{\hyperlink{class_common_envelope_a77558f340722dc3bea95373fa67d0adb}{R\+\_\+core\+\_\+secondary}}
+\item 
+double \mbox{\hyperlink{class_common_envelope_a2c5a0d91144ce03f29e15c5238ea2966}{R\+L\+\_\+primary\+\_\+final}}
+\item 
+double \mbox{\hyperlink{class_common_envelope_af2e502dba5c54ac18fc4ee1041be9b48}{R\+L\+\_\+secondary\+\_\+final}}
+\item 
+double \mbox{\hyperlink{class_common_envelope_a8f4ac2c99e115e47d56971e05bcdf9b3}{Ebind\+\_\+ini}}
+\item 
+double \mbox{\hyperlink{class_common_envelope_a9f78070d91ec2ea17f7558bc368ca09c}{Eorb\+\_\+ini}}
+\item 
+double \mbox{\hyperlink{class_common_envelope_a0aeaaeac68036366549bd8719785948b}{Eorb\+\_\+fin}}
+\item 
+bool \mbox{\hyperlink{class_common_envelope_a8cbff2a649cfd4e17089d8e108e50e74}{isinisialised}} =false
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_common_envelope_a84736626f749ceef7e95fd0ef3604cfd}\label{class_common_envelope_a84736626f749ceef7e95fd0ef3604cfd}} 
+\index{CommonEnvelope@{CommonEnvelope}!CommonEnvelope@{CommonEnvelope}}
+\index{CommonEnvelope@{CommonEnvelope}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{CommonEnvelope()}{CommonEnvelope()}}
+{\footnotesize\ttfamily Common\+Envelope\+::\+Common\+Envelope (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_i_o}{IO}} $\ast$}]{\+\_\+io = {\ttfamily nullptr},  }\item[{bool}]{reg = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_common_envelope_a0ec6677560c7f79d5ae74a946d42c7ff}\label{class_common_envelope_a0ec6677560c7f79d5ae74a946d42c7ff}} 
+\index{CommonEnvelope@{CommonEnvelope}!coalesce@{coalesce}}
+\index{coalesce@{coalesce}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{coalesce()}{coalesce()}}
+{\footnotesize\ttfamily int Common\+Envelope\+::coalesce (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Handling the coalesce after the common envelope using the S\+E\+V\+N2 formalism. 
+\begin{DoxyParams}{Parameters}
+{\em binstar} & Pointer to the binary system \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+X\+I\+T\+\_\+\+S\+U\+C\+C\+E\+SS 
+\end{DoxyReturn}
+Estimate the effective a\+\_\+fin, it is the one for wich RL=rc
+
+Check if a primary-\/secondary swap is needed\mbox{\Hypertarget{class_common_envelope_a0dfa62e3cad406c60c216276ddd25922}\label{class_common_envelope_a0dfa62e3cad406c60c216276ddd25922}} 
+\index{CommonEnvelope@{CommonEnvelope}!coalesce\_with\_bindingEnergy@{coalesce\_with\_bindingEnergy}}
+\index{coalesce\_with\_bindingEnergy@{coalesce\_with\_bindingEnergy}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{coalesce\_with\_bindingEnergy()}{coalesce\_with\_bindingEnergy()}}
+{\footnotesize\ttfamily int Common\+Envelope\+::coalesce\+\_\+with\+\_\+binding\+Energy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Handling the coalesce after coalesce after the common envelope using the S\+E\+V\+N1 binding energy approach 
+\begin{DoxyParams}{Parameters}
+{\em binstar} & Pointer to the binary system \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+X\+I\+T\+\_\+\+S\+U\+C\+C\+E\+SS 
+\end{DoxyReturn}
+E\+S\+T\+I\+M\+A\+TE T\+HE F\+I\+N\+AL E\+N\+V\+E\+L\+O\+PE E\+N\+E\+R\+GY
+
+E\+S\+T\+I\+M\+A\+TE T\+HE C\+O\+RE OF T\+HE N\+EW S\+T\+AR\mbox{\Hypertarget{class_common_envelope_aa700c2a754aaba4e1badafe1034e61dd}\label{class_common_envelope_aa700c2a754aaba4e1badafe1034e61dd}} 
+\index{CommonEnvelope@{CommonEnvelope}!final\_mass\_after\_coalescence@{final\_mass\_after\_coalescence}}
+\index{final\_mass\_after\_coalescence@{final\_mass\_after\_coalescence}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{final\_mass\_after\_coalescence()}{final\_mass\_after\_coalescence()}}
+{\footnotesize\ttfamily double Common\+Envelope\+::final\+\_\+mass\+\_\+after\+\_\+coalescence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Estimate the final mass after CE coalescence using a simple precription\+: Mf = (Mc1 + Mc2) + K\+\_\+\+N\+CE $\ast$ (M2\+\_\+\+N\+CE) + k\+\_\+\+CE $\ast$ (M1\+\_\+\+CE + M2\+\_\+\+CE), where\+:
+\begin{DoxyItemize}
+\item Mc1, Mc2\+: Masses of the cores (He + CO)
+\item K\+\_\+\+N\+CE\+: fraction \mbox{[}0,1\mbox{]} of the (non core) mass of the secondary M2\+\_\+\+N\+CE not participating to the CE (e.\+g. MS) reteained after the CE
+\item K\+\_\+\+CE\+: fraction \mbox{[}0,1\mbox{]} of the (non core) mass of the primary M1\+\_\+\+CE and secondary M2\+\_\+\+CE participating to the CE reteained after the CE 
+\begin{DoxyParams}{Parameters}
+{\em primary} & Pointer to the primary star, NB this is the star starting the CE, it has to have a core. \\
+\hline
+{\em secondary} & Pointer to the secondary star \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Final total mass after CE 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\mbox{\Hypertarget{class_common_envelope_a93466c27e954e1a8c73aea6bb23b6eff}\label{class_common_envelope_a93466c27e954e1a8c73aea6bb23b6eff}} 
+\index{CommonEnvelope@{CommonEnvelope}!hurley\_final\_mass@{hurley\_final\_mass}}
+\index{hurley\_final\_mass@{hurley\_final\_mass}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{hurley\_final\_mass()}{hurley\_final\_mass()}}
+{\footnotesize\ttfamily double Common\+Envelope\+::hurley\+\_\+final\+\_\+mass (\begin{DoxyParamCaption}\item[{const double}]{Ebindf,  }\item[{const double}]{toll = {\ttfamily 1e-\/3},  }\item[{const double}]{maxit = {\ttfamily 100} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_common_envelope_ac10f0f0c1e8f4dc2d0cfac2e60602792}\label{class_common_envelope_ac10f0f0c1e8f4dc2d0cfac2e60602792}} 
+\index{CommonEnvelope@{CommonEnvelope}!hurley\_rm\_x@{hurley\_rm\_x}}
+\index{hurley\_rm\_x@{hurley\_rm\_x}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{hurley\_rm\_x()}{hurley\_rm\_x()}}
+{\footnotesize\ttfamily double Common\+Envelope\+::hurley\+\_\+rm\+\_\+x (\begin{DoxyParamCaption}\item[{double}]{Z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_common_envelope_aee574d1d758ca8b51425bc52fdc20f56}\label{class_common_envelope_aee574d1d758ca8b51425bc52fdc20f56}} 
+\index{CommonEnvelope@{CommonEnvelope}!init@{init}}
+\index{init@{init}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily int Common\+Envelope\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_common_envelope_a3c6a7179e18da25ac91300ab2a1bdd28}\label{class_common_envelope_a3c6a7179e18da25ac91300ab2a1bdd28}} 
+\index{CommonEnvelope@{CommonEnvelope}!Instance@{Instance}}
+\index{Instance@{Instance}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_common_envelope}{Common\+Envelope}}$\ast$ Common\+Envelope\+::\+Instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_o}{IO}} $\ast$}]{\+\_\+io }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+\mbox{\Hypertarget{class_common_envelope_a6e99a2fda4065f9a5907b44e4d13ff35}\label{class_common_envelope_a6e99a2fda4065f9a5907b44e4d13ff35}} 
+\index{CommonEnvelope@{CommonEnvelope}!lose\_the\_envelope@{lose\_the\_envelope}}
+\index{lose\_the\_envelope@{lose\_the\_envelope}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{lose\_the\_envelope()}{lose\_the\_envelope()}}
+{\footnotesize\ttfamily int Common\+Envelope\+::lose\+\_\+the\+\_\+envelope (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Remove the envelope after the CE phase. 
+\begin{DoxyParams}{Parameters}
+{\em binstar} & Pointer to the binary system. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+X\+I\+T\+\_\+\+S\+U\+C\+C\+E\+SS 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_common_envelope_aac9df956649d693b94b60a86434f2159}\label{class_common_envelope_aac9df956649d693b94b60a86434f2159}} 
+\index{CommonEnvelope@{CommonEnvelope}!main\_coalesce@{main\_coalesce}}
+\index{main\_coalesce@{main\_coalesce}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{main\_coalesce()}{main\_coalesce()}}
+{\footnotesize\ttfamily int Common\+Envelope\+::main\+\_\+coalesce (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Let the two stars coalesce after the common envelope. 
+\begin{DoxyParams}{Parameters}
+{\em binstar} & Pointer to the binary system \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+X\+I\+T\+\_\+\+S\+U\+C\+C\+E\+SS 
+\end{DoxyReturn}
+S\+T\+A\+RT
+
+Initial check\mbox{\Hypertarget{class_common_envelope_a3617bf6c39b0855db3e8f13773a64d3d}\label{class_common_envelope_a3617bf6c39b0855db3e8f13773a64d3d}} 
+\index{CommonEnvelope@{CommonEnvelope}!name@{name}}
+\index{name@{name}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string Common\+Envelope\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_process_a1c19334f4e746d3410e4cfad66053035}{Process}}.
+
+\mbox{\Hypertarget{class_common_envelope_a3b6ff6639dc9cf62f9734ba467e050da}\label{class_common_envelope_a3b6ff6639dc9cf62f9734ba467e050da}} 
+\index{CommonEnvelope@{CommonEnvelope}!special\_evolve@{special\_evolve}}
+\index{special\_evolve@{special\_evolve}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{special\_evolve()}{special\_evolve()}}
+{\footnotesize\ttfamily int Common\+Envelope\+::special\+\_\+evolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_process_ae58051f92e63ce4c7fc3b9999595f2ad}{Process}}.
+
+\mbox{\Hypertarget{class_common_envelope_ae40c8707bb3b69f5a77294ed5b11f6f7}\label{class_common_envelope_ae40c8707bb3b69f5a77294ed5b11f6f7}} 
+\index{CommonEnvelope@{CommonEnvelope}!whoisprimary@{whoisprimary}}
+\index{whoisprimary@{whoisprimary}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{whoisprimary()}{whoisprimary()}}
+{\footnotesize\ttfamily int Common\+Envelope\+::whoisprimary (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Initialise the primary and secondary attribute with the stars in the binary system. The primary is the star in the system that has a core and is overfilling the Roche Lobe. If both stars satisfied these conditions, the primary is the star that is more overfilling the Roche Lobe (R1/\+R\+L1$>$R2/\+R\+L2). 
+\begin{DoxyParams}{Parameters}
+{\em binstar} & Pointer to the binary system \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+X\+I\+T\+\_\+\+S\+U\+C\+C\+E\+SS or throw an error.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em sevenstd\+::bse\+\_\+error} & Thrown if neither of the two stars has a core and is overfilling the Roche Lobe (The system should not start a CE). \\
+\hline
+\end{DoxyExceptions}
+Set primary and secondary
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_common_envelope_ae1508067d4dffa6a669716c46509c370}\label{class_common_envelope_ae1508067d4dffa6a669716c46509c370}} 
+\index{CommonEnvelope@{CommonEnvelope}!\_commonenvelope@{\_commonenvelope}}
+\index{\_commonenvelope@{\_commonenvelope}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{\_commonenvelope}{\_commonenvelope}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_common_envelope}{Common\+Envelope}} Common\+Envelope\+::\+\_\+commonenvelope\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_common_envelope_a885a766daef78f29ddf3db2e4f8d91f1}\label{class_common_envelope_a885a766daef78f29ddf3db2e4f8d91f1}} 
+\index{CommonEnvelope@{CommonEnvelope}!a\_fin@{a\_fin}}
+\index{a\_fin@{a\_fin}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{a\_fin}{a\_fin}}
+{\footnotesize\ttfamily double Common\+Envelope\+::a\+\_\+fin\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_common_envelope_af04f5387336333f773bbe8f73e72583b}\label{class_common_envelope_af04f5387336333f773bbe8f73e72583b}} 
+\index{CommonEnvelope@{CommonEnvelope}!alpha@{alpha}}
+\index{alpha@{alpha}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{alpha}{alpha}}
+{\footnotesize\ttfamily double Common\+Envelope\+::alpha\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_common_envelope_a8f4ac2c99e115e47d56971e05bcdf9b3}\label{class_common_envelope_a8f4ac2c99e115e47d56971e05bcdf9b3}} 
+\index{CommonEnvelope@{CommonEnvelope}!Ebind\_ini@{Ebind\_ini}}
+\index{Ebind\_ini@{Ebind\_ini}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{Ebind\_ini}{Ebind\_ini}}
+{\footnotesize\ttfamily double Common\+Envelope\+::\+Ebind\+\_\+ini\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_common_envelope_ad56d3906238c3e420f9b251a97eaab1b}\label{class_common_envelope_ad56d3906238c3e420f9b251a97eaab1b}} 
+\index{CommonEnvelope@{CommonEnvelope}!ecc\_fin@{ecc\_fin}}
+\index{ecc\_fin@{ecc\_fin}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{ecc\_fin}{ecc\_fin}}
+{\footnotesize\ttfamily double Common\+Envelope\+::ecc\+\_\+fin\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_common_envelope_a0aeaaeac68036366549bd8719785948b}\label{class_common_envelope_a0aeaaeac68036366549bd8719785948b}} 
+\index{CommonEnvelope@{CommonEnvelope}!Eorb\_fin@{Eorb\_fin}}
+\index{Eorb\_fin@{Eorb\_fin}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{Eorb\_fin}{Eorb\_fin}}
+{\footnotesize\ttfamily double Common\+Envelope\+::\+Eorb\+\_\+fin\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_common_envelope_a9f78070d91ec2ea17f7558bc368ca09c}\label{class_common_envelope_a9f78070d91ec2ea17f7558bc368ca09c}} 
+\index{CommonEnvelope@{CommonEnvelope}!Eorb\_ini@{Eorb\_ini}}
+\index{Eorb\_ini@{Eorb\_ini}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{Eorb\_ini}{Eorb\_ini}}
+{\footnotesize\ttfamily double Common\+Envelope\+::\+Eorb\+\_\+ini\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_common_envelope_a808fef970eadca2e0fe88bcaecb6fb76}\label{class_common_envelope_a808fef970eadca2e0fe88bcaecb6fb76}} 
+\index{CommonEnvelope@{CommonEnvelope}!ID@{ID}}
+\index{ID@{ID}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily size\+\_\+t Common\+Envelope\+::\+ID\hspace{0.3cm}{\ttfamily [static]}}
+
+Define all the \mbox{\hyperlink{class_process}{Process}} ID \mbox{\Hypertarget{class_common_envelope_a8cbff2a649cfd4e17089d8e108e50e74}\label{class_common_envelope_a8cbff2a649cfd4e17089d8e108e50e74}} 
+\index{CommonEnvelope@{CommonEnvelope}!isinisialised@{isinisialised}}
+\index{isinisialised@{isinisialised}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{isinisialised}{isinisialised}}
+{\footnotesize\ttfamily bool Common\+Envelope\+::isinisialised =false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_common_envelope_a7da0c04854edd7c078cc843f857575f5}\label{class_common_envelope_a7da0c04854edd7c078cc843f857575f5}} 
+\index{CommonEnvelope@{CommonEnvelope}!lambda@{lambda}}
+\index{lambda@{lambda}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{lambda}{lambda}}
+{\footnotesize\ttfamily double Common\+Envelope\+::lambda\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_common_envelope_a60a938d138543f822780032de5deb326}\label{class_common_envelope_a60a938d138543f822780032de5deb326}} 
+\index{CommonEnvelope@{CommonEnvelope}!M\_core\_primary@{M\_core\_primary}}
+\index{M\_core\_primary@{M\_core\_primary}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{M\_core\_primary}{M\_core\_primary}}
+{\footnotesize\ttfamily double Common\+Envelope\+::\+M\+\_\+core\+\_\+primary\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_common_envelope_a10fb8d9d58bb51559349ef2946d06c96}\label{class_common_envelope_a10fb8d9d58bb51559349ef2946d06c96}} 
+\index{CommonEnvelope@{CommonEnvelope}!M\_core\_secondary@{M\_core\_secondary}}
+\index{M\_core\_secondary@{M\_core\_secondary}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{M\_core\_secondary}{M\_core\_secondary}}
+{\footnotesize\ttfamily double Common\+Envelope\+::\+M\+\_\+core\+\_\+secondary\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_common_envelope_ab19c177c1f25bc3b4a115e229fe8d0d6}\label{class_common_envelope_ab19c177c1f25bc3b4a115e229fe8d0d6}} 
+\index{CommonEnvelope@{CommonEnvelope}!M\_env\_primary@{M\_env\_primary}}
+\index{M\_env\_primary@{M\_env\_primary}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{M\_env\_primary}{M\_env\_primary}}
+{\footnotesize\ttfamily double Common\+Envelope\+::\+M\+\_\+env\+\_\+primary\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_common_envelope_ada59b047c75ba3df241f252fecbb5d6c}\label{class_common_envelope_ada59b047c75ba3df241f252fecbb5d6c}} 
+\index{CommonEnvelope@{CommonEnvelope}!M\_env\_secondary@{M\_env\_secondary}}
+\index{M\_env\_secondary@{M\_env\_secondary}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{M\_env\_secondary}{M\_env\_secondary}}
+{\footnotesize\ttfamily double Common\+Envelope\+::\+M\+\_\+env\+\_\+secondary\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_common_envelope_af9611b9d0ab8a0ddc0a5dd0ba4cd3853}\label{class_common_envelope_af9611b9d0ab8a0ddc0a5dd0ba4cd3853}} 
+\index{CommonEnvelope@{CommonEnvelope}!primary@{primary}}
+\index{primary@{primary}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{primary}{primary}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_star}{Star}}$\ast$ Common\+Envelope\+::primary\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_common_envelope_a7f4ab792029896ea0aae1c4f5168c58a}\label{class_common_envelope_a7f4ab792029896ea0aae1c4f5168c58a}} 
+\index{CommonEnvelope@{CommonEnvelope}!R\_core\_primary@{R\_core\_primary}}
+\index{R\_core\_primary@{R\_core\_primary}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{R\_core\_primary}{R\_core\_primary}}
+{\footnotesize\ttfamily double Common\+Envelope\+::\+R\+\_\+core\+\_\+primary\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_common_envelope_a77558f340722dc3bea95373fa67d0adb}\label{class_common_envelope_a77558f340722dc3bea95373fa67d0adb}} 
+\index{CommonEnvelope@{CommonEnvelope}!R\_core\_secondary@{R\_core\_secondary}}
+\index{R\_core\_secondary@{R\_core\_secondary}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{R\_core\_secondary}{R\_core\_secondary}}
+{\footnotesize\ttfamily double Common\+Envelope\+::\+R\+\_\+core\+\_\+secondary\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_common_envelope_a2c5a0d91144ce03f29e15c5238ea2966}\label{class_common_envelope_a2c5a0d91144ce03f29e15c5238ea2966}} 
+\index{CommonEnvelope@{CommonEnvelope}!RL\_primary\_final@{RL\_primary\_final}}
+\index{RL\_primary\_final@{RL\_primary\_final}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{RL\_primary\_final}{RL\_primary\_final}}
+{\footnotesize\ttfamily double Common\+Envelope\+::\+R\+L\+\_\+primary\+\_\+final\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_common_envelope_af2e502dba5c54ac18fc4ee1041be9b48}\label{class_common_envelope_af2e502dba5c54ac18fc4ee1041be9b48}} 
+\index{CommonEnvelope@{CommonEnvelope}!RL\_secondary\_final@{RL\_secondary\_final}}
+\index{RL\_secondary\_final@{RL\_secondary\_final}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{RL\_secondary\_final}{RL\_secondary\_final}}
+{\footnotesize\ttfamily double Common\+Envelope\+::\+R\+L\+\_\+secondary\+\_\+final\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_common_envelope_a61f9c0643d17b46ca2ac4f545891fe57}\label{class_common_envelope_a61f9c0643d17b46ca2ac4f545891fe57}} 
+\index{CommonEnvelope@{CommonEnvelope}!secondary@{secondary}}
+\index{secondary@{secondary}!CommonEnvelope@{CommonEnvelope}}
+\doxysubsubsection{\texorpdfstring{secondary}{secondary}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_star}{Star}}$\ast$ Common\+Envelope\+::secondary\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/binstar/\mbox{\hyperlink{_processes_8h}{Processes.\+h}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/src/binstar/\mbox{\hyperlink{_processes_8cpp}{Processes.\+cpp}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/\mbox{\hyperlink{static__main_8h}{static\+\_\+main.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,95 @@
+\hypertarget{class_mix}{}\doxysection{Mix Class Reference}
+\label{class_mix}\index{Mix@{Mix}}
+
+
+{\ttfamily \#include $<$Processes.\+h$>$}
+
+Inheritance diagram for Mix\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_mix}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mix_adae881d6559f47006831b94a3a48749c}{Mix}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_i_o}{IO}} $\ast$\+\_\+io=nullptr, bool reg=true)
+\item 
+\mbox{\hyperlink{class_mix}{Mix}} $\ast$ \mbox{\hyperlink{class_mix_a3aa534b8c5ae32400a1b9f3bbf2935e1}{Instance}} (\mbox{\hyperlink{class_i_o}{IO}} $\ast$\+\_\+io) override
+\item 
+std\+::string \mbox{\hyperlink{class_mix_a788675bc84d6aa372af62b345fbdab8a}{name}} () override
+\item 
+int \mbox{\hyperlink{class_mix_aac3859367f21231b05e9c7d0dba8269e}{special\+\_\+evolve}} (\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{class_mix_a8b3226b90f29b0a28dbf709ca4854450}{ID}}
+\item 
+static \mbox{\hyperlink{class_mix}{Mix}} \mbox{\hyperlink{class_mix_ac12a61096b5512e4dc996bcef62232b8}{\+\_\+mix}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mix_adae881d6559f47006831b94a3a48749c}\label{class_mix_adae881d6559f47006831b94a3a48749c}} 
+\index{Mix@{Mix}!Mix@{Mix}}
+\index{Mix@{Mix}!Mix@{Mix}}
+\doxysubsubsection{\texorpdfstring{Mix()}{Mix()}}
+{\footnotesize\ttfamily Mix\+::\+Mix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_i_o}{IO}} $\ast$}]{\+\_\+io = {\ttfamily nullptr},  }\item[{bool}]{reg = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mix_a3aa534b8c5ae32400a1b9f3bbf2935e1}\label{class_mix_a3aa534b8c5ae32400a1b9f3bbf2935e1}} 
+\index{Mix@{Mix}!Instance@{Instance}}
+\index{Instance@{Instance}!Mix@{Mix}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mix}{Mix}}$\ast$ Mix\+::\+Instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_o}{IO}} $\ast$}]{\+\_\+io }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+\mbox{\Hypertarget{class_mix_a788675bc84d6aa372af62b345fbdab8a}\label{class_mix_a788675bc84d6aa372af62b345fbdab8a}} 
+\index{Mix@{Mix}!name@{name}}
+\index{name@{name}!Mix@{Mix}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string Mix\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_process_a1c19334f4e746d3410e4cfad66053035}{Process}}.
+
+\mbox{\Hypertarget{class_mix_aac3859367f21231b05e9c7d0dba8269e}\label{class_mix_aac3859367f21231b05e9c7d0dba8269e}} 
+\index{Mix@{Mix}!special\_evolve@{special\_evolve}}
+\index{special\_evolve@{special\_evolve}!Mix@{Mix}}
+\doxysubsubsection{\texorpdfstring{special\_evolve()}{special\_evolve()}}
+{\footnotesize\ttfamily int Mix\+::special\+\_\+evolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Choose the star that remains and the one that is set to empty
+
+Old implementation, now replaced by the get\+\_\+id\+\_\+more\+\_\+evolved\+\_\+star() check
+
+Let\textquotesingle{}s mix
+
+Reimplemented from \mbox{\hyperlink{class_process_ae58051f92e63ce4c7fc3b9999595f2ad}{Process}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_mix_ac12a61096b5512e4dc996bcef62232b8}\label{class_mix_ac12a61096b5512e4dc996bcef62232b8}} 
+\index{Mix@{Mix}!\_mix@{\_mix}}
+\index{\_mix@{\_mix}!Mix@{Mix}}
+\doxysubsubsection{\texorpdfstring{\_mix}{\_mix}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mix}{Mix}} Mix\+::\+\_\+mix\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_mix_a8b3226b90f29b0a28dbf709ca4854450}\label{class_mix_a8b3226b90f29b0a28dbf709ca4854450}} 
+\index{Mix@{Mix}!ID@{ID}}
+\index{ID@{ID}!Mix@{Mix}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily size\+\_\+t Mix\+::\+ID\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/binstar/\mbox{\hyperlink{_processes_8h}{Processes.\+h}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/src/binstar/\mbox{\hyperlink{_processes_8cpp}{Processes.\+cpp}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/\mbox{\hyperlink{static__main_8h}{static\+\_\+main.\+h}}\end{DoxyCompactItemize}

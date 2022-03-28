@@ -1,0 +1,629 @@
+\hypertarget{class_property}{}\doxysection{Property Class Reference}
+\label{class_property}\index{Property@{Property}}
+
+
+{\ttfamily \#include $<$property.\+h$>$}
+
+Inheritance diagram for Property\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_property}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ std\+::string, size\+\_\+t $>$ \mbox{\hyperlink{class_property_a6f9a5424342899495a0dbaf50de06161}{\+\_\+\+Print\+Map}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_property_ab029377b86e5b8ae7513bf93f9c9a955}{Property}} ()
+\item 
+virtual \mbox{\hyperlink{class_property_a8b51beb58a1b29d6d56e00ee9cb01af9}{$\sim$\+Property}} ()
+\item 
+virtual \mbox{\hyperlink{class_property}{Property}} $\ast$ \mbox{\hyperlink{class_property_a378a68a95da682a4247a4809e28a4d0c}{Instance}} ()
+\item 
+virtual std\+::string \mbox{\hyperlink{class_property_a6f2f260968b6780485004496e7c53063}{name}} ()
+\item 
+virtual std\+::string \mbox{\hyperlink{class_property_ab890f984beaf68c49152cfec3943a784}{units}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_property_a8b18408c9aaeca8d819cc360b6de4798}{amiderived}} ()
+\item 
+virtual void \mbox{\hyperlink{class_property_a77cf5606e51abbbe6c4bebcf1d150218}{resynch}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} const double \&dt, \mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} bool set0=true)
+\item 
+virtual void \mbox{\hyperlink{class_property_a35b3b864c8fff60747f5019ea6f70c3a}{resynch}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\item 
+virtual void \mbox{\hyperlink{class_property_aacfbae3cf88d3410b265f632409c91ea}{set\+\_\+empty}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\item 
+virtual void \mbox{\hyperlink{class_property_ab7fb5c9c46521bf17bae1da3729a7004}{set\+\_\+remnant}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\item 
+virtual void \mbox{\hyperlink{class_property_a12598e2ff736cc87a14ab24f03288bcd}{evolve}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\item 
+virtual void \mbox{\hyperlink{class_property_a61c496fb99df9817f7880756596765c2}{evolve\+\_\+remnant}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\item 
+virtual size\+\_\+t \mbox{\hyperlink{class_property_a5496b2bc47beb1dc748353a358fae0fb}{Tab\+ID}} ()
+\item 
+virtual void \mbox{\hyperlink{class_property_a04a08c722ceaf2cf3e31799ede681131}{special\+\_\+evolve}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\item 
+virtual void \mbox{\hyperlink{class_property_a833fc7caf105361d73a96105a0e81928}{evolve\+\_\+fake}} (\mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\item 
+virtual void \mbox{\hyperlink{class_property_ad27cb8ff02474c359e62ce29bdfb04f2}{init}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} const double \&a)
+\item 
+virtual void \mbox{\hyperlink{class_property_aceded1a71ba812e4db3c55d7df87196e}{evolve\+\_\+real}} ()
+\item 
+virtual void \mbox{\hyperlink{class_property_a10c72bdf6843bd00500b44426229b0cf}{update\+\_\+from\+\_\+binary}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s, const double \&DV)
+\item 
+virtual void \mbox{\hyperlink{class_property_af3b5eb999c4a8ad34605a641d6acfd35}{copy\+\_\+\+V\+\_\+from}} (\mbox{\hyperlink{class_property}{Property}} $\ast$p)
+\item 
+virtual void \mbox{\hyperlink{class_property_adcc337246ac8bfabbf3bb52603b13710}{update\+\_\+variation}} ()
+\item 
+virtual void \mbox{\hyperlink{class_property_afb2f76dec040c60ff20fec8fa7437363}{correct\+\_\+interpolation\+\_\+errors}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\item 
+virtual void \mbox{\hyperlink{class_property_a28f6625d99feb3ec86894584df4a25ab}{correct\+\_\+interpolation\+\_\+errors\+\_\+real}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\item 
+virtual void \mbox{\hyperlink{class_property_a4781471dc24b8da09970e500604d73d9}{restore}} ()
+\item 
+virtual void \mbox{\hyperlink{class_property_af8b9f0a647e53f360aa924b89eaa4152}{synch}} ()
+\item 
+virtual void \mbox{\hyperlink{class_property_aca3834d5693f263aea2d462b42d179db}{reset}} ()
+\item 
+virtual void \mbox{\hyperlink{class_property_ab3b4070354b2cddcf25bb6bd7b845a86}{changed\+\_\+track}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s, \mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s\+\_\+jtrack)
+\item 
+virtual double \mbox{\hyperlink{class_property_a726fde19c64b29f74bd97c624348951d}{get\+\_\+fk}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} const \mbox{\hyperlink{class_star}{Star}} $\ast$s=N\+U\+LL)
+\item 
+virtual double \mbox{\hyperlink{class_property_a58c883c8ba1669fc3ae69f47fbb765e6}{get\+\_\+0\+\_\+fk}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} const \mbox{\hyperlink{class_star}{Star}} $\ast$s=N\+U\+LL)
+\item 
+virtual double \mbox{\hyperlink{class_property_ae019306144cf0c61bd52ed4a8334a29d}{get}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} const \mbox{\hyperlink{class_star}{Star}} $\ast$s=N\+U\+LL)
+\item 
+virtual double \mbox{\hyperlink{class_property_ab008bf358e220fcc8ca0bd171c6459b4}{get\+\_\+0}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} const \mbox{\hyperlink{class_star}{Star}} $\ast$s=N\+U\+LL)
+\item 
+double $\ast$ \mbox{\hyperlink{class_property_a01a21347de78dc3bc3c3582d174f66f2}{get\+\_\+wm}} ()
+\item 
+double $\ast$ \mbox{\hyperlink{class_property_ab2c025cded60a43e5e4b0d73a1a5d100}{get\+\_\+wz}} ()
+\item 
+virtual void \mbox{\hyperlink{class_property_ad0a64ecfaddcefb0295451f37cb66e2c}{set\+\_\+w}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{class_property_a7bcf5733d2bdf52f7de6b670890b1989}{size}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double $\ast$ \mbox{\hyperlink{class_property_ababe60be80b6161d1a33fb11099785e7}{val\+\_\+ref}} \mbox{[}4\mbox{]}
+\item 
+double $\ast$ \mbox{\hyperlink{class_property_af9070a9d4982c737ee756969613fd428}{val\+\_\+in}} \mbox{[}4\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_property_a6f9a5424342899495a0dbaf50de06161}{\+\_\+\+Print\+Map}} \mbox{\hyperlink{class_property_ab84e5f4676c7bc0da81d5609f64e783b}{Print\+Map}}
+\item 
+static vector$<$ \mbox{\hyperlink{class_property}{Property}} $\ast$ $>$ \mbox{\hyperlink{class_property_ab5cdf06d67068eb1098883cfffe31581}{all}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_property_a55bb13c2b1ee36882c549d9cf37e2df0}{set\+\_\+fk}} (const double \&a)
+\item 
+void \mbox{\hyperlink{class_property_ae822145d8faed1652a89386cb5df7c1b}{set\+\_\+0\+\_\+fk}} (const double \&a)
+\item 
+virtual void \mbox{\hyperlink{class_property_a585894846bb9cadf7e2d73f13ec6cbf1}{set}} (const double \&a)
+\item 
+virtual void \mbox{\hyperlink{class_property_ac92d790e8b14571dd9dc728b7bb4cba9}{set\+\_\+0}} (const double \&a)
+\item 
+void \mbox{\hyperlink{class_property_af83d046dabb9387a49f3ce882ec88eda}{set\+\_\+\+V\+B\+IN}} (const size\+\_\+t \&id, const double \&a)
+\item 
+virtual void \mbox{\hyperlink{class_property_af2344df15c5a6d7ec0381d51e2426675}{safety\+\_\+check}} ()
+\item 
+void \mbox{\hyperlink{class_property_a6ced207ade04e475fe9efde9aa2bf2e2}{Register}} (\mbox{\hyperlink{class_property}{Property}} $\ast$\+\_\+p, size\+\_\+t $\ast$id, const std\+::string \&\+\_\+name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_property_aabfc2f0b6f3fc8aa3a3d5487ce4861ef}{value}}
+\item 
+double \mbox{\hyperlink{class_property_a76e52efef751ecea28f1d0d17f763a6e}{value0}}
+\item 
+double \mbox{\hyperlink{class_property_a51e9d3a2e917dbf2fce5778d14fe7231}{Dvalue}}
+\item 
+double \mbox{\hyperlink{class_property_a3b81e1e12799a9796befb8f4edcb0dd7}{V}}
+\item 
+double \mbox{\hyperlink{class_property_a0a53ee521591a36d7bb85eafb81fa9db}{V0}}
+\item 
+vector$<$ double $>$ \mbox{\hyperlink{class_property_a381067e9e2e1417e55ef318ccafbc0af}{V\+B\+IN}}
+\item 
+double \mbox{\hyperlink{class_property_a769ea3b1ce48aa6445d3123e3f5a6d01}{interpolating\+\_\+values}} \mbox{[}4\mbox{]}
+\item 
+double \mbox{\hyperlink{class_property_a412194568068d8c49feb7af3ebc82dc1}{wM}} \mbox{[}4\mbox{]}
+\item 
+double \mbox{\hyperlink{class_property_a16f2fd6eedb09bc1dbaf90d76cb1bcd2}{wZ}} \mbox{[}2\mbox{]}
+\item 
+\mbox{\hyperlink{classsevnstd_1_1_sevn_logging}{Sevn\+Logging}} \mbox{\hyperlink{class_property_a74dfe439b14301e6b98a2d10e716fdc9}{svlog}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{class_property_a34a7e861265e5d8147a3af5d0773902f}{\+\_\+size}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_property_a6f9a5424342899495a0dbaf50de06161}\label{class_property_a6f9a5424342899495a0dbaf50de06161}} 
+\index{Property@{Property}!\_PrintMap@{\_PrintMap}}
+\index{\_PrintMap@{\_PrintMap}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{\_PrintMap}{\_PrintMap}}
+{\footnotesize\ttfamily typedef std\+::map$<$std\+::string,size\+\_\+t$>$ \mbox{\hyperlink{class_property_a6f9a5424342899495a0dbaf50de06161}{Property\+::\+\_\+\+Print\+Map}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_property_ab029377b86e5b8ae7513bf93f9c9a955}\label{class_property_ab029377b86e5b8ae7513bf93f9c9a955}} 
+\index{Property@{Property}!Property@{Property}}
+\index{Property@{Property}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{Property()}{Property()}}
+{\footnotesize\ttfamily Property\+::\+Property (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_property_a8b51beb58a1b29d6d56e00ee9cb01af9}\label{class_property_a8b51beb58a1b29d6d56e00ee9cb01af9}} 
+\index{Property@{Property}!````~Property@{$\sim$Property}}
+\index{````~Property@{$\sim$Property}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{$\sim$Property()}{~Property()}}
+{\footnotesize\ttfamily virtual Property\+::$\sim$\+Property (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_property_a8b18408c9aaeca8d819cc360b6de4798}\label{class_property_a8b18408c9aaeca8d819cc360b6de4798}} 
+\index{Property@{Property}!amiderived@{amiderived}}
+\index{amiderived@{amiderived}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{amiderived()}{amiderived()}}
+{\footnotesize\ttfamily virtual bool Property\+::amiderived (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Check if this is a derived. A property is defined dervied if it is estimated by the combination of other properties and it is not the derivative of a property. \begin{DoxyReturn}{Returns}
+true if it is derived, false if it is not (overrided in the derived properties) 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_derived___property_a7be4f4def2303c5d05c4c9ac981dbd8a}{Derived\+\_\+\+Property}}.
+
+\mbox{\Hypertarget{class_property_ab3b4070354b2cddcf25bb6bd7b845a86}\label{class_property_ab3b4070354b2cddcf25bb6bd7b845a86}} 
+\index{Property@{Property}!changed\_track@{changed\_track}}
+\index{changed\_track@{changed\_track}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{changed\_track()}{changed\_track()}}
+{\footnotesize\ttfamily virtual void Property\+::changed\+\_\+track (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s\+\_\+jtrack }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Handle the modification of the property after a track change. It does nothing by default. 
+\begin{DoxyParams}{Parameters}
+{\em s} & The star for which we are changing the tracks. \\
+\hline
+{\em s\+\_\+jtrack} & The star that we are using to get info of the new tracks. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_temperature_a0fefbfb012c965f85ee798a7c0dcdd4c}{Temperature}}, \mbox{\hyperlink{class_luminosity_ab64a63f392445ef6e01cd507f6608f32}{Luminosity}}, \mbox{\hyperlink{class_inertia_a9235a62441518653a8838c2ad9745a86}{Inertia}}, \mbox{\hyperlink{classd_mcumul__binary_ab0d11a6def61fa76b16cad9e3e765b30}{d\+Mcumul\+\_\+binary}}, \mbox{\hyperlink{class_depthconv_aac8e475a7abbd3fd696a85d4631bda46}{Depthconv}}, \mbox{\hyperlink{class_tconv_af9729eb8f30e6cca117d390105405ed2}{Tconv}}, \mbox{\hyperlink{class_qconv_aa3749b7ca3a0da3fdaa9e740b240a020}{Qconv}}, \mbox{\hyperlink{class_osup_a64f2a93043a832bb6743e1b94da667e5}{Osup}}, \mbox{\hyperlink{class_nsup_a2c14c548f10ab2f4a88e3fe1cf626f43}{Nsup}}, \mbox{\hyperlink{class_csup_ace44b0d715bc1ec9b99e7405908f7c5a}{Csup}}, \mbox{\hyperlink{class_h_esup_a2fa6a225d2c7cb84e617f8458f2caae5}{H\+Esup}}, \mbox{\hyperlink{class_hsup_aed8df8c5cceee5462aac2d88c5b170c3}{Hsup}}, \mbox{\hyperlink{class_m_c_o_ab6ae9bdfb2a0a164cad84a4184ee845b}{M\+CO}}, \mbox{\hyperlink{class_m_h_e_aeed5da6f36b247cef8c4403a99bd79fd}{M\+HE}}, \mbox{\hyperlink{class_mass_ae4cf653c9a17d2610933879f4dfbae5f}{Mass}}, \mbox{\hyperlink{class_r_c_o_a9fd6fd65bfd71cf1ba058fbb650ac2f1}{R\+CO}}, \mbox{\hyperlink{class_r_h_e_ae524cefca9ba9e11e56af4fdf19061a2}{R\+HE}}, \mbox{\hyperlink{class_radius_a82322edc16066bb9dae3ae455dd26caa}{Radius}}, \mbox{\hyperlink{class_timestep_ad4edab1a8b1b8a175e5e1f2cf0c2b037}{Timestep}}, \mbox{\hyperlink{class_localtime_a3b957f8fecab43a66c321e037eec2c18}{Localtime}}, and \mbox{\hyperlink{class_phase_ab582098a21d5b9c4172732c467608425}{Phase}}.
+
+\mbox{\Hypertarget{class_property_af3b5eb999c4a8ad34605a641d6acfd35}\label{class_property_af3b5eb999c4a8ad34605a641d6acfd35}} 
+\index{Property@{Property}!copy\_V\_from@{copy\_V\_from}}
+\index{copy\_V\_from@{copy\_V\_from}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{copy\_V\_from()}{copy\_V\_from()}}
+{\footnotesize\ttfamily virtual void Property\+::copy\+\_\+\+V\+\_\+from (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_property}{Property}} $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_derived___property_afb293ba27c38ee6ca88fa487ea37038d}{Derived\+\_\+\+Property}}, \mbox{\hyperlink{class_derivative___property_acdbe6f2be2947f19e1c8cada78ba604c}{Derivative\+\_\+\+Property}}, \mbox{\hyperlink{class_mass__obejct_a2bbf73ea5d5f9fbe58e50a441ec4fa35}{Mass\+\_\+obejct}}, \mbox{\hyperlink{class_r__object_af66eed56867263179644228c4762709b}{R\+\_\+object}}, and \mbox{\hyperlink{class_time__object_a9c30fa972d00e7e657be519d30f152f4}{Time\+\_\+object}}.
+
+\mbox{\Hypertarget{class_property_afb2f76dec040c60ff20fec8fa7437363}\label{class_property_afb2f76dec040c60ff20fec8fa7437363}} 
+\index{Property@{Property}!correct\_interpolation\_errors@{correct\_interpolation\_errors}}
+\index{correct\_interpolation\_errors@{correct\_interpolation\_errors}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{correct\_interpolation\_errors()}{correct\_interpolation\_errors()}}
+{\footnotesize\ttfamily virtual void Property\+::correct\+\_\+interpolation\+\_\+errors (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_m_c_o_a137730447f9d220d108443781757ec51}{M\+CO}}, \mbox{\hyperlink{class_mass_acc7caa5971d790ed1869315ca528a18e}{Mass}}, and \mbox{\hyperlink{class_r_c_o_a24174fe771c9478ad0fa70d06074a688}{R\+CO}}.
+
+\mbox{\Hypertarget{class_property_a28f6625d99feb3ec86894584df4a25ab}\label{class_property_a28f6625d99feb3ec86894584df4a25ab}} 
+\index{Property@{Property}!correct\_interpolation\_errors\_real@{correct\_interpolation\_errors\_real}}
+\index{correct\_interpolation\_errors\_real@{correct\_interpolation\_errors\_real}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{correct\_interpolation\_errors\_real()}{correct\_interpolation\_errors\_real()}}
+{\footnotesize\ttfamily virtual void Property\+::correct\+\_\+interpolation\+\_\+errors\+\_\+real (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_m_c_o_aa59fa61305347062e690c4d8540081c8}{M\+CO}}, \mbox{\hyperlink{class_m_h_e_a6aad4e96b7aefc6608cd5a1627a446a6}{M\+HE}}, \mbox{\hyperlink{class_mass_ac0443691ae4283a3b43ea80cf1bad603}{Mass}}, \mbox{\hyperlink{class_r_c_o_ab84aa4c18e449d1d427ee4bfb8045b4c}{R\+CO}}, and \mbox{\hyperlink{class_r_h_e_a9d34eca17f2dc25df8430ef9861e2cf1}{R\+HE}}.
+
+\mbox{\Hypertarget{class_property_a12598e2ff736cc87a14ab24f03288bcd}\label{class_property_a12598e2ff736cc87a14ab24f03288bcd}} 
+\index{Property@{Property}!evolve@{evolve}}
+\index{evolve@{evolve}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{evolve()}{evolve()}}
+{\footnotesize\ttfamily virtual void Property\+::evolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_j_i_t___property_aa48739c31fa0584a93d66c4117c9ad09}{J\+I\+T\+\_\+\+Property}}, \mbox{\hyperlink{class_rs_a829152058e8d152d753e9c77aa719894}{Rs}}, \mbox{\hyperlink{class_temperature_a7e79b6f1c8b257760efe9acb9397ff0f}{Temperature}}, \mbox{\hyperlink{classd_rdt_ad13fe82c9a206088784b9e51f1357446}{d\+Rdt}}, \mbox{\hyperlink{classd_m_c_odt_a36aad5b285ea471f5d006f668953e366}{d\+M\+C\+Odt}}, \mbox{\hyperlink{classd_m_h_edt_a0d4e1fe1d5ac47abe91b1ab8e4ae5136}{d\+M\+H\+Edt}}, \mbox{\hyperlink{classd_mdt_a618480376b370febd3b3cf1a8d20a7cb}{d\+Mdt}}, \mbox{\hyperlink{class_spin_aa7f9e059f37fe7f58be5b699ee17cfa7}{Spin}}, \mbox{\hyperlink{classd_mcumul__binary_a3ab426b7ab38a002884da0501809b12b}{d\+Mcumul\+\_\+binary}}, \mbox{\hyperlink{class_next_output_a13439dc2906774ca510544f2638970f4}{Next\+Output}}, \mbox{\hyperlink{class_timestep_a8130d39b8e37b31d2da3950bf02b6130}{Timestep}}, \mbox{\hyperlink{class_worldtime_aec32a847587f8b3ef1e141e5ab52e90e}{Worldtime}}, \mbox{\hyperlink{class_localtime_a2dbaac2df62f85691eb46be4c53dc9c3}{Localtime}}, \mbox{\hyperlink{class_phase_ab316055dfa6542258e1ae63933b30662}{Phase}}, \mbox{\hyperlink{class_remnant_type_a67c6a342b9bba500fa3dbfa67353c7f8}{Remnant\+Type}}, \mbox{\hyperlink{class_m_c_o_a86d5e5fe995c4706b9a4cff62ce1e06f}{M\+CO}}, \mbox{\hyperlink{class_m_h_e_ad7fdbe96a8ab4e99d7ddd7e886f3b585}{M\+HE}}, \mbox{\hyperlink{class_r_c_o_a77a25257924a95086f224fbf6c633819}{R\+CO}}, and \mbox{\hyperlink{class_r_h_e_ae6e20e3414ab48825e9a61535abe15e4}{R\+HE}}.
+
+\mbox{\Hypertarget{class_property_a833fc7caf105361d73a96105a0e81928}\label{class_property_a833fc7caf105361d73a96105a0e81928}} 
+\index{Property@{Property}!evolve\_fake@{evolve\_fake}}
+\index{evolve\_fake@{evolve\_fake}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{evolve\_fake()}{evolve\_fake()}}
+{\footnotesize\ttfamily void Property\+::evolve\+\_\+fake (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Set v0=v
+
+Move to new value in the interpolating track
+
+Find new values at times t for the interpolatring tracks using linear interpolation
+
+Find the interpolating z value, M1$\ast$v1 + M2$\ast$v2
+
+Find the final interpolated value, v=Z1$\ast$v1 + Z2$\ast$v2\mbox{\Hypertarget{class_property_aceded1a71ba812e4db3c55d7df87196e}\label{class_property_aceded1a71ba812e4db3c55d7df87196e}} 
+\index{Property@{Property}!evolve\_real@{evolve\_real}}
+\index{evolve\_real@{evolve\_real}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{evolve\_real()}{evolve\_real()}}
+{\footnotesize\ttfamily virtual void Property\+::evolve\+\_\+real (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_property_a61c496fb99df9817f7880756596765c2}\label{class_property_a61c496fb99df9817f7880756596765c2}} 
+\index{Property@{Property}!evolve\_remnant@{evolve\_remnant}}
+\index{evolve\_remnant@{evolve\_remnant}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{evolve\_remnant()}{evolve\_remnant()}}
+{\footnotesize\ttfamily virtual void Property\+::evolve\+\_\+remnant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_lambda_a818e89096f380a5d77153c4cdff93be8}{Lambda}}, \mbox{\hyperlink{class_j_i_t___property_ad127668660669a13d602be2cf09c7b61}{J\+I\+T\+\_\+\+Property}}, \mbox{\hyperlink{class_timestep_a7e6ac7d8b1fe8621dc0dbfe5552c3a7b}{Timestep}}, \mbox{\hyperlink{class_worldtime_a27a608b7ba1f401b2d4d9864c2aceac6}{Worldtime}}, \mbox{\hyperlink{class_localtime_ab7da31a03627a960dba382596a5c6c3f}{Localtime}}, \mbox{\hyperlink{class_time__object_ae7af246c692dae4d4032d6166b92793f}{Time\+\_\+object}}, and \mbox{\hyperlink{class_phase_a2d4bb3039131428b090aa228a75cda6f}{Phase}}.
+
+\mbox{\Hypertarget{class_property_ae019306144cf0c61bd52ed4a8334a29d}\label{class_property_ae019306144cf0c61bd52ed4a8334a29d}} 
+\index{Property@{Property}!get@{get}}
+\index{get@{get}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily virtual double Property\+::get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} const \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_zams_a34aa574eb311a4add6f114cf1cbed1e3}{Zams}}, \mbox{\hyperlink{class_phase_b_s_e_a9af849851a0926985084e3f39f981340}{Phase\+B\+SE}}, \mbox{\hyperlink{class_ebind_a16f8bedd832871b997bf4ce26758099a}{Ebind}}, \mbox{\hyperlink{class_lambda_a31804a1fe5153ba4e95d374778161674}{Lambda}}, \mbox{\hyperlink{class_luminosity_a573a0139aaf92caad138ecacf2166abd}{Luminosity}}, \mbox{\hyperlink{class_inertia_a93cf31a9c471bd1adbdb7ba3a8559565}{Inertia}}, and \mbox{\hyperlink{class_radius_aaf346b88f4ae2b064acfb3e4577c57f1}{Radius}}.
+
+\mbox{\Hypertarget{class_property_ab008bf358e220fcc8ca0bd171c6459b4}\label{class_property_ab008bf358e220fcc8ca0bd171c6459b4}} 
+\index{Property@{Property}!get\_0@{get\_0}}
+\index{get\_0@{get\_0}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{get\_0()}{get\_0()}}
+{\footnotesize\ttfamily virtual double Property\+::get\+\_\+0 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} const \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_j_i_t___property_ad0ef846a016cf974a3f4fcbf6f7ace02}{J\+I\+T\+\_\+\+Property}}, \mbox{\hyperlink{class_luminosity_ab9e6797ace419dcc0a62ac0d69d943e6}{Luminosity}}, \mbox{\hyperlink{class_inertia_a153b1c7b4e9f71264ecb6693015a79c8}{Inertia}}, and \mbox{\hyperlink{class_radius_a44c98aa8d59103bc66cfa36aaf222f61}{Radius}}.
+
+\mbox{\Hypertarget{class_property_a58c883c8ba1669fc3ae69f47fbb765e6}\label{class_property_a58c883c8ba1669fc3ae69f47fbb765e6}} 
+\index{Property@{Property}!get\_0\_fk@{get\_0\_fk}}
+\index{get\_0\_fk@{get\_0\_fk}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{get\_0\_fk()}{get\_0\_fk()}}
+{\footnotesize\ttfamily virtual double Property\+::get\+\_\+0\+\_\+fk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} const \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_j_i_t___property_a6d2ed19cdb4a1c06ea71d75bf304b848}{J\+I\+T\+\_\+\+Property}}, \mbox{\hyperlink{class_luminosity_aa9255979abe8762fe27e7ab932e29fcb}{Luminosity}}, \mbox{\hyperlink{class_inertia_a1fe97ee8f21897105516970cad754897}{Inertia}}, and \mbox{\hyperlink{class_radius_a568323a91162d77315936ab73d0be314}{Radius}}.
+
+\mbox{\Hypertarget{class_property_a726fde19c64b29f74bd97c624348951d}\label{class_property_a726fde19c64b29f74bd97c624348951d}} 
+\index{Property@{Property}!get\_fk@{get\_fk}}
+\index{get\_fk@{get\_fk}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{get\_fk()}{get\_fk()}}
+{\footnotesize\ttfamily virtual double Property\+::get\+\_\+fk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} const \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Here \mbox{\hyperlink{class_star}{Star}} is optional, because it is needed only by property that have to estimate V on the fly. Notice that const Star$\ast$s means that inside the function we can only call method that we are sure will not change the \mbox{\hyperlink{class_star}{Star}} s. 
+
+Reimplemented in \mbox{\hyperlink{class_j_i_t___property_a7e3b017a39b9b2b5c6554b12297f8ec6}{J\+I\+T\+\_\+\+Property}}, \mbox{\hyperlink{class_luminosity_a4ca622f60f32fa1cb442ba3aaeee869e}{Luminosity}}, \mbox{\hyperlink{class_inertia_aa527dd180a1e69d44df8b790462657f5}{Inertia}}, and \mbox{\hyperlink{class_radius_a76d759ade9765e57cd5736d10a653d80}{Radius}}.
+
+\mbox{\Hypertarget{class_property_a01a21347de78dc3bc3c3582d174f66f2}\label{class_property_a01a21347de78dc3bc3c3582d174f66f2}} 
+\index{Property@{Property}!get\_wm@{get\_wm}}
+\index{get\_wm@{get\_wm}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{get\_wm()}{get\_wm()}}
+{\footnotesize\ttfamily double$\ast$ Property\+::get\+\_\+wm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_property_ab2c025cded60a43e5e4b0d73a1a5d100}\label{class_property_ab2c025cded60a43e5e4b0d73a1a5d100}} 
+\index{Property@{Property}!get\_wz@{get\_wz}}
+\index{get\_wz@{get\_wz}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{get\_wz()}{get\_wz()}}
+{\footnotesize\ttfamily double$\ast$ Property\+::get\+\_\+wz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_property_ad27cb8ff02474c359e62ce29bdfb04f2}\label{class_property_ad27cb8ff02474c359e62ce29bdfb04f2}} 
+\index{Property@{Property}!init@{init}}
+\index{init@{init}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual void Property\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} const double \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_property_a378a68a95da682a4247a4809e28a4d0c}\label{class_property_a378a68a95da682a4247a4809e28a4d0c}} 
+\index{Property@{Property}!Instance@{Instance}}
+\index{Instance@{Instance}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_property}{Property}}$\ast$ Property\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_zams_a04bb5e665e17c679b52aa93dc5467cd2}{Zams}}, \mbox{\hyperlink{class_phase_b_s_e_afb56bffc9b64e8c4292013a7a0b4f95d}{Phase\+B\+SE}}, \mbox{\hyperlink{class_ebind_a1a954f7ef95b1bd88f25fbf12fe30188}{Ebind}}, \mbox{\hyperlink{class_lambda_a299b078acb884b48d833e2c1052bd409}{Lambda}}, \mbox{\hyperlink{class_rs_ae89b842b5488d52fa9bd2cd742d64311}{Rs}}, \mbox{\hyperlink{class_temperature_a71ea958535d3c7acdc73a6c79e65b080}{Temperature}}, \mbox{\hyperlink{classd_rdt_a81afdbcf91562caedd89665d4868e9f2}{d\+Rdt}}, \mbox{\hyperlink{classd_m_c_odt_a6919fb624b23a4898ab92bdcc6fdf551}{d\+M\+C\+Odt}}, \mbox{\hyperlink{classd_m_h_edt_afc33935b04cea417d5555cb0707ab31c}{d\+M\+H\+Edt}}, \mbox{\hyperlink{classd_mdt_a8b9d9eb8265bee682e7c1b0aec23d242}{d\+Mdt}}, \mbox{\hyperlink{class_spin_aac1c2328e7ae79eb21e3fa84627529c9}{Spin}}, \mbox{\hyperlink{class_luminosity_af598afc27dcf21caa52c250773d7abcc}{Luminosity}}, \mbox{\hyperlink{class_inertia_a2e38d9dfa86dafe8e4ee379ec491791d}{Inertia}}, \mbox{\hyperlink{classd_mcumul__binary_a710e054b1e3ea5f901ea4ac10f92d67a}{d\+Mcumul\+\_\+binary}}, \mbox{\hyperlink{class_depthconv_aee097a4550b343e1ea849dd29a1fe4bc}{Depthconv}}, \mbox{\hyperlink{class_tconv_a534314dc2573db96c287752eeebd933b}{Tconv}}, \mbox{\hyperlink{class_qconv_a7c77f635cf4465ed69257609629bb35c}{Qconv}}, \mbox{\hyperlink{class_osup_aad5527ad4d7303884f31bba098c47cf9}{Osup}}, \mbox{\hyperlink{class_nsup_ad30d6f3d1dc4b8be04bbcc3d3d80d046}{Nsup}}, \mbox{\hyperlink{class_csup_a9ecf6f861a076c03ddb0a1a50e77e418}{Csup}}, \mbox{\hyperlink{class_h_esup_ad5601cb8d1b7aaa31c14d621097f9454}{H\+Esup}}, \mbox{\hyperlink{class_hsup_a3834f0bc308954fa67c42379b955c7be}{Hsup}}, \mbox{\hyperlink{class_m_c_o_aaf7da6f498227cf0736c72d84f713e18}{M\+CO}}, \mbox{\hyperlink{class_m_h_e_a96543d45b8f935d3eda5ef854e0cb0c6}{M\+HE}}, \mbox{\hyperlink{class_mass_adc81a807141a8d2bd27a1446c4ab3711}{Mass}}, \mbox{\hyperlink{class_r_c_o_a64d7da961d4c59f7441dd92ee00e8bb3}{R\+CO}}, \mbox{\hyperlink{class_r_h_e_a691cceaf93042c62760fbd01a148bc2a}{R\+HE}}, \mbox{\hyperlink{class_radius_a6629baa16929768f4ac4b970e822fd39}{Radius}}, \mbox{\hyperlink{class_next_output_a3eda8824e09ffb7cd6cca5c186c90659}{Next\+Output}}, \mbox{\hyperlink{class_timestep_a379b52aa1bb65f9fd6af373dc8e98398}{Timestep}}, \mbox{\hyperlink{class_worldtime_a3f26400af80c1b9b3b4233263b6da76a}{Worldtime}}, \mbox{\hyperlink{class_localtime_a665cda2f31399badbfe40cef63dd2874}{Localtime}}, \mbox{\hyperlink{class_phase_aae6adbd69313dff535516feeba3cc93d}{Phase}}, and \mbox{\hyperlink{class_remnant_type_a8f1b1aaf96837c89574e0b6d0f06e1f7}{Remnant\+Type}}.
+
+\mbox{\Hypertarget{class_property_a6f2f260968b6780485004496e7c53063}\label{class_property_a6f2f260968b6780485004496e7c53063}} 
+\index{Property@{Property}!name@{name}}
+\index{name@{name}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily virtual std\+::string Property\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_zams_a87e66ac8d59f63cfe56dfc4980bc0827}{Zams}}, \mbox{\hyperlink{class_phase_b_s_e_a17f76a60a024b5c8993ce40574979c1c}{Phase\+B\+SE}}, \mbox{\hyperlink{class_ebind_a3f95aa18f38505969446f3b9c2306ff6}{Ebind}}, \mbox{\hyperlink{class_lambda_af3a89c38c8124f2e674284a64740906f}{Lambda}}, \mbox{\hyperlink{class_j_i_t___property_a0dd4f19e87cb3632e050c432ebe1ca11}{J\+I\+T\+\_\+\+Property}}, \mbox{\hyperlink{class_rs_ad849cd454ac1c2432ce1643d8833764d}{Rs}}, \mbox{\hyperlink{class_temperature_ae6dbe22cdba04a8090d944032880e788}{Temperature}}, \mbox{\hyperlink{classd_rdt_ad3d9c372676af3be6b74b20333baf798}{d\+Rdt}}, \mbox{\hyperlink{classd_m_c_odt_a8587fc4d9f42a290339a901aeadc283e}{d\+M\+C\+Odt}}, \mbox{\hyperlink{classd_m_h_edt_a0801f28df9c2beff6531fcf9571a296f}{d\+M\+H\+Edt}}, \mbox{\hyperlink{classd_mdt_af05e8160e90bc5a862970251ad1a8eec}{d\+Mdt}}, \mbox{\hyperlink{class_spin_ac8b16fa7c43b051967b4a8c2df2bc6e8}{Spin}}, \mbox{\hyperlink{class_luminosity_aee3da674c98da040a0e9e5f186b6d6c0}{Luminosity}}, \mbox{\hyperlink{class_inertia_adde9c12a3d54221e5f50e03fbfd349a1}{Inertia}}, \mbox{\hyperlink{classd_mcumul__binary_a4bb7ac1f5501e2ccf3e38615b9ed9e42}{d\+Mcumul\+\_\+binary}}, \mbox{\hyperlink{class_depthconv_a3ee68ae4ebc9fe1924d534e2d0c049c6}{Depthconv}}, \mbox{\hyperlink{class_tconv_a34d0034558ba890fa8ea41d309e4285b}{Tconv}}, \mbox{\hyperlink{class_qconv_a553faab8b88dafdf1c2306d232f5f084}{Qconv}}, \mbox{\hyperlink{class_osup_ae733d304c7acfc5f0243ea7634ae2586}{Osup}}, \mbox{\hyperlink{class_nsup_a4ffaf6a3f500d4c518658331f9284f78}{Nsup}}, \mbox{\hyperlink{class_csup_ab669c21e24f3771bf71fbb66c7656fe7}{Csup}}, \mbox{\hyperlink{class_h_esup_a632b8d2ede776acaf4c61aa4423863c8}{H\+Esup}}, \mbox{\hyperlink{class_hsup_a2300f4c628411e47f0ef58129047ef40}{Hsup}}, \mbox{\hyperlink{class_m_c_o_ac9af8dfd948e3d2f65bc101c94c239b1}{M\+CO}}, \mbox{\hyperlink{class_m_h_e_a0b46dec36b53889fac953e19216f92ff}{M\+HE}}, \mbox{\hyperlink{class_mass_a00330d3ddf038260385a20d7431f36a2}{Mass}}, \mbox{\hyperlink{class_r_c_o_acda8ac59892682cb87df2ca600d79b0c}{R\+CO}}, \mbox{\hyperlink{class_r_h_e_aa689a0808685ad5f392dac13545e98d2}{R\+HE}}, \mbox{\hyperlink{class_radius_aa0a76bfcb5373b350e106ef5cbb6b298}{Radius}}, \mbox{\hyperlink{class_next_output_a84da300a490598486ffdc5bc26c4b34d}{Next\+Output}}, \mbox{\hyperlink{class_timestep_a3fd0c1976cf46b79e30fb7eec262bae9}{Timestep}}, \mbox{\hyperlink{class_worldtime_a488c11cb186d8c911facb8e3d73d9108}{Worldtime}}, \mbox{\hyperlink{class_localtime_a47815b4dd27d7c2a3986d242a9044c93}{Localtime}}, \mbox{\hyperlink{class_phase_a293fa423fce71eea0414f193e00a409b}{Phase}}, and \mbox{\hyperlink{class_remnant_type_af4e106df835af108b7c008ae96adea39}{Remnant\+Type}}.
+
+\mbox{\Hypertarget{class_property_a6ced207ade04e475fe9efde9aa2bf2e2}\label{class_property_a6ced207ade04e475fe9efde9aa2bf2e2}} 
+\index{Property@{Property}!Register@{Register}}
+\index{Register@{Register}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily void Property\+::\+Register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_property}{Property}} $\ast$}]{\+\_\+p,  }\item[{size\+\_\+t $\ast$}]{id,  }\item[{const std\+::string \&}]{\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_property_aca3834d5693f263aea2d462b42d179db}\label{class_property_aca3834d5693f263aea2d462b42d179db}} 
+\index{Property@{Property}!reset@{reset}}
+\index{reset@{reset}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily virtual void Property\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Reset to 0 \mbox{\Hypertarget{class_property_a4781471dc24b8da09970e500604d73d9}\label{class_property_a4781471dc24b8da09970e500604d73d9}} 
+\index{Property@{Property}!restore@{restore}}
+\index{restore@{restore}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{restore()}{restore()}}
+{\footnotesize\ttfamily virtual void Property\+::restore (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_j_i_t___property_a4c7a4c724c401de5ee1ee569ecc6338f}{J\+I\+T\+\_\+\+Property}}, and \mbox{\hyperlink{class_next_output_ad5d4204e6146f7b14590c3a8f208b79e}{Next\+Output}}.
+
+\mbox{\Hypertarget{class_property_a77cf5606e51abbbe6c4bebcf1d150218}\label{class_property_a77cf5606e51abbbe6c4bebcf1d150218}} 
+\index{Property@{Property}!resynch@{resynch}}
+\index{resynch@{resynch}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{resynch()}{resynch()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Property\+::resynch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} const double \&}]{dt,  }\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} bool}]{set0 = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_property_a35b3b864c8fff60747f5019ea6f70c3a}\label{class_property_a35b3b864c8fff60747f5019ea6f70c3a}} 
+\index{Property@{Property}!resynch@{resynch}}
+\index{resynch@{resynch}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{resynch()}{resynch()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Property\+::resynch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_property_af2344df15c5a6d7ec0381d51e2426675}\label{class_property_af2344df15c5a6d7ec0381d51e2426675}} 
+\index{Property@{Property}!safety\_check@{safety\_check}}
+\index{safety\_check@{safety\_check}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{safety\_check()}{safety\_check()}}
+{\footnotesize\ttfamily virtual void Property\+::safety\+\_\+check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_mass_a49d007bc8b7fefb417bfcf07ec331abd}{Mass}}, and \mbox{\hyperlink{class_radius_af44ec06c75156534f66d06a6e552ae38}{Radius}}.
+
+\mbox{\Hypertarget{class_property_a585894846bb9cadf7e2d73f13ec6cbf1}\label{class_property_a585894846bb9cadf7e2d73f13ec6cbf1}} 
+\index{Property@{Property}!set@{set}}
+\index{set@{set}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily virtual void Property\+::set (\begin{DoxyParamCaption}\item[{const double \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_j_i_t___property_ab6c0dfe2c8cd939e27f98be55a20e572}{J\+I\+T\+\_\+\+Property}}, and \mbox{\hyperlink{class_radius_a5691c5c5c9e3a5ed6aa341751bd81b97}{Radius}}.
+
+\mbox{\Hypertarget{class_property_ac92d790e8b14571dd9dc728b7bb4cba9}\label{class_property_ac92d790e8b14571dd9dc728b7bb4cba9}} 
+\index{Property@{Property}!set\_0@{set\_0}}
+\index{set\_0@{set\_0}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{set\_0()}{set\_0()}}
+{\footnotesize\ttfamily virtual void Property\+::set\+\_\+0 (\begin{DoxyParamCaption}\item[{const double \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_radius_ab8ced38a3c5c20955ac4ea7e1bbf9cfa}{Radius}}.
+
+\mbox{\Hypertarget{class_property_ae822145d8faed1652a89386cb5df7c1b}\label{class_property_ae822145d8faed1652a89386cb5df7c1b}} 
+\index{Property@{Property}!set\_0\_fk@{set\_0\_fk}}
+\index{set\_0\_fk@{set\_0\_fk}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{set\_0\_fk()}{set\_0\_fk()}}
+{\footnotesize\ttfamily void Property\+::set\+\_\+0\+\_\+fk (\begin{DoxyParamCaption}\item[{const double \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_property_aacfbae3cf88d3410b265f632409c91ea}\label{class_property_aacfbae3cf88d3410b265f632409c91ea}} 
+\index{Property@{Property}!set\_empty@{set\_empty}}
+\index{set\_empty@{set\_empty}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{set\_empty()}{set\_empty()}}
+{\footnotesize\ttfamily virtual void Property\+::set\+\_\+empty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_j_i_t___property_acf10efcb0d35eb63cd70640fd9820c05}{J\+I\+T\+\_\+\+Property}}, \mbox{\hyperlink{class_timestep_a95c636f7c4bc1b9e42285959dbe08621}{Timestep}}, \mbox{\hyperlink{class_time__object_a87a67cbb80d60cd9b35bd355a34ce684}{Time\+\_\+object}}, \mbox{\hyperlink{class_phase_a3b8e201da46440a0d2d02e72fd6a2908}{Phase}}, and \mbox{\hyperlink{class_remnant_type_abd99b60a57d450524f577cc701da3de1}{Remnant\+Type}}.
+
+\mbox{\Hypertarget{class_property_a55bb13c2b1ee36882c549d9cf37e2df0}\label{class_property_a55bb13c2b1ee36882c549d9cf37e2df0}} 
+\index{Property@{Property}!set\_fk@{set\_fk}}
+\index{set\_fk@{set\_fk}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{set\_fk()}{set\_fk()}}
+{\footnotesize\ttfamily void Property\+::set\+\_\+fk (\begin{DoxyParamCaption}\item[{const double \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_property_ab7fb5c9c46521bf17bae1da3729a7004}\label{class_property_ab7fb5c9c46521bf17bae1da3729a7004}} 
+\index{Property@{Property}!set\_remnant@{set\_remnant}}
+\index{set\_remnant@{set\_remnant}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{set\_remnant()}{set\_remnant()}}
+{\footnotesize\ttfamily virtual void Property\+::set\+\_\+remnant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_j_i_t___property_a758a535595f61a245795968b33d0c93b}{J\+I\+T\+\_\+\+Property}}, \mbox{\hyperlink{class_rs_ac31856fd6c7b069ac534257551273626}{Rs}}, \mbox{\hyperlink{class_temperature_ab74555c502ccb52b12104d7cbb455a86}{Temperature}}, \mbox{\hyperlink{class_spin_ac2914b05defde587c3212d12bb6de135}{Spin}}, \mbox{\hyperlink{class_luminosity_a6732cb237042e122d93db9153a7061ce}{Luminosity}}, \mbox{\hyperlink{class_inertia_a1a2d44f9278699cc2347d34dfec6e3fd}{Inertia}}, \mbox{\hyperlink{class_radius_a961962a6ef515bfe3e3ac4d994d5c81c}{Radius}}, \mbox{\hyperlink{class_next_output_a2cd08bb584af2d3295f28928cf9f8930}{Next\+Output}}, \mbox{\hyperlink{class_timestep_a03af2ccfe0e266e619c0e99653fab0cb}{Timestep}}, \mbox{\hyperlink{class_worldtime_afee788201ce0d476de3656152763edbe}{Worldtime}}, \mbox{\hyperlink{class_localtime_acd66bee440966a2f89889265eb0df00b}{Localtime}}, \mbox{\hyperlink{class_phase_a9eef5949e4f3c9110d38844e4da66069}{Phase}}, and \mbox{\hyperlink{class_remnant_type_a302475e08d3450e8dc71c9762b351132}{Remnant\+Type}}.
+
+\mbox{\Hypertarget{class_property_af83d046dabb9387a49f3ce882ec88eda}\label{class_property_af83d046dabb9387a49f3ce882ec88eda}} 
+\index{Property@{Property}!set\_VBIN@{set\_VBIN}}
+\index{set\_VBIN@{set\_VBIN}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{set\_VBIN()}{set\_VBIN()}}
+{\footnotesize\ttfamily void Property\+::set\+\_\+\+V\+B\+IN (\begin{DoxyParamCaption}\item[{const size\+\_\+t \&}]{id,  }\item[{const double \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_property_ad0a64ecfaddcefb0295451f37cb66e2c}\label{class_property_ad0a64ecfaddcefb0295451f37cb66e2c}} 
+\index{Property@{Property}!set\_w@{set\_w}}
+\index{set\_w@{set\_w}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{set\_w()}{set\_w()}}
+{\footnotesize\ttfamily virtual void Property\+::set\+\_\+w (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_luminosity_a684abfb92250aeef9b9d468334e3f87f}{Luminosity}}, \mbox{\hyperlink{class_inertia_a1ab2358b490066033fd297bbea741768}{Inertia}}, \mbox{\hyperlink{class_depthconv_a8808714da187b2980f583e581047397a}{Depthconv}}, \mbox{\hyperlink{class_tconv_ab9b311fdf559dd53606c13a7cbd39b02}{Tconv}}, \mbox{\hyperlink{class_qconv_a5c1702e8fe0cc27257e8b92b90668a80}{Qconv}}, \mbox{\hyperlink{class_osup_a2d53f1081dbe87e951de86f3754aa7c0}{Osup}}, \mbox{\hyperlink{class_nsup_a964d438dc5389408935be87aba713c16}{Nsup}}, \mbox{\hyperlink{class_csup_aabefa590f7a72b7b1e61b3f68abc7c2f}{Csup}}, \mbox{\hyperlink{class_h_esup_a3db4a5675cc41d36a42874e4b19653af}{H\+Esup}}, \mbox{\hyperlink{class_hsup_a71b2b45a17f9637fb4b18a16b10df0db}{Hsup}}, \mbox{\hyperlink{class_m_c_o_a7cab059ecf590b5aabfb3ed36b19d9bb}{M\+CO}}, \mbox{\hyperlink{class_m_h_e_a463b24cb36e21b3332a3f64b5ad61cff}{M\+HE}}, \mbox{\hyperlink{class_mass_a54c4a33059755f92d0c1ee728941fe13}{Mass}}, \mbox{\hyperlink{class_r_c_o_a7e36bf2f1e77542f7fa0767ce2df01bf}{R\+CO}}, \mbox{\hyperlink{class_r_h_e_a382f6f7532c4316a3f69d2cfffbe6b20}{R\+HE}}, and \mbox{\hyperlink{class_radius_a8f76cbbda9644701a206c95da94cfa2b}{Radius}}.
+
+\mbox{\Hypertarget{class_property_a7bcf5733d2bdf52f7de6b670890b1989}\label{class_property_a7bcf5733d2bdf52f7de6b670890b1989}} 
+\index{Property@{Property}!size@{size}}
+\index{size@{size}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily static size\+\_\+t Property\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_property_a04a08c722ceaf2cf3e31799ede681131}\label{class_property_a04a08c722ceaf2cf3e31799ede681131}} 
+\index{Property@{Property}!special\_evolve@{special\_evolve}}
+\index{special\_evolve@{special\_evolve}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{special\_evolve()}{special\_evolve()}}
+{\footnotesize\ttfamily virtual void Property\+::special\+\_\+evolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_worldtime_a711d96fe77c67b221d22040480865cbb}{Worldtime}}, \mbox{\hyperlink{class_localtime_a8e9dc6a31c5b0a70a9ecf24575030335}{Localtime}}, and \mbox{\hyperlink{class_phase_a174147f8c4de807c763848ea637c7ab0}{Phase}}.
+
+\mbox{\Hypertarget{class_property_af8b9f0a647e53f360aa924b89eaa4152}\label{class_property_af8b9f0a647e53f360aa924b89eaa4152}} 
+\index{Property@{Property}!synch@{synch}}
+\index{synch@{synch}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{synch()}{synch()}}
+{\footnotesize\ttfamily virtual void Property\+::synch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_j_i_t___property_a578119e681c7ee710a734b70a036b412}{J\+I\+T\+\_\+\+Property}}, \mbox{\hyperlink{class_timestep_a0fd7f402f5cf477f1bae146cccf42f0c}{Timestep}}, \mbox{\hyperlink{class_worldtime_a3ce2183683042a2d445a42d1ac0b6e77}{Worldtime}}, \mbox{\hyperlink{class_localtime_a6ec8feedf8c3e5f57960c18100840d19}{Localtime}}, \mbox{\hyperlink{class_phase_a1c37e1495ae092d9bc8b345747e1eb5d}{Phase}}, and \mbox{\hyperlink{class_remnant_type_a694c3aabbc3e685278e8ebae3451edea}{Remnant\+Type}}.
+
+\mbox{\Hypertarget{class_property_a5496b2bc47beb1dc748353a358fae0fb}\label{class_property_a5496b2bc47beb1dc748353a358fae0fb}} 
+\index{Property@{Property}!TabID@{TabID}}
+\index{TabID@{TabID}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{TabID()}{TabID()}}
+{\footnotesize\ttfamily virtual size\+\_\+t Property\+::\+Tab\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_luminosity_aeb66c1ffbbdcf48b53a6f93bbe005504}{Luminosity}}, \mbox{\hyperlink{class_inertia_a9d0001db0aa6a9f7459290607a50d0ba}{Inertia}}, \mbox{\hyperlink{class_depthconv_ab7f668966f9e7ce78106c126089fa32c}{Depthconv}}, \mbox{\hyperlink{class_tconv_ae084dbd0a8add0f43bb9b34fd25cb802}{Tconv}}, \mbox{\hyperlink{class_qconv_aad957c3b84e82689632239ba2a8536d1}{Qconv}}, \mbox{\hyperlink{class_osup_a3ec60efd6e26d36062762255dac3c1db}{Osup}}, \mbox{\hyperlink{class_nsup_aba9d9719cc21c97965ebb801ab94ccb4}{Nsup}}, \mbox{\hyperlink{class_csup_aa1fdb5b48cd4236bdca4522117843ec9}{Csup}}, \mbox{\hyperlink{class_h_esup_a0abe2a51bd99becd42d7989bb076e25e}{H\+Esup}}, \mbox{\hyperlink{class_hsup_a0d7bca8c73155fb8e93dcbca6b9b2c9f}{Hsup}}, \mbox{\hyperlink{class_m_c_o_ae3605ff16f7c25df9a6f2024ad6b6f01}{M\+CO}}, \mbox{\hyperlink{class_m_h_e_a3b869bcc2bc13858a6dd58deaf56439a}{M\+HE}}, \mbox{\hyperlink{class_mass_afb6e94b77c047f5f617732c937ab3ed1}{Mass}}, \mbox{\hyperlink{class_r_c_o_a6a8e31d00b8b28afb9f32bf81ace034b}{R\+CO}}, \mbox{\hyperlink{class_r_h_e_ab79e6359ace0f251ed2a1303ceeb758a}{R\+HE}}, \mbox{\hyperlink{class_radius_aad698da3a23920b7b0c0c74915d8442d}{Radius}}, and \mbox{\hyperlink{class_phase_a286025dc27db5839fdfaf7a937bf4d31}{Phase}}.
+
+\mbox{\Hypertarget{class_property_ab890f984beaf68c49152cfec3943a784}\label{class_property_ab890f984beaf68c49152cfec3943a784}} 
+\index{Property@{Property}!units@{units}}
+\index{units@{units}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{units()}{units()}}
+{\footnotesize\ttfamily virtual std\+::string Property\+::units (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_zams_abcad2ec576cc3531b614d4239f14551d}{Zams}}, \mbox{\hyperlink{class_phase_b_s_e_a1cbd14d1f660b95ecf163869c3c98853}{Phase\+B\+SE}}, \mbox{\hyperlink{class_ebind_add58b3e6336cedcb138b3150f6589ff3}{Ebind}}, \mbox{\hyperlink{class_lambda_a1df4f3cfc1be8e4cc933c22eac12c6cb}{Lambda}}, \mbox{\hyperlink{class_rs_a48b9a6039841cff592956ff7ff22f8eb}{Rs}}, \mbox{\hyperlink{class_temperature_a57d9a9b7585069bd0f5c4e9fdf2a5284}{Temperature}}, \mbox{\hyperlink{classd_rdt_a537888e02dde155f786c9f2a5b5c2871}{d\+Rdt}}, \mbox{\hyperlink{classd_m_c_odt_a9262e22b77dc2cd8b7facfdfee48647a}{d\+M\+C\+Odt}}, \mbox{\hyperlink{classd_m_h_edt_a76e80e8256adfc97a339f244c2d66f1c}{d\+M\+H\+Edt}}, \mbox{\hyperlink{classd_mdt_a324d9dd7d4c99ecd87ebc6631bc9c8ad}{d\+Mdt}}, \mbox{\hyperlink{class_mass__obejct_a08b7a940a41c51ca35ce5181db4dd1d5}{Mass\+\_\+obejct}}, \mbox{\hyperlink{class_r__object_ab7380bc9e7d890aa33e9eb760bace59b}{R\+\_\+object}}, and \mbox{\hyperlink{class_time__object_ab83409435fe5098c9139d3913e9d3f3e}{Time\+\_\+object}}.
+
+\mbox{\Hypertarget{class_property_a10c72bdf6843bd00500b44426229b0cf}\label{class_property_a10c72bdf6843bd00500b44426229b0cf}} 
+\index{Property@{Property}!update\_from\_binary@{update\_from\_binary}}
+\index{update\_from\_binary@{update\_from\_binary}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{update\_from\_binary()}{update\_from\_binary()}}
+{\footnotesize\ttfamily virtual void Property\+::update\+\_\+from\+\_\+binary (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s,  }\item[{const double \&}]{DV }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_j_i_t___property_a5d3cc821fadaadf0d92a73c0cbcc08ac}{J\+I\+T\+\_\+\+Property}}.
+
+\mbox{\Hypertarget{class_property_adcc337246ac8bfabbf3bb52603b13710}\label{class_property_adcc337246ac8bfabbf3bb52603b13710}} 
+\index{Property@{Property}!update\_variation@{update\_variation}}
+\index{update\_variation@{update\_variation}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{update\_variation()}{update\_variation()}}
+{\footnotesize\ttfamily virtual void Property\+::update\+\_\+variation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_property_a34a7e861265e5d8147a3af5d0773902f}\label{class_property_a34a7e861265e5d8147a3af5d0773902f}} 
+\index{Property@{Property}!\_size@{\_size}}
+\index{\_size@{\_size}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{\_size}{\_size}}
+{\footnotesize\ttfamily size\+\_\+t Property\+::\+\_\+size = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Instruction for adding new property P\+R\+OP 1-\/ Add the size\+\_\+t P\+R\+O\+P\+::\+ID 2-\/ Initialise the static (fake) instance P\+R\+OP P\+R\+O\+P\+::\+\_\+prop. NB\+: take care of the order of initilisation. The properies will be evolved exactly in the same order in which they are initialised here Define\+: @size\+: total number of instances of \mbox{\hyperlink{class_property}{Property}} and derived classes (both fake and real). @all\+: vector containing all the (pointers) to the \mbox{\hyperlink{class_property}{Property}}. @\+Print\+Map\+: map containing the pair (Property\+\_\+name, Property\+\_\+id) for output purpose. Note all and Print\+Map are filled during the instantiation of the fake Processes (see below) \mbox{\Hypertarget{class_property_ab5cdf06d67068eb1098883cfffe31581}\label{class_property_ab5cdf06d67068eb1098883cfffe31581}} 
+\index{Property@{Property}!all@{all}}
+\index{all@{all}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{all}{all}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_property}{Property}} $\ast$ $>$ Property\+::all\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_property_a51e9d3a2e917dbf2fce5778d14fe7231}\label{class_property_a51e9d3a2e917dbf2fce5778d14fe7231}} 
+\index{Property@{Property}!Dvalue@{Dvalue}}
+\index{Dvalue@{Dvalue}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{Dvalue}{Dvalue}}
+{\footnotesize\ttfamily double Property\+::\+Dvalue\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_property_a769ea3b1ce48aa6445d3123e3f5a6d01}\label{class_property_a769ea3b1ce48aa6445d3123e3f5a6d01}} 
+\index{Property@{Property}!interpolating\_values@{interpolating\_values}}
+\index{interpolating\_values@{interpolating\_values}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{interpolating\_values}{interpolating\_values}}
+{\footnotesize\ttfamily double Property\+::interpolating\+\_\+values\mbox{[}4\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_property_ab84e5f4676c7bc0da81d5609f64e783b}\label{class_property_ab84e5f4676c7bc0da81d5609f64e783b}} 
+\index{Property@{Property}!PrintMap@{PrintMap}}
+\index{PrintMap@{PrintMap}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{PrintMap}{PrintMap}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_property_a6f9a5424342899495a0dbaf50de06161}{Property\+::\+\_\+\+Print\+Map}} Property\+::\+Print\+Map\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_property_a74dfe439b14301e6b98a2d10e716fdc9}\label{class_property_a74dfe439b14301e6b98a2d10e716fdc9}} 
+\index{Property@{Property}!svlog@{svlog}}
+\index{svlog@{svlog}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{svlog}{svlog}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsevnstd_1_1_sevn_logging}{Sevn\+Logging}} Property\+::svlog\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_property_a3b81e1e12799a9796befb8f4edcb0dd7}\label{class_property_a3b81e1e12799a9796befb8f4edcb0dd7}} 
+\index{Property@{Property}!V@{V}}
+\index{V@{V}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{V}{V}}
+{\footnotesize\ttfamily double Property\+::V\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_property_a0a53ee521591a36d7bb85eafb81fa9db}\label{class_property_a0a53ee521591a36d7bb85eafb81fa9db}} 
+\index{Property@{Property}!V0@{V0}}
+\index{V0@{V0}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{V0}{V0}}
+{\footnotesize\ttfamily double Property\+::\+V0\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_property_af9070a9d4982c737ee756969613fd428}\label{class_property_af9070a9d4982c737ee756969613fd428}} 
+\index{Property@{Property}!val\_in@{val\_in}}
+\index{val\_in@{val\_in}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{val\_in}{val\_in}}
+{\footnotesize\ttfamily double$\ast$ Property\+::val\+\_\+in\mbox{[}4\mbox{]}}
+
+\mbox{\Hypertarget{class_property_ababe60be80b6161d1a33fb11099785e7}\label{class_property_ababe60be80b6161d1a33fb11099785e7}} 
+\index{Property@{Property}!val\_ref@{val\_ref}}
+\index{val\_ref@{val\_ref}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{val\_ref}{val\_ref}}
+{\footnotesize\ttfamily double$\ast$ Property\+::val\+\_\+ref\mbox{[}4\mbox{]}}
+
+\mbox{\Hypertarget{class_property_aabfc2f0b6f3fc8aa3a3d5487ce4861ef}\label{class_property_aabfc2f0b6f3fc8aa3a3d5487ce4861ef}} 
+\index{Property@{Property}!value@{value}}
+\index{value@{value}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily double Property\+::value\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_property_a76e52efef751ecea28f1d0d17f763a6e}\label{class_property_a76e52efef751ecea28f1d0d17f763a6e}} 
+\index{Property@{Property}!value0@{value0}}
+\index{value0@{value0}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{value0}{value0}}
+{\footnotesize\ttfamily double Property\+::value0\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_property_a381067e9e2e1417e55ef318ccafbc0af}\label{class_property_a381067e9e2e1417e55ef318ccafbc0af}} 
+\index{Property@{Property}!VBIN@{VBIN}}
+\index{VBIN@{VBIN}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{VBIN}{VBIN}}
+{\footnotesize\ttfamily vector$<$double$>$ Property\+::\+V\+B\+IN\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_property_a412194568068d8c49feb7af3ebc82dc1}\label{class_property_a412194568068d8c49feb7af3ebc82dc1}} 
+\index{Property@{Property}!wM@{wM}}
+\index{wM@{wM}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{wM}{wM}}
+{\footnotesize\ttfamily double Property\+::wM\mbox{[}4\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_property_a16f2fd6eedb09bc1dbaf90d76cb1bcd2}\label{class_property_a16f2fd6eedb09bc1dbaf90d76cb1bcd2}} 
+\index{Property@{Property}!wZ@{wZ}}
+\index{wZ@{wZ}!Property@{Property}}
+\doxysubsubsection{\texorpdfstring{wZ}{wZ}}
+{\footnotesize\ttfamily double Property\+::wZ\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/star/\mbox{\hyperlink{property_8h}{property.\+h}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/src/star/\mbox{\hyperlink{property_8cpp}{property.\+cpp}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/\mbox{\hyperlink{static__main_8h}{static\+\_\+main.\+h}}\end{DoxyCompactItemize}

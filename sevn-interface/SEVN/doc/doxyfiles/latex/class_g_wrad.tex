@@ -1,0 +1,95 @@
+\hypertarget{class_g_wrad}{}\doxysection{G\+Wrad Class Reference}
+\label{class_g_wrad}\index{GWrad@{GWrad}}
+
+
+{\ttfamily \#include $<$Processes.\+h$>$}
+
+Inheritance diagram for G\+Wrad\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_wrad}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_wrad_a6b7f93c15f9aec0ac5d54bf2efb1e001}{G\+Wrad}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_i_o}{IO}} $\ast$\+\_\+io=nullptr, bool reg=true)
+\item 
+\mbox{\hyperlink{class_g_wrad}{G\+Wrad}} $\ast$ \mbox{\hyperlink{class_g_wrad_ae84e4fab2c1723c8f4f4c00ceedf6e61}{Instance}} (\mbox{\hyperlink{class_i_o}{IO}} $\ast$\+\_\+io) override
+\item 
+std\+::string \mbox{\hyperlink{class_g_wrad_a47effcd6dc1ffab2a9f3ce2ce1b5c08f}{name}} () override
+\item 
+int \mbox{\hyperlink{class_g_wrad_a596b48a762604a562818d250a69ca029}{evolve}} (\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{class_g_wrad_a13cf76a99b689ac4683ebab640d99346}{ID}}
+\item 
+static \mbox{\hyperlink{class_g_wrad}{G\+Wrad}} \mbox{\hyperlink{class_g_wrad_ab43be925c7f98565c680b46658fcd6a4}{\+\_\+gwrad}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_wrad_a6b7f93c15f9aec0ac5d54bf2efb1e001}\label{class_g_wrad_a6b7f93c15f9aec0ac5d54bf2efb1e001}} 
+\index{GWrad@{GWrad}!GWrad@{GWrad}}
+\index{GWrad@{GWrad}!GWrad@{GWrad}}
+\doxysubsubsection{\texorpdfstring{GWrad()}{GWrad()}}
+{\footnotesize\ttfamily G\+Wrad\+::\+G\+Wrad (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_i_o}{IO}} $\ast$}]{\+\_\+io = {\ttfamily nullptr},  }\item[{bool}]{reg = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_wrad_a596b48a762604a562818d250a69ca029}\label{class_g_wrad_a596b48a762604a562818d250a69ca029}} 
+\index{GWrad@{GWrad}!evolve@{evolve}}
+\index{evolve@{evolve}!GWrad@{GWrad}}
+\doxysubsubsection{\texorpdfstring{evolve()}{evolve()}}
+{\footnotesize\ttfamily int G\+Wrad\+::evolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Check condition to stop \mbox{\hyperlink{class_g_wrad}{G\+Wrad}}
+
+If are\+\_\+mergerd id true a$<$=3\mbox{\hyperlink{class_rs}{Rs}}, flags the mix and exit.
+
+DO the evolution if\+: i) GW are enabled, iii) \mbox{\hyperlink{class_g_wtime}{G\+Wtime}}$<$f$\ast$\+T\+Hubble.
+
+Reimplemented from \mbox{\hyperlink{class_process_ab8729b32bb73a12bbe4e481f661213f9}{Process}}.
+
+\mbox{\Hypertarget{class_g_wrad_ae84e4fab2c1723c8f4f4c00ceedf6e61}\label{class_g_wrad_ae84e4fab2c1723c8f4f4c00ceedf6e61}} 
+\index{GWrad@{GWrad}!Instance@{Instance}}
+\index{Instance@{Instance}!GWrad@{GWrad}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_g_wrad}{G\+Wrad}}$\ast$ G\+Wrad\+::\+Instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_o}{IO}} $\ast$}]{\+\_\+io }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+\mbox{\Hypertarget{class_g_wrad_a47effcd6dc1ffab2a9f3ce2ce1b5c08f}\label{class_g_wrad_a47effcd6dc1ffab2a9f3ce2ce1b5c08f}} 
+\index{GWrad@{GWrad}!name@{name}}
+\index{name@{name}!GWrad@{GWrad}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string G\+Wrad\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_process_a1c19334f4e746d3410e4cfad66053035}{Process}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_wrad_ab43be925c7f98565c680b46658fcd6a4}\label{class_g_wrad_ab43be925c7f98565c680b46658fcd6a4}} 
+\index{GWrad@{GWrad}!\_gwrad@{\_gwrad}}
+\index{\_gwrad@{\_gwrad}!GWrad@{GWrad}}
+\doxysubsubsection{\texorpdfstring{\_gwrad}{\_gwrad}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_g_wrad}{G\+Wrad}} G\+Wrad\+::\+\_\+gwrad\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_g_wrad_a13cf76a99b689ac4683ebab640d99346}\label{class_g_wrad_a13cf76a99b689ac4683ebab640d99346}} 
+\index{GWrad@{GWrad}!ID@{ID}}
+\index{ID@{ID}!GWrad@{GWrad}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily size\+\_\+t G\+Wrad\+::\+ID\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/binstar/\mbox{\hyperlink{_processes_8h}{Processes.\+h}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/src/binstar/\mbox{\hyperlink{_processes_8cpp}{Processes.\+cpp}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/\mbox{\hyperlink{static__main_8h}{static\+\_\+main.\+h}}\end{DoxyCompactItemize}

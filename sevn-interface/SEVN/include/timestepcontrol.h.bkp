@@ -1,0 +1,25 @@
+//
+// Created by spera on 30/12/18.
+//
+
+#ifndef SEVN_TSCONTROL_H
+#define SEVN_TSCONTROL_H
+
+class star;
+
+namespace sevnstd {
+
+    class tscontrol {
+
+    public:
+        tscontrol(){}
+
+        bool call(star *s);
+        void estimate_initial_ts(star *s);
+        double max_timestep(star *s);
+    };
+
+}
+
+
+#endif //SEVN_TSCONTROL_H

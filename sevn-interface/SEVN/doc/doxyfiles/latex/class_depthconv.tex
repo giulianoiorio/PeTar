@@ -1,0 +1,129 @@
+\hypertarget{class_depthconv}{}\doxysection{Depthconv Class Reference}
+\label{class_depthconv}\index{Depthconv@{Depthconv}}
+
+
+{\ttfamily \#include $<$property.\+h$>$}
+
+Inheritance diagram for Depthconv\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_depthconv}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_depthconv_a958dee5a0e681db414f1c94343332543}{Depthconv}} (bool reg=true)
+\item 
+size\+\_\+t \mbox{\hyperlink{class_depthconv_ab7f668966f9e7ce78106c126089fa32c}{Tab\+ID}} () override
+\item 
+\mbox{\hyperlink{class_depthconv}{Depthconv}} $\ast$ \mbox{\hyperlink{class_depthconv_aee097a4550b343e1ea849dd29a1fe4bc}{Instance}} () override
+\item 
+std\+::string \mbox{\hyperlink{class_depthconv_a3ee68ae4ebc9fe1924d534e2d0c049c6}{name}} () override
+\item 
+void \mbox{\hyperlink{class_depthconv_a8808714da187b2980f583e581047397a}{set\+\_\+w}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+void \mbox{\hyperlink{class_depthconv_aac8e475a7abbd3fd696a85d4631bda46}{changed\+\_\+track}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s, \mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s\+\_\+jtrack) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{class_depthconv_aab80ab5e18d484790bd7c8e3548c513e}{ID}}
+\item 
+static \mbox{\hyperlink{class_depthconv}{Depthconv}} \mbox{\hyperlink{class_depthconv_a5603f2f0f3a24950c6a13fd5393211d5}{\+\_\+depthconv}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This property stores the Depth of the convective envelope normalised to the stellar radius. @\+Note it has to be multiplied with the stellar radius. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_depthconv_a958dee5a0e681db414f1c94343332543}\label{class_depthconv_a958dee5a0e681db414f1c94343332543}} 
+\index{Depthconv@{Depthconv}!Depthconv@{Depthconv}}
+\index{Depthconv@{Depthconv}!Depthconv@{Depthconv}}
+\doxysubsubsection{\texorpdfstring{Depthconv()}{Depthconv()}}
+{\footnotesize\ttfamily Depthconv\+::\+Depthconv (\begin{DoxyParamCaption}\item[{bool}]{reg = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_depthconv_aac8e475a7abbd3fd696a85d4631bda46}\label{class_depthconv_aac8e475a7abbd3fd696a85d4631bda46}} 
+\index{Depthconv@{Depthconv}!changed\_track@{changed\_track}}
+\index{changed\_track@{changed\_track}!Depthconv@{Depthconv}}
+\doxysubsubsection{\texorpdfstring{changed\_track()}{changed\_track()}}
+{\footnotesize\ttfamily void Depthconv\+::changed\+\_\+track (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s\+\_\+jtrack }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Handle the modification of the property after a track change. It does nothing by default. 
+\begin{DoxyParams}{Parameters}
+{\em s} & The star for which we are changing the tracks. \\
+\hline
+{\em s\+\_\+jtrack} & The star that we are using to get info of the new tracks. \\
+\hline
+\end{DoxyParams}
+Copy the \mbox{\hyperlink{class_luminosity}{Luminosity}} from the jtrack star
+
+Reimplemented from \mbox{\hyperlink{class_property_ab3b4070354b2cddcf25bb6bd7b845a86}{Property}}.
+
+\mbox{\Hypertarget{class_depthconv_aee097a4550b343e1ea849dd29a1fe4bc}\label{class_depthconv_aee097a4550b343e1ea849dd29a1fe4bc}} 
+\index{Depthconv@{Depthconv}!Instance@{Instance}}
+\index{Instance@{Instance}!Depthconv@{Depthconv}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_depthconv}{Depthconv}}$\ast$ Depthconv\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a378a68a95da682a4247a4809e28a4d0c}{Property}}.
+
+\mbox{\Hypertarget{class_depthconv_a3ee68ae4ebc9fe1924d534e2d0c049c6}\label{class_depthconv_a3ee68ae4ebc9fe1924d534e2d0c049c6}} 
+\index{Depthconv@{Depthconv}!name@{name}}
+\index{name@{name}!Depthconv@{Depthconv}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string Depthconv\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a6f2f260968b6780485004496e7c53063}{Property}}.
+
+\mbox{\Hypertarget{class_depthconv_a8808714da187b2980f583e581047397a}\label{class_depthconv_a8808714da187b2980f583e581047397a}} 
+\index{Depthconv@{Depthconv}!set\_w@{set\_w}}
+\index{set\_w@{set\_w}!Depthconv@{Depthconv}}
+\doxysubsubsection{\texorpdfstring{set\_w()}{set\_w()}}
+{\footnotesize\ttfamily void Depthconv\+::set\+\_\+w (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_ad0a64ecfaddcefb0295451f37cb66e2c}{Property}}.
+
+\mbox{\Hypertarget{class_depthconv_ab7f668966f9e7ce78106c126089fa32c}\label{class_depthconv_ab7f668966f9e7ce78106c126089fa32c}} 
+\index{Depthconv@{Depthconv}!TabID@{TabID}}
+\index{TabID@{TabID}!Depthconv@{Depthconv}}
+\doxysubsubsection{\texorpdfstring{TabID()}{TabID()}}
+{\footnotesize\ttfamily size\+\_\+t Depthconv\+::\+Tab\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a5496b2bc47beb1dc748353a358fae0fb}{Property}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_depthconv_a5603f2f0f3a24950c6a13fd5393211d5}\label{class_depthconv_a5603f2f0f3a24950c6a13fd5393211d5}} 
+\index{Depthconv@{Depthconv}!\_depthconv@{\_depthconv}}
+\index{\_depthconv@{\_depthconv}!Depthconv@{Depthconv}}
+\doxysubsubsection{\texorpdfstring{\_depthconv}{\_depthconv}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_depthconv}{Depthconv}} Depthconv\+::\+\_\+depthconv\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_depthconv_aab80ab5e18d484790bd7c8e3548c513e}\label{class_depthconv_aab80ab5e18d484790bd7c8e3548c513e}} 
+\index{Depthconv@{Depthconv}!ID@{ID}}
+\index{ID@{ID}!Depthconv@{Depthconv}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily size\+\_\+t Depthconv\+::\+ID\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/star/\mbox{\hyperlink{property_8h}{property.\+h}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/src/star/\mbox{\hyperlink{property_8cpp}{property.\+cpp}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/\mbox{\hyperlink{static__main_8h}{static\+\_\+main.\+h}}\end{DoxyCompactItemize}

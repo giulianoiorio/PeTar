@@ -1,0 +1,322 @@
+\hypertarget{class_process}{}\doxysection{Process Class Reference}
+\label{class_process}\index{Process@{Process}}
+
+
+{\ttfamily \#include $<$Processes.\+h$>$}
+
+Inheritance diagram for Process\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.322314cm]{class_process}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ std\+::string, size\+\_\+t $>$ \mbox{\hyperlink{class_process_a38ef601981b5f2feeffbf4cb0906f222}{\+\_\+\+Print\+Map}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_process_a9f4553eac74c657bb451f390c17d6bea}{Process}} ()
+\item 
+virtual \mbox{\hyperlink{class_process_a5ebad5acfc234e26c20f276239ded68e}{$\sim$ Process}} ()
+\item 
+virtual \mbox{\hyperlink{class_process}{Process}} $\ast$ \mbox{\hyperlink{class_process_a77e90c188e94cfb9d8b8cd6e180041ab}{Instance}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_i_o}{IO}} $\ast$\+\_\+io)
+\item 
+virtual std\+::string \mbox{\hyperlink{class_process_a1c19334f4e746d3410e4cfad66053035}{name}} ()
+\item 
+virtual int \mbox{\hyperlink{class_process_ab8729b32bb73a12bbe4e481f661213f9}{evolve}} (\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar)
+\item 
+virtual int \mbox{\hyperlink{class_process_ae58051f92e63ce4c7fc3b9999595f2ad}{special\+\_\+evolve}} (\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar)
+\item 
+double \mbox{\hyperlink{class_process_ac9249ff51c5989b28144f3554418af0c}{get}} (const size\+\_\+t \&id)
+\item 
+double \mbox{\hyperlink{class_process_ad09210bc293fb21331f331c8c6eb2152}{get\+\_\+var}} (const size\+\_\+t \&star\+ID, const size\+\_\+t \&prop\+ID)
+\item 
+std\+::string \& \mbox{\hyperlink{class_process_a1cfe031ee2d92a40197fecd9d3946da5}{get\+\_\+msg}} ()
+\item 
+void \mbox{\hyperlink{class_process_ad89d46b229414c2cd8077312b06e06cc}{restore}} ()
+\item 
+int \mbox{\hyperlink{class_process_ac8f8936087d36a0f819ee52aac4f7ee0}{modify\+\_\+\+Semimajor\+D\+V\+\_\+by\+\_\+a\+\_\+factor}} (double factor)
+\item 
+int \mbox{\hyperlink{class_process_ae9e6f863b7cbba6d89b8f4ec58d6a884}{modify\+\_\+\+Eccentricity\+D\+V\+\_\+by\+\_\+a\+\_\+factor}} (double factor)
+\item 
+bool \mbox{\hyperlink{class_process_a45ecf35e14d1479d369c740561a4f5ea}{is\+\_\+mass\+\_\+transfer\+\_\+happening}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{class_process}{Process}} $\ast$ $>$ \mbox{\hyperlink{class_process_ab65dcfdf8b2bbd06e15de82b41116e02}{all}}
+\item 
+static \mbox{\hyperlink{class_process_a38ef601981b5f2feeffbf4cb0906f222}{\+\_\+\+Print\+Map}} \mbox{\hyperlink{class_process_a332d0f6431c087d40da2931c491937d2}{Print\+Map}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_process_a22775758327708f0135eb29387eb6e63}{Register}} (\mbox{\hyperlink{class_process}{Process}} $\ast$\+\_\+p, size\+\_\+t $\ast$id, const std\+::string \&\+\_\+name)
+\item 
+void \mbox{\hyperlink{class_process_abd2dbb16d25845cb4b320a01f31b8958}{set}} (const size\+\_\+t \&id, const double \&value)
+\item 
+void \mbox{\hyperlink{class_process_aadf068fa44c66ac0a9ada4527d175038}{set\+\_\+var}} (const size\+\_\+t \&star\+ID, const size\+\_\+t \&prop\+ID, const double \&value)
+\item 
+void \mbox{\hyperlink{class_process_ae5974e7f0b6dd61aba4580a7aa7134a3}{set\+\_\+msg}} (const std\+::string \&str)
+\item 
+void \mbox{\hyperlink{class_process_a784cc5cb052f07a0b1b5b6aa9c2b618a}{set\+\_\+\+V\+\_\+to\+\_\+0}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_star}{Star}} $\ast$ \mbox{\hyperlink{class_process_a2a114019fa8e3620ca38b2d925748cd8}{donor}}
+\item 
+\mbox{\hyperlink{class_star}{Star}} $\ast$ \mbox{\hyperlink{class_process_aa3d88fef38cee969b3d94db346195958}{accretor}}
+\item 
+\mbox{\hyperlink{classsevnstd_1_1_sevn_logging}{Sevn\+Logging}} \mbox{\hyperlink{class_process_ae5c441df6c15bccdf5a739be870741ea}{svlog}}
+\item 
+\mbox{\hyperlink{class_orbital__change}{Orbital\+\_\+change}} $\ast$ \mbox{\hyperlink{class_process_a9e684d72ffd74456362e8a25fd65976c}{orb\+\_\+change}}
+\item 
+std\+::uniform\+\_\+real\+\_\+distribution$<$ double $>$ \mbox{\hyperlink{class_process_a4e208c4db3aa8052aa289a8b90e9ea96}{\+\_\+uniform\+\_\+real}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_process_a0cc53752eadae992d1817b18da5a5246}{VB}}
+\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{class_process_aab93990b3cb70e865eeaeee66c407040}{VS}}
+\item 
+std\+::string \mbox{\hyperlink{class_process_ad63ddf091a10c4a07444b5b60cd0720b}{message}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{class_process_a95c3723ba5175dbcff4298597322fc6d}{size}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_process_a38ef601981b5f2feeffbf4cb0906f222}\label{class_process_a38ef601981b5f2feeffbf4cb0906f222}} 
+\index{Process@{Process}!\_PrintMap@{\_PrintMap}}
+\index{\_PrintMap@{\_PrintMap}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{\_PrintMap}{\_PrintMap}}
+{\footnotesize\ttfamily typedef std\+::map$<$std\+::string,size\+\_\+t$>$ \mbox{\hyperlink{class_process_a38ef601981b5f2feeffbf4cb0906f222}{Process\+::\+\_\+\+Print\+Map}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_process_a9f4553eac74c657bb451f390c17d6bea}\label{class_process_a9f4553eac74c657bb451f390c17d6bea}} 
+\index{Process@{Process}!Process@{Process}}
+\index{Process@{Process}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily Process\+::\+Process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_process_a5ebad5acfc234e26c20f276239ded68e}\label{class_process_a5ebad5acfc234e26c20f276239ded68e}} 
+\index{Process@{Process}!````~ Process@{$\sim$ Process}}
+\index{````~ Process@{$\sim$ Process}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{$\sim$ Process()}{~ Process()}}
+{\footnotesize\ttfamily virtual Process\+::$\sim$ \mbox{\hyperlink{class_process}{Process}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_process_ab8729b32bb73a12bbe4e481f661213f9}\label{class_process_ab8729b32bb73a12bbe4e481f661213f9}} 
+\index{Process@{Process}!evolve@{evolve}}
+\index{evolve@{evolve}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{evolve()}{evolve()}}
+{\footnotesize\ttfamily virtual int Process\+::evolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_tides_a7bbd6acb5f2498f0dd3d813c26625beb}{Tides}}, \mbox{\hyperlink{class_windaccretion_a1147ff5ea18de5f6c12bd714447b6f9f}{Windaccretion}}, \mbox{\hyperlink{class_g_wrad_a596b48a762604a562818d250a69ca029}{G\+Wrad}}, and \mbox{\hyperlink{class_roche_lobe_a8d66b25c282951d9e7a94ef5da8b91a9}{Roche\+Lobe}}.
+
+\mbox{\Hypertarget{class_process_ac9249ff51c5989b28144f3554418af0c}\label{class_process_ac9249ff51c5989b28144f3554418af0c}} 
+\index{Process@{Process}!get@{get}}
+\index{get@{get}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily double Process\+::get (\begin{DoxyParamCaption}\item[{const size\+\_\+t \&}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_process_a1cfe031ee2d92a40197fecd9d3946da5}\label{class_process_a1cfe031ee2d92a40197fecd9d3946da5}} 
+\index{Process@{Process}!get\_msg@{get\_msg}}
+\index{get\_msg@{get\_msg}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{get\_msg()}{get\_msg()}}
+{\footnotesize\ttfamily std\+::string\& Process\+::get\+\_\+msg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_process_ad09210bc293fb21331f331c8c6eb2152}\label{class_process_ad09210bc293fb21331f331c8c6eb2152}} 
+\index{Process@{Process}!get\_var@{get\_var}}
+\index{get\_var@{get\_var}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{get\_var()}{get\_var()}}
+{\footnotesize\ttfamily double Process\+::get\+\_\+var (\begin{DoxyParamCaption}\item[{const size\+\_\+t \&}]{star\+ID,  }\item[{const size\+\_\+t \&}]{prop\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_process_a77e90c188e94cfb9d8b8cd6e180041ab}\label{class_process_a77e90c188e94cfb9d8b8cd6e180041ab}} 
+\index{Process@{Process}!Instance@{Instance}}
+\index{Instance@{Instance}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_process}{Process}}$\ast$ Process\+::\+Instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_i_o}{IO}} $\ast$}]{\+\_\+io }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_process_a45ecf35e14d1479d369c740561a4f5ea}\label{class_process_a45ecf35e14d1479d369c740561a4f5ea}} 
+\index{Process@{Process}!is\_mass\_transfer\_happening@{is\_mass\_transfer\_happening}}
+\index{is\_mass\_transfer\_happening@{is\_mass\_transfer\_happening}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{is\_mass\_transfer\_happening()}{is\_mass\_transfer\_happening()}}
+{\footnotesize\ttfamily bool Process\+::is\+\_\+mass\+\_\+transfer\+\_\+happening (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Check if this process is changing the mass \begin{DoxyReturn}{Returns}
+false if the DV regarding the \mbox{\hyperlink{class_mass}{Mass}} of both stars is currently set to 0, true otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_process_ae9e6f863b7cbba6d89b8f4ec58d6a884}\label{class_process_ae9e6f863b7cbba6d89b8f4ec58d6a884}} 
+\index{Process@{Process}!modify\_EccentricityDV\_by\_a\_factor@{modify\_EccentricityDV\_by\_a\_factor}}
+\index{modify\_EccentricityDV\_by\_a\_factor@{modify\_EccentricityDV\_by\_a\_factor}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{modify\_EccentricityDV\_by\_a\_factor()}{modify\_EccentricityDV\_by\_a\_factor()}}
+{\footnotesize\ttfamily int Process\+::modify\+\_\+\+Eccentricity\+D\+V\+\_\+by\+\_\+a\+\_\+factor (\begin{DoxyParamCaption}\item[{double}]{factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Correct the VB cell containing the \mbox{\hyperlink{class_eccentricity}{Eccentricity}} variation 
+\begin{DoxyParams}{Parameters}
+{\em factor} & correction factor the new DE will be D\+E$\ast$factor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+X\+I\+T\+\_\+\+S\+U\+C\+C\+E\+SS 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_process_ac8f8936087d36a0f819ee52aac4f7ee0}\label{class_process_ac8f8936087d36a0f819ee52aac4f7ee0}} 
+\index{Process@{Process}!modify\_SemimajorDV\_by\_a\_factor@{modify\_SemimajorDV\_by\_a\_factor}}
+\index{modify\_SemimajorDV\_by\_a\_factor@{modify\_SemimajorDV\_by\_a\_factor}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{modify\_SemimajorDV\_by\_a\_factor()}{modify\_SemimajorDV\_by\_a\_factor()}}
+{\footnotesize\ttfamily int Process\+::modify\+\_\+\+Semimajor\+D\+V\+\_\+by\+\_\+a\+\_\+factor (\begin{DoxyParamCaption}\item[{double}]{factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Correct the VB cell containing the \mbox{\hyperlink{class_semimajor}{Semimajor}} variation 
+\begin{DoxyParams}{Parameters}
+{\em factor} & correction factor the new DA will be D\+A$\ast$factor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+X\+I\+T\+\_\+\+S\+U\+C\+C\+E\+SS 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_process_a1c19334f4e746d3410e4cfad66053035}\label{class_process_a1c19334f4e746d3410e4cfad66053035}} 
+\index{Process@{Process}!name@{name}}
+\index{name@{name}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily virtual std\+::string Process\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_mix_a788675bc84d6aa372af62b345fbdab8a}{Mix}}, \mbox{\hyperlink{class_tides_ad73381ebdc904c3f3fd577d0d2ab2af2}{Tides}}, \mbox{\hyperlink{class_windaccretion_a5d37b17e174ddba6bef399844c35a23e}{Windaccretion}}, \mbox{\hyperlink{class_g_wrad_a47effcd6dc1ffab2a9f3ce2ce1b5c08f}{G\+Wrad}}, \mbox{\hyperlink{class_s_n_kicks_a0fb21926eb858bb3c81b9b4ece53cb77}{S\+N\+Kicks}}, \mbox{\hyperlink{class_roche_lobe_a66c61557ccd88f93ed05185ef31835de}{Roche\+Lobe}}, and \mbox{\hyperlink{class_common_envelope_a3617bf6c39b0855db3e8f13773a64d3d}{Common\+Envelope}}.
+
+\mbox{\Hypertarget{class_process_a22775758327708f0135eb29387eb6e63}\label{class_process_a22775758327708f0135eb29387eb6e63}} 
+\index{Process@{Process}!Register@{Register}}
+\index{Register@{Register}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily void Process\+::\+Register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_process}{Process}} $\ast$}]{\+\_\+p,  }\item[{size\+\_\+t $\ast$}]{id,  }\item[{const std\+::string \&}]{\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_process_ad89d46b229414c2cd8077312b06e06cc}\label{class_process_ad89d46b229414c2cd8077312b06e06cc}} 
+\index{Process@{Process}!restore@{restore}}
+\index{restore@{restore}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{restore()}{restore()}}
+{\footnotesize\ttfamily void Process\+::restore (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_process_abd2dbb16d25845cb4b320a01f31b8958}\label{class_process_abd2dbb16d25845cb4b320a01f31b8958}} 
+\index{Process@{Process}!set@{set}}
+\index{set@{set}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void Process\+::set (\begin{DoxyParamCaption}\item[{const size\+\_\+t \&}]{id,  }\item[{const double \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_process_ae5974e7f0b6dd61aba4580a7aa7134a3}\label{class_process_ae5974e7f0b6dd61aba4580a7aa7134a3}} 
+\index{Process@{Process}!set\_msg@{set\_msg}}
+\index{set\_msg@{set\_msg}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{set\_msg()}{set\_msg()}}
+{\footnotesize\ttfamily void Process\+::set\+\_\+msg (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_process_a784cc5cb052f07a0b1b5b6aa9c2b618a}\label{class_process_a784cc5cb052f07a0b1b5b6aa9c2b618a}} 
+\index{Process@{Process}!set\_V\_to\_0@{set\_V\_to\_0}}
+\index{set\_V\_to\_0@{set\_V\_to\_0}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{set\_V\_to\_0()}{set\_V\_to\_0()}}
+{\footnotesize\ttfamily void Process\+::set\+\_\+\+V\+\_\+to\+\_\+0 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_process_aadf068fa44c66ac0a9ada4527d175038}\label{class_process_aadf068fa44c66ac0a9ada4527d175038}} 
+\index{Process@{Process}!set\_var@{set\_var}}
+\index{set\_var@{set\_var}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{set\_var()}{set\_var()}}
+{\footnotesize\ttfamily void Process\+::set\+\_\+var (\begin{DoxyParamCaption}\item[{const size\+\_\+t \&}]{star\+ID,  }\item[{const size\+\_\+t \&}]{prop\+ID,  }\item[{const double \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_process_ae58051f92e63ce4c7fc3b9999595f2ad}\label{class_process_ae58051f92e63ce4c7fc3b9999595f2ad}} 
+\index{Process@{Process}!special\_evolve@{special\_evolve}}
+\index{special\_evolve@{special\_evolve}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{special\_evolve()}{special\_evolve()}}
+{\footnotesize\ttfamily virtual int Process\+::special\+\_\+evolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_mix_aac3859367f21231b05e9c7d0dba8269e}{Mix}}, \mbox{\hyperlink{class_s_n_kicks_a46a9259d63c31d5356b6c10dffc6e9d7}{S\+N\+Kicks}}, \mbox{\hyperlink{class_roche_lobe_a7333c68bdddfdf414f94b1387647d5e3}{Roche\+Lobe}}, and \mbox{\hyperlink{class_common_envelope_a3b6ff6639dc9cf62f9734ba467e050da}{Common\+Envelope}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_process_a4e208c4db3aa8052aa289a8b90e9ea96}\label{class_process_a4e208c4db3aa8052aa289a8b90e9ea96}} 
+\index{Process@{Process}!\_uniform\_real@{\_uniform\_real}}
+\index{\_uniform\_real@{\_uniform\_real}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{\_uniform\_real}{\_uniform\_real}}
+{\footnotesize\ttfamily std\+::uniform\+\_\+real\+\_\+distribution$<$double$>$ Process\+::\+\_\+uniform\+\_\+real\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_process_aa3d88fef38cee969b3d94db346195958}\label{class_process_aa3d88fef38cee969b3d94db346195958}} 
+\index{Process@{Process}!accretor@{accretor}}
+\index{accretor@{accretor}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{accretor}{accretor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_star}{Star}}$\ast$ Process\+::accretor\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_process_ab65dcfdf8b2bbd06e15de82b41116e02}\label{class_process_ab65dcfdf8b2bbd06e15de82b41116e02}} 
+\index{Process@{Process}!all@{all}}
+\index{all@{all}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{all}{all}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_process}{Process}} $\ast$ $>$ Process\+::all\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_process_a2a114019fa8e3620ca38b2d925748cd8}\label{class_process_a2a114019fa8e3620ca38b2d925748cd8}} 
+\index{Process@{Process}!donor@{donor}}
+\index{donor@{donor}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{donor}{donor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_star}{Star}}$\ast$ Process\+::donor\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_process_ad63ddf091a10c4a07444b5b60cd0720b}\label{class_process_ad63ddf091a10c4a07444b5b60cd0720b}} 
+\index{Process@{Process}!message@{message}}
+\index{message@{message}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{message}{message}}
+{\footnotesize\ttfamily std\+::string Process\+::message\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_process_a9e684d72ffd74456362e8a25fd65976c}\label{class_process_a9e684d72ffd74456362e8a25fd65976c}} 
+\index{Process@{Process}!orb\_change@{orb\_change}}
+\index{orb\_change@{orb\_change}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{orb\_change}{orb\_change}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_orbital__change}{Orbital\+\_\+change}}$\ast$ Process\+::orb\+\_\+change\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_process_a332d0f6431c087d40da2931c491937d2}\label{class_process_a332d0f6431c087d40da2931c491937d2}} 
+\index{Process@{Process}!PrintMap@{PrintMap}}
+\index{PrintMap@{PrintMap}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{PrintMap}{PrintMap}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_process_a38ef601981b5f2feeffbf4cb0906f222}{Process\+::\+\_\+\+Print\+Map}} Process\+::\+Print\+Map\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_process_a95c3723ba5175dbcff4298597322fc6d}\label{class_process_a95c3723ba5175dbcff4298597322fc6d}} 
+\index{Process@{Process}!size@{size}}
+\index{size@{size}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily size\+\_\+t Process\+::size = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Instruction for adding new property P\+R\+OC 1-\/ Add the size\+\_\+t P\+R\+O\+C\+::\+ID 2-\/ Initialise the static (fake) instance P\+R\+OC P\+R\+O\+C\+::\+\_\+proc. NB\+: take care of the order of initialisation. The processes will be evolved exactly in the same order in which they are initialised here Define\+: @size\+: total number of instances of \mbox{\hyperlink{class_process}{Process}} and derived classes (both fake and real). @all\+: vector containing all the (pointers) to the processes. @\+Print\+Map\+: map containing the pair (process\+\_\+name, process\+\_\+id) for output purpose. Note all and Print\+Map are filled during the instantiation of the fake Processes (see below) \mbox{\Hypertarget{class_process_ae5c441df6c15bccdf5a739be870741ea}\label{class_process_ae5c441df6c15bccdf5a739be870741ea}} 
+\index{Process@{Process}!svlog@{svlog}}
+\index{svlog@{svlog}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{svlog}{svlog}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsevnstd_1_1_sevn_logging}{Sevn\+Logging}} Process\+::svlog\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_process_a0cc53752eadae992d1817b18da5a5246}\label{class_process_a0cc53752eadae992d1817b18da5a5246}} 
+\index{Process@{Process}!VB@{VB}}
+\index{VB@{VB}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{VB}{VB}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Process\+::\+VB\hspace{0.3cm}{\ttfamily [private]}}
+
+values of the properties of the binary system (e.\+g. processes change eccentricity, semimajor...) \mbox{\Hypertarget{class_process_aab93990b3cb70e865eeaeee66c407040}\label{class_process_aab93990b3cb70e865eeaeee66c407040}} 
+\index{Process@{Process}!VS@{VS}}
+\index{VS@{VS}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{VS}{VS}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$double$>$ $>$ Process\+::\+VS\hspace{0.3cm}{\ttfamily [private]}}
+
+variations of the single star parameters due to binary stellar evolution processes (e.\+g. mass, radius...) 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/binstar/\mbox{\hyperlink{_processes_8h}{Processes.\+h}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/\mbox{\hyperlink{static__main_8h}{static\+\_\+main.\+h}}\end{DoxyCompactItemize}

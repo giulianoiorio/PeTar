@@ -1,0 +1,185 @@
+\hypertarget{classcompactness}{}\doxysection{compactness Class Reference}
+\label{classcompactness}\index{compactness@{compactness}}
+
+
+{\ttfamily \#include $<$supernova.\+h$>$}
+
+Inheritance diagram for compactness\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcompactness}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classcompactness_a35e4fec8a03068a7b8d091dfbcb8aa18}{csi25\+\_\+mapelli20}} (\mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\item 
+bool \mbox{\hyperlink{classcompactness_ac89633475e7375b5b4e544b93c61eea7}{triggering\+\_\+explosion}} (double csi25)
+\item 
+void \mbox{\hyperlink{classcompactness_a0c5084cee44fea66dadc9ec18da51737}{load\+\_\+table}} (\mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsevnstd_1_1_sevn_logging}{Sevn\+Logging}} \mbox{\hyperlink{classcompactness_a5b5be9d0003064873c2e25b175a5099c}{svlog}}
+\item 
+double \mbox{\hyperlink{classcompactness_a856f9dd0545e98062dec8e5add8a4940}{csi25\+\_\+explosion\+\_\+tshold}}
+\item 
+double \mbox{\hyperlink{classcompactness_acdb1473810a2d717f0c9b8af1c1221fb}{Average\+\_\+\+Mremnant\+\_\+\+NS}}
+\item 
+double \mbox{\hyperlink{classcompactness_afbedfe167b8551594f580c5b5d7cded8}{Std\+\_\+\+Mremnant\+\_\+\+NS}}
+\item 
+std\+::string \mbox{\hyperlink{classcompactness_a4309fb116133eea77cde22016a7e75d5}{auxiliary\+\_\+table\+\_\+name}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{classcompactness_a67865f35fa43eea8475e28fd3dda279e}{csi25\+\_\+vs\+\_\+explosion\+\_\+probability}} =\{\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcompactness_ab27dae34caf26e4f6951a6e69a04934e}{compactness}} (\mbox{\hyperlink{class_star}{Star}} $\ast$s=nullptr)
+\item 
+void \mbox{\hyperlink{classcompactness_ac7777230e6b58e8127d7745b99cccc98}{explosion}} (\mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+\mbox{\hyperlink{classcompactness}{compactness}} $\ast$ \mbox{\hyperlink{classcompactness_a0123a18308a6f1adc4bf83124f739ebf}{instance}} (\mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\item 
+std\+::string \mbox{\hyperlink{classcompactness_a49e46714a1a659c8f9d5d4c2b9663f17}{name}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classcompactness}{compactness}} \mbox{\hyperlink{classcompactness_aa3030995326e7bb36000964335f1683b}{\+\_\+compactness}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcompactness_ab27dae34caf26e4f6951a6e69a04934e}\label{classcompactness_ab27dae34caf26e4f6951a6e69a04934e}} 
+\index{compactness@{compactness}!compactness@{compactness}}
+\index{compactness@{compactness}!compactness@{compactness}}
+\doxysubsubsection{\texorpdfstring{compactness()}{compactness()}}
+{\footnotesize\ttfamily compactness\+::compactness (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcompactness_a35e4fec8a03068a7b8d091dfbcb8aa18}\label{classcompactness_a35e4fec8a03068a7b8d091dfbcb8aa18}} 
+\index{compactness@{compactness}!csi25\_mapelli20@{csi25\_mapelli20}}
+\index{csi25\_mapelli20@{csi25\_mapelli20}!compactness@{compactness}}
+\doxysubsubsection{\texorpdfstring{csi25\_mapelli20()}{csi25\_mapelli20()}}
+{\footnotesize\ttfamily double compactness\+::csi25\+\_\+mapelli20 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Estimate the compactenss from the properties at the onset of the collpase from Eq. 2 in Mapelli+20 (\href{https://arxiv.org/pdf/1909.01371.pdf}{\texttt{ https\+://arxiv.\+org/pdf/1909.\+01371.\+pdf}}). 
+\begin{DoxyParams}{Parameters}
+{\em s} & Pointer to star \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Compactness parameter (see Mapelli+20) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcompactness_ac7777230e6b58e8127d7745b99cccc98}\label{classcompactness_ac7777230e6b58e8127d7745b99cccc98}} 
+\index{compactness@{compactness}!explosion@{explosion}}
+\index{explosion@{explosion}!compactness@{compactness}}
+\doxysubsubsection{\texorpdfstring{explosion()}{explosion()}}
+{\footnotesize\ttfamily void compactness\+::explosion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+Following Mapelli+20 (\href{https://arxiv.org/pdf/1909.01371.pdf}{\texttt{ https\+://arxiv.\+org/pdf/1909.\+01371.\+pdf}})
+
+Implements \mbox{\hyperlink{classsupernova_a3f9dd4c9349d4f8598927fc2a2cb5ca5}{supernova}}.
+
+\mbox{\Hypertarget{classcompactness_a0123a18308a6f1adc4bf83124f739ebf}\label{classcompactness_a0123a18308a6f1adc4bf83124f739ebf}} 
+\index{compactness@{compactness}!instance@{instance}}
+\index{instance@{instance}!compactness@{compactness}}
+\doxysubsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcompactness}{compactness}}$\ast$ compactness\+::instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcompactness_a0c5084cee44fea66dadc9ec18da51737}\label{classcompactness_a0c5084cee44fea66dadc9ec18da51737}} 
+\index{compactness@{compactness}!load\_table@{load\_table}}
+\index{load\_table@{load\_table}!compactness@{compactness}}
+\doxysubsubsection{\texorpdfstring{load\_table()}{load\_table()}}
+{\footnotesize\ttfamily void compactness\+::load\+\_\+table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Load the auxiliary table to esimate the explosion likelihood (from Patton\&Sukhbold20), 
+\begin{DoxyParams}{Parameters}
+{\em s} & Pointer to the star (from which we get the io object) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcompactness_a49e46714a1a659c8f9d5d4c2b9663f17}\label{classcompactness_a49e46714a1a659c8f9d5d4c2b9663f17}} 
+\index{compactness@{compactness}!name@{name}}
+\index{name@{name}!compactness@{compactness}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string compactness\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsupernova_aae854ae2865c69c6b69aa793e724a17c}{supernova}}.
+
+\mbox{\Hypertarget{classcompactness_ac89633475e7375b5b4e544b93c61eea7}\label{classcompactness_ac89633475e7375b5b4e544b93c61eea7}} 
+\index{compactness@{compactness}!triggering\_explosion@{triggering\_explosion}}
+\index{triggering\_explosion@{triggering\_explosion}!compactness@{compactness}}
+\doxysubsubsection{\texorpdfstring{triggering\_explosion()}{triggering\_explosion()}}
+{\footnotesize\ttfamily bool compactness\+::triggering\+\_\+explosion (\begin{DoxyParamCaption}\item[{double}]{csi25 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Estimate if the SN trigger an explosion or an implosion 
+\begin{DoxyParams}{Parameters}
+{\em csi25} & Compacteness parameters csi25 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if an explosion is trigerred, false if an implosion is triggered @\+Note the estimate method depends on the parameter csi25\+\_\+explosion\+\_\+tshold if it is positive we just compare csi25 with csi25\+\_\+explosion\+\_\+tshold. If csi25\+\_\+explosion\+\_\+tshold=-\/1, we estimate the likelihood of explosion at given csi25 (from Patton\&Sukhbold20) and then we draw a random number between 0 aand 1, if it is lower than per probability lkelihood a explosion is triggered. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcompactness_aa3030995326e7bb36000964335f1683b}\label{classcompactness_aa3030995326e7bb36000964335f1683b}} 
+\index{compactness@{compactness}!\_compactness@{\_compactness}}
+\index{\_compactness@{\_compactness}!compactness@{compactness}}
+\doxysubsubsection{\texorpdfstring{\_compactness}{\_compactness}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcompactness}{compactness}} compactness\+::\+\_\+compactness\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcompactness_a4309fb116133eea77cde22016a7e75d5}\label{classcompactness_a4309fb116133eea77cde22016a7e75d5}} 
+\index{compactness@{compactness}!auxiliary\_table\_name@{auxiliary\_table\_name}}
+\index{auxiliary\_table\_name@{auxiliary\_table\_name}!compactness@{compactness}}
+\doxysubsubsection{\texorpdfstring{auxiliary\_table\_name}{auxiliary\_table\_name}}
+{\footnotesize\ttfamily std\+::string compactness\+::auxiliary\+\_\+table\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcompactness_acdb1473810a2d717f0c9b8af1c1221fb}\label{classcompactness_acdb1473810a2d717f0c9b8af1c1221fb}} 
+\index{compactness@{compactness}!Average\_Mremnant\_NS@{Average\_Mremnant\_NS}}
+\index{Average\_Mremnant\_NS@{Average\_Mremnant\_NS}!compactness@{compactness}}
+\doxysubsubsection{\texorpdfstring{Average\_Mremnant\_NS}{Average\_Mremnant\_NS}}
+{\footnotesize\ttfamily double compactness\+::\+Average\+\_\+\+Mremnant\+\_\+\+NS\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcompactness_a856f9dd0545e98062dec8e5add8a4940}\label{classcompactness_a856f9dd0545e98062dec8e5add8a4940}} 
+\index{compactness@{compactness}!csi25\_explosion\_tshold@{csi25\_explosion\_tshold}}
+\index{csi25\_explosion\_tshold@{csi25\_explosion\_tshold}!compactness@{compactness}}
+\doxysubsubsection{\texorpdfstring{csi25\_explosion\_tshold}{csi25\_explosion\_tshold}}
+{\footnotesize\ttfamily double compactness\+::csi25\+\_\+explosion\+\_\+tshold\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcompactness_a67865f35fa43eea8475e28fd3dda279e}\label{classcompactness_a67865f35fa43eea8475e28fd3dda279e}} 
+\index{compactness@{compactness}!csi25\_vs\_explosion\_probability@{csi25\_vs\_explosion\_probability}}
+\index{csi25\_vs\_explosion\_probability@{csi25\_vs\_explosion\_probability}!compactness@{compactness}}
+\doxysubsubsection{\texorpdfstring{csi25\_vs\_explosion\_probability}{csi25\_vs\_explosion\_probability}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ double $>$ $>$ compactness\+::csi25\+\_\+vs\+\_\+explosion\+\_\+probability =\{\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcompactness_afbedfe167b8551594f580c5b5d7cded8}\label{classcompactness_afbedfe167b8551594f580c5b5d7cded8}} 
+\index{compactness@{compactness}!Std\_Mremnant\_NS@{Std\_Mremnant\_NS}}
+\index{Std\_Mremnant\_NS@{Std\_Mremnant\_NS}!compactness@{compactness}}
+\doxysubsubsection{\texorpdfstring{Std\_Mremnant\_NS}{Std\_Mremnant\_NS}}
+{\footnotesize\ttfamily double compactness\+::\+Std\+\_\+\+Mremnant\+\_\+\+NS\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcompactness_a5b5be9d0003064873c2e25b175a5099c}\label{classcompactness_a5b5be9d0003064873c2e25b175a5099c}} 
+\index{compactness@{compactness}!svlog@{svlog}}
+\index{svlog@{svlog}!compactness@{compactness}}
+\doxysubsubsection{\texorpdfstring{svlog}{svlog}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsevnstd_1_1_sevn_logging}{Sevn\+Logging}} compactness\+::svlog\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/star/procs/\mbox{\hyperlink{supernova_8h}{supernova.\+h}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/src/star/procs/\mbox{\hyperlink{supernova_8cpp}{supernova.\+cpp}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/\mbox{\hyperlink{static__main_8h}{static\+\_\+main.\+h}}\end{DoxyCompactItemize}

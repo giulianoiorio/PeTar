@@ -1,0 +1,247 @@
+\hypertarget{class_timestep}{}\doxysection{Timestep Class Reference}
+\label{class_timestep}\index{Timestep@{Timestep}}
+
+
+{\ttfamily \#include $<$property.\+h$>$}
+
+Inheritance diagram for Timestep\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_timestep}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_timestep_a247d525ba15839215341f4ed15e33eb1}{Timestep}} (bool reg=true)
+\item 
+\mbox{\hyperlink{class_timestep}{Timestep}} $\ast$ \mbox{\hyperlink{class_timestep_a379b52aa1bb65f9fd6af373dc8e98398}{Instance}} () override
+\item 
+std\+::string \mbox{\hyperlink{class_timestep_a3fd0c1976cf46b79e30fb7eec262bae9}{name}} () override
+\item 
+void \mbox{\hyperlink{class_timestep_a03af2ccfe0e266e619c0e99653fab0cb}{set\+\_\+remnant}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+void \mbox{\hyperlink{class_timestep_a7e6ac7d8b1fe8621dc0dbfe5552c3a7b}{evolve\+\_\+remnant}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+void \mbox{\hyperlink{class_timestep_a95c636f7c4bc1b9e42285959dbe08621}{set\+\_\+empty}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+bool \mbox{\hyperlink{class_timestep_af3a9abc90c105526d4e650638a025291}{check\+\_\+repeat}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s, const double \&m0, const double \&m, const double \&derivative, const double tstart)
+\item 
+void \mbox{\hyperlink{class_timestep_a8130d39b8e37b31d2da3950bf02b6130}{evolve}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+void \mbox{\hyperlink{class_timestep_a0fd7f402f5cf477f1bae146cccf42f0c}{synch}} () override
+\item 
+void \mbox{\hyperlink{class_timestep_a34b0dd43e3967e4aa258d1c3d0671a88}{resynch}} (const double \&dt, bool set0) override
+\item 
+void \mbox{\hyperlink{class_timestep_a848c19ddced43d9b5b0f34db75e671e5}{resynch}} (\mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+void \mbox{\hyperlink{class_timestep_ad4edab1a8b1b8a175e5e1f2cf0c2b037}{changed\+\_\+track}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s, \mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s\+\_\+jtrack) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{class_timestep_a24a23439b8f40c8d942102966c4fed3a}{ID}}
+\item 
+static \mbox{\hyperlink{class_timestep}{Timestep}} \mbox{\hyperlink{class_timestep_a30abebbc0577bd94393349c203d41b2c}{\+\_\+timestep}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_timestep_a4a49235456f873277f23071d8eeb49f3}{check\+\_\+dt\+\_\+limits}} (double \&dt, \mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_timestep_a247d525ba15839215341f4ed15e33eb1}\label{class_timestep_a247d525ba15839215341f4ed15e33eb1}} 
+\index{Timestep@{Timestep}!Timestep@{Timestep}}
+\index{Timestep@{Timestep}!Timestep@{Timestep}}
+\doxysubsubsection{\texorpdfstring{Timestep()}{Timestep()}}
+{\footnotesize\ttfamily Timestep\+::\+Timestep (\begin{DoxyParamCaption}\item[{bool}]{reg = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_timestep_ad4edab1a8b1b8a175e5e1f2cf0c2b037}\label{class_timestep_ad4edab1a8b1b8a175e5e1f2cf0c2b037}} 
+\index{Timestep@{Timestep}!changed\_track@{changed\_track}}
+\index{changed\_track@{changed\_track}!Timestep@{Timestep}}
+\doxysubsubsection{\texorpdfstring{changed\_track()}{changed\_track()}}
+{\footnotesize\ttfamily void Timestep\+::changed\+\_\+track (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s\+\_\+jtrack }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Handle the modification of the property after a track change. It does nothing by default. 
+\begin{DoxyParams}{Parameters}
+{\em s} & The star for which we are changing the tracks. \\
+\hline
+{\em s\+\_\+jtrack} & The star that we are using to get info of the new tracks. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_property_ab3b4070354b2cddcf25bb6bd7b845a86}{Property}}.
+
+\mbox{\Hypertarget{class_timestep_a4a49235456f873277f23071d8eeb49f3}\label{class_timestep_a4a49235456f873277f23071d8eeb49f3}} 
+\index{Timestep@{Timestep}!check\_dt\_limits@{check\_dt\_limits}}
+\index{check\_dt\_limits@{check\_dt\_limits}!Timestep@{Timestep}}
+\doxysubsubsection{\texorpdfstring{check\_dt\_limits()}{check\_dt\_limits()}}
+{\footnotesize\ttfamily void Timestep\+::check\+\_\+dt\+\_\+limits (\begin{DoxyParamCaption}\item[{double \&}]{dt,  }\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Check if the proposed dt is larger than max\+\_\+dt or lower than min\+\_\+dt. In that cases force dt to be one of the limits. 
+\begin{DoxyParams}{Parameters}
+{\em dt} & reference to the timestep to analyse \\
+\hline
+{\em s} & pointer to the star \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_timestep_af3a9abc90c105526d4e650638a025291}\label{class_timestep_af3a9abc90c105526d4e650638a025291}} 
+\index{Timestep@{Timestep}!check\_repeat@{check\_repeat}}
+\index{check\_repeat@{check\_repeat}!Timestep@{Timestep}}
+\doxysubsubsection{\texorpdfstring{check\_repeat()}{check\_repeat()}}
+{\footnotesize\ttfamily bool Timestep\+::check\+\_\+repeat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s,  }\item[{const double \&}]{m0,  }\item[{const double \&}]{m,  }\item[{const double \&}]{derivative,  }\item[{const double}]{tstart }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This function check if the current evolution time step has caused a too fast evolution of a property with values {\ttfamily m0} (before the evolution), {\ttfamily m} (after the evolution) and time derivative ({\ttfamily derivative}). If the property is related to some subphase (e.\+g. \mbox{\hyperlink{class_m_h_e}{M\+HE}}, \mbox{\hyperlink{class_m_c_o}{M\+CO}}) we should also set the initial time of this phase with the parameter {\ttfamily tstart}. If the property has not subphases (e.\+g. the \mbox{\hyperlink{class_radius}{Radius}}) {\ttfamily tstart} should be set to 0. At the beginning of the function the new\+\_\+dt is set to the max dt allowed (Delta\+\_\+t phase/starparameter\+::min\+\_\+points\+\_\+per\+\_\+phase). Then if tstart is 0 the function check if the relative variation ({\ttfamily m} -\/{\ttfamily m0})/ {\ttfamily m} is lower that 2 times \mbox{\hyperlink{namespacestarparameter_a8398de803188e71e7b07a21cd0c78d0e}{starparameter\+::maximum\+\_\+variation}} (default 0.\+05). If it is lower return false, else set a new dt to half of the current dt and set repeat to true. if tstart is not 0 there are different options\+: if m0=0 and m$>$\mbox{\hyperlink{namespacestarparameter_a8398de803188e71e7b07a21cd0c78d0e}{starparameter\+::maximum\+\_\+variation}}\+: set a new\+\_\+dt as 0.\+5$\ast$(\mbox{\hyperlink{class_localtime}{Localtime}} -\/ tstart) + (tstart -\/ Localtime\+\_\+0) (time from Localtime\+\_\+0 to start + half of Localtime-\/tstart) if the realtive variaiton ((\mbox{\hyperlink{class_localtime}{Localtime}} + new\+\_\+dt)-\/tstart)/tstart $<$1e-\/2 do not repeat else repeat with the new dt (return immediatly). if m0$>$2 and relative difference (m-\/m0)/m0 $<$ 2$\ast$starparameter\+::maximum\+\_\+variation not needed to repeat else set repeat to true and set new\+\_\+dt=\mbox{\hyperlink{namespacestarparameter_a8398de803188e71e7b07a21cd0c78d0e}{starparameter\+::maximum\+\_\+variation}}$\ast$({\ttfamily m/{\ttfamily derivative})} if m02$<$2 and absolute difference (m-\/m0) $<$4$\ast$starparameter\+::maximum\+\_\+variation not needed to repeat else set repeat to true and new\+\_\+dt=2.\+0$\ast$starparameter\+::maximum\+\_\+variation$\ast$({\ttfamily m/{\ttfamily derivative})} 
+
+Finally there is a final check, if the new\+\_\+dt is larger than 0.\+8$\ast$dt return False.
+
+Example of usage 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_timestep_af3a9abc90c105526d4e650638a025291}{check\_repeat}}(s, s-\/>getp\_0(\mbox{\hyperlink{class_m_h_e_a577a3ee3d6a317081c3040c7e5c410eb}{MHE::ID}}), s-\/>getp(\mbox{\hyperlink{class_m_h_e_a577a3ee3d6a317081c3040c7e5c410eb}{MHE::ID}}), s-\/>getp(\mbox{\hyperlink{classd_m_h_edt_a6ce09d15915a0c5691a6b7d9a4d42c8d}{dMHEdt::ID}}), s-\/>hestart());}
+\DoxyCodeLine{\mbox{\hyperlink{class_timestep_af3a9abc90c105526d4e650638a025291}{check\_repeat}}(s, s-\/>getp\_0(\mbox{\hyperlink{class_radius_a0db9fe95a63fad977a9c1e28ad84d907}{Radius::ID}}), s-\/>getp(\mbox{\hyperlink{class_radius_a0db9fe95a63fad977a9c1e28ad84d907}{Radius::ID}}), s-\/>getp(\mbox{\hyperlink{classd_rdt_a1d25e924a01a98e6d1db67768f276f66}{dRdt::ID}}), 0.0);}
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em s} & Object of class star \\
+\hline
+{\em m0} & Value to check (before the evolution) \\
+\hline
+{\em m} & Value to check (after the evolution) \\
+\hline
+{\em derivative} & derivative of the value to check \\
+\hline
+{\em tstart} & Starting time of a given subphase if we are checking the core mass of that subphase. E.\+g. s-\/$>$hestart(). If we are checking a varaible without subphase tstart should be set to 0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return true if the evolve step should be reset and repeated with a new smaller time step. The new time step is selected inside the function with set(new\+\_\+dt). 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function is called inside \mbox{\hyperlink{class_timestep_a8130d39b8e37b31d2da3950bf02b6130}{Timestep\+::evolve}}. Notice that the new\+\_\+dt is only used for the repeated step. If this function return false the proper new time step is estimated in \mbox{\hyperlink{class_timestep_a8130d39b8e37b31d2da3950bf02b6130}{Timestep\+::evolve}}. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_timestep_a8130d39b8e37b31d2da3950bf02b6130}\label{class_timestep_a8130d39b8e37b31d2da3950bf02b6130}} 
+\index{Timestep@{Timestep}!evolve@{evolve}}
+\index{evolve@{evolve}!Timestep@{Timestep}}
+\doxysubsubsection{\texorpdfstring{evolve()}{evolve()}}
+{\footnotesize\ttfamily void Timestep\+::evolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Evolve the \mbox{\hyperlink{class_timestep}{Timestep}}, the new value V will be the dt to use in the next iteration. The function passes through the following steps\+:
+\begin{DoxyItemize}
+\item Check if the \mbox{\hyperlink{class_m_h_e}{M\+HE}}, \mbox{\hyperlink{class_m_c_o}{M\+CO}} or the \mbox{\hyperlink{class_radius}{Radius}} have evolved too much (comparing with \mbox{\hyperlink{namespacestarparameter_a8398de803188e71e7b07a21cd0c78d0e}{starparameter\+::maximum\+\_\+variation}}). If this happened the function set repeat to True and set a new dt (see \mbox{\hyperlink{class_timestep_af3a9abc90c105526d4e650638a025291}{Timestep\+::check\+\_\+repeat}})
+\item If not needed to repeat determine next dt by imposing a maximum relative variation of stellar mass and radius.
+\item Check if the dt should be changed because we are close to phase change (e.\+g. formation of the He core, CO core, remnant, ...)
+\begin{DoxyItemize}
+\item Set reference\+\_\+time to 0 if \mbox{\hyperlink{class_localtime}{Localtime}} + new\+\_\+dt$<$time\+\_\+next\+\_\+phase else reference\+\_\+time=time\+\_\+next\+\_\+phase
+\item if reference\+\_\+time is 0, new\+\_\+dt=min(new\+\_\+dt, 0.\+999$\ast$(reference\+\_\+time -\/ \mbox{\hyperlink{class_localtime}{Localtime}}) ) else new\+\_\+dt=min(new\+\_\+dt, 1.\+001 $\ast$(reference\+\_\+time -\/\mbox{\hyperlink{class_localtime}{Localtime}}).
+\end{DoxyItemize}
+\item Finally set \mbox{\hyperlink{class_property_a3b81e1e12799a9796befb8f4edcb0dd7}{Timestep\+::V}} to new\+\_\+dt 
+\begin{DoxyParams}{Parameters}
+{\em s} & Object of class star\\
+\hline
+\end{DoxyParams}
+\mbox{\hyperlink{class_timestep}{Timestep}} 
+\end{DoxyItemize}Check and repeat
+
+Reimplemented from \mbox{\hyperlink{class_property_a12598e2ff736cc87a14ab24f03288bcd}{Property}}.
+
+\mbox{\Hypertarget{class_timestep_a7e6ac7d8b1fe8621dc0dbfe5552c3a7b}\label{class_timestep_a7e6ac7d8b1fe8621dc0dbfe5552c3a7b}} 
+\index{Timestep@{Timestep}!evolve\_remnant@{evolve\_remnant}}
+\index{evolve\_remnant@{evolve\_remnant}!Timestep@{Timestep}}
+\doxysubsubsection{\texorpdfstring{evolve\_remnant()}{evolve\_remnant()}}
+{\footnotesize\ttfamily void Timestep\+::evolve\+\_\+remnant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_time__object_ae7af246c692dae4d4032d6166b92793f}{Time\+\_\+object}}.
+
+\mbox{\Hypertarget{class_timestep_a379b52aa1bb65f9fd6af373dc8e98398}\label{class_timestep_a379b52aa1bb65f9fd6af373dc8e98398}} 
+\index{Timestep@{Timestep}!Instance@{Instance}}
+\index{Instance@{Instance}!Timestep@{Timestep}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_timestep}{Timestep}}$\ast$ Timestep\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a378a68a95da682a4247a4809e28a4d0c}{Property}}.
+
+\mbox{\Hypertarget{class_timestep_a3fd0c1976cf46b79e30fb7eec262bae9}\label{class_timestep_a3fd0c1976cf46b79e30fb7eec262bae9}} 
+\index{Timestep@{Timestep}!name@{name}}
+\index{name@{name}!Timestep@{Timestep}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string Timestep\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a6f2f260968b6780485004496e7c53063}{Property}}.
+
+\mbox{\Hypertarget{class_timestep_a34b0dd43e3967e4aa258d1c3d0671a88}\label{class_timestep_a34b0dd43e3967e4aa258d1c3d0671a88}} 
+\index{Timestep@{Timestep}!resynch@{resynch}}
+\index{resynch@{resynch}!Timestep@{Timestep}}
+\doxysubsubsection{\texorpdfstring{resynch()}{resynch()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Timestep\+::resynch (\begin{DoxyParamCaption}\item[{const double \&}]{dt,  }\item[{bool}]{set0 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+\mbox{\Hypertarget{class_timestep_a848c19ddced43d9b5b0f34db75e671e5}\label{class_timestep_a848c19ddced43d9b5b0f34db75e671e5}} 
+\index{Timestep@{Timestep}!resynch@{resynch}}
+\index{resynch@{resynch}!Timestep@{Timestep}}
+\doxysubsubsection{\texorpdfstring{resynch()}{resynch()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Timestep\+::resynch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{class_timestep_a95c636f7c4bc1b9e42285959dbe08621}\label{class_timestep_a95c636f7c4bc1b9e42285959dbe08621}} 
+\index{Timestep@{Timestep}!set\_empty@{set\_empty}}
+\index{set\_empty@{set\_empty}!Timestep@{Timestep}}
+\doxysubsubsection{\texorpdfstring{set\_empty()}{set\_empty()}}
+{\footnotesize\ttfamily void Timestep\+::set\+\_\+empty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_time__object_a87a67cbb80d60cd9b35bd355a34ce684}{Time\+\_\+object}}.
+
+\mbox{\Hypertarget{class_timestep_a03af2ccfe0e266e619c0e99653fab0cb}\label{class_timestep_a03af2ccfe0e266e619c0e99653fab0cb}} 
+\index{Timestep@{Timestep}!set\_remnant@{set\_remnant}}
+\index{set\_remnant@{set\_remnant}!Timestep@{Timestep}}
+\doxysubsubsection{\texorpdfstring{set\_remnant()}{set\_remnant()}}
+{\footnotesize\ttfamily void Timestep\+::set\+\_\+remnant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_ab7fb5c9c46521bf17bae1da3729a7004}{Property}}.
+
+\mbox{\Hypertarget{class_timestep_a0fd7f402f5cf477f1bae146cccf42f0c}\label{class_timestep_a0fd7f402f5cf477f1bae146cccf42f0c}} 
+\index{Timestep@{Timestep}!synch@{synch}}
+\index{synch@{synch}!Timestep@{Timestep}}
+\doxysubsubsection{\texorpdfstring{synch()}{synch()}}
+{\footnotesize\ttfamily void Timestep\+::synch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_af8b9f0a647e53f360aa924b89eaa4152}{Property}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_timestep_a30abebbc0577bd94393349c203d41b2c}\label{class_timestep_a30abebbc0577bd94393349c203d41b2c}} 
+\index{Timestep@{Timestep}!\_timestep@{\_timestep}}
+\index{\_timestep@{\_timestep}!Timestep@{Timestep}}
+\doxysubsubsection{\texorpdfstring{\_timestep}{\_timestep}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_timestep}{Timestep}} Timestep\+::\+\_\+timestep\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_timestep_a24a23439b8f40c8d942102966c4fed3a}\label{class_timestep_a24a23439b8f40c8d942102966c4fed3a}} 
+\index{Timestep@{Timestep}!ID@{ID}}
+\index{ID@{ID}!Timestep@{Timestep}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily size\+\_\+t Timestep\+::\+ID\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/star/\mbox{\hyperlink{property_8h}{property.\+h}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/src/star/\mbox{\hyperlink{property_8cpp}{property.\+cpp}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/\mbox{\hyperlink{static__main_8h}{static\+\_\+main.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,162 @@
+\hypertarget{class_r_c_o}{}\doxysection{R\+CO Class Reference}
+\label{class_r_c_o}\index{RCO@{RCO}}
+
+
+{\ttfamily \#include $<$property.\+h$>$}
+
+Inheritance diagram for R\+CO\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_r_c_o}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_r_c_o_ade4a63d4014191fc95d2121665a775fb}{R\+CO}} (bool reg=true)
+\item 
+size\+\_\+t \mbox{\hyperlink{class_r_c_o_a6a8e31d00b8b28afb9f32bf81ace034b}{Tab\+ID}} () override
+\item 
+\mbox{\hyperlink{class_r_c_o}{R\+CO}} $\ast$ \mbox{\hyperlink{class_r_c_o_a64d7da961d4c59f7441dd92ee00e8bb3}{Instance}} () override
+\item 
+std\+::string \mbox{\hyperlink{class_r_c_o_acda8ac59892682cb87df2ca600d79b0c}{name}} () override
+\item 
+void \mbox{\hyperlink{class_r_c_o_a77a25257924a95086f224fbf6c633819}{evolve}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\item 
+void \mbox{\hyperlink{class_r_c_o_a7e36bf2f1e77542f7fa0767ce2df01bf}{set\+\_\+w}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+void \mbox{\hyperlink{class_r_c_o_a24174fe771c9478ad0fa70d06074a688}{correct\+\_\+interpolation\+\_\+errors}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+void \mbox{\hyperlink{class_r_c_o_ab84aa4c18e449d1d427ee4bfb8045b4c}{correct\+\_\+interpolation\+\_\+errors\+\_\+real}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+void \mbox{\hyperlink{class_r_c_o_a9fd6fd65bfd71cf1ba058fbb650ac2f1}{changed\+\_\+track}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s, \mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s\+\_\+jtrack) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{class_r_c_o_a71a60351f97d7e0b0be5f9deb944ed99}{ID}}
+\item 
+static \mbox{\hyperlink{class_r_c_o}{R\+CO}} \mbox{\hyperlink{class_r_c_o_a077850a8f72207d94c1fb98477315dae}{\+\_\+rco}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_r_c_o_ade4a63d4014191fc95d2121665a775fb}\label{class_r_c_o_ade4a63d4014191fc95d2121665a775fb}} 
+\index{RCO@{RCO}!RCO@{RCO}}
+\index{RCO@{RCO}!RCO@{RCO}}
+\doxysubsubsection{\texorpdfstring{RCO()}{RCO()}}
+{\footnotesize\ttfamily R\+C\+O\+::\+R\+CO (\begin{DoxyParamCaption}\item[{bool}]{reg = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_r_c_o_a9fd6fd65bfd71cf1ba058fbb650ac2f1}\label{class_r_c_o_a9fd6fd65bfd71cf1ba058fbb650ac2f1}} 
+\index{RCO@{RCO}!changed\_track@{changed\_track}}
+\index{changed\_track@{changed\_track}!RCO@{RCO}}
+\doxysubsubsection{\texorpdfstring{changed\_track()}{changed\_track()}}
+{\footnotesize\ttfamily void R\+C\+O\+::changed\+\_\+track (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s\+\_\+jtrack }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Handle the modification of the property after a track change. It does nothing by default. 
+\begin{DoxyParams}{Parameters}
+{\em s} & The star for which we are changing the tracks. \\
+\hline
+{\em s\+\_\+jtrack} & The star that we are using to get info of the new tracks. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_property_ab3b4070354b2cddcf25bb6bd7b845a86}{Property}}.
+
+\mbox{\Hypertarget{class_r_c_o_a24174fe771c9478ad0fa70d06074a688}\label{class_r_c_o_a24174fe771c9478ad0fa70d06074a688}} 
+\index{RCO@{RCO}!correct\_interpolation\_errors@{correct\_interpolation\_errors}}
+\index{correct\_interpolation\_errors@{correct\_interpolation\_errors}!RCO@{RCO}}
+\doxysubsubsection{\texorpdfstring{correct\_interpolation\_errors()}{correct\_interpolation\_errors()}}
+{\footnotesize\ttfamily void R\+C\+O\+::correct\+\_\+interpolation\+\_\+errors (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_afb2f76dec040c60ff20fec8fa7437363}{Property}}.
+
+\mbox{\Hypertarget{class_r_c_o_ab84aa4c18e449d1d427ee4bfb8045b4c}\label{class_r_c_o_ab84aa4c18e449d1d427ee4bfb8045b4c}} 
+\index{RCO@{RCO}!correct\_interpolation\_errors\_real@{correct\_interpolation\_errors\_real}}
+\index{correct\_interpolation\_errors\_real@{correct\_interpolation\_errors\_real}!RCO@{RCO}}
+\doxysubsubsection{\texorpdfstring{correct\_interpolation\_errors\_real()}{correct\_interpolation\_errors\_real()}}
+{\footnotesize\ttfamily void R\+C\+O\+::correct\+\_\+interpolation\+\_\+errors\+\_\+real (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a28f6625d99feb3ec86894584df4a25ab}{Property}}.
+
+\mbox{\Hypertarget{class_r_c_o_a77a25257924a95086f224fbf6c633819}\label{class_r_c_o_a77a25257924a95086f224fbf6c633819}} 
+\index{RCO@{RCO}!evolve@{evolve}}
+\index{evolve@{evolve}!RCO@{RCO}}
+\doxysubsubsection{\texorpdfstring{evolve()}{evolve()}}
+{\footnotesize\ttfamily void R\+C\+O\+::evolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\hyperlink{class_r_c_o}{R\+CO}} 
+
+Reimplemented from \mbox{\hyperlink{class_property_a12598e2ff736cc87a14ab24f03288bcd}{Property}}.
+
+\mbox{\Hypertarget{class_r_c_o_a64d7da961d4c59f7441dd92ee00e8bb3}\label{class_r_c_o_a64d7da961d4c59f7441dd92ee00e8bb3}} 
+\index{RCO@{RCO}!Instance@{Instance}}
+\index{Instance@{Instance}!RCO@{RCO}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_r_c_o}{R\+CO}}$\ast$ R\+C\+O\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a378a68a95da682a4247a4809e28a4d0c}{Property}}.
+
+\mbox{\Hypertarget{class_r_c_o_acda8ac59892682cb87df2ca600d79b0c}\label{class_r_c_o_acda8ac59892682cb87df2ca600d79b0c}} 
+\index{RCO@{RCO}!name@{name}}
+\index{name@{name}!RCO@{RCO}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string R\+C\+O\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a6f2f260968b6780485004496e7c53063}{Property}}.
+
+\mbox{\Hypertarget{class_r_c_o_a7e36bf2f1e77542f7fa0767ce2df01bf}\label{class_r_c_o_a7e36bf2f1e77542f7fa0767ce2df01bf}} 
+\index{RCO@{RCO}!set\_w@{set\_w}}
+\index{set\_w@{set\_w}!RCO@{RCO}}
+\doxysubsubsection{\texorpdfstring{set\_w()}{set\_w()}}
+{\footnotesize\ttfamily void R\+C\+O\+::set\+\_\+w (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_ad0a64ecfaddcefb0295451f37cb66e2c}{Property}}.
+
+\mbox{\Hypertarget{class_r_c_o_a6a8e31d00b8b28afb9f32bf81ace034b}\label{class_r_c_o_a6a8e31d00b8b28afb9f32bf81ace034b}} 
+\index{RCO@{RCO}!TabID@{TabID}}
+\index{TabID@{TabID}!RCO@{RCO}}
+\doxysubsubsection{\texorpdfstring{TabID()}{TabID()}}
+{\footnotesize\ttfamily size\+\_\+t R\+C\+O\+::\+Tab\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a5496b2bc47beb1dc748353a358fae0fb}{Property}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_r_c_o_a077850a8f72207d94c1fb98477315dae}\label{class_r_c_o_a077850a8f72207d94c1fb98477315dae}} 
+\index{RCO@{RCO}!\_rco@{\_rco}}
+\index{\_rco@{\_rco}!RCO@{RCO}}
+\doxysubsubsection{\texorpdfstring{\_rco}{\_rco}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_r_c_o}{R\+CO}} R\+C\+O\+::\+\_\+rco\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_r_c_o_a71a60351f97d7e0b0be5f9deb944ed99}\label{class_r_c_o_a71a60351f97d7e0b0be5f9deb944ed99}} 
+\index{RCO@{RCO}!ID@{ID}}
+\index{ID@{ID}!RCO@{RCO}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily size\+\_\+t R\+C\+O\+::\+ID\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/star/\mbox{\hyperlink{property_8h}{property.\+h}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/src/star/\mbox{\hyperlink{property_8cpp}{property.\+cpp}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/\mbox{\hyperlink{static__main_8h}{static\+\_\+main.\+h}}\end{DoxyCompactItemize}

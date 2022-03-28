@@ -1,0 +1,32 @@
+70.0  0.0002  0.5     rapid  zams   end   all
+
+8.0  0.02  0.0     rapid  zams   end   all
+8.0  0.006  0.0     rapid  zams   end   all
+8.0  0.0001  0.0     rapid  zams   end   all
+12.0  0.02  0.0     rapid  zams   end   all
+12.0  0.006  0.0     rapid  zams   end   all
+12.0  0.0001  0.0     rapid  zams   end   all
+40.0  0.02  0.0     rapid  zams   end   all
+40.0  0.006  0.0     rapid  zams   end   all
+40.0  0.0001  0.0     rapid  zams   end   all
+100.0  0.02  0.0     rapid  zams   end   all
+100.0  0.006  0.0     rapid  zams   end   all
+100.0  0.0001  0.0     rapid  zams   end   all
+
+50 0.02 0.0     rapid  zams   end   all
+50 0.002 0.0     rapid  zams   end   all
+50 0.0001 0.0     rapid  zams   end   all
+
+
+5.0  0.02   0.0     delayed zams   end   all
+10.0  0.02   0.0     delayed tms   end   all
+20.0  0.02   0.0     delayed tms   end   all
+30.0  0.02   0.0     delayed tms   end   all
+40.0  0.02   0.0     delayed tms   end   all
+50.0  0.02   0.0     delayed tms   end   all
+60.0  0.02   0.0     delayed tms   end   all
+70.0  0.02   0.0     delayed tms   end   all
+80.0  0.02   0.0     delayed tms   end   all
+90.0  0.02   0.0     delayed tms   end   all
+100.0  0.02   0.0     delayed tms   end   all
+

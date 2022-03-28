@@ -1,0 +1,174 @@
+\hypertarget{class_localtime}{}\doxysection{Localtime Class Reference}
+\label{class_localtime}\index{Localtime@{Localtime}}
+
+
+{\ttfamily \#include $<$property.\+h$>$}
+
+Inheritance diagram for Localtime\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_localtime}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_localtime_ab3633c8002ac35837a1a68f668c14ed2}{Localtime}} (bool reg=true)
+\item 
+\mbox{\hyperlink{class_localtime}{Localtime}} $\ast$ \mbox{\hyperlink{class_localtime_a665cda2f31399badbfe40cef63dd2874}{Instance}} () override
+\item 
+void \mbox{\hyperlink{class_localtime_a6ec8feedf8c3e5f57960c18100840d19}{synch}} () override
+\item 
+void \mbox{\hyperlink{class_localtime_a3958f432fa99c8fea096a06190ae9c37}{init}} (const double \&a)
+\item 
+std\+::string \mbox{\hyperlink{class_localtime_a47815b4dd27d7c2a3986d242a9044c93}{name}} () override
+\item 
+void \mbox{\hyperlink{class_localtime_a2dbaac2df62f85691eb46be4c53dc9c3}{evolve}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+void \mbox{\hyperlink{class_localtime_acd66bee440966a2f89889265eb0df00b}{set\+\_\+remnant}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+void \mbox{\hyperlink{class_localtime_ab7da31a03627a960dba382596a5c6c3f}{evolve\+\_\+remnant}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+void \mbox{\hyperlink{class_localtime_a8e9dc6a31c5b0a70a9ecf24575030335}{special\+\_\+evolve}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+void \mbox{\hyperlink{class_localtime_a3b957f8fecab43a66c321e037eec2c18}{changed\+\_\+track}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s, \mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s\+\_\+jtrack) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{class_localtime_aecc760963f7041ec3c52ceaa485a1fd7}{ID}}
+\item 
+static \mbox{\hyperlink{class_localtime}{Localtime}} \mbox{\hyperlink{class_localtime_a72872a17a52cf0d3b67ca8f7f255d8c7}{\+\_\+localtime}}
+\begin{DoxyCompactList}\small\item\em To be added. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_localtime_ab3633c8002ac35837a1a68f668c14ed2}\label{class_localtime_ab3633c8002ac35837a1a68f668c14ed2}} 
+\index{Localtime@{Localtime}!Localtime@{Localtime}}
+\index{Localtime@{Localtime}!Localtime@{Localtime}}
+\doxysubsubsection{\texorpdfstring{Localtime()}{Localtime()}}
+{\footnotesize\ttfamily Localtime\+::\+Localtime (\begin{DoxyParamCaption}\item[{bool}]{reg = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_localtime_a3b957f8fecab43a66c321e037eec2c18}\label{class_localtime_a3b957f8fecab43a66c321e037eec2c18}} 
+\index{Localtime@{Localtime}!changed\_track@{changed\_track}}
+\index{changed\_track@{changed\_track}!Localtime@{Localtime}}
+\doxysubsubsection{\texorpdfstring{changed\_track()}{changed\_track()}}
+{\footnotesize\ttfamily void Localtime\+::changed\+\_\+track (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s\+\_\+jtrack }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Handle the modification of the property after a track change. It does nothing by default. 
+\begin{DoxyParams}{Parameters}
+{\em s} & The star for which we are changing the tracks. \\
+\hline
+{\em s\+\_\+jtrack} & The star that we are using to get info of the new tracks. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_property_ab3b4070354b2cddcf25bb6bd7b845a86}{Property}}.
+
+\mbox{\Hypertarget{class_localtime_a2dbaac2df62f85691eb46be4c53dc9c3}\label{class_localtime_a2dbaac2df62f85691eb46be4c53dc9c3}} 
+\index{Localtime@{Localtime}!evolve@{evolve}}
+\index{evolve@{evolve}!Localtime@{Localtime}}
+\doxysubsubsection{\texorpdfstring{evolve()}{evolve()}}
+{\footnotesize\ttfamily void Localtime\+::evolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a12598e2ff736cc87a14ab24f03288bcd}{Property}}.
+
+\mbox{\Hypertarget{class_localtime_ab7da31a03627a960dba382596a5c6c3f}\label{class_localtime_ab7da31a03627a960dba382596a5c6c3f}} 
+\index{Localtime@{Localtime}!evolve\_remnant@{evolve\_remnant}}
+\index{evolve\_remnant@{evolve\_remnant}!Localtime@{Localtime}}
+\doxysubsubsection{\texorpdfstring{evolve\_remnant()}{evolve\_remnant()}}
+{\footnotesize\ttfamily void Localtime\+::evolve\+\_\+remnant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_time__object_ae7af246c692dae4d4032d6166b92793f}{Time\+\_\+object}}.
+
+\mbox{\Hypertarget{class_localtime_a3958f432fa99c8fea096a06190ae9c37}\label{class_localtime_a3958f432fa99c8fea096a06190ae9c37}} 
+\index{Localtime@{Localtime}!init@{init}}
+\index{init@{init}!Localtime@{Localtime}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Localtime\+::init (\begin{DoxyParamCaption}\item[{const double \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_localtime_a665cda2f31399badbfe40cef63dd2874}\label{class_localtime_a665cda2f31399badbfe40cef63dd2874}} 
+\index{Localtime@{Localtime}!Instance@{Instance}}
+\index{Instance@{Instance}!Localtime@{Localtime}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_localtime}{Localtime}}$\ast$ Localtime\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a378a68a95da682a4247a4809e28a4d0c}{Property}}.
+
+\mbox{\Hypertarget{class_localtime_a47815b4dd27d7c2a3986d242a9044c93}\label{class_localtime_a47815b4dd27d7c2a3986d242a9044c93}} 
+\index{Localtime@{Localtime}!name@{name}}
+\index{name@{name}!Localtime@{Localtime}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string Localtime\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a6f2f260968b6780485004496e7c53063}{Property}}.
+
+\mbox{\Hypertarget{class_localtime_acd66bee440966a2f89889265eb0df00b}\label{class_localtime_acd66bee440966a2f89889265eb0df00b}} 
+\index{Localtime@{Localtime}!set\_remnant@{set\_remnant}}
+\index{set\_remnant@{set\_remnant}!Localtime@{Localtime}}
+\doxysubsubsection{\texorpdfstring{set\_remnant()}{set\_remnant()}}
+{\footnotesize\ttfamily void Localtime\+::set\+\_\+remnant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_ab7fb5c9c46521bf17bae1da3729a7004}{Property}}.
+
+\mbox{\Hypertarget{class_localtime_a8e9dc6a31c5b0a70a9ecf24575030335}\label{class_localtime_a8e9dc6a31c5b0a70a9ecf24575030335}} 
+\index{Localtime@{Localtime}!special\_evolve@{special\_evolve}}
+\index{special\_evolve@{special\_evolve}!Localtime@{Localtime}}
+\doxysubsubsection{\texorpdfstring{special\_evolve()}{special\_evolve()}}
+{\footnotesize\ttfamily void Localtime\+::special\+\_\+evolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\hyperlink{class_localtime}{Localtime}} 
+
+Reimplemented from \mbox{\hyperlink{class_property_a04a08c722ceaf2cf3e31799ede681131}{Property}}.
+
+\mbox{\Hypertarget{class_localtime_a6ec8feedf8c3e5f57960c18100840d19}\label{class_localtime_a6ec8feedf8c3e5f57960c18100840d19}} 
+\index{Localtime@{Localtime}!synch@{synch}}
+\index{synch@{synch}!Localtime@{Localtime}}
+\doxysubsubsection{\texorpdfstring{synch()}{synch()}}
+{\footnotesize\ttfamily void Localtime\+::synch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_af8b9f0a647e53f360aa924b89eaa4152}{Property}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_localtime_a72872a17a52cf0d3b67ca8f7f255d8c7}\label{class_localtime_a72872a17a52cf0d3b67ca8f7f255d8c7}} 
+\index{Localtime@{Localtime}!\_localtime@{\_localtime}}
+\index{\_localtime@{\_localtime}!Localtime@{Localtime}}
+\doxysubsubsection{\texorpdfstring{\_localtime}{\_localtime}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_localtime}{Localtime}} Localtime\+::\+\_\+localtime\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+To be added. 
+
+Initialisation of the static (fake) instance NB\+: take care of the order of initialisation. The properties will be evolved exactly in the same order in which they are initialised here \mbox{\Hypertarget{class_localtime_aecc760963f7041ec3c52ceaa485a1fd7}\label{class_localtime_aecc760963f7041ec3c52ceaa485a1fd7}} 
+\index{Localtime@{Localtime}!ID@{ID}}
+\index{ID@{ID}!Localtime@{Localtime}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily size\+\_\+t Localtime\+::\+ID\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/star/\mbox{\hyperlink{property_8h}{property.\+h}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/src/star/\mbox{\hyperlink{property_8cpp}{property.\+cpp}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/\mbox{\hyperlink{static__main_8h}{static\+\_\+main.\+h}}\end{DoxyCompactItemize}

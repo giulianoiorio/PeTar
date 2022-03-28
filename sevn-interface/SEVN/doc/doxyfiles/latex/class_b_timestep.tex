@@ -1,0 +1,203 @@
+\hypertarget{class_b_timestep}{}\doxysection{B\+Timestep Class Reference}
+\label{class_b_timestep}\index{BTimestep@{BTimestep}}
+
+
+{\ttfamily \#include $<$Binary\+Property.\+h$>$}
+
+Inheritance diagram for B\+Timestep\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_b_timestep}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_timestep_a0b7909d1e42d4b9c6ba69198a6ac5b11}{B\+Timestep}} (bool reg=true)
+\item 
+\mbox{\hyperlink{class_b_timestep}{B\+Timestep}} $\ast$ \mbox{\hyperlink{class_b_timestep_a5ad0ec7ae6523e3403c76bca4c2c7ccd}{Instance}} () override
+\item 
+std\+::string \mbox{\hyperlink{class_b_timestep_aa0674b311b1ffff6e02ac9ef5a9f2452}{name}} () override
+\item 
+double \mbox{\hyperlink{class_b_timestep_a78ff8ff132c6e392ab9b58c55bfb09ad}{max\+\_\+timestep}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$s)
+\item 
+bool \mbox{\hyperlink{class_b_timestep_ab4400d4998d7e76d21035e053140b5c1}{check\+\_\+repeat}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar, const double \&m0, const double \&m, const double \&derivative)
+\item 
+bool \mbox{\hyperlink{class_b_timestep_aaf97241b2bff40c577c41dd629a19b16}{check\+\_\+repeat\+\_\+\+D\+M\+\_\+\+R\+LO}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar)
+\item 
+int \mbox{\hyperlink{class_b_timestep_a5fd2780bf6d0e587c9dce7027be5a34c}{evolve}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar) override
+\item 
+int \mbox{\hyperlink{class_b_timestep_a10e83d5fa2b197c4d9340af8e86a9272}{get\+ID}} () override
+\item 
+void \mbox{\hyperlink{class_b_timestep_add14ada665c499613a892cf7546f7633}{resynch}} (const double \&dt, bool set0) override
+\item 
+int \mbox{\hyperlink{class_b_timestep_a4b3b21bceb6ecb6114174dfc31740edd}{set\+\_\+broken}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{class_b_timestep_acdc36a207c0ef0318c9f45526ca1554d}{ID}}
+\item 
+static \mbox{\hyperlink{class_b_timestep}{B\+Timestep}} \mbox{\hyperlink{class_b_timestep_a8106a9a19af6eb6c6a7f4eb616afa17b}{\+\_\+btimestep}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_b_timestep_a6bf5ff22b011b34c21d21366a160b49b}{check\+\_\+dt\+\_\+limits}} (double \&dt, \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar)
+\item 
+double \mbox{\hyperlink{class_b_timestep_a66bfde6c3c5417a1c5408ecd4087de4a}{tiny\+\_\+dt}} (\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_b_timestep_a0b7909d1e42d4b9c6ba69198a6ac5b11}\label{class_b_timestep_a0b7909d1e42d4b9c6ba69198a6ac5b11}} 
+\index{BTimestep@{BTimestep}!BTimestep@{BTimestep}}
+\index{BTimestep@{BTimestep}!BTimestep@{BTimestep}}
+\doxysubsubsection{\texorpdfstring{BTimestep()}{BTimestep()}}
+{\footnotesize\ttfamily B\+Timestep\+::\+B\+Timestep (\begin{DoxyParamCaption}\item[{bool}]{reg = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_b_timestep_a6bf5ff22b011b34c21d21366a160b49b}\label{class_b_timestep_a6bf5ff22b011b34c21d21366a160b49b}} 
+\index{BTimestep@{BTimestep}!check\_dt\_limits@{check\_dt\_limits}}
+\index{check\_dt\_limits@{check\_dt\_limits}!BTimestep@{BTimestep}}
+\doxysubsubsection{\texorpdfstring{check\_dt\_limits()}{check\_dt\_limits()}}
+{\footnotesize\ttfamily void B\+Timestep\+::check\+\_\+dt\+\_\+limits (\begin{DoxyParamCaption}\item[{double \&}]{dt,  }\item[{\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Check if the proposed dt is larger than max\+\_\+dt or lower than min\+\_\+dt. In that cases force dt to be one of the limits. 
+\begin{DoxyParams}{Parameters}
+{\em dt} & reference to the timestep to analyse \\
+\hline
+{\em s} & pointer to the star \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_b_timestep_ab4400d4998d7e76d21035e053140b5c1}\label{class_b_timestep_ab4400d4998d7e76d21035e053140b5c1}} 
+\index{BTimestep@{BTimestep}!check\_repeat@{check\_repeat}}
+\index{check\_repeat@{check\_repeat}!BTimestep@{BTimestep}}
+\doxysubsubsection{\texorpdfstring{check\_repeat()}{check\_repeat()}}
+{\footnotesize\ttfamily bool B\+Timestep\+::check\+\_\+repeat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar,  }\item[{const double \&}]{m0,  }\item[{const double \&}]{m,  }\item[{const double \&}]{derivative }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_b_timestep_aaf97241b2bff40c577c41dd629a19b16}\label{class_b_timestep_aaf97241b2bff40c577c41dd629a19b16}} 
+\index{BTimestep@{BTimestep}!check\_repeat\_DM\_RLO@{check\_repeat\_DM\_RLO}}
+\index{check\_repeat\_DM\_RLO@{check\_repeat\_DM\_RLO}!BTimestep@{BTimestep}}
+\doxysubsubsection{\texorpdfstring{check\_repeat\_DM\_RLO()}{check\_repeat\_DM\_RLO()}}
+{\footnotesize\ttfamily bool B\+Timestep\+::check\+\_\+repeat\+\_\+\+D\+M\+\_\+\+R\+LO (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Check if the \mbox{\hyperlink{class_mass}{Mass}} transfer during the R\+LO is too much with respect to the maximum variation 
+\begin{DoxyParams}{Parameters}
+{\em binstar} & Pointer to the binary system \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the system has to repeat the evolution with a new timestep, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_b_timestep_a5fd2780bf6d0e587c9dce7027be5a34c}\label{class_b_timestep_a5fd2780bf6d0e587c9dce7027be5a34c}} 
+\index{BTimestep@{BTimestep}!evolve@{evolve}}
+\index{evolve@{evolve}!BTimestep@{BTimestep}}
+\doxysubsubsection{\texorpdfstring{evolve()}{evolve()}}
+{\footnotesize\ttfamily int B\+Timestep\+::evolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Reset repeatstep
+
+C\+Heck if the Binary evolution trigger a special step in that case call a repeatstep setting a tiny dt
+
+\char`\"{}\+Normal\char`\"{} check and repeat
+
+check if \mbox{\hyperlink{class_semimajor}{Semimajor}} axis has varied a lot, despiting the timestep control
+
+check if \mbox{\hyperlink{class_eccentricity}{Eccentricity}} has varied a lot, despiting the timestep control
+
+Special check\+\_\+repeat\+: Check the amount of mass transferred in the R\+LO
+
+Initialise new\+\_\+timestep as the maximum possible timestep
+
+Check if force\+\_\+tiny\+\_\+dt is active. This is a special condition, it can be triggered when the cumulative binary evolution reduce a to 0 and we want the next step is a step needed only for the CE evolution
+
+Condition from \char`\"{}expected\char`\"{} variation of DA
+
+Condition from DE
+
+Reimplemented from \mbox{\hyperlink{class_binary_property_aea2550f81b0bfcdd589ab929e8a53652}{Binary\+Property}}.
+
+\mbox{\Hypertarget{class_b_timestep_a10e83d5fa2b197c4d9340af8e86a9272}\label{class_b_timestep_a10e83d5fa2b197c4d9340af8e86a9272}} 
+\index{BTimestep@{BTimestep}!getID@{getID}}
+\index{getID@{getID}!BTimestep@{BTimestep}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily int B\+Timestep\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_binary_property_af6cdf0352d0477830655ae5c9785bb74}{Binary\+Property}}.
+
+\mbox{\Hypertarget{class_b_timestep_a5ad0ec7ae6523e3403c76bca4c2c7ccd}\label{class_b_timestep_a5ad0ec7ae6523e3403c76bca4c2c7ccd}} 
+\index{BTimestep@{BTimestep}!Instance@{Instance}}
+\index{Instance@{Instance}!BTimestep@{BTimestep}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_timestep}{B\+Timestep}}$\ast$ B\+Timestep\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_binary_property_ad5d3f8314a5b68fbf8f66e23542f1683}{Binary\+Property}}.
+
+\mbox{\Hypertarget{class_b_timestep_a78ff8ff132c6e392ab9b58c55bfb09ad}\label{class_b_timestep_a78ff8ff132c6e392ab9b58c55bfb09ad}} 
+\index{BTimestep@{BTimestep}!max\_timestep@{max\_timestep}}
+\index{max\_timestep@{max\_timestep}!BTimestep@{BTimestep}}
+\doxysubsubsection{\texorpdfstring{max\_timestep()}{max\_timestep()}}
+{\footnotesize\ttfamily double B\+Timestep\+::max\+\_\+timestep (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_b_timestep_aa0674b311b1ffff6e02ac9ef5a9f2452}\label{class_b_timestep_aa0674b311b1ffff6e02ac9ef5a9f2452}} 
+\index{BTimestep@{BTimestep}!name@{name}}
+\index{name@{name}!BTimestep@{BTimestep}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string B\+Timestep\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_binary_property_a9804b0b1727df8fd494bb78f709128c9}{Binary\+Property}}.
+
+\mbox{\Hypertarget{class_b_timestep_add14ada665c499613a892cf7546f7633}\label{class_b_timestep_add14ada665c499613a892cf7546f7633}} 
+\index{BTimestep@{BTimestep}!resynch@{resynch}}
+\index{resynch@{resynch}!BTimestep@{BTimestep}}
+\doxysubsubsection{\texorpdfstring{resynch()}{resynch()}}
+{\footnotesize\ttfamily void B\+Timestep\+::resynch (\begin{DoxyParamCaption}\item[{const double \&}]{dt,  }\item[{bool}]{set0 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+\mbox{\Hypertarget{class_b_timestep_a4b3b21bceb6ecb6114174dfc31740edd}\label{class_b_timestep_a4b3b21bceb6ecb6114174dfc31740edd}} 
+\index{BTimestep@{BTimestep}!set\_broken@{set\_broken}}
+\index{set\_broken@{set\_broken}!BTimestep@{BTimestep}}
+\doxysubsubsection{\texorpdfstring{set\_broken()}{set\_broken()}}
+{\footnotesize\ttfamily int B\+Timestep\+::set\+\_\+broken (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_binary_property_a1e13250414bd528f8e6b69d1f7400743}{Binary\+Property}}.
+
+\mbox{\Hypertarget{class_b_timestep_a66bfde6c3c5417a1c5408ecd4087de4a}\label{class_b_timestep_a66bfde6c3c5417a1c5408ecd4087de4a}} 
+\index{BTimestep@{BTimestep}!tiny\_dt@{tiny\_dt}}
+\index{tiny\_dt@{tiny\_dt}!BTimestep@{BTimestep}}
+\doxysubsubsection{\texorpdfstring{tiny\_dt()}{tiny\_dt()}}
+{\footnotesize\ttfamily double B\+Timestep\+::tiny\+\_\+dt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_b_timestep_a8106a9a19af6eb6c6a7f4eb616afa17b}\label{class_b_timestep_a8106a9a19af6eb6c6a7f4eb616afa17b}} 
+\index{BTimestep@{BTimestep}!\_btimestep@{\_btimestep}}
+\index{\_btimestep@{\_btimestep}!BTimestep@{BTimestep}}
+\doxysubsubsection{\texorpdfstring{\_btimestep}{\_btimestep}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_timestep}{B\+Timestep}} B\+Timestep\+::\+\_\+btimestep\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_b_timestep_acdc36a207c0ef0318c9f45526ca1554d}\label{class_b_timestep_acdc36a207c0ef0318c9f45526ca1554d}} 
+\index{BTimestep@{BTimestep}!ID@{ID}}
+\index{ID@{ID}!BTimestep@{BTimestep}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily size\+\_\+t B\+Timestep\+::\+ID\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/binstar/\mbox{\hyperlink{_binary_property_8h}{Binary\+Property.\+h}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/src/binstar/\mbox{\hyperlink{_binary_property_8cpp}{Binary\+Property.\+cpp}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/\mbox{\hyperlink{static__main_8h}{static\+\_\+main.\+h}}\end{DoxyCompactItemize}

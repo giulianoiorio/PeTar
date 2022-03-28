@@ -1,0 +1,88 @@
+\hypertarget{class_time__object}{}\doxysection{Time\+\_\+object Class Reference}
+\label{class_time__object}\index{Time\_object@{Time\_object}}
+
+
+{\ttfamily \#include $<$property.\+h$>$}
+
+Inheritance diagram for Time\+\_\+object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_time__object}
+\end{center}
+\end{figure}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_time__object_ab83409435fe5098c9139d3913e9d3f3e}{units}} () override
+\item 
+void \mbox{\hyperlink{class_time__object_a9c30fa972d00e7e657be519d30f152f4}{copy\+\_\+\+V\+\_\+from}} (\mbox{\hyperlink{class_property}{Property}} $\ast$p) override
+\item 
+void \mbox{\hyperlink{class_time__object_ae7af246c692dae4d4032d6166b92793f}{evolve\+\_\+remnant}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+virtual void \mbox{\hyperlink{class_time__object_a87a67cbb80d60cd9b35bd355a34ce684}{set\+\_\+empty}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Timeing Base class for Properties about the times 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_time__object_a9c30fa972d00e7e657be519d30f152f4}\label{class_time__object_a9c30fa972d00e7e657be519d30f152f4}} 
+\index{Time\_object@{Time\_object}!copy\_V\_from@{copy\_V\_from}}
+\index{copy\_V\_from@{copy\_V\_from}!Time\_object@{Time\_object}}
+\doxysubsubsection{\texorpdfstring{copy\_V\_from()}{copy\_V\_from()}}
+{\footnotesize\ttfamily void Time\+\_\+object\+::copy\+\_\+\+V\+\_\+from (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_property}{Property}} $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+Disable copy 
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_property_af3b5eb999c4a8ad34605a641d6acfd35}{Property}}.
+
+\mbox{\Hypertarget{class_time__object_ae7af246c692dae4d4032d6166b92793f}\label{class_time__object_ae7af246c692dae4d4032d6166b92793f}} 
+\index{Time\_object@{Time\_object}!evolve\_remnant@{evolve\_remnant}}
+\index{evolve\_remnant@{evolve\_remnant}!Time\_object@{Time\_object}}
+\doxysubsubsection{\texorpdfstring{evolve\_remnant()}{evolve\_remnant()}}
+{\footnotesize\ttfamily void Time\+\_\+object\+::evolve\+\_\+remnant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a61c496fb99df9817f7880756596765c2}{Property}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_timestep_a7e6ac7d8b1fe8621dc0dbfe5552c3a7b}{Timestep}}, \mbox{\hyperlink{class_worldtime_a27a608b7ba1f401b2d4d9864c2aceac6}{Worldtime}}, and \mbox{\hyperlink{class_localtime_ab7da31a03627a960dba382596a5c6c3f}{Localtime}}.
+
+\mbox{\Hypertarget{class_time__object_a87a67cbb80d60cd9b35bd355a34ce684}\label{class_time__object_a87a67cbb80d60cd9b35bd355a34ce684}} 
+\index{Time\_object@{Time\_object}!set\_empty@{set\_empty}}
+\index{set\_empty@{set\_empty}!Time\_object@{Time\_object}}
+\doxysubsubsection{\texorpdfstring{set\_empty()}{set\_empty()}}
+{\footnotesize\ttfamily virtual void Time\+\_\+object\+::set\+\_\+empty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_aacfbae3cf88d3410b265f632409c91ea}{Property}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_timestep_a95c636f7c4bc1b9e42285959dbe08621}{Timestep}}.
+
+\mbox{\Hypertarget{class_time__object_ab83409435fe5098c9139d3913e9d3f3e}\label{class_time__object_ab83409435fe5098c9139d3913e9d3f3e}} 
+\index{Time\_object@{Time\_object}!units@{units}}
+\index{units@{units}!Time\_object@{Time\_object}}
+\doxysubsubsection{\texorpdfstring{units()}{units()}}
+{\footnotesize\ttfamily std\+::string Time\+\_\+object\+::units (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_ab890f984beaf68c49152cfec3943a784}{Property}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/star/\mbox{\hyperlink{property_8h}{property.\+h}}\end{DoxyCompactItemize}

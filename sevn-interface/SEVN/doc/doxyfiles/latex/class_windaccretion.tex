@@ -1,0 +1,121 @@
+\hypertarget{class_windaccretion}{}\doxysection{Windaccretion Class Reference}
+\label{class_windaccretion}\index{Windaccretion@{Windaccretion}}
+
+
+{\ttfamily \#include $<$Processes.\+h$>$}
+
+Inheritance diagram for Windaccretion\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_windaccretion}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_windaccretion_a81035d0d4cdcb425761f32f7e9df8ab7}{Windaccretion}} (\mbox{\hyperlink{class_i_o}{IO}} $\ast$\+\_\+io=nullptr, bool reg=true)
+\item 
+\mbox{\hyperlink{class_windaccretion}{Windaccretion}} $\ast$ \mbox{\hyperlink{class_windaccretion_abdd5deb7a7294a50ca24f4bfde0a00d1}{Instance}} (\mbox{\hyperlink{class_i_o}{IO}} $\ast$\+\_\+io) override
+\item 
+std\+::string \mbox{\hyperlink{class_windaccretion_a5d37b17e174ddba6bef399844c35a23e}{name}} () override
+\item 
+int \mbox{\hyperlink{class_windaccretion_a1147ff5ea18de5f6c12bd714447b6f9f}{evolve}} (\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{class_windaccretion_a2a78080675e5e7fb80d64e640ab2f33c}{ID}}
+\item 
+static \mbox{\hyperlink{class_windaccretion}{Windaccretion}} \mbox{\hyperlink{class_windaccretion_a80f60f5dde7ed2baa1418e986a993f37}{\+\_\+windaccretion}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_windaccretion_ae2d6530f6aa7d427c29357500689463d}{accrete\+\_\+mass}} (\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_windaccretion_a6d1d9f93208b5a36a3589dc1c36a4765}{betaw}}
+\item 
+double \mbox{\hyperlink{class_windaccretion_a3d7fec9e83772b4d97e18a9282a229cb}{alphaw}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_windaccretion_a81035d0d4cdcb425761f32f7e9df8ab7}\label{class_windaccretion_a81035d0d4cdcb425761f32f7e9df8ab7}} 
+\index{Windaccretion@{Windaccretion}!Windaccretion@{Windaccretion}}
+\index{Windaccretion@{Windaccretion}!Windaccretion@{Windaccretion}}
+\doxysubsubsection{\texorpdfstring{Windaccretion()}{Windaccretion()}}
+{\footnotesize\ttfamily Windaccretion\+::\+Windaccretion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_o}{IO}} $\ast$}]{\+\_\+io = {\ttfamily nullptr},  }\item[{bool}]{reg = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_windaccretion_ae2d6530f6aa7d427c29357500689463d}\label{class_windaccretion_ae2d6530f6aa7d427c29357500689463d}} 
+\index{Windaccretion@{Windaccretion}!accrete\_mass@{accrete\_mass}}
+\index{accrete\_mass@{accrete\_mass}!Windaccretion@{Windaccretion}}
+\doxysubsubsection{\texorpdfstring{accrete\_mass()}{accrete\_mass()}}
+{\footnotesize\ttfamily int Windaccretion\+::accrete\+\_\+mass (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Estimate Maccreted\mbox{\Hypertarget{class_windaccretion_a1147ff5ea18de5f6c12bd714447b6f9f}\label{class_windaccretion_a1147ff5ea18de5f6c12bd714447b6f9f}} 
+\index{Windaccretion@{Windaccretion}!evolve@{evolve}}
+\index{evolve@{evolve}!Windaccretion@{Windaccretion}}
+\doxysubsubsection{\texorpdfstring{evolve()}{evolve()}}
+{\footnotesize\ttfamily int Windaccretion\+::evolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_process_ab8729b32bb73a12bbe4e481f661213f9}{Process}}.
+
+\mbox{\Hypertarget{class_windaccretion_abdd5deb7a7294a50ca24f4bfde0a00d1}\label{class_windaccretion_abdd5deb7a7294a50ca24f4bfde0a00d1}} 
+\index{Windaccretion@{Windaccretion}!Instance@{Instance}}
+\index{Instance@{Instance}!Windaccretion@{Windaccretion}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_windaccretion}{Windaccretion}}$\ast$ Windaccretion\+::\+Instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_o}{IO}} $\ast$}]{\+\_\+io }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+\mbox{\Hypertarget{class_windaccretion_a5d37b17e174ddba6bef399844c35a23e}\label{class_windaccretion_a5d37b17e174ddba6bef399844c35a23e}} 
+\index{Windaccretion@{Windaccretion}!name@{name}}
+\index{name@{name}!Windaccretion@{Windaccretion}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string Windaccretion\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_process_a1c19334f4e746d3410e4cfad66053035}{Process}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_windaccretion_a80f60f5dde7ed2baa1418e986a993f37}\label{class_windaccretion_a80f60f5dde7ed2baa1418e986a993f37}} 
+\index{Windaccretion@{Windaccretion}!\_windaccretion@{\_windaccretion}}
+\index{\_windaccretion@{\_windaccretion}!Windaccretion@{Windaccretion}}
+\doxysubsubsection{\texorpdfstring{\_windaccretion}{\_windaccretion}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_windaccretion}{Windaccretion}} Windaccretion\+::\+\_\+windaccretion\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_windaccretion_a3d7fec9e83772b4d97e18a9282a229cb}\label{class_windaccretion_a3d7fec9e83772b4d97e18a9282a229cb}} 
+\index{Windaccretion@{Windaccretion}!alphaw@{alphaw}}
+\index{alphaw@{alphaw}!Windaccretion@{Windaccretion}}
+\doxysubsubsection{\texorpdfstring{alphaw}{alphaw}}
+{\footnotesize\ttfamily double Windaccretion\+::alphaw\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_windaccretion_a6d1d9f93208b5a36a3589dc1c36a4765}\label{class_windaccretion_a6d1d9f93208b5a36a3589dc1c36a4765}} 
+\index{Windaccretion@{Windaccretion}!betaw@{betaw}}
+\index{betaw@{betaw}!Windaccretion@{Windaccretion}}
+\doxysubsubsection{\texorpdfstring{betaw}{betaw}}
+{\footnotesize\ttfamily double Windaccretion\+::betaw\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_windaccretion_a2a78080675e5e7fb80d64e640ab2f33c}\label{class_windaccretion_a2a78080675e5e7fb80d64e640ab2f33c}} 
+\index{Windaccretion@{Windaccretion}!ID@{ID}}
+\index{ID@{ID}!Windaccretion@{Windaccretion}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily size\+\_\+t Windaccretion\+::\+ID\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/binstar/\mbox{\hyperlink{_processes_8h}{Processes.\+h}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/src/binstar/\mbox{\hyperlink{_processes_8cpp}{Processes.\+cpp}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/\mbox{\hyperlink{static__main_8h}{static\+\_\+main.\+h}}\end{DoxyCompactItemize}

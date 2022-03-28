@@ -1,0 +1,1 @@
+g++ -I/usr/include/python2.7 main.cpp -lpython2.7

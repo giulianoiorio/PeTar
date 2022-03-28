@@ -1,0 +1,181 @@
+\hypertarget{class_mass}{}\doxysection{Mass Class Reference}
+\label{class_mass}\index{Mass@{Mass}}
+
+
+{\ttfamily \#include $<$property.\+h$>$}
+
+Inheritance diagram for Mass\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_mass}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mass_a46e2bea7cd70f5cf83e0a25682712ffa}{Mass}} (bool reg=true)
+\item 
+size\+\_\+t \mbox{\hyperlink{class_mass_afb6e94b77c047f5f617732c937ab3ed1}{Tab\+ID}} () override
+\item 
+\mbox{\hyperlink{class_mass}{Mass}} $\ast$ \mbox{\hyperlink{class_mass_adc81a807141a8d2bd27a1446c4ab3711}{Instance}} () override
+\item 
+std\+::string \mbox{\hyperlink{class_mass_a00330d3ddf038260385a20d7431f36a2}{name}} () override
+\item 
+void \mbox{\hyperlink{class_mass_a7d32cfc4c3c6b2c7835fce502f35b2dd}{set\+\_\+remnant}} (\mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+void \mbox{\hyperlink{class_mass_a54c4a33059755f92d0c1ee728941fe13}{set\+\_\+w}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+void \mbox{\hyperlink{class_mass_acc7caa5971d790ed1869315ca528a18e}{correct\+\_\+interpolation\+\_\+errors}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+void \mbox{\hyperlink{class_mass_ac0443691ae4283a3b43ea80cf1bad603}{correct\+\_\+interpolation\+\_\+errors\+\_\+real}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+void \mbox{\hyperlink{class_mass_ae4cf653c9a17d2610933879f4dfbae5f}{changed\+\_\+track}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s, \mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s\+\_\+jtrack) override
+\item 
+void \mbox{\hyperlink{class_mass_aa38d13324b032f9e944409c343682120}{update\+\_\+from\+\_\+binary}} (\mbox{\hyperlink{class_star}{Star}} $\ast$s, const double \&DV) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{class_mass_a28889a5e19af947d4e614c399a869e9b}{ID}}
+\item 
+static \mbox{\hyperlink{class_mass}{Mass}} \mbox{\hyperlink{class_mass_ac0f1eefdbedd1eb230250f0e9137a00a}{\+\_\+mass}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_mass_a49d007bc8b7fefb417bfcf07ec331abd}{safety\+\_\+check}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mass_a46e2bea7cd70f5cf83e0a25682712ffa}\label{class_mass_a46e2bea7cd70f5cf83e0a25682712ffa}} 
+\index{Mass@{Mass}!Mass@{Mass}}
+\index{Mass@{Mass}!Mass@{Mass}}
+\doxysubsubsection{\texorpdfstring{Mass()}{Mass()}}
+{\footnotesize\ttfamily Mass\+::\+Mass (\begin{DoxyParamCaption}\item[{bool}]{reg = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mass_ae4cf653c9a17d2610933879f4dfbae5f}\label{class_mass_ae4cf653c9a17d2610933879f4dfbae5f}} 
+\index{Mass@{Mass}!changed\_track@{changed\_track}}
+\index{changed\_track@{changed\_track}!Mass@{Mass}}
+\doxysubsubsection{\texorpdfstring{changed\_track()}{changed\_track()}}
+{\footnotesize\ttfamily void Mass\+::changed\+\_\+track (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s\+\_\+jtrack }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Handle the modification of the property after a track change. It does nothing by default. 
+\begin{DoxyParams}{Parameters}
+{\em s} & The star for which we are changing the tracks. \\
+\hline
+{\em s\+\_\+jtrack} & The star that we are using to get info of the new tracks. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_property_ab3b4070354b2cddcf25bb6bd7b845a86}{Property}}.
+
+\mbox{\Hypertarget{class_mass_acc7caa5971d790ed1869315ca528a18e}\label{class_mass_acc7caa5971d790ed1869315ca528a18e}} 
+\index{Mass@{Mass}!correct\_interpolation\_errors@{correct\_interpolation\_errors}}
+\index{correct\_interpolation\_errors@{correct\_interpolation\_errors}!Mass@{Mass}}
+\doxysubsubsection{\texorpdfstring{correct\_interpolation\_errors()}{correct\_interpolation\_errors()}}
+{\footnotesize\ttfamily void Mass\+::correct\+\_\+interpolation\+\_\+errors (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_afb2f76dec040c60ff20fec8fa7437363}{Property}}.
+
+\mbox{\Hypertarget{class_mass_ac0443691ae4283a3b43ea80cf1bad603}\label{class_mass_ac0443691ae4283a3b43ea80cf1bad603}} 
+\index{Mass@{Mass}!correct\_interpolation\_errors\_real@{correct\_interpolation\_errors\_real}}
+\index{correct\_interpolation\_errors\_real@{correct\_interpolation\_errors\_real}!Mass@{Mass}}
+\doxysubsubsection{\texorpdfstring{correct\_interpolation\_errors\_real()}{correct\_interpolation\_errors\_real()}}
+{\footnotesize\ttfamily void Mass\+::correct\+\_\+interpolation\+\_\+errors\+\_\+real (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a28f6625d99feb3ec86894584df4a25ab}{Property}}.
+
+\mbox{\Hypertarget{class_mass_adc81a807141a8d2bd27a1446c4ab3711}\label{class_mass_adc81a807141a8d2bd27a1446c4ab3711}} 
+\index{Mass@{Mass}!Instance@{Instance}}
+\index{Instance@{Instance}!Mass@{Mass}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mass}{Mass}}$\ast$ Mass\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a378a68a95da682a4247a4809e28a4d0c}{Property}}.
+
+\mbox{\Hypertarget{class_mass_a00330d3ddf038260385a20d7431f36a2}\label{class_mass_a00330d3ddf038260385a20d7431f36a2}} 
+\index{Mass@{Mass}!name@{name}}
+\index{name@{name}!Mass@{Mass}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string Mass\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a6f2f260968b6780485004496e7c53063}{Property}}.
+
+\mbox{\Hypertarget{class_mass_a49d007bc8b7fefb417bfcf07ec331abd}\label{class_mass_a49d007bc8b7fefb417bfcf07ec331abd}} 
+\index{Mass@{Mass}!safety\_check@{safety\_check}}
+\index{safety\_check@{safety\_check}!Mass@{Mass}}
+\doxysubsubsection{\texorpdfstring{safety\_check()}{safety\_check()}}
+{\footnotesize\ttfamily virtual void Mass\+::safety\+\_\+check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_af2344df15c5a6d7ec0381d51e2426675}{Property}}.
+
+\mbox{\Hypertarget{class_mass_a7d32cfc4c3c6b2c7835fce502f35b2dd}\label{class_mass_a7d32cfc4c3c6b2c7835fce502f35b2dd}} 
+\index{Mass@{Mass}!set\_remnant@{set\_remnant}}
+\index{set\_remnant@{set\_remnant}!Mass@{Mass}}
+\doxysubsubsection{\texorpdfstring{set\_remnant()}{set\_remnant()}}
+{\footnotesize\ttfamily void Mass\+::set\+\_\+remnant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{class_mass_a54c4a33059755f92d0c1ee728941fe13}\label{class_mass_a54c4a33059755f92d0c1ee728941fe13}} 
+\index{Mass@{Mass}!set\_w@{set\_w}}
+\index{set\_w@{set\_w}!Mass@{Mass}}
+\doxysubsubsection{\texorpdfstring{set\_w()}{set\_w()}}
+{\footnotesize\ttfamily void Mass\+::set\+\_\+w (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\hyperlink{class_mass}{Mass}} 
+
+Reimplemented from \mbox{\hyperlink{class_property_ad0a64ecfaddcefb0295451f37cb66e2c}{Property}}.
+
+\mbox{\Hypertarget{class_mass_afb6e94b77c047f5f617732c937ab3ed1}\label{class_mass_afb6e94b77c047f5f617732c937ab3ed1}} 
+\index{Mass@{Mass}!TabID@{TabID}}
+\index{TabID@{TabID}!Mass@{Mass}}
+\doxysubsubsection{\texorpdfstring{TabID()}{TabID()}}
+{\footnotesize\ttfamily size\+\_\+t Mass\+::\+Tab\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a5496b2bc47beb1dc748353a358fae0fb}{Property}}.
+
+\mbox{\Hypertarget{class_mass_aa38d13324b032f9e944409c343682120}\label{class_mass_aa38d13324b032f9e944409c343682120}} 
+\index{Mass@{Mass}!update\_from\_binary@{update\_from\_binary}}
+\index{update\_from\_binary@{update\_from\_binary}!Mass@{Mass}}
+\doxysubsubsection{\texorpdfstring{update\_from\_binary()}{update\_from\_binary()}}
+{\footnotesize\ttfamily void Mass\+::update\+\_\+from\+\_\+binary (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s,  }\item[{const double \&}]{DV }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_mass_ac0f1eefdbedd1eb230250f0e9137a00a}\label{class_mass_ac0f1eefdbedd1eb230250f0e9137a00a}} 
+\index{Mass@{Mass}!\_mass@{\_mass}}
+\index{\_mass@{\_mass}!Mass@{Mass}}
+\doxysubsubsection{\texorpdfstring{\_mass}{\_mass}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mass}{Mass}} Mass\+::\+\_\+mass\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_mass_a28889a5e19af947d4e614c399a869e9b}\label{class_mass_a28889a5e19af947d4e614c399a869e9b}} 
+\index{Mass@{Mass}!ID@{ID}}
+\index{ID@{ID}!Mass@{Mass}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily size\+\_\+t Mass\+::\+ID\hspace{0.3cm}{\ttfamily [static]}}
+
+Define all the Properties ID 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/star/\mbox{\hyperlink{property_8h}{property.\+h}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/src/star/\mbox{\hyperlink{property_8cpp}{property.\+cpp}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/\mbox{\hyperlink{static__main_8h}{static\+\_\+main.\+h}}\end{DoxyCompactItemize}

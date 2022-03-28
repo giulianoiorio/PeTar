@@ -1,0 +1,132 @@
+\hypertarget{class_ang_mom}{}\doxysection{Ang\+Mom Class Reference}
+\label{class_ang_mom}\index{AngMom@{AngMom}}
+
+
+{\ttfamily \#include $<$Binary\+Property.\+h$>$}
+
+Inheritance diagram for Ang\+Mom\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_ang_mom}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ang_mom_abb3ff8b1a58513b288e66517ac44ed79}{Ang\+Mom}} (bool reg=true)
+\item 
+std\+::string \mbox{\hyperlink{class_ang_mom_a16cc56a544734238d65f67c02da764b8}{name}} () override
+\item 
+\mbox{\hyperlink{class_ang_mom}{Ang\+Mom}} $\ast$ \mbox{\hyperlink{class_ang_mom_ae9dc9155da5d15c916af2781c6f45c94}{Instance}} () override
+\item 
+int \mbox{\hyperlink{class_ang_mom_ace988d76c8312b92b48c4a3bf21044fe}{evolve}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar) override
+\item 
+int \mbox{\hyperlink{class_ang_mom_accb3eecc94f48488d45e967a6419dde7}{get\+ID}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{class_ang_mom_aa5d18b17bfdc0c393443584063eb19a0}{ID}}
+\item 
+static \mbox{\hyperlink{class_ang_mom}{Ang\+Mom}} \mbox{\hyperlink{class_ang_mom_aabf0d81c9c5e98d5740f75b9a97f2e84}{\+\_\+angmom}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_ang_mom_a783361efa687f490d8bb806a65c4c69c}{Ang\+Mom\+\_\+from\+\_\+orbit}} (double a, double e, double M1, double M2)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_ang_mom_abb3ff8b1a58513b288e66517ac44ed79}\label{class_ang_mom_abb3ff8b1a58513b288e66517ac44ed79}} 
+\index{AngMom@{AngMom}!AngMom@{AngMom}}
+\index{AngMom@{AngMom}!AngMom@{AngMom}}
+\doxysubsubsection{\texorpdfstring{AngMom()}{AngMom()}}
+{\footnotesize\ttfamily Ang\+Mom\+::\+Ang\+Mom (\begin{DoxyParamCaption}\item[{bool}]{reg = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_ang_mom_a783361efa687f490d8bb806a65c4c69c}\label{class_ang_mom_a783361efa687f490d8bb806a65c4c69c}} 
+\index{AngMom@{AngMom}!AngMom\_from\_orbit@{AngMom\_from\_orbit}}
+\index{AngMom\_from\_orbit@{AngMom\_from\_orbit}!AngMom@{AngMom}}
+\doxysubsubsection{\texorpdfstring{AngMom\_from\_orbit()}{AngMom\_from\_orbit()}}
+{\footnotesize\ttfamily double Ang\+Mom\+::\+Ang\+Mom\+\_\+from\+\_\+orbit (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{e,  }\item[{double}]{M1,  }\item[{double}]{M2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Estimate the orbital angular momentum from orbital properties 
+\begin{DoxyParams}{Parameters}
+{\em a} & semi\+\_\+major axis \mbox{[}Rsun\mbox{]} \\
+\hline
+{\em e} & eccentricity \\
+\hline
+{\em M1} & \mbox{\hyperlink{class_mass}{Mass}} of the first star \mbox{[}Msun\mbox{]} \\
+\hline
+{\em M2} & \mbox{\hyperlink{class_mass}{Mass}} of the second star \mbox{[}Msun\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Orbital angular momentum in Rsun$^\wedge$2 Msun yr$^\wedge$-\/1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_ang_mom_ace988d76c8312b92b48c4a3bf21044fe}\label{class_ang_mom_ace988d76c8312b92b48c4a3bf21044fe}} 
+\index{AngMom@{AngMom}!evolve@{evolve}}
+\index{evolve@{evolve}!AngMom@{AngMom}}
+\doxysubsubsection{\texorpdfstring{evolve()}{evolve()}}
+{\footnotesize\ttfamily int Ang\+Mom\+::evolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_binary_property_aea2550f81b0bfcdd589ab929e8a53652}{Binary\+Property}}.
+
+\mbox{\Hypertarget{class_ang_mom_accb3eecc94f48488d45e967a6419dde7}\label{class_ang_mom_accb3eecc94f48488d45e967a6419dde7}} 
+\index{AngMom@{AngMom}!getID@{getID}}
+\index{getID@{getID}!AngMom@{AngMom}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily int Ang\+Mom\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_binary_property_af6cdf0352d0477830655ae5c9785bb74}{Binary\+Property}}.
+
+\mbox{\Hypertarget{class_ang_mom_ae9dc9155da5d15c916af2781c6f45c94}\label{class_ang_mom_ae9dc9155da5d15c916af2781c6f45c94}} 
+\index{AngMom@{AngMom}!Instance@{Instance}}
+\index{Instance@{Instance}!AngMom@{AngMom}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ang_mom}{Ang\+Mom}}$\ast$ Ang\+Mom\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_binary_property_ad5d3f8314a5b68fbf8f66e23542f1683}{Binary\+Property}}.
+
+\mbox{\Hypertarget{class_ang_mom_a16cc56a544734238d65f67c02da764b8}\label{class_ang_mom_a16cc56a544734238d65f67c02da764b8}} 
+\index{AngMom@{AngMom}!name@{name}}
+\index{name@{name}!AngMom@{AngMom}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string Ang\+Mom\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_binary_property_a9804b0b1727df8fd494bb78f709128c9}{Binary\+Property}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_ang_mom_aabf0d81c9c5e98d5740f75b9a97f2e84}\label{class_ang_mom_aabf0d81c9c5e98d5740f75b9a97f2e84}} 
+\index{AngMom@{AngMom}!\_angmom@{\_angmom}}
+\index{\_angmom@{\_angmom}!AngMom@{AngMom}}
+\doxysubsubsection{\texorpdfstring{\_angmom}{\_angmom}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ang_mom}{Ang\+Mom}} Ang\+Mom\+::\+\_\+angmom\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_ang_mom_aa5d18b17bfdc0c393443584063eb19a0}\label{class_ang_mom_aa5d18b17bfdc0c393443584063eb19a0}} 
+\index{AngMom@{AngMom}!ID@{ID}}
+\index{ID@{ID}!AngMom@{AngMom}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily size\+\_\+t Ang\+Mom\+::\+ID\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/binstar/\mbox{\hyperlink{_binary_property_8h}{Binary\+Property.\+h}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/src/binstar/\mbox{\hyperlink{_binary_property_8cpp}{Binary\+Property.\+cpp}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/\mbox{\hyperlink{static__main_8h}{static\+\_\+main.\+h}}\end{DoxyCompactItemize}

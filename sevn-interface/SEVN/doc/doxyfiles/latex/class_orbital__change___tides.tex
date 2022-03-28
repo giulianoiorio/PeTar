@@ -1,0 +1,246 @@
+\hypertarget{class_orbital__change___tides}{}\doxysection{Orbital\+\_\+change\+\_\+\+Tides Class Reference}
+\label{class_orbital__change___tides}\index{Orbital\_change\_Tides@{Orbital\_change\_Tides}}
+
+
+{\ttfamily \#include $<$Orbit.\+h$>$}
+
+Inheritance diagram for Orbital\+\_\+change\+\_\+\+Tides\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_orbital__change___tides}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_orbital__change___tides_abc9e0bbbaeca0e6e4715eb61894a1546}{Orbital\+\_\+change\+\_\+\+Tides}} ()
+\item 
+virtual \mbox{\hyperlink{class_orbital__change___tides_a3b8e51b6cd9f4a96d0c36f5de45708e6}{$\sim$\+Orbital\+\_\+change\+\_\+\+Tides}} ()
+\item 
+virtual \mbox{\hyperlink{class_orbital__change___tides}{Orbital\+\_\+change\+\_\+\+Tides}} $\ast$ \mbox{\hyperlink{class_orbital__change___tides_a4eea0d4b0f21d79f6df2108396084513}{instance}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_orbital__change___tides_a475ba78c9819037c2c52d076fbcacb13}{name}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_orbital__change___tides}{Orbital\+\_\+change\+\_\+\+Tides}} $\ast$ \mbox{\hyperlink{class_orbital__change___tides_a7baed3ed0b7f2bcbcb6f60802fd360bd}{Instance}} (const std\+::string \&\mbox{\hyperlink{class_orbital__change___tides_a475ba78c9819037c2c52d076fbcacb13}{name}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_orbital__change___tides_a2317048f0ca28750d7b8e9cbb01e9ee4}{Register}} (\mbox{\hyperlink{class_orbital__change___tides}{Orbital\+\_\+change\+\_\+\+Tides}} $\ast$ptr, const std\+::string \&\+\_\+name)
+\item 
+virtual double \mbox{\hyperlink{class_orbital__change___tides_a0566fb2fb2ef2acf6796ec97a2ffb3b8}{get\+\_\+tconv}} (\mbox{\hyperlink{class_star}{Star}} $\ast$star\+\_\+wtides)
+\begin{DoxyCompactList}\small\item\em Override this in derived class. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_orbital__change___tides_a12693af3569c545c56d934e82692d4e7}{compute\+\_\+kt\+\_\+zahn\+\_\+conv}} (\mbox{\hyperlink{class_star}{Star}} $\ast$star\+\_\+wtides, \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar, double spin\+\_\+period)
+\item 
+double \mbox{\hyperlink{class_orbital__change___tides_a10195b89f83579568f3adbd95d59d0ef}{compute\+\_\+kt\+\_\+zahn\+\_\+rad}} (\mbox{\hyperlink{class_star}{Star}} $\ast$star\+\_\+wtides, \mbox{\hyperlink{class_star}{Star}} $\ast$star\+\_\+pert, \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar)
+\item 
+double \mbox{\hyperlink{class_orbital__change___tides_aa2471ae2424b6600c1d8502e43d0dc5c}{compute\+\_\+tconv\+\_\+rasio96}} (\mbox{\hyperlink{class_star}{Star}} $\ast$star\+\_\+wtides)
+\item 
+double \mbox{\hyperlink{class_orbital__change___tides_a4677d379118544a1f29fe3a69009f6cd}{compute\+\_\+tconv\+\_\+pwheel18}} (\mbox{\hyperlink{class_star}{Star}} $\ast$star\+\_\+wtides)
+\item 
+double \mbox{\hyperlink{class_orbital__change___tides_a0f46e4abfacc568d6d84edf6e58b7c68}{dadt\+\_\+hut}} (\mbox{\hyperlink{class_star}{Star}} $\ast$star\+\_\+wtides, \mbox{\hyperlink{class_star}{Star}} $\ast$star\+\_\+pert, \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar, double kt, double spin)
+\item 
+double \mbox{\hyperlink{class_orbital__change___tides_a21bf94680d7f779c344a4f94e4f5e3ce}{dedt\+\_\+hut}} (\mbox{\hyperlink{class_star}{Star}} $\ast$star\+\_\+wtides, \mbox{\hyperlink{class_star}{Star}} $\ast$star\+\_\+pert, \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar, double kt, double spin)
+\item 
+double \mbox{\hyperlink{class_orbital__change___tides_a00a924f6ef52d5c8fad21e2f682ac0a4}{dspindt\+\_\+hut}} (\mbox{\hyperlink{class_star}{Star}} $\ast$star\+\_\+wtides, \mbox{\hyperlink{class_star}{Star}} $\ast$star\+\_\+pert, \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar, double kt, double spin)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{class_orbital__change___tides_a8f38d2e1d44a29fe6d382e8574b0ec19}{f1}} (double e2)
+\item 
+static double \mbox{\hyperlink{class_orbital__change___tides_a18535a57dd591d564805d0eed08a63e1}{f2}} (double e2)
+\item 
+static double \mbox{\hyperlink{class_orbital__change___tides_a3c620fb8d2fd90afff4f1ef34771f6c8}{f3}} (double e2)
+\item 
+static double \mbox{\hyperlink{class_orbital__change___tides_adfe72e825df7cafa9f05c508783ef3db}{f4}} (double e2)
+\item 
+static double \mbox{\hyperlink{class_orbital__change___tides_a37413c159dec4e4221126167cb68f7aa}{f5}} (double e2)
+\item 
+static double \mbox{\hyperlink{class_orbital__change___tides_a7ad6195b7ccc86acfd90db1cc9447704}{pseudosync\+\_\+spin}} (double e2, double omegaorb)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::map$<$ std\+::string, \mbox{\hyperlink{class_orbital__change___tides}{Orbital\+\_\+change\+\_\+\+Tides}} $\ast$ $>$ \& \mbox{\hyperlink{class_orbital__change___tides_a81c1afadefbd5b22fe0ef1a707cf52bd}{Get\+Static\+Map}} ()
+\item 
+static std\+::vector$<$ int $>$ \& \mbox{\hyperlink{class_orbital__change___tides_ac8fe7b387b21c9c06244c3bff1ad85b5}{Get\+Used}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_orbital__change___tides_abc9e0bbbaeca0e6e4715eb61894a1546}\label{class_orbital__change___tides_abc9e0bbbaeca0e6e4715eb61894a1546}} 
+\index{Orbital\_change\_Tides@{Orbital\_change\_Tides}!Orbital\_change\_Tides@{Orbital\_change\_Tides}}
+\index{Orbital\_change\_Tides@{Orbital\_change\_Tides}!Orbital\_change\_Tides@{Orbital\_change\_Tides}}
+\doxysubsubsection{\texorpdfstring{Orbital\_change\_Tides()}{Orbital\_change\_Tides()}}
+{\footnotesize\ttfamily Orbital\+\_\+change\+\_\+\+Tides\+::\+Orbital\+\_\+change\+\_\+\+Tides (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_orbital__change___tides_a3b8e51b6cd9f4a96d0c36f5de45708e6}\label{class_orbital__change___tides_a3b8e51b6cd9f4a96d0c36f5de45708e6}} 
+\index{Orbital\_change\_Tides@{Orbital\_change\_Tides}!````~Orbital\_change\_Tides@{$\sim$Orbital\_change\_Tides}}
+\index{````~Orbital\_change\_Tides@{$\sim$Orbital\_change\_Tides}!Orbital\_change\_Tides@{Orbital\_change\_Tides}}
+\doxysubsubsection{\texorpdfstring{$\sim$Orbital\_change\_Tides()}{~Orbital\_change\_Tides()}}
+{\footnotesize\ttfamily virtual Orbital\+\_\+change\+\_\+\+Tides\+::$\sim$\+Orbital\+\_\+change\+\_\+\+Tides (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_orbital__change___tides_a12693af3569c545c56d934e82692d4e7}\label{class_orbital__change___tides_a12693af3569c545c56d934e82692d4e7}} 
+\index{Orbital\_change\_Tides@{Orbital\_change\_Tides}!compute\_kt\_zahn\_conv@{compute\_kt\_zahn\_conv}}
+\index{compute\_kt\_zahn\_conv@{compute\_kt\_zahn\_conv}!Orbital\_change\_Tides@{Orbital\_change\_Tides}}
+\doxysubsubsection{\texorpdfstring{compute\_kt\_zahn\_conv()}{compute\_kt\_zahn\_conv()}}
+{\footnotesize\ttfamily double Orbital\+\_\+change\+\_\+\+Tides\+::compute\+\_\+kt\+\_\+zahn\+\_\+conv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{star\+\_\+wtides,  }\item[{\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar,  }\item[{double}]{spin\+\_\+period }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Computes kt in convective envelopes in star\+\_\+wtides Output is in yr$^\wedge$-\/1 Should be mass of convective envelope
+
+Vidal+ 2020\mbox{\Hypertarget{class_orbital__change___tides_a10195b89f83579568f3adbd95d59d0ef}\label{class_orbital__change___tides_a10195b89f83579568f3adbd95d59d0ef}} 
+\index{Orbital\_change\_Tides@{Orbital\_change\_Tides}!compute\_kt\_zahn\_rad@{compute\_kt\_zahn\_rad}}
+\index{compute\_kt\_zahn\_rad@{compute\_kt\_zahn\_rad}!Orbital\_change\_Tides@{Orbital\_change\_Tides}}
+\doxysubsubsection{\texorpdfstring{compute\_kt\_zahn\_rad()}{compute\_kt\_zahn\_rad()}}
+{\footnotesize\ttfamily double Orbital\+\_\+change\+\_\+\+Tides\+::compute\+\_\+kt\+\_\+zahn\+\_\+rad (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{star\+\_\+wtides,  }\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{star\+\_\+pert,  }\item[{\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Computes kt in radiative envelopes in star\+\_\+wtides induced by star\+\_\+pert Output is in yr$^\wedge$-\/1 \mbox{\Hypertarget{class_orbital__change___tides_a4677d379118544a1f29fe3a69009f6cd}\label{class_orbital__change___tides_a4677d379118544a1f29fe3a69009f6cd}} 
+\index{Orbital\_change\_Tides@{Orbital\_change\_Tides}!compute\_tconv\_pwheel18@{compute\_tconv\_pwheel18}}
+\index{compute\_tconv\_pwheel18@{compute\_tconv\_pwheel18}!Orbital\_change\_Tides@{Orbital\_change\_Tides}}
+\doxysubsubsection{\texorpdfstring{compute\_tconv\_pwheel18()}{compute\_tconv\_pwheel18()}}
+{\footnotesize\ttfamily double Orbital\+\_\+change\+\_\+\+Tides\+::compute\+\_\+tconv\+\_\+pwheel18 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{star\+\_\+wtides }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Should be mass of convective envelope
+
+$<$ In years\mbox{\Hypertarget{class_orbital__change___tides_aa2471ae2424b6600c1d8502e43d0dc5c}\label{class_orbital__change___tides_aa2471ae2424b6600c1d8502e43d0dc5c}} 
+\index{Orbital\_change\_Tides@{Orbital\_change\_Tides}!compute\_tconv\_rasio96@{compute\_tconv\_rasio96}}
+\index{compute\_tconv\_rasio96@{compute\_tconv\_rasio96}!Orbital\_change\_Tides@{Orbital\_change\_Tides}}
+\doxysubsubsection{\texorpdfstring{compute\_tconv\_rasio96()}{compute\_tconv\_rasio96()}}
+{\footnotesize\ttfamily double Orbital\+\_\+change\+\_\+\+Tides\+::compute\+\_\+tconv\+\_\+rasio96 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{star\+\_\+wtides }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Should be depth of convective envelope
+
+Should be mass of convective envelope
+
+Modification from Hurley+ 2002 Eq 31
+
+$<$ l\+\_\+t from L\+Sun is converted to M\+Sun R\+Sun$^\wedge$2 yr$^\wedge$-\/3\mbox{\Hypertarget{class_orbital__change___tides_a0f46e4abfacc568d6d84edf6e58b7c68}\label{class_orbital__change___tides_a0f46e4abfacc568d6d84edf6e58b7c68}} 
+\index{Orbital\_change\_Tides@{Orbital\_change\_Tides}!dadt\_hut@{dadt\_hut}}
+\index{dadt\_hut@{dadt\_hut}!Orbital\_change\_Tides@{Orbital\_change\_Tides}}
+\doxysubsubsection{\texorpdfstring{dadt\_hut()}{dadt\_hut()}}
+{\footnotesize\ttfamily double Orbital\+\_\+change\+\_\+\+Tides\+::dadt\+\_\+hut (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{star\+\_\+wtides,  }\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{star\+\_\+pert,  }\item[{\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar,  }\item[{double}]{kt,  }\item[{double}]{spin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Returns da/dt from the tides induced from star\+\_\+pert on star\+\_\+wtides Eq 9 Hut 81 \mbox{\Hypertarget{class_orbital__change___tides_a21bf94680d7f779c344a4f94e4f5e3ce}\label{class_orbital__change___tides_a21bf94680d7f779c344a4f94e4f5e3ce}} 
+\index{Orbital\_change\_Tides@{Orbital\_change\_Tides}!dedt\_hut@{dedt\_hut}}
+\index{dedt\_hut@{dedt\_hut}!Orbital\_change\_Tides@{Orbital\_change\_Tides}}
+\doxysubsubsection{\texorpdfstring{dedt\_hut()}{dedt\_hut()}}
+{\footnotesize\ttfamily double Orbital\+\_\+change\+\_\+\+Tides\+::dedt\+\_\+hut (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{star\+\_\+wtides,  }\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{star\+\_\+pert,  }\item[{\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar,  }\item[{double}]{kt,  }\item[{double}]{spin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Returns de/dt from the tides induced from star\+\_\+wtides on star\+\_\+pert Eq 10 Hut 81 \mbox{\Hypertarget{class_orbital__change___tides_a00a924f6ef52d5c8fad21e2f682ac0a4}\label{class_orbital__change___tides_a00a924f6ef52d5c8fad21e2f682ac0a4}} 
+\index{Orbital\_change\_Tides@{Orbital\_change\_Tides}!dspindt\_hut@{dspindt\_hut}}
+\index{dspindt\_hut@{dspindt\_hut}!Orbital\_change\_Tides@{Orbital\_change\_Tides}}
+\doxysubsubsection{\texorpdfstring{dspindt\_hut()}{dspindt\_hut()}}
+{\footnotesize\ttfamily double Orbital\+\_\+change\+\_\+\+Tides\+::dspindt\+\_\+hut (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{star\+\_\+wtides,  }\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{star\+\_\+pert,  }\item[{\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar,  }\item[{double}]{kt,  }\item[{double}]{spin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Returns dspin/dt from the tides induced from star\+\_\+wtides on star\+\_\+pert Eq 11 Hut 81 \mbox{\Hypertarget{class_orbital__change___tides_a8f38d2e1d44a29fe6d382e8574b0ec19}\label{class_orbital__change___tides_a8f38d2e1d44a29fe6d382e8574b0ec19}} 
+\index{Orbital\_change\_Tides@{Orbital\_change\_Tides}!f1@{f1}}
+\index{f1@{f1}!Orbital\_change\_Tides@{Orbital\_change\_Tides}}
+\doxysubsubsection{\texorpdfstring{f1()}{f1()}}
+{\footnotesize\ttfamily static double Orbital\+\_\+change\+\_\+\+Tides\+::f1 (\begin{DoxyParamCaption}\item[{double}]{e2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_orbital__change___tides_a18535a57dd591d564805d0eed08a63e1}\label{class_orbital__change___tides_a18535a57dd591d564805d0eed08a63e1}} 
+\index{Orbital\_change\_Tides@{Orbital\_change\_Tides}!f2@{f2}}
+\index{f2@{f2}!Orbital\_change\_Tides@{Orbital\_change\_Tides}}
+\doxysubsubsection{\texorpdfstring{f2()}{f2()}}
+{\footnotesize\ttfamily static double Orbital\+\_\+change\+\_\+\+Tides\+::f2 (\begin{DoxyParamCaption}\item[{double}]{e2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_orbital__change___tides_a3c620fb8d2fd90afff4f1ef34771f6c8}\label{class_orbital__change___tides_a3c620fb8d2fd90afff4f1ef34771f6c8}} 
+\index{Orbital\_change\_Tides@{Orbital\_change\_Tides}!f3@{f3}}
+\index{f3@{f3}!Orbital\_change\_Tides@{Orbital\_change\_Tides}}
+\doxysubsubsection{\texorpdfstring{f3()}{f3()}}
+{\footnotesize\ttfamily static double Orbital\+\_\+change\+\_\+\+Tides\+::f3 (\begin{DoxyParamCaption}\item[{double}]{e2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_orbital__change___tides_adfe72e825df7cafa9f05c508783ef3db}\label{class_orbital__change___tides_adfe72e825df7cafa9f05c508783ef3db}} 
+\index{Orbital\_change\_Tides@{Orbital\_change\_Tides}!f4@{f4}}
+\index{f4@{f4}!Orbital\_change\_Tides@{Orbital\_change\_Tides}}
+\doxysubsubsection{\texorpdfstring{f4()}{f4()}}
+{\footnotesize\ttfamily static double Orbital\+\_\+change\+\_\+\+Tides\+::f4 (\begin{DoxyParamCaption}\item[{double}]{e2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_orbital__change___tides_a37413c159dec4e4221126167cb68f7aa}\label{class_orbital__change___tides_a37413c159dec4e4221126167cb68f7aa}} 
+\index{Orbital\_change\_Tides@{Orbital\_change\_Tides}!f5@{f5}}
+\index{f5@{f5}!Orbital\_change\_Tides@{Orbital\_change\_Tides}}
+\doxysubsubsection{\texorpdfstring{f5()}{f5()}}
+{\footnotesize\ttfamily static double Orbital\+\_\+change\+\_\+\+Tides\+::f5 (\begin{DoxyParamCaption}\item[{double}]{e2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_orbital__change___tides_a0566fb2fb2ef2acf6796ec97a2ffb3b8}\label{class_orbital__change___tides_a0566fb2fb2ef2acf6796ec97a2ffb3b8}} 
+\index{Orbital\_change\_Tides@{Orbital\_change\_Tides}!get\_tconv@{get\_tconv}}
+\index{get\_tconv@{get\_tconv}!Orbital\_change\_Tides@{Orbital\_change\_Tides}}
+\doxysubsubsection{\texorpdfstring{get\_tconv()}{get\_tconv()}}
+{\footnotesize\ttfamily virtual double Orbital\+\_\+change\+\_\+\+Tides\+::get\+\_\+tconv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{star\+\_\+wtides }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Override this in derived class. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_tides__simple_a0f7d16fa34d78e4fd9f9889dfe6d6d8b}{Tides\+\_\+simple}}.
+
+\mbox{\Hypertarget{class_orbital__change___tides_a81c1afadefbd5b22fe0ef1a707cf52bd}\label{class_orbital__change___tides_a81c1afadefbd5b22fe0ef1a707cf52bd}} 
+\index{Orbital\_change\_Tides@{Orbital\_change\_Tides}!GetStaticMap@{GetStaticMap}}
+\index{GetStaticMap@{GetStaticMap}!Orbital\_change\_Tides@{Orbital\_change\_Tides}}
+\doxysubsubsection{\texorpdfstring{GetStaticMap()}{GetStaticMap()}}
+{\footnotesize\ttfamily static std\+::map$<$std\+::string, \mbox{\hyperlink{class_orbital__change___tides}{Orbital\+\_\+change\+\_\+\+Tides}} $\ast$$>$\& Orbital\+\_\+change\+\_\+\+Tides\+::\+Get\+Static\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_orbital__change___tides_ac8fe7b387b21c9c06244c3bff1ad85b5}\label{class_orbital__change___tides_ac8fe7b387b21c9c06244c3bff1ad85b5}} 
+\index{Orbital\_change\_Tides@{Orbital\_change\_Tides}!GetUsed@{GetUsed}}
+\index{GetUsed@{GetUsed}!Orbital\_change\_Tides@{Orbital\_change\_Tides}}
+\doxysubsubsection{\texorpdfstring{GetUsed()}{GetUsed()}}
+{\footnotesize\ttfamily static std\+::vector$<$int$>$\& Orbital\+\_\+change\+\_\+\+Tides\+::\+Get\+Used (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_orbital__change___tides_a4eea0d4b0f21d79f6df2108396084513}\label{class_orbital__change___tides_a4eea0d4b0f21d79f6df2108396084513}} 
+\index{Orbital\_change\_Tides@{Orbital\_change\_Tides}!instance@{instance}}
+\index{instance@{instance}!Orbital\_change\_Tides@{Orbital\_change\_Tides}}
+\doxysubsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_orbital__change___tides}{Orbital\+\_\+change\+\_\+\+Tides}}$\ast$ Orbital\+\_\+change\+\_\+\+Tides\+::instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_tides__simple_aa06c140c3f3b525ca00dcadbb7fe8036}{Tides\+\_\+simple}}, and \mbox{\hyperlink{classdisabled__tides_a615fe857f329cb3930c77e74cb32341d}{disabled\+\_\+tides}}.
+
+\mbox{\Hypertarget{class_orbital__change___tides_a7baed3ed0b7f2bcbcb6f60802fd360bd}\label{class_orbital__change___tides_a7baed3ed0b7f2bcbcb6f60802fd360bd}} 
+\index{Orbital\_change\_Tides@{Orbital\_change\_Tides}!Instance@{Instance}}
+\index{Instance@{Instance}!Orbital\_change\_Tides@{Orbital\_change\_Tides}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_orbital__change___tides}{Orbital\+\_\+change\+\_\+\+Tides}} $\ast$ Orbital\+\_\+change\+\_\+\+Tides\+::\+Instance (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_orbital__change___tides_a475ba78c9819037c2c52d076fbcacb13}\label{class_orbital__change___tides_a475ba78c9819037c2c52d076fbcacb13}} 
+\index{Orbital\_change\_Tides@{Orbital\_change\_Tides}!name@{name}}
+\index{name@{name}!Orbital\_change\_Tides@{Orbital\_change\_Tides}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string Orbital\+\_\+change\+\_\+\+Tides\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_orbital__change_ab24ef0207a5065c4aa8376a0478b2504}{Orbital\+\_\+change}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_tides__simple_adaa8cae41b9751c8890d59de0b61d317}{Tides\+\_\+simple}}, and \mbox{\hyperlink{classdisabled__tides_aea3d3d34726a4723b81897bb3cc13265}{disabled\+\_\+tides}}.
+
+\mbox{\Hypertarget{class_orbital__change___tides_a7ad6195b7ccc86acfd90db1cc9447704}\label{class_orbital__change___tides_a7ad6195b7ccc86acfd90db1cc9447704}} 
+\index{Orbital\_change\_Tides@{Orbital\_change\_Tides}!pseudosync\_spin@{pseudosync\_spin}}
+\index{pseudosync\_spin@{pseudosync\_spin}!Orbital\_change\_Tides@{Orbital\_change\_Tides}}
+\doxysubsubsection{\texorpdfstring{pseudosync\_spin()}{pseudosync\_spin()}}
+{\footnotesize\ttfamily static double Orbital\+\_\+change\+\_\+\+Tides\+::pseudosync\+\_\+spin (\begin{DoxyParamCaption}\item[{double}]{e2,  }\item[{double}]{omegaorb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_orbital__change___tides_a2317048f0ca28750d7b8e9cbb01e9ee4}\label{class_orbital__change___tides_a2317048f0ca28750d7b8e9cbb01e9ee4}} 
+\index{Orbital\_change\_Tides@{Orbital\_change\_Tides}!Register@{Register}}
+\index{Register@{Register}!Orbital\_change\_Tides@{Orbital\_change\_Tides}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily void Orbital\+\_\+change\+\_\+\+Tides\+::\+Register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_orbital__change___tides}{Orbital\+\_\+change\+\_\+\+Tides}} $\ast$}]{ptr,  }\item[{const std\+::string \&}]{\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/binstar/\mbox{\hyperlink{_orbit_8h}{Orbit.\+h}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/src/binstar/\mbox{\hyperlink{_orbit_8cpp}{Orbit.\+cpp}}\end{DoxyCompactItemize}

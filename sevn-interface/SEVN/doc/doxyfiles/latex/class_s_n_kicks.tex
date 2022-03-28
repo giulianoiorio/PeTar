@@ -1,0 +1,101 @@
+\hypertarget{class_s_n_kicks}{}\doxysection{S\+N\+Kicks Class Reference}
+\label{class_s_n_kicks}\index{SNKicks@{SNKicks}}
+
+
+{\ttfamily \#include $<$Processes.\+h$>$}
+
+Inheritance diagram for S\+N\+Kicks\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_n_kicks}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_n_kicks_acb44ff79a54797eab357429bacb3f8af}{S\+N\+Kicks}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_i_o}{IO}} $\ast$\+\_\+io=nullptr, bool reg=true)
+\item 
+\mbox{\hyperlink{class_s_n_kicks}{S\+N\+Kicks}} $\ast$ \mbox{\hyperlink{class_s_n_kicks_ac12854dfa8064d3cd7b40817bec90a5b}{Instance}} (\mbox{\hyperlink{class_i_o}{IO}} $\ast$\+\_\+io) override
+\item 
+std\+::string \mbox{\hyperlink{class_s_n_kicks_a0fb21926eb858bb3c81b9b4ece53cb77}{name}} () override
+\item 
+int \mbox{\hyperlink{class_s_n_kicks_a46a9259d63c31d5356b6c10dffc6e9d7}{special\+\_\+evolve}} (\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{class_s_n_kicks_a7b5257b8ca130b492afebdf7b9f358b4}{ID}}
+\item 
+static \mbox{\hyperlink{class_s_n_kicks}{S\+N\+Kicks}} \mbox{\hyperlink{class_s_n_kicks_ac3e7747d0255a74a28131233dc0fd05d}{\+\_\+snkicks}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_s_n_kicks_acb44ff79a54797eab357429bacb3f8af}\label{class_s_n_kicks_acb44ff79a54797eab357429bacb3f8af}} 
+\index{SNKicks@{SNKicks}!SNKicks@{SNKicks}}
+\index{SNKicks@{SNKicks}!SNKicks@{SNKicks}}
+\doxysubsubsection{\texorpdfstring{SNKicks()}{SNKicks()}}
+{\footnotesize\ttfamily S\+N\+Kicks\+::\+S\+N\+Kicks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_i_o}{IO}} $\ast$}]{\+\_\+io = {\ttfamily nullptr},  }\item[{bool}]{reg = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_s_n_kicks_ac12854dfa8064d3cd7b40817bec90a5b}\label{class_s_n_kicks_ac12854dfa8064d3cd7b40817bec90a5b}} 
+\index{SNKicks@{SNKicks}!Instance@{Instance}}
+\index{Instance@{Instance}!SNKicks@{SNKicks}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_n_kicks}{S\+N\+Kicks}}$\ast$ S\+N\+Kicks\+::\+Instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_o}{IO}} $\ast$}]{\+\_\+io }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+\mbox{\Hypertarget{class_s_n_kicks_a0fb21926eb858bb3c81b9b4ece53cb77}\label{class_s_n_kicks_a0fb21926eb858bb3c81b9b4ece53cb77}} 
+\index{SNKicks@{SNKicks}!name@{name}}
+\index{name@{name}!SNKicks@{SNKicks}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string S\+N\+Kicks\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_process_a1c19334f4e746d3410e4cfad66053035}{Process}}.
+
+\mbox{\Hypertarget{class_s_n_kicks_a46a9259d63c31d5356b6c10dffc6e9d7}\label{class_s_n_kicks_a46a9259d63c31d5356b6c10dffc6e9d7}} 
+\index{SNKicks@{SNKicks}!special\_evolve@{special\_evolve}}
+\index{special\_evolve@{special\_evolve}!SNKicks@{SNKicks}}
+\doxysubsubsection{\texorpdfstring{special\_evolve()}{special\_evolve()}}
+{\footnotesize\ttfamily int S\+N\+Kicks\+::special\+\_\+evolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+This special evolve it is called before the other processes. If it returns 1 it means that the bianry has been broken an the other processes are not considered. 
+\begin{DoxyParams}{Parameters}
+{\em binstar} & Pointer to the binary \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the binary has been broken by the kick, 0 if not. 
+\end{DoxyReturn}
+If disabled just exit
+
+Initiliase orbit changer (here DA and DE are filled with values)
+
+Reimplemented from \mbox{\hyperlink{class_process_ae58051f92e63ce4c7fc3b9999595f2ad}{Process}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_s_n_kicks_ac3e7747d0255a74a28131233dc0fd05d}\label{class_s_n_kicks_ac3e7747d0255a74a28131233dc0fd05d}} 
+\index{SNKicks@{SNKicks}!\_snkicks@{\_snkicks}}
+\index{\_snkicks@{\_snkicks}!SNKicks@{SNKicks}}
+\doxysubsubsection{\texorpdfstring{\_snkicks}{\_snkicks}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_n_kicks}{S\+N\+Kicks}} S\+N\+Kicks\+::\+\_\+snkicks\hspace{0.3cm}{\ttfamily [static]}}
+
+Initialisation of the static (fake) instance NB\+: take care of the order of initialisation. The processes will be evolved exactly in the same order in which they are initialised here \mbox{\Hypertarget{class_s_n_kicks_a7b5257b8ca130b492afebdf7b9f358b4}\label{class_s_n_kicks_a7b5257b8ca130b492afebdf7b9f358b4}} 
+\index{SNKicks@{SNKicks}!ID@{ID}}
+\index{ID@{ID}!SNKicks@{SNKicks}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily size\+\_\+t S\+N\+Kicks\+::\+ID\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/binstar/\mbox{\hyperlink{_processes_8h}{Processes.\+h}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/src/binstar/\mbox{\hyperlink{_processes_8cpp}{Processes.\+cpp}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/\mbox{\hyperlink{static__main_8h}{static\+\_\+main.\+h}}\end{DoxyCompactItemize}

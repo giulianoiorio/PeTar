@@ -1,0 +1,450 @@
+#include <star.h>
+#include <utilities.h>
+
+std::mt19937_64 mtrand;
+
+
+void star::evolve(const double time) {
+
+
+    double realtime = time;
+    double localtime_save = localtime;
+
+
+    for(;;) {
+
+        localtime = realtime;
+
+        stellarphase(); //this is the new stellar phase of the star
+
+        if (isempty || isremnant || isconaked) return;
+
+        if (localtime >= tphase[starparameter::Remnant]) {
+            sn.call(this); //it must be calculated with the values of the real star!!
+            //TODO need to update the values of the real star as well here.. or inside the SN function
+            // the SN function can call a function like "star::remnant()" where it updates everything!!
+            isremnant = true;
+            return;
+        }
+
+
+        for(int i = 0; i < starparameter::_nparams; i++)
+            property_fake_0[i] = property_fake[i];
+
+
+        tracktimes();
+        lookuppositions();
+
+
+
+        update_parameter<starparameter::_pm>();
+        update_parameter<starparameter::_pr>();
+        update_parameter<starparameter::_pl>();
+        update_parameter<starparameter::_pi>();
+
+
+        //TODO: should change the units of the inertia lookup tables in the following way:
+        //s->I_t = s->I_t + log10(physutilities::km_to_RSun*1e-5 * physutilities::km_to_RSun*1e-5 * physutilities::g_to_MSun);
+        //s-> I_t = exp10(s->I_t);
+
+
+        if (subphase >= starparameter::Hecore) {
+            update_parameter<starparameter::_pmhe>();
+            update_parameter<starparameter::_prhe>();
+        } else
+            property_fake[starparameter::_pmhe] = property_fake[starparameter::_prhe] = 0.0;
+
+        if (subphase >= starparameter::COcore) {
+            update_parameter<starparameter::_pmco>();
+            update_parameter<starparameter::_prco>();
+        } else
+            property_fake[starparameter::_pmco] = property_fake[starparameter::_prco] = 0.0;
+
+
+
+        //TODO add temperature for HR diagrams
+        property_real[starparameter::_pphase] = currentphase;
+        property_real[starparameter::_ptime] = localtime;
+
+
+
+        bool repeat = false;
+        if (!needsinit) {
+            correct_interpolation_errors();
+            update_variations();
+            repeat = evolve_realstar();
+        } else
+            init_realstar();
+
+
+        if(repeat){
+
+            for(int i = 0; i < starparameter::_nparams; i++)
+                property_fake[i] = property_fake_0[i];
+
+             realtime = localtime_save + timestep;
+
+             continue;
+        }
+        else
+            break;
+
+    }
+
+}
+
+void star::init_realstar() {
+
+    for(int i = 0; i < starparameter::_nparams; i++)
+        set_property(property_fake[i], i);
+
+    set_dRdt(0.0);
+    set_dMdt(0.0);
+    set_dMHEdt(0.0);
+    set_dMCOdt(0.0);
+    set_dM_winds(0.0);
+
+}
+
+
+bool star::evolve_realstar() {
+
+    for(int i = 0; i < starparameter::_nparams; i++)
+        property_real_0[i] = property_real[i];
+
+    std::cout<<" evolve real star "<<std::endl;
+    std::cout<<" VAR HE = "<<property_fake_var[starparameter::_pmhe]<<std::endl;
+    std::cout<<" Mass CO = "<<property_real[starparameter::_pmco]<<std::endl;
+
+
+    double R0 = property_real[starparameter::_pr];
+    set_property(R0 + property_fake_var[starparameter::_pr] * R0, starparameter::_pr);
+    double M0 = property_real[starparameter::_pm];
+    set_property(M0 + property_fake_var[starparameter::_pm] * M0, starparameter::_pm);
+    double L0 = property_real[starparameter::_pl];
+    set_property(L0 + property_fake_var[starparameter::_pl] * L0, starparameter::_pl);
+    double I0 = property_real[starparameter::_pi];
+    set_property(I0 + property_fake_var[starparameter::_pi] * I0, starparameter::_pi);
+
+    std::cout<<" VARMTOT = "<<property_fake_var[starparameter::_pm]<<std::endl;
+    std::cout<<" M0 = "<<M0<<std::endl;
+    std::cout<<" M  = "<<property_real[starparameter::_pm]<<std::endl;
+
+
+    double MHE0, RHE0, MCO0, RCO0;
+    if(subphase >= starparameter::Hecore) {
+        if(property_real_0[starparameter::_pmhe] != 0.0) {
+            MHE0 = property_real[starparameter::_pmhe];
+            set_property(MHE0 + property_fake_var[starparameter::_pmhe] * MHE0, starparameter::_pmhe);
+            RHE0 = property_real[starparameter::_prhe];
+            set_property(RHE0 + property_fake_var[starparameter::_prhe] * RHE0, starparameter::_prhe);
+        }
+        else{
+            MHE0 = property_fake[starparameter::_pmhe];
+            RHE0 = property_fake[starparameter::_prhe];
+            set_property(MHE0, starparameter::_pmhe);
+            set_property(RHE0, starparameter::_prhe);
+        }
+    }
+    else
+        MHE0 = RHE0 = property_real[starparameter::_pmhe] = property_real[starparameter::_prhe] = 0.0;
+
+
+
+
+    if(subphase >= starparameter::COcore) {
+        if(property_real_0[starparameter::_pmco] != 0.0) {
+            MCO0 = property_real[starparameter::_pmco];
+            set_property(MCO0 + property_fake_var[starparameter::_pmco] * MCO0, starparameter::_pmco);
+            RCO0 = property_real[starparameter::_prco];
+            set_property(RCO0 + property_fake_var[starparameter::_prco] * RCO0, starparameter::_prco);
+        }
+        else{
+            MCO0 = property_fake[starparameter::_pmco];
+            RCO0 = property_fake[starparameter::_prco];
+            set_property(MCO0, starparameter::_pmco);
+            set_property(RCO0, starparameter::_prco);
+        }
+    }
+    else
+        MCO0 = RCO0 = property_real[starparameter::_pmco] = property_real[starparameter::_prco] = 0.0;
+
+
+
+    std::cout<<" Mass CO = "<<property_real[starparameter::_pmco]<<std::endl;
+
+
+
+    //TODO the following function should never be called
+    correct_interpolation_errors_real();
+
+
+    //TODO If binary stellar evolution is active, the following quantities must be recalculated
+    set_dRdt((property_real[starparameter::_pr] - R0)/timestep);
+    set_dMdt((property_real[starparameter::_pm] - M0)/timestep);
+    set_dM_winds(property_real[starparameter::_pm] - M0);
+    set_dMHEdt((property_real[starparameter::_pmhe] - MHE0)/timestep);
+    set_dMCOdt((property_real[starparameter::_pmco] - MCO0)/timestep);
+
+
+    return (ts.call(this)); //timestep control
+
+
+}
+
+
+
+
+
+
+void star::init_1(std::vector<std::string> &params){
+
+    set_mzams(utilities::s2n<double>(params[0], __FILE__, __LINE__), __FILE__, __LINE__);
+    set_Z(utilities::s2n<double>(params[1], __FILE__, __LINE__), __FILE__, __LINE__);
+    set_ospin(utilities::s2n<double>(params[2], __FILE__, __LINE__), __FILE__, __LINE__);
+    set_sntype(params[3], __FILE__, __LINE__);
+
+    std::cout<<" Star first init completed"<<std::endl;
+
+}
+
+void star::init_2(std::vector<std::string> &params){
+
+    set_localtime(inspect_param(params[4]), __FILE__, __LINE__);
+    set_tf(inspect_param(params[5]), __FILE__, __LINE__);
+    set_dtout(inspect_param(params[6]), __FILE__, __LINE__);
+
+    std::cout<<" Star second init completed"<<std::endl;
+
+}
+
+void star::init_on_lookup() {
+
+    auto *Z_id = new size_t [2];
+    auto *Ztrack = new double [2];
+
+    std::cout<<" metallicity = "<<Z<<std::endl;
+    //find Zlow and Zhigh
+    //TODO what happens at the extremes?
+    Z_id[0] = utilities::binary_search(&io->Z[0], 0, io->Z.size()-1, Z); //search the metallicity of the star (Z)
+    Z_id[1] = std::min(Z_id[0] + 1, io->Z.size() - 1); //avoid out-of-vector
+
+    //interpolating metallicity values
+    Ztrack[0] = io->Z[Z_id[0]];
+    Ztrack[1] = io->Z[Z_id[1]];
+
+    std::cout<<" Z1/Z2 = "<<Ztrack[0]<<"/"<<Ztrack[1]<<std::endl;
+
+
+    //find neighbour ZAMSs at zlow and zhigh
+    size_t *zams_id = new size_t [4];
+    double *Mtrack = new double [4];
+
+    for(size_t i = 0, k = 0; i < 2; i++, k+=2){
+        size_t dim = io->allzams[Z_id[i]].size();
+        zams_id[k] =  utilities::binary_search(&io->allzams[Z_id[i]][0], 0, dim-1, mzams); //search for the ZAMS of the star (mzams)
+        zams_id[k+1] = std::min(zams_id[k] + 1, dim - 1); //avoid out-of-vector
+    }
+
+
+    //interpolating zams values
+    Mtrack[0] = io->allzams[Z_id[0]][zams_id[0]];
+    Mtrack[1] = io->allzams[Z_id[0]][zams_id[1]];
+    Mtrack[2] = io->allzams[Z_id[1]][zams_id[2]];
+    Mtrack[3] = io->allzams[Z_id[1]][zams_id[3]];
+
+    std::cout<<" m1/m2 = "<<Mtrack[0]<<"/"<<Mtrack[1]<<std::endl;
+    std::cout<<" m1/m2 = "<<Mtrack[2]<<"/"<<Mtrack[3]<<std::endl;
+
+
+
+    //get the right table pointers
+
+    for(size_t i = 0; i < 2; i++) {
+        size_t zid = Z_id[i];
+
+        for(size_t k = 0; k < 2; k++) {
+            size_t mid = zams_id[k + 2*i];
+
+            for (int j = 0; j < starparameter::_ntables; j++) {
+                std::cout<<" index = "<<j<<std::endl;
+                std::cout<<" size = "<<tables.size()<<std::endl;
+                std::cout<<" size y = "<<tables[j].size()<<std::endl;
+                std::cout<<" zid/size = "<<zid<<"   "<<io->tables[j].size()<<std::endl;
+                std::cout<<" mid/size = "<<mid<<"   "<<io->tables[j][zid].size()<<std::endl;
+                tables[j][k + 2*i] = &io->tables[j][zid][mid]; //points to the j-th table, at the zid-th metallicity, at the mid-th zams
+                //star is always init at t=0, then we call the evolve function to evolve it at the desired time (read from the param file)
+            }
+        }
+    }
+
+    std::cout<<" Star pointers set "<<tables[starparameter::_pm][0]->at(0)<<"   "<<tables[starparameter::_pm][1]->at(0)<<std::endl;
+    std::cout<<" Star pointers set "<<tables[starparameter::_pm][2]->at(0)<<"   "<<tables[starparameter::_pm][3]->at(0)<<std::endl;
+
+
+
+    //We use linear weights that are functions of mzams to calculate the evolution of all the stellar
+    //evolution parameters.
+
+    //1st point: maybe, we should use weights that use luminosities to calculate luminosities, radii to calculate
+    //radii and so on... Example: if mzams=60 and the two interpolating tracks are at mzams_1 = 61 and mzams_2 = 59
+    //the weights are both 0.5, therefore 0.5*61 + 0.5*59 = 60 (correct). But this is not true for luminosities,
+    //for example, on the MS, L = C*M^3.5, which is not linear in masses!!
+
+    //2nd point: linear weights works well on the ZAMS because Mass vs ZAMS at t=tzams is, obviously, a linear relation.
+    //Still, the relation Mass vs ZAMS at t!=tzams is NOT a linear relation therefore linear weights are wrong.
+    //If the mass-grid of the look-up tables is dense enough we can assume that the relation Mass vs ZAMS is locally linear.
+    //But, how dense that should be to obtain a good approximation? The same, of course, holds for the other physical
+    //stellar parameters.
+
+
+    //set weights for masses
+    wM.resize(4);
+    for(int i = 0; i < 4; i+=2) {
+        //linear weights
+        wM[i]   = (Mtrack[i+1] - mzams) / (Mtrack[i + 1] - Mtrack[i]);
+        wM[i+1] = (mzams - Mtrack[i]) / (Mtrack[i + 1] - Mtrack[i]);
+
+        //more complex weights
+        //wM[i]   = fabs(Mtrack[i] - Mtrack[i] * Mtrack[i + 1] / mzams) / (Mtrack[i + 1] - Mtrack[i]);
+        //wM[i+1] = fabs(Mtrack[i + 1] - Mtrack[i] * Mtrack[i + 1] / mzams) / (Mtrack[i + 1] - Mtrack[i]);
+    }
+
+    std::cout<<" M weights set = "<<wM[0]<<"   "<<wM[1]<<std::endl;
+    std::cout<<" M weights set = "<<wM[2]<<"   "<<wM[3]<<std::endl;
+
+    //set weights for metallicities
+    wZ.resize(2);
+    wZ[0] = (Ztrack[1] - Z) / (Ztrack[1] - Ztrack[0]);
+    wZ[1] = (Z - Ztrack[0]) / (Ztrack[1] - Ztrack[0]);
+
+    std::cout<<" Z weights set = "<<wZ[0]<<"   "<<wZ[1]<<std::endl;
+
+
+
+    std::vector<double> t_neigh_co, t_neigh_he;
+    t_neigh_co.resize(4);
+    t_neigh_he.resize(4);
+
+
+
+    for(size_t i = 0; i < 2; i++) {
+        size_t zid = Z_id[i];
+
+        for (size_t k = 0; k < 2; k++) {
+            size_t mid = zams_id[k + 2 * i];
+
+            tphase_neigh[k + 2 * i].resize(io->tables[starparameter::_pphase][zid][mid].size()/2 + 1); //+1 = supernova time.. starparameter::Remnant
+            //format file: time phase time phase time phase
+            std::cout<<" tphase "<<k + 2 * i<<" Resized "<<std::endl;
+
+            //check if there are too many phases in the look-up tables
+            if(tphase_neigh[k + 2 * i].size() > starparameter::Nphases)
+                err.critical("Too many phases specified in the look-up tables. Please check your tables", __FILE__, __LINE__);
+
+            //initialize all tphase_neigh to -1
+            for (double &j : tphase_neigh[k + 2 * i])
+                j = -1;
+
+            for (size_t j = 0; j < io->tables[starparameter::_pphase][zid][mid].size(); j+=2) {
+
+                double value_t = io->tables[starparameter::_pphase][zid][mid][j];
+                int    value_p = (int) io->tables[starparameter::_pphase][zid][mid][j+1];
+
+                if(tphase_neigh[k + 2 * i][value_p] != -1)
+                    err.critical("Phase time has already been set. Do you have duplicated in the look-up tables?", __FILE__, __LINE__);
+                else
+                    tphase_neigh[k + 2 * i][value_p] = value_t;
+
+            }
+
+            //set also remnant time, which is not included in the look-up tables
+            size_t last_point = io->tables[starparameter::_ptime][zid][mid].size();
+            tphase_neigh[k + 2 * i][starparameter::Remnant] = io->tables[starparameter::_ptime][zid][mid][last_point-1];
+
+
+            bool heset = false;
+            for (size_t j = 0; j < io->tables[starparameter::_pmco][zid][mid].size(); j++) {
+
+                if (io->tables[starparameter::_pmco][zid][mid][j] != 0.0) {
+                    t_neigh_co[k + 2 * i] = io->tables[starparameter::_ptime][zid][mid][j - 1];
+                    break;
+                }
+
+                if (io->tables[starparameter::_pmhe][zid][mid][j] != 0.0 && !heset) {
+                    t_neigh_he[k + 2 * i] = io->tables[starparameter::_ptime][zid][mid][j - 1];
+                    heset = true;
+                }
+            }
+        }
+    }
+
+
+    std::cout<<" All phases set"<<std::endl;
+
+#if 0
+    //check if some phase is missing and alert the user
+    for(int i = 0; i < 4; i++) {
+        for (int j = 0; j < starparameter::Nphases; j++) {
+            if (tphase_neigh[i][j] == -1) {
+                //TODO print a message that the following phase is missing...
+            }
+        }
+    }
+#endif
+
+    std::cout<<" No weird phases... printout phases"<<std::endl;
+    for(int i = 0; i < 4; i++) {
+        for (int j = 0; j < starparameter::Nphases; j++) {
+            std::cout<<tphase_neigh[i][j]<<"   ";
+        }
+        std::cout<<std::endl;
+    }
+
+    for(int i = 0; i < 4; i++) {
+        std::cout<<" t(he_start) = "<<t_neigh_he[i]<<"   t(co_start) = "<<t_neigh_co[i]<<std::endl;
+    }
+
+
+    //initialize tphase vector of the star using the tphase_neigh vectors
+    for (int j = 0; j < starparameter::Nphases; j++){
+        if(tphase_neigh[0][j] != -1 && tphase_neigh[1][j] != -1 && tphase_neigh[2][j] != -1 && tphase_neigh[3][j] != -1) {
+            double tphase_zlow = tphase_neigh[0][j] * wM[0] + tphase_neigh[1][j] * wM[1];
+            double tphase_zhigh = tphase_neigh[2][j] * wM[2] + tphase_neigh[3][j] * wM[3];
+            tphase[j] = wZ[0] * tphase_zlow + wZ[1] * tphase_zhigh;
+        }
+        else
+            tphase[j] = -1;
+    }
+
+    std::cout<<" time stellar phases "<<std::endl;
+    for (int j = 0; j < starparameter::Nphases; j++){
+        if(tphase[j] != -1)
+            std::cout<<tphase[j]<<"   ";
+    }
+    std::cout<<std::endl;
+
+
+
+
+
+    //calculate also t_he_start and t_co_start for the subphases
+    double t_he_zlow = t_neigh_he[0] * wM[0] + t_neigh_he[1] * wM[1];
+    double t_he_zhigh = t_neigh_he[2] * wM[2] + t_neigh_he[3] * wM[3];
+    t_he_start = wZ[0] * t_he_zlow + wZ[1] * t_he_zhigh;
+
+    double t_co_zlow = t_neigh_co[0] * wM[0] + t_neigh_co[1] * wM[1];
+    double t_co_zhigh = t_neigh_co[2] * wM[2] + t_neigh_co[3] * wM[3];
+    t_co_start = wZ[0] * t_co_zlow + wZ[1] * t_co_zhigh;
+
+    std::cout<<" star he and co start "<<std::endl;
+    std::cout<<t_he_start<<"   "<<t_co_start<<std::endl;
+
+
+    delete [] Z_id;
+    delete [] Ztrack;
+    delete [] Mtrack;
+    delete [] zams_id;
+
+
+}

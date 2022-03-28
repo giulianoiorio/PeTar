@@ -1,0 +1,129 @@
+\hypertarget{class_tconv}{}\doxysection{Tconv Class Reference}
+\label{class_tconv}\index{Tconv@{Tconv}}
+
+
+{\ttfamily \#include $<$property.\+h$>$}
+
+Inheritance diagram for Tconv\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tconv}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tconv_abf84abc4fa49a136327f1bd203b01a0b}{Tconv}} (bool reg=true)
+\item 
+size\+\_\+t \mbox{\hyperlink{class_tconv_ae084dbd0a8add0f43bb9b34fd25cb802}{Tab\+ID}} () override
+\item 
+\mbox{\hyperlink{class_tconv}{Tconv}} $\ast$ \mbox{\hyperlink{class_tconv_a534314dc2573db96c287752eeebd933b}{Instance}} () override
+\item 
+std\+::string \mbox{\hyperlink{class_tconv_a34d0034558ba890fa8ea41d309e4285b}{name}} () override
+\item 
+void \mbox{\hyperlink{class_tconv_ab9b311fdf559dd53606c13a7cbd39b02}{set\+\_\+w}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+void \mbox{\hyperlink{class_tconv_af9729eb8f30e6cca117d390105405ed2}{changed\+\_\+track}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s, \mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s\+\_\+jtrack) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{class_tconv_a068921a4437eea758d057e5d851ac785}{ID}}
+\item 
+static \mbox{\hyperlink{class_tconv}{Tconv}} \mbox{\hyperlink{class_tconv_ab37133b762d77759ee59e65828a6dcca}{\+\_\+tconv}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This property stores the T(?) scale of the convective envelope 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tconv_abf84abc4fa49a136327f1bd203b01a0b}\label{class_tconv_abf84abc4fa49a136327f1bd203b01a0b}} 
+\index{Tconv@{Tconv}!Tconv@{Tconv}}
+\index{Tconv@{Tconv}!Tconv@{Tconv}}
+\doxysubsubsection{\texorpdfstring{Tconv()}{Tconv()}}
+{\footnotesize\ttfamily Tconv\+::\+Tconv (\begin{DoxyParamCaption}\item[{bool}]{reg = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tconv_af9729eb8f30e6cca117d390105405ed2}\label{class_tconv_af9729eb8f30e6cca117d390105405ed2}} 
+\index{Tconv@{Tconv}!changed\_track@{changed\_track}}
+\index{changed\_track@{changed\_track}!Tconv@{Tconv}}
+\doxysubsubsection{\texorpdfstring{changed\_track()}{changed\_track()}}
+{\footnotesize\ttfamily void Tconv\+::changed\+\_\+track (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s\+\_\+jtrack }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Handle the modification of the property after a track change. It does nothing by default. 
+\begin{DoxyParams}{Parameters}
+{\em s} & The star for which we are changing the tracks. \\
+\hline
+{\em s\+\_\+jtrack} & The star that we are using to get info of the new tracks. \\
+\hline
+\end{DoxyParams}
+Copy the \mbox{\hyperlink{class_luminosity}{Luminosity}} from the jtrack star
+
+Reimplemented from \mbox{\hyperlink{class_property_ab3b4070354b2cddcf25bb6bd7b845a86}{Property}}.
+
+\mbox{\Hypertarget{class_tconv_a534314dc2573db96c287752eeebd933b}\label{class_tconv_a534314dc2573db96c287752eeebd933b}} 
+\index{Tconv@{Tconv}!Instance@{Instance}}
+\index{Instance@{Instance}!Tconv@{Tconv}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tconv}{Tconv}}$\ast$ Tconv\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a378a68a95da682a4247a4809e28a4d0c}{Property}}.
+
+\mbox{\Hypertarget{class_tconv_a34d0034558ba890fa8ea41d309e4285b}\label{class_tconv_a34d0034558ba890fa8ea41d309e4285b}} 
+\index{Tconv@{Tconv}!name@{name}}
+\index{name@{name}!Tconv@{Tconv}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string Tconv\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a6f2f260968b6780485004496e7c53063}{Property}}.
+
+\mbox{\Hypertarget{class_tconv_ab9b311fdf559dd53606c13a7cbd39b02}\label{class_tconv_ab9b311fdf559dd53606c13a7cbd39b02}} 
+\index{Tconv@{Tconv}!set\_w@{set\_w}}
+\index{set\_w@{set\_w}!Tconv@{Tconv}}
+\doxysubsubsection{\texorpdfstring{set\_w()}{set\_w()}}
+{\footnotesize\ttfamily void Tconv\+::set\+\_\+w (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_ad0a64ecfaddcefb0295451f37cb66e2c}{Property}}.
+
+\mbox{\Hypertarget{class_tconv_ae084dbd0a8add0f43bb9b34fd25cb802}\label{class_tconv_ae084dbd0a8add0f43bb9b34fd25cb802}} 
+\index{Tconv@{Tconv}!TabID@{TabID}}
+\index{TabID@{TabID}!Tconv@{Tconv}}
+\doxysubsubsection{\texorpdfstring{TabID()}{TabID()}}
+{\footnotesize\ttfamily size\+\_\+t Tconv\+::\+Tab\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a5496b2bc47beb1dc748353a358fae0fb}{Property}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_tconv_ab37133b762d77759ee59e65828a6dcca}\label{class_tconv_ab37133b762d77759ee59e65828a6dcca}} 
+\index{Tconv@{Tconv}!\_tconv@{\_tconv}}
+\index{\_tconv@{\_tconv}!Tconv@{Tconv}}
+\doxysubsubsection{\texorpdfstring{\_tconv}{\_tconv}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tconv}{Tconv}} Tconv\+::\+\_\+tconv\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_tconv_a068921a4437eea758d057e5d851ac785}\label{class_tconv_a068921a4437eea758d057e5d851ac785}} 
+\index{Tconv@{Tconv}!ID@{ID}}
+\index{ID@{ID}!Tconv@{Tconv}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily size\+\_\+t Tconv\+::\+ID\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/star/\mbox{\hyperlink{property_8h}{property.\+h}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/src/star/\mbox{\hyperlink{property_8cpp}{property.\+cpp}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/\mbox{\hyperlink{static__main_8h}{static\+\_\+main.\+h}}\end{DoxyCompactItemize}

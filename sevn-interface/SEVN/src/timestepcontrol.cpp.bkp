@@ -1,0 +1,155 @@
+//
+// Created by mario on 03/05/18.
+//
+
+
+#include <timestepcontrol.h>
+#include <star.h>
+
+bool sevnstd::tscontrol::call(star *s){
+
+
+    bool repeat = false;
+    double new_dt = max_timestep(s);
+    std::cout<<" old dt = "<<new_dt<<std::endl;
+
+
+
+    if(s->get_property_0(starparameter::_pmhe) > 2.0 && fabs(s->get_property(starparameter::_pmhe) - s->get_property_0(starparameter::_pmhe))/s->get_property(starparameter::_pmhe) > 2.0*starparameter::maximum_variation){
+        repeat = true;
+        new_dt = starparameter::maximum_variation*( s->get_property(starparameter::_pmhe)/fabs(s->get_dMHEdt()) );
+    }
+    else if(s->get_property_0(starparameter::_pmhe) <= 2.0 && fabs(s->get_property(starparameter::_pmhe) - s->get_property_0(starparameter::_pmhe)) > 2.0*starparameter::maximum_variation*2.0){
+        repeat = true;
+        new_dt = starparameter::maximum_variation*2.0*( s->get_property(starparameter::_pmhe)/fabs(s->get_dMHEdt()) );
+    }
+
+    if(new_dt >= 0.8*s->get_timestep()) repeat = false;
+
+    if(repeat) {
+
+        for(int i = 0; i < starparameter::_nparams; i++)
+            s->_set_property(s->get_property_0(i), i, __FILE__, __LINE__);
+
+        s->_set_timestep(new_dt, __FILE__, __LINE__);
+        std::cout<<" NEWDT "<<new_dt<<std::endl;
+
+        return repeat;
+    }
+
+
+
+
+
+
+    if(s->get_property_0(starparameter::_pmco) > 2.0 && fabs(s->get_property(starparameter::_pmco) - s->get_property_0(starparameter::_pmco))/s->get_property(starparameter::_pmco) > 2.0*starparameter::maximum_variation){
+        repeat = true;
+        new_dt = starparameter::maximum_variation*( s->get_property(starparameter::_pmco)/fabs(s->get_dMCOdt()) );
+    }
+    else if(s->get_property_0(starparameter::_pmco) <= 2.0 && fabs(s->get_property(starparameter::_pmco) - s->get_property_0(starparameter::_pmco)) > 2.0*starparameter::maximum_variation*2.0){
+        repeat = true;
+        new_dt = starparameter::maximum_variation*2.0*( s->get_property(starparameter::_pmco)/fabs(s->get_dMCOdt()) );
+    }
+
+    if(new_dt >= 0.8*s->get_timestep()) repeat = false;
+
+    if(repeat) {
+
+        for(int i = 0; i < starparameter::_nparams; i++)
+            s->_set_property(s->get_property_0(i), i, __FILE__, __LINE__);
+
+        s->_set_timestep(new_dt, __FILE__, __LINE__);
+        std::cout<<" NEWDT "<<new_dt<<std::endl;
+
+        return repeat;
+    }
+
+
+
+
+
+
+
+    double new_timestep = max_timestep(s);
+    std::cout<<" max allowed timestep "<<new_timestep<<std::endl;
+
+    //determine next dt by imposing a maximum relative variation of stellar mass and radius
+    if(fabs(s->get_dMdt()) != 0.0)
+        new_timestep = std::min(new_timestep, starparameter::maximum_variation*( s->get_property(starparameter::_pm)/fabs(s->get_dMdt()) ) );
+
+    if(fabs(s->get_dRdt()) != 0.0)
+        new_timestep = std::min(new_timestep, starparameter::maximum_variation*( s->get_property(starparameter::_pr)/fabs(s->get_dRdt()) ) );
+
+
+
+    if(s->get_property_0(starparameter::_pmhe) > 2.0){
+        new_timestep = std::min(new_timestep, starparameter::maximum_variation*( s->get_property(starparameter::_pmhe)/fabs(s->get_dMHEdt()) ) );
+    }
+    else{//fixed maximum variation under 2.0Msun (avoid small time steps just because Mhe or MCO are small)
+        new_dt = (starparameter::maximum_variation*2.0) / (fabs(s->get_property(starparameter::_pmhe) - s->get_property_0(starparameter::_pmhe)) / s->get_timestep());
+        new_timestep = std::min(new_timestep,new_dt);
+    }
+
+
+    if(s->get_property_0(starparameter::_pmco) > 2.0){
+        new_timestep = std::min(new_timestep, starparameter::maximum_variation*( s->get_property(starparameter::_pmco)/fabs(s->get_dMCOdt()) ) );
+    }
+    else{ //fixed maximum variation under 2.0Msun (avoid small time steps just because Mhe or MCO are small)
+        new_dt = (starparameter::maximum_variation*2.0) / (fabs(s->get_property(starparameter::_pmco) - s->get_property_0(starparameter::_pmco)) / s->get_timestep());
+        new_timestep = std::min(new_timestep,new_dt);
+    }
+
+
+
+
+
+   // if(fabs(s->get_dMHEdt()) != 0.0)
+   //     new_timestep = std::min(new_timestep, starparameter::maximum_variation*( s->get_MHE()/fabs(s->get_dMHEdt()) ) );
+
+   // if(fabs(s->get_dMCOdt()) != 0.0)
+   //     new_timestep = std::min(new_timestep, starparameter::maximum_variation*( s->get_MCO()/fabs(s->get_dMCOdt()) ) );
+
+
+    std::cout<<" dMdt = "<<s->get_dMdt()<<std::endl;
+    std::cout<<" dRdt = "<<s->get_dRdt()<<std::endl;
+
+    //reduce the time-step at every critical passage (e.g. formation of the He core, CO core, remnant, ...)
+    //TODO maybe we should take into account also the transformation into a WR star??
+
+    if(s->get_localtime()+new_timestep > s->get_next_tphase()) {
+        if(s->get_changedphase()) {
+            //std::cout<<" CHANGED PHASE"<<std::endl;
+            new_timestep = std::min(new_timestep, 1.001 * (s->get_next_tphase() - s->get_localtime()));
+            s->set_changedphase(false);
+        }
+        else{
+            s->set_changedphase(true);
+            std::cout<<" CHANGED PHASE"<<std::endl;
+            new_timestep = std::min(new_timestep, 0.999 * (s->get_next_tphase() - s->get_localtime()));
+        }
+    }
+
+    std::cout<<" New time step = "<<new_timestep<<std::endl;
+
+    s->_set_timestep(new_timestep, __FILE__, __LINE__);
+
+    return repeat;
+}
+
+void sevnstd::tscontrol::estimate_initial_ts(star *s) {
+
+    std::cout<<"initial dt "<<std::endl;
+    s->_set_timestep(1.0e-3, __FILE__, __LINE__);
+    star sold = *s;
+
+    std::cout<<sold.get_localtime()<<std::endl;
+    sold.evolve(sold.get_localtime()+sold.get_timestep());
+    call(&sold);
+
+    std::cout<<"afterdt "<<std::endl;
+    s->_set_timestep(sold.get_timestep(), __FILE__, __LINE__);
+}
+
+double sevnstd::tscontrol::max_timestep(star *s) {
+    return ( (s->get_next_tphase() - s->get_current_tphase())/starparameter::min_points_per_phase);
+}

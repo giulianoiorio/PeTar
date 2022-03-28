@@ -1,0 +1,78 @@
+\hypertarget{classevolve__utility_1_1_evolve_b_b_h}{}\doxysection{evolve\+\_\+utility\+::Evolve\+B\+BH Class Reference}
+\label{classevolve__utility_1_1_evolve_b_b_h}\index{evolve\_utility::EvolveBBH@{evolve\_utility::EvolveBBH}}
+
+
+{\ttfamily \#include $<$evolve.\+h$>$}
+
+Inheritance diagram for evolve\+\_\+utility\+::Evolve\+B\+BH\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classevolve__utility_1_1_evolve_b_b_h}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classevolve__utility_1_1_evolve_b_b_h_aa81170459b22bd8d6fa1657f5809658c}{Evolve\+B\+BH}} (\mbox{\hyperlink{classsevnstd_1_1_sevn_logging}{Sevn\+Logging}} \&svlog, bool record\+\_\+state=true)
+\item 
+int \mbox{\hyperlink{classevolve__utility_1_1_evolve_b_b_h_af7e736b81010d015a60a132f1b2f844e}{operator()}} (\mbox{\hyperlink{class_binstar}{Binstar}} \&binary) override
+\item 
+int \mbox{\hyperlink{classevolve__utility_1_1_evolve_b_b_h_a43e150970a882e69cf9745c53bf6dbdb}{operator()}} (\mbox{\hyperlink{class_star}{Star}} \&star) override
+\item 
+std\+::string \mbox{\hyperlink{classevolve__utility_1_1_evolve_b_b_h_af503cd5e5f38f2d51c080f714f77e000}{name}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Evolve functor specialised for the analysis of BH binaries. During the evolution the only output is the state when the system becomes a BH binary @record\+\_\+state\+\_\+policy The state is recorded only the first time the system becomes a BH binary dtout is not used @break\+\_\+evolve\+\_\+policy The evolution is stopped when both objects become B\+Hs and the stars are still bound or following the tf input option. @binstar\+\_\+evolve Yes @star\+\_\+evolve raise Not implemented error @catch sevnerr 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classevolve__utility_1_1_evolve_b_b_h_aa81170459b22bd8d6fa1657f5809658c}\label{classevolve__utility_1_1_evolve_b_b_h_aa81170459b22bd8d6fa1657f5809658c}} 
+\index{evolve\_utility::EvolveBBH@{evolve\_utility::EvolveBBH}!EvolveBBH@{EvolveBBH}}
+\index{EvolveBBH@{EvolveBBH}!evolve\_utility::EvolveBBH@{evolve\_utility::EvolveBBH}}
+\doxysubsubsection{\texorpdfstring{EvolveBBH()}{EvolveBBH()}}
+{\footnotesize\ttfamily evolve\+\_\+utility\+::\+Evolve\+B\+B\+H\+::\+Evolve\+B\+BH (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsevnstd_1_1_sevn_logging}{Sevn\+Logging}} \&}]{svlog,  }\item[{bool}]{record\+\_\+state = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classevolve__utility_1_1_evolve_b_b_h_af503cd5e5f38f2d51c080f714f77e000}\label{classevolve__utility_1_1_evolve_b_b_h_af503cd5e5f38f2d51c080f714f77e000}} 
+\index{evolve\_utility::EvolveBBH@{evolve\_utility::EvolveBBH}!name@{name}}
+\index{name@{name}!evolve\_utility::EvolveBBH@{evolve\_utility::EvolveBBH}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string evolve\+\_\+utility\+::\+Evolve\+B\+B\+H\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classevolve__utility_1_1_evolve_functor_a2e879b095812d2c1fa89cd30fc77feac}{evolve\+\_\+utility\+::\+Evolve\+Functor}}.
+
+\mbox{\Hypertarget{classevolve__utility_1_1_evolve_b_b_h_af7e736b81010d015a60a132f1b2f844e}\label{classevolve__utility_1_1_evolve_b_b_h_af7e736b81010d015a60a132f1b2f844e}} 
+\index{evolve\_utility::EvolveBBH@{evolve\_utility::EvolveBBH}!operator()@{operator()}}
+\index{operator()@{operator()}!evolve\_utility::EvolveBBH@{evolve\_utility::EvolveBBH}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int evolve\+\_\+utility\+::\+Evolve\+B\+B\+H\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_binstar}{Binstar}} \&}]{binary }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Evolve
+
+The special break condition is activated the first time both stars are BH and the system is not broken
+
+Check record state
+
+Implements \mbox{\hyperlink{classevolve__utility_1_1_evolve_functor_a4102a35c461e68fb65ed5d9ed8d04d73}{evolve\+\_\+utility\+::\+Evolve\+Functor}}.
+
+\mbox{\Hypertarget{classevolve__utility_1_1_evolve_b_b_h_a43e150970a882e69cf9745c53bf6dbdb}\label{classevolve__utility_1_1_evolve_b_b_h_a43e150970a882e69cf9745c53bf6dbdb}} 
+\index{evolve\_utility::EvolveBBH@{evolve\_utility::EvolveBBH}!operator()@{operator()}}
+\index{operator()@{operator()}!evolve\_utility::EvolveBBH@{evolve\_utility::EvolveBBH}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int evolve\+\_\+utility\+::\+Evolve\+B\+B\+H\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} \&}]{star }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classevolve__utility_1_1_evolve_functor_a29a3aeb6f5fc928ae9af92b8822d874c}{evolve\+\_\+utility\+::\+Evolve\+Functor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/utils/\mbox{\hyperlink{evolve_8h}{evolve.\+h}}\end{DoxyCompactItemize}

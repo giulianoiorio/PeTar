@@ -1,0 +1,777 @@
+#ifndef STAR_H
+#define STAR_H
+
+#include <iostream>
+#include <vector>
+#include <string>
+#include <starparameter.h>
+#include <utilities.h>
+#include <cmath>
+
+
+#include <types.h>
+#include <fstream>
+
+#include <algorithm>
+
+#include <IO.h>
+
+
+#include <supernova.h>
+using sevnstd::supernova;
+#include <timestepcontrol.h>
+using sevnstd::tscontrol;
+#include <errhand.h>
+using sevnstd::sevnerr;
+
+
+#define set_property(A, B) star::_set_property(A, B, __FILE__, __LINE__)
+
+#define set_dRdt(A) star::_set_dRdt(A, __FILE__, __LINE__)
+#define set_dMdt(A) star::_set_dMdt(A, __FILE__, __LINE__)
+#define set_dMHEdt(A) star::_set_dMHEdt(A, __FILE__, __LINE__)
+#define set_dMCOdt(A) star::_set_dMCOdt(A, __FILE__, __LINE__)
+#define set_dM_winds(A) star::_set_dM_winds(A, __FILE__, __LINE__)
+
+class star{
+
+
+public:
+
+    star(IO *_io, std::vector<std::string> &params, size_t &_ID){ //default constructor
+
+
+        needsinit = true;
+        break_at_remnant = false;
+        print_all_steps = false;
+        print_per_phase = false;
+        isempty = isconaked = isremnant = changedphase = false;
+
+        io = _io;
+        ID = _ID;
+
+        property_fake.resize(starparameter::_nparams);
+        property_fake_var.resize(starparameter::_nparams);
+        property_fake_0.resize(starparameter::_nparams);
+
+        property_real_0.resize(starparameter::_nparams);
+
+
+
+        property_real.resize(starparameter::_ntotal);
+        property_real[starparameter::_nparams] = starparameter::_nparams; //reserved position
+        property_real[starparameter::_ntables] = starparameter::_ntables; //reserved position
+        property_real[starparameter::_ntotal] = starparameter::_ntotal; //reserved position
+
+
+        state.resize(io->printcolumns.size());
+
+
+
+        name = utilities::random_keygen(&io->mtrand);
+        std::cout<<"My name = "<<name<<std::endl;
+
+
+        init_params = params;
+
+        ttimes.resize(4); //times of the 4 interpolating tracks
+        lookuppos.resize(4); //positions on the 4 interpolating tracks
+        lookuptimes.resize(4);
+        tphase_neigh.resize(4);
+        tphase.resize(starparameter::Nphases);
+
+
+
+        std::cout<<" before resize "<<std::endl;
+
+        tables.resize(starparameter::_ntables);
+        std::cout<<" tables resized "<<std::endl;
+        for (auto &i : tables)
+            i.resize(4);
+
+        std::cout<<" resized "<<std::endl;
+
+        //tables[i][j] points to the beginning of the i-th look-up table (mass,radius...) at the j-th interpolating zams
+        //for each interpolating metallicity I have 4 pointers corresponding to the 4 interpolating tracks
+
+        init_1(init_params);
+        init_on_lookup();
+        init_2(init_params);
+
+        evolve(localtime); //evolve the star at localtime (specified at the beginning, input parameter)
+
+
+        needsinit = false;
+
+
+        ts.estimate_initial_ts(this);
+
+       // exit(1);
+
+
+
+    }
+
+    ~star(){}
+
+
+    void evolve(double time); //evolve the star at time t=time
+    //it evolves all the parameters of the star
+    //this function must be public
+
+
+
+//useful public functions
+
+    //check if the star is a WR
+    inline bool amiwr() const{
+        return (starparameter::wrtolerance*property_fake[starparameter::_pm] <= property_fake[starparameter::_pmhe]);
+    }
+
+
+    //calculate and return the percentage of life in the current phase
+    // (beginning of phase = 0, end of phase = 1)
+    inline double plife() {
+        return ((localtime - tphase[currentphase])/(tphase[currentphase+1] - tphase[currentphase]));
+    }
+
+
+
+    //TODO for ALL the parameters of the fake star we must not provide either setters or getters.
+    // They should be provided only for the REAL star.
+
+
+    inline void _set_timestep(const double a, const char* file, const int line) {
+
+        std::cout<<" Setting timestep "<<std::endl;
+
+        if(std::isnan(a) || std::isinf(a))
+            err.critical(" Timestep is set to INF or NAN", file, line);
+        else if(a <= 0.0)
+            err.critical("Timestep cannot be negative or zero", file, line);
+        else timestep = a;
+    }
+
+    inline void _set_property(const double a, const int ID, const char* file, const int line) {
+
+        if(std::isnan(a) || std::isinf(a))
+            err.critical("Mass set to INF or NAN", file, line);
+        else if(a < 0.0)
+            err.critical("Mass cannot be negative", file, line);
+        else property_real[ID] = a;
+    }
+
+
+
+
+
+    inline void _set_p(const int ID, const char* file, const int line) {
+
+        _p[ID].set();
+    }
+
+    inline void _get_p(const int ID, const char* file, const int line) {
+
+        return _p[ID].get();
+    }
+
+
+
+
+
+
+
+    inline void set_changedphase(const bool a) {changedphase = a;}
+
+
+    inline double get_property(const int &ID){return property_real[ID];}
+    inline double get_property_0(const int &ID){return property_real_0[ID];}
+
+
+    inline double get_localtime() {return localtime;}
+    inline double get_timestep() {return timestep;}
+
+    inline double get_phase() {return (double)currentphase;}
+
+    inline double get_dMdt()  {return dMdt;}
+    inline double get_dRdt()  {return dRdt;}
+    inline double get_dMHEdt() {return dMHEdt;}
+    inline double get_dMCOdt() {return dMCOdt;}
+    inline double get_current_tphase()  {return tphase[currentphase];}
+    inline double get_next_tphase() {return tphase[currentphase+1];}
+    inline bool get_changedphase()  {return changedphase;}
+    inline double get_finaltime()  {return tf;}
+    inline bool printall() {return print_all_steps;}
+
+    inline double get_dtout()  {
+        if(print_per_phase)
+            return dtout_phase[currentphase];
+        else
+            return dtout;
+    }
+
+    inline std::vector<std::string> get_initparams()  {return init_params;}
+
+    void recordstate() {
+
+        std::cout<<" record state "<<std::endl;
+
+        for(size_t i = 0; i < io->printcolumns.size(); i++)
+            state[i] = get_property(io->printcolumns[i]);
+
+        std::cout<<" state = "<<state[0]<<std::endl;
+       // exit(1);
+
+
+        allstates.push_back(state);
+
+    }
+
+    void print(){
+
+        io->print_output(allstates, name, ID);
+
+    }
+
+    inline bool breaktrigger(const double worldtime) const {
+
+        if(isremnant && break_at_remnant) return true;
+        else if (!isremnant && break_at_remnant) return false;
+        else if(!break_at_remnant) return (worldtime >= tf);
+
+    }
+
+
+private:
+
+    std::vector<double> state;
+    std::vector<std::vector<double>> allstates;
+    std::vector<double> dtout_phase;
+
+    size_t ID;
+
+    //real-star parameters: should provide public setters and getters
+    std::vector<double> property_real;
+    std::vector<double> property_real_0;
+    //double M, MHE, MCO, R, L, RHE, RCO, I;
+    //shoudl provide JUST getters for the following
+    //double dMdt, dRdt, dM_winds, dMHEdt, dMCOdt;
+    std::vector<double> property_fake_0;
+    std::vector<double> property_fake_var;
+
+    std::string name;
+
+    std::vector<std::string> init_params;
+
+    //Class for input-output
+    IO *io;
+
+
+    //TODO to substitute all the properties with a vector<double> prop;
+    // prop[prop::mass] = M.. and so on... this should be linked with the vectors that contain the look-up tables
+    //fake-star parameters
+    std::vector<double> property_fake;
+
+    //double mtot, mhe, mco, r, rhe, rco, localtime, l, inertia, mzams;
+    //double timestep, Z, tf, dtout;
+    //double var_mtot, var_mhe, var_mco, var_r, var_l, var_i, var_rhe, var_rco;
+
+
+    double4 ospin;
+    std::string sntype;
+    std::vector<double> ttimes;
+    std::vector<size_t> lookuppos;
+    std::vector<double*> lookuptimes;
+
+
+    //each array should contain N pointers (double*). They point to the beginning of the N specific interpolating tracks in the look-up tables
+    std::vector<double> tphase;
+    double t_he_start, t_co_start;
+    std::vector<std::vector<double>> tphase_neigh;
+
+    std::vector<std::vector<std::vector<double>*>> tables; //A vector of vector of pointers to a vector<double>
+
+    std::vector<double> wM;
+    std::vector<double> wZ;
+
+    int currentphase;
+    int subphase;
+
+    bool isempty, isconaked, isremnant, needsinit;
+
+    double Z, mzams, localtime, timestep, tf, dtout, dMdt, dRdt, dM_winds, dMHEdt, dMCOdt;
+
+
+
+    //calculate the times to use for the values of the interpolating tracks.
+    //All the interpolating tracks have the same percentage of life of the star.
+    inline void tracktimes(){
+
+        double perc = plife();
+
+        std::cout<<" perc calculated "<<perc<<"   "<<ttimes.size()<<std::endl;
+        std::cout<<" current "<<currentphase<<std::endl;
+
+        for(int i = 0; i < 4; i++) {
+            ttimes[i] = (tphase_neigh[i][currentphase] +
+                         perc * (tphase_neigh[i][currentphase + 1] - tphase_neigh[i][currentphase]));
+            std::cout<<ttimes[i]<<std::endl;
+        }
+    }
+
+
+    //calculate the actual positions on the lookup tables for all the interpolating tracks, given a target time
+    inline void lookuppositions() {
+
+
+        //  tables[starparameter::_time][0] is a pointer to a vector...
+        // &tables[starparameter::_time][0]->at(0) is a pointer to the first element of the pointed vector
+
+        //unroll
+
+        if(needsinit) { //if the star need to be (re-)initialized use binary search algorithms for tables
+            lookuppos[0] = utilities::binary_search(&tables[starparameter::_ptime][0]->at(0), 0, tables[starparameter::_ptime][0]->size() - 1, ttimes[0]);
+            lookuppos[1] = utilities::binary_search(&tables[starparameter::_ptime][1]->at(0), 0, tables[starparameter::_ptime][1]->size() - 1, ttimes[1]);
+            lookuppos[2] = utilities::binary_search(&tables[starparameter::_ptime][2]->at(0), 0, tables[starparameter::_ptime][2]->size() - 1, ttimes[2]);
+            lookuppos[3] = utilities::binary_search(&tables[starparameter::_ptime][3]->at(0), 0, tables[starparameter::_ptime][3]->size() - 1, ttimes[3]);
+        }
+        else{
+
+            std::cout<<"Inside the cycle "<<std::endl;
+            for(size_t i = 0; i < 4; i++) {
+                double time_right = tables[starparameter::_ptime][i]->at(lookuppos[i] + 1);
+                std::cout<<" right  = "<<time_right<<std::endl;
+                std::cout<<" mytime = "<<ttimes[i]<<std::endl;
+                std::cout<<" left = "<<tables[starparameter::_ptime][i]->at(lookuppos[i])<<std::endl;
+
+
+               // bool increased = false;
+                while (ttimes[i] >= time_right) {
+                    lookuppos[i]++;
+                //    increased = true;
+                    time_right = tables[starparameter::_ptime][i]->at(lookuppos[i] + 1);
+                }
+                std::cout<<" right AFTER = "<<time_right<<std::endl;
+
+
+                if (ttimes[i] < tables[starparameter::_ptime][i]->at(lookuppos[i]) || ttimes[i] > tables[starparameter::_ptime][i]->at(lookuppos[i] + 1)) {
+                    //err.critical("Algorithm failed. Please check.", __FILE__, __LINE__);
+                    lookuppos[0] = utilities::binary_search(&tables[starparameter::_ptime][0]->at(0), 0, tables[starparameter::_ptime][0]->size() - 1, ttimes[0]);
+                    lookuppos[1] = utilities::binary_search(&tables[starparameter::_ptime][1]->at(0), 0, tables[starparameter::_ptime][1]->size() - 1, ttimes[1]);
+                    lookuppos[2] = utilities::binary_search(&tables[starparameter::_ptime][2]->at(0), 0, tables[starparameter::_ptime][2]->size() - 1, ttimes[2]);
+                    lookuppos[3] = utilities::binary_search(&tables[starparameter::_ptime][3]->at(0), 0, tables[starparameter::_ptime][3]->size() - 1, ttimes[3]);
+                    break;
+                }
+
+
+
+            }
+        }
+
+
+        lookuptimes[0] = &tables[starparameter::_ptime][0]->at(lookuppos[0]);
+        lookuptimes[1] = &tables[starparameter::_ptime][1]->at(lookuppos[1]);
+        lookuptimes[2] = &tables[starparameter::_ptime][2]->at(lookuppos[2]);
+        lookuptimes[3] = &tables[starparameter::_ptime][3]->at(lookuppos[3]);
+
+        std::cout<<" timesloc = "<<lookuppos[0]<<"   "<<lookuppos[1]<<"   "<<lookuppos[2]<<"   "<<lookuppos[3]<<std::endl;
+
+    }
+
+
+    inline void set_pointers(const int &table_id, std::vector<double *> &lookupval, double *&localval){
+
+        for(int i = 0; i < 4; i++)
+            lookupval[i] = &tables[table_id][i]->at(0);
+
+        localval = &property_fake[table_id];
+
+    }
+
+
+    //update the specific physical parameter of the star at time target_time, given the positions k in the look-up tables
+    //(function lookuppositions(const std::vector<double> &target_time))
+    template <const int __ID> void update_parameter() {
+
+        std::vector<double *> value(4);
+        std::vector<double> interpolating_values(4);
+        double *localval = nullptr;
+        double current_slope = 0.0;
+
+
+
+        set_pointers(__ID, value, localval); //also set the function to which update_value points to
+        std::cout<<" pointers set "<<std::endl;
+        if(localval == nullptr) err.critical("I cannot recognize the value you want to update", __FILE__, __LINE__);
+
+
+
+        for(int i = 0; i < 4; i++) {
+            double *pval = value[i]  + lookuppos[i];
+            double *ptime = lookuptimes[i];
+
+            double slope = ((*(pval + 1)) - *pval) / ((*(ptime +1)) - *ptime);
+            double intercept = *pval - slope * (*ptime);
+
+            interpolating_values[i] = slope * ttimes[i] + intercept; //ttimes come from function tracktimes()
+
+            if(__ID == starparameter::_pmhe)
+                std::cout<<" IVAL =  "<<*pval<<"   "<<*(pval+1)<<std::endl;
+
+            current_slope += slope;
+        }
+
+
+
+
+        if(__ID == starparameter::_pmco) {
+            std::cout << " INTERPOLA = "<<std::endl;
+            std::cout<<interpolating_values[0]<<"   "<<interpolating_values[1]<<std::endl;
+            std::cout<<interpolating_values[2]<<"   "<<interpolating_values[3]<<std::endl;
+        }
+        double val_zlow = interpolating_values[0]*wM[0] + interpolating_values[1]*wM[1];
+        double val_zhigh = interpolating_values[2]*wM[2] + interpolating_values[3]*wM[3];
+
+
+         *localval = wZ[0]*val_zlow + wZ[1]*val_zhigh;
+
+    }
+
+
+    //correct some small interpolation errors that may happen every now and then
+    void correct_interpolation_errors(){
+
+       double mtot =  property_fake[starparameter::_pm];
+       double mtot_0 = property_fake_0[starparameter::_pm];
+
+        mtot = (mtot >= mtot_0) ? mtot_0 : mtot; //total mass cannot increase in single stellar evolution
+
+        property_fake[starparameter::_pm] = mtot;
+
+
+
+        if(currentphase >= starparameter::Hecore) //helium cannot decrease in single stellar evolution
+            property_fake[starparameter::_pmhe] = ((property_fake[starparameter::_pmhe]  <= property_fake_0[starparameter::_pmhe])  ? property_fake_0[starparameter::_pmhe]  : property_fake[starparameter::_pmhe]);
+
+        if(currentphase >= starparameter::COcore) //CO cannot decrease in single stellar evolution
+            property_fake[starparameter::_pmco] = ((property_fake[starparameter::_pmco]  <= property_fake_0[starparameter::_pmco])  ? property_fake_0[starparameter::_pmco]  : property_fake[starparameter::_pmco]);
+
+
+        if(amiwr()){ //.. but for WR stars helium can decrease
+            property_fake[starparameter::_prhe] = property_fake[starparameter::_pr];
+            property_fake[starparameter::_pmhe] = property_fake[starparameter::_pm];
+        }
+
+        //CO stars are not evolved so, no need to implement interpolation corrections
+
+    }
+
+    //correct some small interpolation errors that may happen every now and then
+    void correct_interpolation_errors_real(){
+
+        double M = property_real[starparameter::_pm];
+        double mtot_0 = property_real_0[starparameter::_pm];
+
+        double MHE = property_real[starparameter::_pmhe];
+        double mhe_0 = property_real_0[starparameter::_pmhe];
+
+        double MCO = property_real[starparameter::_pmco];
+        double mco_0 = property_real_0[starparameter::_pmco];
+
+        M = (M >= mtot_0) ? mtot_0 : M;
+        set_property(M, starparameter::_pm); //total mass cannot increase in single stellar evolution
+
+        if(subphase >= starparameter::Hecore) {
+            MHE = (MHE <= mhe_0) ? mhe_0 : MHE;
+            set_property(MHE, starparameter::_pmhe);
+        }
+
+        if(subphase >= starparameter::COcore) {
+            MCO = (MCO <= mco_0) ? mco_0 : MCO;
+            set_property(MCO, starparameter::_pmco);
+        }
+
+
+        if(amiwr()){ //.. but for WR stars helium can decrease
+            set_property(property_real[starparameter::_pr], starparameter::_prhe);
+            set_property(property_real[starparameter::_pm], starparameter::_pmhe);
+        }
+
+        //CO stars are not evolved so, no need to implement interpolation corrections
+
+    }
+
+
+    void stellarphase(){
+
+        const double t = localtime;
+        currentphase = -1;
+
+        //TODO for WR stars maybe we should refer to different phases (same for pureHE tracks)
+        //if(amiwr()) then use the tphaseWR vector coupled with the PhasesWR enum
+
+        if(t < tphase[0])
+            err.critical("Initial time is likely negative",__FILE__,__LINE__);
+
+        for(int i = 0; i < starparameter::Nphases-1; i++) {
+            if (t < tphase[i + 1] && t >= tphase[i])
+                currentphase = i;
+        }
+        if(t >= tphase[starparameter::Nphases-1])
+            currentphase = (starparameter::Nphases-1);
+
+
+        if(currentphase == -1)
+            err.critical("Cannot initialize the phase of the star", __FILE__, __LINE__);
+
+        if(tphase[currentphase] == -1)
+            err.critical("Cannot set the phase of the star, tphase not set. Interpolating track with different phases? Check in the look-up tables",
+                    __FILE__, __LINE__);
+
+
+
+        if(t >= t_co_start)
+            subphase = starparameter::COcore;
+        else if (t >= t_he_start)
+            subphase = starparameter::Hecore;
+        else
+            subphase = starparameter::Hydrogen;
+
+
+    }
+
+    //update several auxiliary quantities
+    void update_variations(){
+
+        for(int i = 0; i < starparameter::_nparams; i++) {
+            if (property_fake_0[i] != 0.0)
+                property_fake_var[i] = (property_fake[i] - property_fake_0[i]) / property_fake_0[i];
+            else
+                property_fake_var[i] = 0.0;
+        }
+
+    }
+
+
+    bool evolve_realstar();
+
+
+    //private setters
+
+    inline void _set_dMdt(const double a, const char* file, const int line) {
+        if(std::isnan(a) || std::isinf(a))
+            err.critical("dMdt set to INF or NAN", file, line);
+        else
+            dMdt = a;
+    }
+
+    inline void _set_dMHEdt(const double a, const char* file, const int line) {
+        if(std::isnan(a) || std::isinf(a))
+            err.critical("dMHEdt set to INF or NAN", file, line);
+        else
+            dMHEdt = a;
+    }
+
+    inline void _set_dMCOdt(const double a, const char* file, const int line) {
+        if(std::isnan(a) || std::isinf(a))
+            err.critical("dMCOdt set to INF or NAN", file, line);
+        else
+            dMCOdt = a;
+    }
+
+
+    inline void _set_dRdt(const double a, const char* file, const int line) {
+        if(std::isnan(a) || std::isinf(a))
+            err.critical("dRdt set to INF or NAN", file, line);
+        else
+            dRdt = a;
+    }
+
+    inline void _set_dM_winds(const double a, const char* file, const int line) {
+        if(std::isnan(a) || std::isinf(a))
+            err.critical("dM_winds set to INF or NAN", file, line);
+        else if (a > 0.0)
+            err.critical("An isolated star gained mass after losing mass through stellar winds. This cannot happen.", file, line);
+        else
+            dM_winds = a;
+    }
+
+
+    inline void set_mzams(const double a, const char* file, const int line) {
+
+        if(std::isnan(a) || std::isinf(a))
+            err.critical("MZAMS set to INF or NAN", file, line);
+        else if(a <= 0.0)
+            err.critical("MZAMS cannot be negative", file, line);
+        else if (a >= starparameter::MAX_ZAMS || a <= starparameter::MIN_ZAMS)
+            err.critical("MZAMS is " + utilities::n2s(a, __FILE__, __LINE__) + ": out of range", file, line);
+        else
+            mzams = a;
+    }
+
+    inline void set_Z(const double a, const char* file, const int line) {
+
+        if(std::isnan(a) || std::isinf(a))
+            err.critical("Z set to INF or NAN", file, line);
+        else if(a <= 0.0)
+            err.critical("Z cannot be negative", file, line);
+        else if (a >= starparameter::MAX_Z || a <= starparameter::MIN_Z)
+            err.critical("Z is " + utilities::n2s(a, __FILE__, __LINE__) + ": out of range", file, line);
+        else
+            Z = a;
+    }
+
+    inline void set_ospin(const double a, const char* file, const int line) {
+
+        if(std::isnan(a) || std::isinf(a))
+            err.critical("Ospin set to INF or NAN", file, line);
+        else if(a < 0.0)
+            err.critical("Ospin cannot be negative", file, line);
+            //else if (a >= starparameter::MAX_Z || a <= starparameter::MIN_Z) //TODO: should we include some checks on the limits of the spin?
+            //  err.critical("Z is " + utilities::n2s(a, __FILE__, __LINE__) + ": out of range", file, line);
+        else
+            ospin.set_w(a);
+    }
+
+    inline void set_ospin(const double3 *a, const char* file, const int line) {
+
+        if(a->isnan() || a->isinf())
+            err.critical("Component of Ospin set to INF or NAN", file, line);
+        else
+            ospin = double4(a);
+    }
+
+    inline void set_sntype(const std::string &a, const char* file, const int line) {
+
+        if(std::find(starparameter::SNtypes.begin(), starparameter::SNtypes.end(), a) == starparameter::SNtypes.end())
+            err.critical("Unknown SN explosion model for a star:" + a, file, line);
+        else
+            sntype = a;
+    }
+
+    inline void set_localtime(const double a, const char* file, const int line) {
+
+        if(std::isnan(a) || std::isinf(a))
+            err.critical("T0 set to INF or NAN", file, line);
+        else if(a < 0.0)
+            err.critical("T0 cannot be negative", file, line);
+        else
+            localtime = a;
+    }
+
+    inline void set_tf(const double a, const char* file, const int line) {
+
+        if(std::isnan(a) || std::isinf(a))
+            err.critical("Tf set to INF or NAN", file, line);
+        else if(a < 0.0)
+            err.critical("Tf cannot be negative", file, line);
+        else
+            tf = a;
+    }
+
+    inline void set_dtout(const double a, const char* file, const int line) {
+
+        if(std::isnan(a) || std::isinf(a))
+            err.critical("dtout set to INF or NAN", file, line);
+        else if(a <0.0)
+            err.critical("dtout cannot be negative", file, line);
+        else
+            dtout = a;
+    }
+
+    supernova sn;
+    tscontrol ts;
+    sevnerr err;
+
+    void init_1(std::vector<std::string> &params); //initialize the initial parameters of a star
+    void init_2(std::vector<std::string> &params); //initialize the initial parameters of a star
+
+    void init_on_lookup();
+    void init_realstar();
+
+    bool changedphase, break_at_remnant, print_all_steps, print_per_phase;
+    std::vector<double> percandphase;
+
+
+    double inspect_param(std::string p) {
+
+        size_t pos = 0;
+
+        if(utilities::string_is_number<double>(p))
+            return utilities::s2n<double>(p, __FILE__, __LINE__);
+        else{
+
+            if (p.find("zams") != std::string::npos || p.find("ZAMS") != std::string::npos) {
+
+                return tphase[starparameter::MainSequence];
+            }
+
+            else if (p.find(':') != std::string::npos) {
+
+                std::stringstream ss(p);
+                int phase;
+                double perc;
+
+                if (!(ss >> perc)) err.critical("Error while reading percentage of initial time", __FILE__, __LINE__);
+                if (ss.peek() == ':') ss.ignore();
+                if (!(ss >> phase)) err.critical("Error while reading phase for the initial time", __FILE__, __LINE__);
+
+                std::cout << " perc and phase = " << perc << "   " << phase << std::endl;
+
+                if (phase > starparameter::Remnant)
+                    err.critical("You want to evolve a star starting at " + utilities::n2s(perc, __FILE__, __LINE__) +
+                                 " percent of its life as a remnant. This does not make any sense. Please provide meaningful values",
+                                 __FILE__, __LINE__);
+
+                if (phase == starparameter::Remnant) {
+                    return (perc * tphase[phase]);
+                } else {
+                    double time_begin = tphase[phase];
+                    double time_end = tphase[phase + 1];
+
+                    return (perc * (time_end - time_begin) + time_begin);
+                }
+            }
+
+            else if(p.find("end") != std::string::npos || p.find("END") != std::string::npos) {
+                break_at_remnant = true;
+                return 0.0;
+            }
+
+            else if(p.find("all") != std::string::npos || p.find("ALL") != std::string::npos) {
+                print_all_steps = true;
+                return 0.0;
+            }
+
+            else if( (pos = p.find('p')) != std::string::npos) {
+                std::string token = p.substr(pos+1);
+                print_per_phase = true;
+
+                int npoints = utilities::s2n<int>(p, __FILE__, __LINE__);
+
+                for(size_t i = 0; i < tphase.size()-1; i++){
+                    dtout_phase.push_back((tphase[i+1] - tphase[i])/(double)npoints);
+                }
+
+                dtout_phase.push_back(1.0e30); //do not print snapshots anymore after the star has turned into a compact remnant
+
+                return 0.0;
+            }
+            else
+                err.critical("Unrecognized input parameter: "+ p, __FILE__, __LINE__);
+
+        }
+
+        return 0.0;
+
+    }
+
+
+
+
+
+};
+
+
+
+#endif

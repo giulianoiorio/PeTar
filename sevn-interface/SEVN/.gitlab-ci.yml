@@ -1,0 +1,105 @@
+# This file is a template, and might need editing before it works on your project.
+# To contribute improvements to CI/CD templates, please follow the Development guide at:
+# https://docs.gitlab.com/ee/development/cicd/templates.html
+# This specific template is located at:
+# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/C++.gitlab-ci.yml
+
+# use the official gcc image, based on debian
+# can use verions as well, like gcc:5.2
+# see https://hub.docker.com/_/gcc/
+
+
+.build_template: &build_definition
+  stage: build
+  before_script:
+    - apt-get update --yes
+    - apt-get install --yes cmake
+  script:
+    - mkdir build
+    - cd build
+    - cmake .. -Dbin=true -Dsin=true -Dtest=true
+    - make -j
+  artifacts:
+    expire_in: 2 hrs
+    paths:
+      - build/
+
+
+#Ubunti build
+.build_template: &build_ubuntu_definition
+  stage: build
+  before_script:
+    - apt-get update --yes
+    - apt-get install --yes g++
+    - apt-get install --yes cmake
+  script:
+    - mkdir build
+    - cd build
+    - cmake .. -Dbin=true -Dsin=true -Dtest=true
+    - make -j
+  artifacts:
+    expire_in: 2 hrs
+    paths:
+      - build/
+
+##Ubuntu distros
+#14
+build:ubuntu_trusty14:
+  image: ubuntu:14.04
+  <<: *build_ubuntu_definition
+
+#16
+build:ubuntu_xenial16:
+  image: ubuntu:16.04
+  <<: *build_ubuntu_definition
+
+#18
+build:ubuntu_bionic18:
+  image: ubuntu:18.04
+  <<: *build_ubuntu_definition
+
+#20
+build:ubuntu_focal20:
+  image: ubuntu:20.04
+  <<: *build_ubuntu_definition
+
+#21
+build:ubuntu_hirsute21:
+  image: ubuntu:21.04
+  <<: *build_ubuntu_definition
+
+
+##Gcc images
+build:gcc4:
+  image: gcc:4
+  <<: *build_definition
+
+build:gcc5:
+  image: gcc:5
+  <<: *build_definition
+
+build:gcc6:
+  image: gcc:6
+  <<: *build_definition
+
+build:gcc7:
+  image: gcc:7
+  <<: *build_definition
+
+build:gcc8:
+  image: gcc:8
+  <<: *build_definition
+
+build:gcc10:
+  image: gcc:10
+  <<: *build_definition
+
+build:gcc11:
+  image: gcc:11
+  <<: *build_definition
+
+#Intel compiler
+#To large for docker 
+#build:intel:
+#  image: intel/oneapi-basekit
+#   <<: *build_definition

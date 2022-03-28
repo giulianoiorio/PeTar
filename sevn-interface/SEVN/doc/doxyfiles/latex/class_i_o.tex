@@ -1,0 +1,695 @@
+\hypertarget{class_i_o}{}\doxysection{IO Class Reference}
+\label{class_i_o}\index{IO@{IO}}
+
+
+{\ttfamily \#include $<$I\+O.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_o_a49b27a2ee79bce0de4e3ef163cbebd30}{IO}} ()
+\item 
+\mbox{\hyperlink{class_i_o_a22f459df27d51574a058a56ec0caa55a}{IO}} (int argc, char $\ast$$\ast$argv)
+\item 
+\mbox{\hyperlink{class_i_o_a44861ff225d351615179f0f24cb8d7f6}{$\sim$\+IO}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{class_i_o_a033b19c4a742f3b1c0197db003f63755}{fill\+\_\+matrix\+\_\+test}} (std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&matrix, std\+::ifstream \&file)
+\item 
+bool \mbox{\hyperlink{class_i_o_a865cff47863a99f5e102ad9ef205db83}{rseed\+\_\+provided}} ()
+\begin{DoxyCompactList}\small\item\em Parameters call. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_o_aed798e8de57fec85ddbec4ebfc42983c}{print\+\_\+output}} (std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&\mbox{\hyperlink{class_i_o_ac85fd3d98c79fb9d772476657181a095}{printmatrix}}, const std\+::string \&\+\_\+name, const size\+\_\+t \&\+\_\+\+ID, const bool binaryprint=false)
+\item 
+void \mbox{\hyperlink{class_i_o_aec8fcece0c9d7a8e9cdb69ec215deaa0}{print\+\_\+params}} (std\+::string filename=\char`\"{}used\+\_\+params.\+svpar\char`\"{})
+\item 
+void \mbox{\hyperlink{class_i_o_afae6e76c754113671a661cd5142589bb}{create\+\_\+folder}} (const std\+::string \&name)
+\item 
+std\+::string \mbox{\hyperlink{class_i_o_ac95aad84d1b1e0d3613eb9e4981a5331}{get\+\_\+output\+\_\+folder\+\_\+name}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_i_o_a7a7404d5fd025bc721ef99821674847e}{get\+\_\+\+S\+E\+V\+Npath}} ()
+\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{class_i_o_a9b234357da362e70838cc7ce8a87a19b}{load\+\_\+auxiliary\+\_\+table}} (std\+::string name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ $>$ \mbox{\hyperlink{class_i_o_ad1642c3766821d0ef9dcfa2e54aebc72}{tables}}
+\item 
+std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ $>$ \mbox{\hyperlink{class_i_o_a90f14c95a96dedbfda32a7b02d94d9f2}{tables\+\_\+\+HE}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_i_o_ae94ed649736fdfb01ea7dcf41484cd47}{Z}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_i_o_ad894a210155a726d323b4f91fd114d55}{Z\+\_\+\+HE}}
+\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{class_i_o_a99dac6d688185986f5811a3bbcbd24f7}{allzams}}
+\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{class_i_o_acc1f5242fe349ff0f42ff8efbab97aa5}{allzams\+\_\+\+HE}}
+\item 
+std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{class_i_o_a2cd285232510801d44e35f5db87ed7dd}{S\+T\+A\+R\+S\+\_\+\+M\+A\+T\+R\+IX}}
+\item 
+std\+::vector$<$ unsigned long $>$ \mbox{\hyperlink{class_i_o_a4930ce708a331ef5f75dc3253e28382e}{rand\+\_\+seeds}}
+\item 
+std\+::random\+\_\+device \mbox{\hyperlink{class_i_o_a1440350ee5aa95d339103dd77df6b755}{rd}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_i_o_afeeda6890b171d3ee1740898233f9cc1}{printcolumns\+\_\+star}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_i_o_a13566b115648e8dd8d7d84c413c4962a}{printcolumns\+\_\+binary}}
+\item 
+std\+::vector$<$ size\+\_\+t $>$ \mbox{\hyperlink{class_i_o_a9d9508e411fb8ea9a8ee7f86260c34fa}{print\+I\+Ds\+\_\+star}}
+\item 
+std\+::vector$<$ size\+\_\+t $>$ \mbox{\hyperlink{class_i_o_a76e7189db5b97005fa199ca0ae6fb19c}{print\+I\+Ds\+\_\+binary}}
+\item 
+size\+\_\+t \mbox{\hyperlink{class_i_o_a95c786b97f2781158479418eb6c198fa}{ntables}}
+\item 
+int \mbox{\hyperlink{class_i_o_a77a4905e7d35bee2deda850455e05afc}{nthreads}}
+\item 
+std\+::string \mbox{\hyperlink{class_i_o_a204e3df440bcc0034664ef5d86a31133}{output\+\_\+mode}}
+\item 
+std\+::string \mbox{\hyperlink{class_i_o_abadbf7d7e979b1b4515dfe8b47a30722}{binput\+\_\+mode}}
+\item 
+std\+::string \mbox{\hyperlink{class_i_o_a4ac766acaf307359f5facbf62bbf3f70}{winds\+\_\+mode}}
+\item 
+std\+::string \mbox{\hyperlink{class_i_o_ac33e1ec6a721c92b6d7c057fbd71b3cc}{R\+L\+\_\+mode}}
+\item 
+std\+::string \mbox{\hyperlink{class_i_o_a3ee5533182fed7d49d1026dad0bbc79e}{tides\+\_\+mode}}
+\item 
+std\+::string \mbox{\hyperlink{class_i_o_a15e0862f7603931b6b9e87f4b3638e25}{G\+W\+\_\+mode}}
+\item 
+std\+::string \mbox{\hyperlink{class_i_o_ac1be29dc01b59b7d8ac8e4bbac33e3df}{mix\+\_\+mode}}
+\item 
+std\+::string \mbox{\hyperlink{class_i_o_a8beed7ecd8cd6104baea317c014f4fad}{S\+N\+K\+\_\+mode}}
+\item 
+std\+::string \mbox{\hyperlink{class_i_o_aa10cbde61a00ee4994d624013656d425}{C\+E\+\_\+mode}}
+\item 
+\mbox{\hyperlink{class_s_e_v_npar}{S\+E\+V\+Npar}} \mbox{\hyperlink{class_i_o_a41a5770e39f8a3df8ab4b550b427f2c0}{svpar}}
+\item 
+int \mbox{\hyperlink{class_i_o_abb939263e352fb61e877e259c0dbf677}{tablesloaded}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_i_o_ab3f855449a8ab4951da61d0a05c01e5f}{seed\+\_\+provided}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_i_o_a6f56823f20c05fc9b7fb74b27c28d963}{load}} (int n, char $\ast$$\ast$val)
+\item 
+void \mbox{\hyperlink{class_i_o_aac02feeac4cce0b0ca1ddd4e6fc98af2}{set\+\_\+init\+\_\+variable}} ()
+\item 
+bool \mbox{\hyperlink{class_i_o_aaf0c343feed69efb211f069fb11bb071}{check\+\_\+sorted}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_i_o_a8c4f4ceb3bfc6eb04f44fb1d54e136e1}{columns\+\_\+to\+\_\+print}} (std\+::string \&list\+\_\+cols, std\+::vector$<$ std\+::string $>$ \&printcolumns)
+\item 
+void \mbox{\hyperlink{class_i_o_aaf66b034f0b5bfcdd0762f5edd6b4b01}{read}} (std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ double $>$$>$$>$$>$ \&\mbox{\hyperlink{class_i_o_ad1642c3766821d0ef9dcfa2e54aebc72}{tables}}, const std\+::vector$<$ std\+::vector$<$ std\+::string $>$$>$ \mbox{\hyperlink{class_i_o_afda25e65418b5ebb98ddcf79b8e64092}{tables\+\_\+file}}, const std\+::string \mbox{\hyperlink{class_i_o_ac1d1616d42388e6a72fab4a2aa43be0e}{tables\+\_\+dir}}, const std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_i_o_a193891ac41ed11bffceae0b9ee0d9040}{zstring}}, std\+::vector$<$ double $>$ \&\mbox{\hyperlink{class_i_o_ae94ed649736fdfb01ea7dcf41484cd47}{Z}})
+\item 
+void \mbox{\hyperlink{class_i_o_aee3cfa2b1755f02312b293fb4bb46f7a}{read\+\_\+tables}} ()
+\item 
+void \mbox{\hyperlink{class_i_o_a9557f43d3af7e85545627a06d2a12d9d}{inspect\+\_\+tables}} ()
+\item 
+void \mbox{\hyperlink{class_i_o_a35556aa0b6afcaf09a97d82767040898}{load\+\_\+tables}} ()
+\item 
+void \mbox{\hyperlink{class_i_o_a8208e360fe14ca4f4d35f258ad8e6963}{load\+\_\+stars}} ()
+\item 
+void \mbox{\hyperlink{class_i_o_acdab67d4ca1742eab9b3665872d61e2f}{draw\+\_\+rseed}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{class_i_o_ade1d05c760522238637366db8420a36b}{fill\+\_\+matrix}} (std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&matrix, std\+::ifstream \&file)
+\item 
+void \mbox{\hyperlink{class_i_o_af818de25f0558c0c7fd27ebc6f5c1ae0}{print\+\_\+evolved\+\_\+summary}} (const std\+::string \&\+\_\+name, const size\+\_\+t \&\+\_\+\+ID)
+\item 
+void \mbox{\hyperlink{class_i_o_ae6da7de90d63720afbe643b7fb6ecfc0}{print\+\_\+formatted\+\_\+ascii}} (const std\+::string \&filename, std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&\mbox{\hyperlink{class_i_o_ac85fd3d98c79fb9d772476657181a095}{printmatrix}}, const std\+::string \&\+\_\+name, const size\+\_\+t \&\+\_\+\+ID, const bool binaryprint, const std\+::string \&separator, const size\+\_\+t \&\+\_\+w\+\_\+id, const size\+\_\+t \&\+\_\+w\+\_\+name, const size\+\_\+t \&\+\_\+w\+\_\+header, const size\+\_\+t \&\+\_\+precision)
+\item 
+void \mbox{\hyperlink{class_i_o_a180b016079e8ca2efc1fcb76204b5540}{print\+\_\+ascii}} (std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&\mbox{\hyperlink{class_i_o_ac85fd3d98c79fb9d772476657181a095}{printmatrix}}, const std\+::string \&\+\_\+name, const size\+\_\+t \&\+\_\+\+ID, const bool binaryprint)
+\item 
+void \mbox{\hyperlink{class_i_o_a0ef2f99ca67e0565b4bcdcb10fbc98dd}{print\+\_\+csv}} (std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&\mbox{\hyperlink{class_i_o_ac85fd3d98c79fb9d772476657181a095}{printmatrix}}, const std\+::string \&\+\_\+name, const size\+\_\+t \&\+\_\+\+ID, const bool binaryprint)
+\item 
+void \mbox{\hyperlink{class_i_o_aad6efbfb8e9d9f341716d7da24fa1103}{print\+\_\+bin}} (std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&\mbox{\hyperlink{class_i_o_ac85fd3d98c79fb9d772476657181a095}{printmatrix}}, const std\+::string \&\+\_\+name, const size\+\_\+t \&\+\_\+\+ID, const bool binaryprint)
+\item 
+void \mbox{\hyperlink{class_i_o_a9808f559683213cb37d355fe25fc2f6a}{inspect\+\_\+dirs}} ()
+\item 
+void \mbox{\hyperlink{class_i_o_a2b857a5d62908fa7637295c98c1be4e2}{inspect\+\_\+dir}} (const std\+::string \&motherdir, std\+::vector$<$ std\+::string $>$ \&\+\_\+zstring, std\+::vector$<$ double $>$ \&\+\_\+Z, std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \&\+\_\+tables\+\_\+file, std\+::string inspectdir=\char`\"{}\char`\"{})
+\item 
+void \mbox{\hyperlink{class_i_o_a239023eb900d106e68672d8d18743c05}{inspect\+\_\+object}} (dirent $\ast$object, const std\+::string \&motherdir, std\+::vector$<$ std\+::string $>$ \&\+\_\+zstring, std\+::vector$<$ double $>$ \&\+\_\+Z, std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \&\+\_\+tables\+\_\+file)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_i_o_a867eecd7111719c707202b4ce1418a6d}{output\+\_\+folder\+\_\+name}} =\char`\"{}output\char`\"{}
+\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{class_i_o_ac85fd3d98c79fb9d772476657181a095}{printmatrix}}
+\item 
+\mbox{\hyperlink{classsevnstd_1_1_sevn_logging}{Sevn\+Logging}} \mbox{\hyperlink{class_i_o_abf8c66e267377a1952a2b91ac33e93b9}{svlog}}
+\item 
+std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{class_i_o_afda25e65418b5ebb98ddcf79b8e64092}{tables\+\_\+file}}
+\item 
+std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{class_i_o_a0157732084fa1202dacf7df71a31bcb5}{tables\+\_\+file\+\_\+\+HE}}
+\item 
+std\+::string \mbox{\hyperlink{class_i_o_ac1d1616d42388e6a72fab4a2aa43be0e}{tables\+\_\+dir}}
+\item 
+std\+::string \mbox{\hyperlink{class_i_o_a87475d8749c2bb0f2b92604ee4933f3a}{tables\+\_\+dir\+\_\+\+HE}}
+\item 
+std\+::string \mbox{\hyperlink{class_i_o_a64bbe89ff4b744049da60893f42ba256}{list\+\_\+file}}
+\item 
+std\+::string \mbox{\hyperlink{class_i_o_adafa7aa9fc3a50f0a7e32524ee533304}{list\+\_\+cols\+\_\+star}}
+\item 
+std\+::string \mbox{\hyperlink{class_i_o_abcc7edabe3d0811bc46a9c68b8e8b6ec}{list\+\_\+cols\+\_\+binary}}
+\item 
+std\+::ifstream \mbox{\hyperlink{class_i_o_ab001a2bb8a47811ac999d0eb5814585f}{in}}
+\item 
+std\+::string \mbox{\hyperlink{class_i_o_add1f5fa1c7960b91f47f0b91bb5bd1ae}{S\+E\+V\+Npath}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_i_o_a193891ac41ed11bffceae0b9ee0d9040}{zstring}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_i_o_a64d53b30721d067efe2fd1f4f407ee63}{zstring\+\_\+\+HE}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::ofstream \mbox{\hyperlink{class_i_o_a77a375b43764c0bf47b620f8a4a13d47}{liststars}}
+\item 
+static std\+::ofstream \mbox{\hyperlink{class_i_o_a4fd150be4fbad55ec4721a85fae50fb6}{outputfile}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i_o_a49b27a2ee79bce0de4e3ef163cbebd30}\label{class_i_o_a49b27a2ee79bce0de4e3ef163cbebd30}} 
+\index{IO@{IO}!IO@{IO}}
+\index{IO@{IO}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{IO()}{IO()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily I\+O\+::\+IO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_i_o_a22f459df27d51574a058a56ec0caa55a}\label{class_i_o_a22f459df27d51574a058a56ec0caa55a}} 
+\index{IO@{IO}!IO@{IO}}
+\index{IO@{IO}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{IO()}{IO()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily I\+O\+::\+IO (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_i_o_a44861ff225d351615179f0f24cb8d7f6}\label{class_i_o_a44861ff225d351615179f0f24cb8d7f6}} 
+\index{IO@{IO}!````~IO@{$\sim$IO}}
+\index{````~IO@{$\sim$IO}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{$\sim$IO()}{~IO()}}
+{\footnotesize\ttfamily I\+O\+::$\sim$\+IO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_o_aaf0c343feed69efb211f069fb11bb071}\label{class_i_o_aaf0c343feed69efb211f069fb11bb071}} 
+\index{IO@{IO}!check\_sorted@{check\_sorted}}
+\index{check\_sorted@{check\_sorted}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{check\_sorted()}{check\_sorted()}}
+{\footnotesize\ttfamily bool I\+O\+::check\+\_\+sorted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Check if the tables Z, Z\+HE, allzams, allzams\+\_\+\+HE are sorted \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_o_a8c4f4ceb3bfc6eb04f44fb1d54e136e1}\label{class_i_o_a8c4f4ceb3bfc6eb04f44fb1d54e136e1}} 
+\index{IO@{IO}!columns\_to\_print@{columns\_to\_print}}
+\index{columns\_to\_print@{columns\_to\_print}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{columns\_to\_print()}{columns\_to\_print()}}
+{\footnotesize\ttfamily void I\+O\+::columns\+\_\+to\+\_\+print (\begin{DoxyParamCaption}\item[{std\+::string \&}]{list\+\_\+cols,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{printcolumns }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Transfer the name from a string containing the name separated by a \+: to a vector of string. It checks that each name in list cols is one of the name included in \mbox{\hyperlink{class_property_ab84e5f4676c7bc0da81d5609f64e783b}{Property\+::\+Print\+Map}} or in Binary\+Property\+::\+Print\+M\+AP 
+\begin{DoxyParams}{Parameters}
+{\em list\+\_\+cols} & A string containing the property names separated with a \+: \\
+\hline
+{\em printcolumns} & Vector of sting to fill with names from list\+\_\+cols. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_i_o_afae6e76c754113671a661cd5142589bb}\label{class_i_o_afae6e76c754113671a661cd5142589bb}} 
+\index{IO@{IO}!create\_folder@{create\_folder}}
+\index{create\_folder@{create\_folder}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{create\_folder()}{create\_folder()}}
+{\footnotesize\ttfamily void I\+O\+::create\+\_\+folder (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_i_o_acdab67d4ca1742eab9b3665872d61e2f}\label{class_i_o_acdab67d4ca1742eab9b3665872d61e2f}} 
+\index{IO@{IO}!draw\_rseed@{draw\_rseed}}
+\index{draw\_rseed@{draw\_rseed}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{draw\_rseed()}{draw\_rseed()}}
+{\footnotesize\ttfamily void I\+O\+::draw\+\_\+rseed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_o_ade1d05c760522238637366db8420a36b}\label{class_i_o_ade1d05c760522238637366db8420a36b}} 
+\index{IO@{IO}!fill\_matrix@{fill\_matrix}}
+\index{fill\_matrix@{fill\_matrix}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{fill\_matrix()}{fill\_matrix()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void I\+O\+::fill\+\_\+matrix (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&}]{matrix,  }\item[{std\+::ifstream \&}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Fill a given 2Dmatrix reading the line of a given input stream 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of the matrix to generate. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Matrix where to store the value in the stream \\
+\hline
+{\em file} & Opened Input file stream (ifstream) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_i_o_a033b19c4a742f3b1c0197db003f63755}\label{class_i_o_a033b19c4a742f3b1c0197db003f63755}} 
+\index{IO@{IO}!fill\_matrix\_test@{fill\_matrix\_test}}
+\index{fill\_matrix\_test@{fill\_matrix\_test}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{fill\_matrix\_test()}{fill\_matrix\_test()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void I\+O\+::fill\+\_\+matrix\+\_\+test (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&}]{matrix,  }\item[{std\+::ifstream \&}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_i_o_ac95aad84d1b1e0d3613eb9e4981a5331}\label{class_i_o_ac95aad84d1b1e0d3613eb9e4981a5331}} 
+\index{IO@{IO}!get\_output\_folder\_name@{get\_output\_folder\_name}}
+\index{get\_output\_folder\_name@{get\_output\_folder\_name}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{get\_output\_folder\_name()}{get\_output\_folder\_name()}}
+{\footnotesize\ttfamily std\+::string I\+O\+::get\+\_\+output\+\_\+folder\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_i_o_a7a7404d5fd025bc721ef99821674847e}\label{class_i_o_a7a7404d5fd025bc721ef99821674847e}} 
+\index{IO@{IO}!get\_SEVNpath@{get\_SEVNpath}}
+\index{get\_SEVNpath@{get\_SEVNpath}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{get\_SEVNpath()}{get\_SEVNpath()}}
+{\footnotesize\ttfamily std\+::string I\+O\+::get\+\_\+\+S\+E\+V\+Npath (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_i_o_a2b857a5d62908fa7637295c98c1be4e2}\label{class_i_o_a2b857a5d62908fa7637295c98c1be4e2}} 
+\index{IO@{IO}!inspect\_dir@{inspect\_dir}}
+\index{inspect\_dir@{inspect\_dir}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{inspect\_dir()}{inspect\_dir()}}
+{\footnotesize\ttfamily void I\+O\+::inspect\+\_\+dir (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{motherdir,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{\+\_\+zstring,  }\item[{std\+::vector$<$ double $>$ \&}]{\+\_\+Z,  }\item[{std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \&}]{\+\_\+tables\+\_\+file,  }\item[{std\+::string}]{inspectdir = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_o_a9808f559683213cb37d355fe25fc2f6a}\label{class_i_o_a9808f559683213cb37d355fe25fc2f6a}} 
+\index{IO@{IO}!inspect\_dirs@{inspect\_dirs}}
+\index{inspect\_dirs@{inspect\_dirs}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{inspect\_dirs()}{inspect\_dirs()}}
+{\footnotesize\ttfamily void I\+O\+::inspect\+\_\+dirs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_o_a239023eb900d106e68672d8d18743c05}\label{class_i_o_a239023eb900d106e68672d8d18743c05}} 
+\index{IO@{IO}!inspect\_object@{inspect\_object}}
+\index{inspect\_object@{inspect\_object}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{inspect\_object()}{inspect\_object()}}
+{\footnotesize\ttfamily void I\+O\+::inspect\+\_\+object (\begin{DoxyParamCaption}\item[{dirent $\ast$}]{object,  }\item[{const std\+::string \&}]{motherdir,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{\+\_\+zstring,  }\item[{std\+::vector$<$ double $>$ \&}]{\+\_\+Z,  }\item[{std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \&}]{\+\_\+tables\+\_\+file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_o_a9557f43d3af7e85545627a06d2a12d9d}\label{class_i_o_a9557f43d3af7e85545627a06d2a12d9d}} 
+\index{IO@{IO}!inspect\_tables@{inspect\_tables}}
+\index{inspect\_tables@{inspect\_tables}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{inspect\_tables()}{inspect\_tables()}}
+{\footnotesize\ttfamily void I\+O\+::inspect\+\_\+tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_o_a6f56823f20c05fc9b7fb74b27c28d963}\label{class_i_o_a6f56823f20c05fc9b7fb74b27c28d963}} 
+\index{IO@{IO}!load@{load}}
+\index{load@{load}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void I\+O\+::load (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{char $\ast$$\ast$}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_i_o_a9b234357da362e70838cc7ce8a87a19b}\label{class_i_o_a9b234357da362e70838cc7ce8a87a19b}} 
+\index{IO@{IO}!load\_auxiliary\_table@{load\_auxiliary\_table}}
+\index{load\_auxiliary\_table@{load\_auxiliary\_table}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{load\_auxiliary\_table()}{load\_auxiliary\_table()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$double$>$ $>$ I\+O\+::load\+\_\+auxiliary\+\_\+table (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Utilities to load auxiliary data tables. The files needs to be all inside the folder S\+E\+V\+N/auxiliary\+\_\+data 
+\begin{DoxyParams}{Parameters}
+{\em name} & name of the file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a 2D vector of double storing the given auxiliary table @\+Note lines starting with \# or / are skipped 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_o_a8208e360fe14ca4f4d35f258ad8e6963}\label{class_i_o_a8208e360fe14ca4f4d35f258ad8e6963}} 
+\index{IO@{IO}!load\_stars@{load\_stars}}
+\index{load\_stars@{load\_stars}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{load\_stars()}{load\_stars()}}
+{\footnotesize\ttfamily void I\+O\+::load\+\_\+stars (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Fill S\+T\+A\+R\+S\+\_\+\+M\+A\+T\+R\+IX (2D string matrix) reading the line of the file given in input (name of the file is stored in list\+\_\+file) \mbox{\Hypertarget{class_i_o_a35556aa0b6afcaf09a97d82767040898}\label{class_i_o_a35556aa0b6afcaf09a97d82767040898}} 
+\index{IO@{IO}!load\_tables@{load\_tables}}
+\index{load\_tables@{load\_tables}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{load\_tables()}{load\_tables()}}
+{\footnotesize\ttfamily void I\+O\+::load\+\_\+tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_o_a180b016079e8ca2efc1fcb76204b5540}\label{class_i_o_a180b016079e8ca2efc1fcb76204b5540}} 
+\index{IO@{IO}!print\_ascii@{print\_ascii}}
+\index{print\_ascii@{print\_ascii}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{print\_ascii()}{print\_ascii()}}
+{\footnotesize\ttfamily void I\+O\+::print\+\_\+ascii (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&}]{printmatrix,  }\item[{const std\+::string \&}]{\+\_\+name,  }\item[{const size\+\_\+t \&}]{\+\_\+\+ID,  }\item[{const bool}]{binaryprint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Print the output in ascii format with header \mbox{\Hypertarget{class_i_o_aad6efbfb8e9d9f341716d7da24fa1103}\label{class_i_o_aad6efbfb8e9d9f341716d7da24fa1103}} 
+\index{IO@{IO}!print\_bin@{print\_bin}}
+\index{print\_bin@{print\_bin}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{print\_bin()}{print\_bin()}}
+{\footnotesize\ttfamily void I\+O\+::print\+\_\+bin (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&}]{printmatrix,  }\item[{const std\+::string \&}]{\+\_\+name,  }\item[{const size\+\_\+t \&}]{\+\_\+\+ID,  }\item[{const bool}]{binaryprint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Print the output in binary format with header \mbox{\Hypertarget{class_i_o_a0ef2f99ca67e0565b4bcdcb10fbc98dd}\label{class_i_o_a0ef2f99ca67e0565b4bcdcb10fbc98dd}} 
+\index{IO@{IO}!print\_csv@{print\_csv}}
+\index{print\_csv@{print\_csv}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{print\_csv()}{print\_csv()}}
+{\footnotesize\ttfamily void I\+O\+::print\+\_\+csv (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&}]{printmatrix,  }\item[{const std\+::string \&}]{\+\_\+name,  }\item[{const size\+\_\+t \&}]{\+\_\+\+ID,  }\item[{const bool}]{binaryprint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Print the output in csv format with header \mbox{\Hypertarget{class_i_o_af818de25f0558c0c7fd27ebc6f5c1ae0}\label{class_i_o_af818de25f0558c0c7fd27ebc6f5c1ae0}} 
+\index{IO@{IO}!print\_evolved\_summary@{print\_evolved\_summary}}
+\index{print\_evolved\_summary@{print\_evolved\_summary}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{print\_evolved\_summary()}{print\_evolved\_summary()}}
+{\footnotesize\ttfamily void I\+O\+::print\+\_\+evolved\+\_\+summary (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name,  }\item[{const size\+\_\+t \&}]{\+\_\+\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Print the evolved summary in ascii format. The info are printed in the file opened as liststars in \mbox{\hyperlink{_i_o_8h}{I\+O.\+h}}. The name of the file is equal to evolved.\+dat and it will be saved in the ouput folder chosen in input. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & name assigned to the star \\
+\hline
+{\em \+\_\+\+ID} & ID assigen to the star \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_i_o_ae6da7de90d63720afbe643b7fb6ecfc0}\label{class_i_o_ae6da7de90d63720afbe643b7fb6ecfc0}} 
+\index{IO@{IO}!print\_formatted\_ascii@{print\_formatted\_ascii}}
+\index{print\_formatted\_ascii@{print\_formatted\_ascii}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{print\_formatted\_ascii()}{print\_formatted\_ascii()}}
+{\footnotesize\ttfamily void I\+O\+::print\+\_\+formatted\+\_\+ascii (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&}]{printmatrix,  }\item[{const std\+::string \&}]{\+\_\+name,  }\item[{const size\+\_\+t \&}]{\+\_\+\+ID,  }\item[{const bool}]{binaryprint,  }\item[{const std\+::string \&}]{separator,  }\item[{const size\+\_\+t \&}]{\+\_\+w\+\_\+id,  }\item[{const size\+\_\+t \&}]{\+\_\+w\+\_\+name,  }\item[{const size\+\_\+t \&}]{\+\_\+w\+\_\+header,  }\item[{const size\+\_\+t \&}]{\+\_\+precision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Formatted ascii print of values contained in the a 2D vector of doubles. In addition to the value in printmatrix two columns are added with the name and the ID of the star. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & name of the file where to write the data \\
+\hline
+{\em printmatrix} & 2D vector of doubles to print \\
+\hline
+{\em \+\_\+name} & name of the star (it will be the second column in addition to the data in {\ttfamily printmatrix}) \\
+\hline
+{\em \+\_\+\+ID} & ID of the star (it will the first column in addition to the data in {\ttfamily printmatrix}) \\
+\hline
+{\em binaryprint} & if true the system calling print is a binary, so the printmatrix contains the info of the two stars and of their orbit \\
+\hline
+{\em separator} & field delimiter for the output file \\
+\hline
+{\em \+\_\+w\+\_\+id} & field width of the id column \\
+\hline
+{\em \+\_\+w\+\_\+name} & field width of the name column \\
+\hline
+{\em \+\_\+w\+\_\+header} & field with of all the other columns \\
+\hline
+{\em \+\_\+precision} & decimal precision \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The name of the columns shown in the header are taken from \mbox{\hyperlink{class_i_o_afeeda6890b171d3ee1740898233f9cc1}{I\+O\+::printcolumns\+\_\+star}} and \mbox{\hyperlink{class_i_o_a13566b115648e8dd8d7d84c413c4962a}{I\+O\+::printcolumns\+\_\+binary}}. The order of the columns name and of the columns in printmatrix has to be the same, but it is not checked here (see \mbox{\hyperlink{class_i_o_a8c4f4ceb3bfc6eb04f44fb1d54e136e1}{I\+O\+::columns\+\_\+to\+\_\+print}} for other details on how this is managed in the class).
+\end{DoxyNote}
+Print the output in hdf5 format with header \mbox{\Hypertarget{class_i_o_aed798e8de57fec85ddbec4ebfc42983c}\label{class_i_o_aed798e8de57fec85ddbec4ebfc42983c}} 
+\index{IO@{IO}!print\_output@{print\_output}}
+\index{print\_output@{print\_output}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{print\_output()}{print\_output()}}
+{\footnotesize\ttfamily void I\+O\+::print\+\_\+output (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&}]{printmatrix,  }\item[{const std\+::string \&}]{\+\_\+name,  }\item[{const size\+\_\+t \&}]{\+\_\+\+ID,  }\item[{const bool}]{binaryprint = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i_o_aec8fcece0c9d7a8e9cdb69ec215deaa0}\label{class_i_o_aec8fcece0c9d7a8e9cdb69ec215deaa0}} 
+\index{IO@{IO}!print\_params@{print\_params}}
+\index{print\_params@{print\_params}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{print\_params()}{print\_params()}}
+{\footnotesize\ttfamily void I\+O\+::print\+\_\+params (\begin{DoxyParamCaption}\item[{std\+::string}]{filename = {\ttfamily \char`\"{}used\+\_\+params.svpar\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_i_o_aaf66b034f0b5bfcdd0762f5edd6b4b01}\label{class_i_o_aaf66b034f0b5bfcdd0762f5edd6b4b01}} 
+\index{IO@{IO}!read@{read}}
+\index{read@{read}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void I\+O\+::read (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ double $>$$>$$>$$>$ \&}]{tables,  }\item[{const std\+::vector$<$ std\+::vector$<$ std\+::string $>$$>$}]{tables\+\_\+file,  }\item[{const std\+::string}]{tables\+\_\+dir,  }\item[{const std\+::vector$<$ std\+::string $>$}]{zstring,  }\item[{std\+::vector$<$ double $>$ \&}]{Z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_o_aee3cfa2b1755f02312b293fb4bb46f7a}\label{class_i_o_aee3cfa2b1755f02312b293fb4bb46f7a}} 
+\index{IO@{IO}!read\_tables@{read\_tables}}
+\index{read\_tables@{read\_tables}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{read\_tables()}{read\_tables()}}
+{\footnotesize\ttfamily void I\+O\+::read\+\_\+tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_o_a865cff47863a99f5e102ad9ef205db83}\label{class_i_o_a865cff47863a99f5e102ad9ef205db83}} 
+\index{IO@{IO}!rseed\_provided@{rseed\_provided}}
+\index{rseed\_provided@{rseed\_provided}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{rseed\_provided()}{rseed\_provided()}}
+{\footnotesize\ttfamily bool I\+O\+::rseed\+\_\+provided (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Parameters call. 
+
+\mbox{\Hypertarget{class_i_o_aac02feeac4cce0b0ca1ddd4e6fc98af2}\label{class_i_o_aac02feeac4cce0b0ca1ddd4e6fc98af2}} 
+\index{IO@{IO}!set\_init\_variable@{set\_init\_variable}}
+\index{set\_init\_variable@{set\_init\_variable}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{set\_init\_variable()}{set\_init\_variable()}}
+{\footnotesize\ttfamily void I\+O\+::set\+\_\+init\+\_\+variable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_i_o_a99dac6d688185986f5811a3bbcbd24f7}\label{class_i_o_a99dac6d688185986f5811a3bbcbd24f7}} 
+\index{IO@{IO}!allzams@{allzams}}
+\index{allzams@{allzams}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{allzams}{allzams}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$double$>$ $>$ I\+O\+::allzams}
+
+\mbox{\Hypertarget{class_i_o_acc1f5242fe349ff0f42ff8efbab97aa5}\label{class_i_o_acc1f5242fe349ff0f42ff8efbab97aa5}} 
+\index{IO@{IO}!allzams\_HE@{allzams\_HE}}
+\index{allzams\_HE@{allzams\_HE}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{allzams\_HE}{allzams\_HE}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$double$>$ $>$ I\+O\+::allzams\+\_\+\+HE}
+
+\mbox{\Hypertarget{class_i_o_abadbf7d7e979b1b4515dfe8b47a30722}\label{class_i_o_abadbf7d7e979b1b4515dfe8b47a30722}} 
+\index{IO@{IO}!binput\_mode@{binput\_mode}}
+\index{binput\_mode@{binput\_mode}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{binput\_mode}{binput\_mode}}
+{\footnotesize\ttfamily std\+::string I\+O\+::binput\+\_\+mode}
+
+Handle the formalism for the input for binaries \mbox{\Hypertarget{class_i_o_aa10cbde61a00ee4994d624013656d425}\label{class_i_o_aa10cbde61a00ee4994d624013656d425}} 
+\index{IO@{IO}!CE\_mode@{CE\_mode}}
+\index{CE\_mode@{CE\_mode}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{CE\_mode}{CE\_mode}}
+{\footnotesize\ttfamily std\+::string I\+O\+::\+C\+E\+\_\+mode}
+
+Formalism for Common envelope processes options \mbox{\Hypertarget{class_i_o_a15e0862f7603931b6b9e87f4b3638e25}\label{class_i_o_a15e0862f7603931b6b9e87f4b3638e25}} 
+\index{IO@{IO}!GW\_mode@{GW\_mode}}
+\index{GW\_mode@{GW\_mode}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{GW\_mode}{GW\_mode}}
+{\footnotesize\ttfamily std\+::string I\+O\+::\+G\+W\+\_\+mode}
+
+Formalism for DA and DE in GW rad processes \mbox{\Hypertarget{class_i_o_ab001a2bb8a47811ac999d0eb5814585f}\label{class_i_o_ab001a2bb8a47811ac999d0eb5814585f}} 
+\index{IO@{IO}!in@{in}}
+\index{in@{in}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{in}{in}}
+{\footnotesize\ttfamily std\+::ifstream I\+O\+::in\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_o_abcc7edabe3d0811bc46a9c68b8e8b6ec}\label{class_i_o_abcc7edabe3d0811bc46a9c68b8e8b6ec}} 
+\index{IO@{IO}!list\_cols\_binary@{list\_cols\_binary}}
+\index{list\_cols\_binary@{list\_cols\_binary}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{list\_cols\_binary}{list\_cols\_binary}}
+{\footnotesize\ttfamily std\+::string I\+O\+::list\+\_\+cols\+\_\+binary\hspace{0.3cm}{\ttfamily [private]}}
+
+Default list of binary properties to print in output, defined in \mbox{\hyperlink{class_i_o_a6f56823f20c05fc9b7fb74b27c28d963}{I\+O\+::load}} \mbox{\Hypertarget{class_i_o_adafa7aa9fc3a50f0a7e32524ee533304}\label{class_i_o_adafa7aa9fc3a50f0a7e32524ee533304}} 
+\index{IO@{IO}!list\_cols\_star@{list\_cols\_star}}
+\index{list\_cols\_star@{list\_cols\_star}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{list\_cols\_star}{list\_cols\_star}}
+{\footnotesize\ttfamily std\+::string I\+O\+::list\+\_\+cols\+\_\+star\hspace{0.3cm}{\ttfamily [private]}}
+
+Default list of stellar properties to print in output, defined in \mbox{\hyperlink{class_i_o_a6f56823f20c05fc9b7fb74b27c28d963}{I\+O\+::load}} \mbox{\Hypertarget{class_i_o_a64bbe89ff4b744049da60893f42ba256}\label{class_i_o_a64bbe89ff4b744049da60893f42ba256}} 
+\index{IO@{IO}!list\_file@{list\_file}}
+\index{list\_file@{list\_file}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{list\_file}{list\_file}}
+{\footnotesize\ttfamily std\+::string I\+O\+::list\+\_\+file\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_o_a77a375b43764c0bf47b620f8a4a13d47}\label{class_i_o_a77a375b43764c0bf47b620f8a4a13d47}} 
+\index{IO@{IO}!liststars@{liststars}}
+\index{liststars@{liststars}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{liststars}{liststars}}
+{\footnotesize\ttfamily std\+::ofstream I\+O\+::liststars\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_o_ac1be29dc01b59b7d8ac8e4bbac33e3df}\label{class_i_o_ac1be29dc01b59b7d8ac8e4bbac33e3df}} 
+\index{IO@{IO}!mix\_mode@{mix\_mode}}
+\index{mix\_mode@{mix\_mode}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{mix\_mode}{mix\_mode}}
+{\footnotesize\ttfamily std\+::string I\+O\+::mix\+\_\+mode}
+
+Formalism for mixing processes options \mbox{\Hypertarget{class_i_o_a95c786b97f2781158479418eb6c198fa}\label{class_i_o_a95c786b97f2781158479418eb6c198fa}} 
+\index{IO@{IO}!ntables@{ntables}}
+\index{ntables@{ntables}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{ntables}{ntables}}
+{\footnotesize\ttfamily size\+\_\+t I\+O\+::ntables}
+
+\mbox{\Hypertarget{class_i_o_a77a4905e7d35bee2deda850455e05afc}\label{class_i_o_a77a4905e7d35bee2deda850455e05afc}} 
+\index{IO@{IO}!nthreads@{nthreads}}
+\index{nthreads@{nthreads}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{nthreads}{nthreads}}
+{\footnotesize\ttfamily int I\+O\+::nthreads}
+
+\mbox{\Hypertarget{class_i_o_a867eecd7111719c707202b4ce1418a6d}\label{class_i_o_a867eecd7111719c707202b4ce1418a6d}} 
+\index{IO@{IO}!output\_folder\_name@{output\_folder\_name}}
+\index{output\_folder\_name@{output\_folder\_name}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{output\_folder\_name}{output\_folder\_name}}
+{\footnotesize\ttfamily std\+::string I\+O\+::output\+\_\+folder\+\_\+name =\char`\"{}output\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_o_a204e3df440bcc0034664ef5d86a31133}\label{class_i_o_a204e3df440bcc0034664ef5d86a31133}} 
+\index{IO@{IO}!output\_mode@{output\_mode}}
+\index{output\_mode@{output\_mode}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{output\_mode}{output\_mode}}
+{\footnotesize\ttfamily std\+::string I\+O\+::output\+\_\+mode}
+
+Handle the file output type \mbox{\Hypertarget{class_i_o_a4fd150be4fbad55ec4721a85fae50fb6}\label{class_i_o_a4fd150be4fbad55ec4721a85fae50fb6}} 
+\index{IO@{IO}!outputfile@{outputfile}}
+\index{outputfile@{outputfile}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{outputfile}{outputfile}}
+{\footnotesize\ttfamily std\+::ofstream I\+O\+::outputfile\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_o_a13566b115648e8dd8d7d84c413c4962a}\label{class_i_o_a13566b115648e8dd8d7d84c413c4962a}} 
+\index{IO@{IO}!printcolumns\_binary@{printcolumns\_binary}}
+\index{printcolumns\_binary@{printcolumns\_binary}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{printcolumns\_binary}{printcolumns\_binary}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ I\+O\+::printcolumns\+\_\+binary}
+
+\mbox{\Hypertarget{class_i_o_afeeda6890b171d3ee1740898233f9cc1}\label{class_i_o_afeeda6890b171d3ee1740898233f9cc1}} 
+\index{IO@{IO}!printcolumns\_star@{printcolumns\_star}}
+\index{printcolumns\_star@{printcolumns\_star}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{printcolumns\_star}{printcolumns\_star}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ I\+O\+::printcolumns\+\_\+star}
+
+List of string containing the name of the stellar properties to print in output. It is composed by a default lit of columns (\mbox{\hyperlink{class_i_o_adafa7aa9fc3a50f0a7e32524ee533304}{I\+O\+::list\+\_\+cols\+\_\+star}}, defined in \mbox{\hyperlink{class_i_o_a6f56823f20c05fc9b7fb74b27c28d963}{I\+O\+::load}}) plus some extra columns selected at runtime by the user with the -\/scol flag see \mbox{\hyperlink{class_i_o_a6f56823f20c05fc9b7fb74b27c28d963}{I\+O\+::load}} \mbox{\Hypertarget{class_i_o_a76e7189db5b97005fa199ca0ae6fb19c}\label{class_i_o_a76e7189db5b97005fa199ca0ae6fb19c}} 
+\index{IO@{IO}!printIDs\_binary@{printIDs\_binary}}
+\index{printIDs\_binary@{printIDs\_binary}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{printIDs\_binary}{printIDs\_binary}}
+{\footnotesize\ttfamily std\+::vector$<$size\+\_\+t$>$ I\+O\+::print\+I\+Ds\+\_\+binary}
+
+\mbox{\Hypertarget{class_i_o_a9d9508e411fb8ea9a8ee7f86260c34fa}\label{class_i_o_a9d9508e411fb8ea9a8ee7f86260c34fa}} 
+\index{IO@{IO}!printIDs\_star@{printIDs\_star}}
+\index{printIDs\_star@{printIDs\_star}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{printIDs\_star}{printIDs\_star}}
+{\footnotesize\ttfamily std\+::vector$<$size\+\_\+t$>$ I\+O\+::print\+I\+Ds\+\_\+star}
+
+\mbox{\Hypertarget{class_i_o_ac85fd3d98c79fb9d772476657181a095}\label{class_i_o_ac85fd3d98c79fb9d772476657181a095}} 
+\index{IO@{IO}!printmatrix@{printmatrix}}
+\index{printmatrix@{printmatrix}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{printmatrix}{printmatrix}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$double$>$ $>$ I\+O\+::printmatrix\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_o_a4930ce708a331ef5f75dc3253e28382e}\label{class_i_o_a4930ce708a331ef5f75dc3253e28382e}} 
+\index{IO@{IO}!rand\_seeds@{rand\_seeds}}
+\index{rand\_seeds@{rand\_seeds}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{rand\_seeds}{rand\_seeds}}
+{\footnotesize\ttfamily std\+::vector$<$unsigned long$>$ I\+O\+::rand\+\_\+seeds}
+
+\mbox{\Hypertarget{class_i_o_a1440350ee5aa95d339103dd77df6b755}\label{class_i_o_a1440350ee5aa95d339103dd77df6b755}} 
+\index{IO@{IO}!rd@{rd}}
+\index{rd@{rd}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{rd}{rd}}
+{\footnotesize\ttfamily std\+::random\+\_\+device I\+O\+::rd}
+
+\mbox{\Hypertarget{class_i_o_ac33e1ec6a721c92b6d7c057fbd71b3cc}\label{class_i_o_ac33e1ec6a721c92b6d7c057fbd71b3cc}} 
+\index{IO@{IO}!RL\_mode@{RL\_mode}}
+\index{RL\_mode@{RL\_mode}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{RL\_mode}{RL\_mode}}
+{\footnotesize\ttfamily std\+::string I\+O\+::\+R\+L\+\_\+mode}
+
+Formalism for DA and DE in RL process \mbox{\Hypertarget{class_i_o_ab3f855449a8ab4951da61d0a05c01e5f}\label{class_i_o_ab3f855449a8ab4951da61d0a05c01e5f}} 
+\index{IO@{IO}!seed\_provided@{seed\_provided}}
+\index{seed\_provided@{seed\_provided}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{seed\_provided}{seed\_provided}}
+{\footnotesize\ttfamily bool I\+O\+::seed\+\_\+provided = false\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_i_o_add1f5fa1c7960b91f47f0b91bb5bd1ae}\label{class_i_o_add1f5fa1c7960b91f47f0b91bb5bd1ae}} 
+\index{IO@{IO}!SEVNpath@{SEVNpath}}
+\index{SEVNpath@{SEVNpath}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{SEVNpath}{SEVNpath}}
+{\footnotesize\ttfamily std\+::string I\+O\+::\+S\+E\+V\+Npath\hspace{0.3cm}{\ttfamily [private]}}
+
+Path of the main S\+E\+VN folder \mbox{\Hypertarget{class_i_o_a8beed7ecd8cd6104baea317c014f4fad}\label{class_i_o_a8beed7ecd8cd6104baea317c014f4fad}} 
+\index{IO@{IO}!SNK\_mode@{SNK\_mode}}
+\index{SNK\_mode@{SNK\_mode}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{SNK\_mode}{SNK\_mode}}
+{\footnotesize\ttfamily std\+::string I\+O\+::\+S\+N\+K\+\_\+mode}
+
+Formalism for SN kick processes options \mbox{\Hypertarget{class_i_o_a2cd285232510801d44e35f5db87ed7dd}\label{class_i_o_a2cd285232510801d44e35f5db87ed7dd}} 
+\index{IO@{IO}!STARS\_MATRIX@{STARS\_MATRIX}}
+\index{STARS\_MATRIX@{STARS\_MATRIX}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{STARS\_MATRIX}{STARS\_MATRIX}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$std\+::string$>$ $>$ I\+O\+::\+S\+T\+A\+R\+S\+\_\+\+M\+A\+T\+R\+IX}
+
+\mbox{\Hypertarget{class_i_o_abf8c66e267377a1952a2b91ac33e93b9}\label{class_i_o_abf8c66e267377a1952a2b91ac33e93b9}} 
+\index{IO@{IO}!svlog@{svlog}}
+\index{svlog@{svlog}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{svlog}{svlog}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsevnstd_1_1_sevn_logging}{Sevn\+Logging}} I\+O\+::svlog\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_o_a41a5770e39f8a3df8ab4b550b427f2c0}\label{class_i_o_a41a5770e39f8a3df8ab4b550b427f2c0}} 
+\index{IO@{IO}!svpar@{svpar}}
+\index{svpar@{svpar}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{svpar}{svpar}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_e_v_npar}{S\+E\+V\+Npar}} I\+O\+::svpar}
+
+\mbox{\Hypertarget{class_i_o_ad1642c3766821d0ef9dcfa2e54aebc72}\label{class_i_o_ad1642c3766821d0ef9dcfa2e54aebc72}} 
+\index{IO@{IO}!tables@{tables}}
+\index{tables@{tables}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{tables}{tables}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$std\+::vector$<$std\+::vector$<$double$>$ $>$ $>$ $>$ I\+O\+::tables}
+
+\mbox{\Hypertarget{class_i_o_ac1d1616d42388e6a72fab4a2aa43be0e}\label{class_i_o_ac1d1616d42388e6a72fab4a2aa43be0e}} 
+\index{IO@{IO}!tables\_dir@{tables\_dir}}
+\index{tables\_dir@{tables\_dir}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{tables\_dir}{tables\_dir}}
+{\footnotesize\ttfamily std\+::string I\+O\+::tables\+\_\+dir\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_o_a87475d8749c2bb0f2b92604ee4933f3a}\label{class_i_o_a87475d8749c2bb0f2b92604ee4933f3a}} 
+\index{IO@{IO}!tables\_dir\_HE@{tables\_dir\_HE}}
+\index{tables\_dir\_HE@{tables\_dir\_HE}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{tables\_dir\_HE}{tables\_dir\_HE}}
+{\footnotesize\ttfamily std\+::string I\+O\+::tables\+\_\+dir\+\_\+\+HE\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_o_afda25e65418b5ebb98ddcf79b8e64092}\label{class_i_o_afda25e65418b5ebb98ddcf79b8e64092}} 
+\index{IO@{IO}!tables\_file@{tables\_file}}
+\index{tables\_file@{tables\_file}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{tables\_file}{tables\_file}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$std\+::string$>$ $>$ I\+O\+::tables\+\_\+file\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_o_a0157732084fa1202dacf7df71a31bcb5}\label{class_i_o_a0157732084fa1202dacf7df71a31bcb5}} 
+\index{IO@{IO}!tables\_file\_HE@{tables\_file\_HE}}
+\index{tables\_file\_HE@{tables\_file\_HE}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{tables\_file\_HE}{tables\_file\_HE}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$std\+::string$>$ $>$ I\+O\+::tables\+\_\+file\+\_\+\+HE\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_o_a90f14c95a96dedbfda32a7b02d94d9f2}\label{class_i_o_a90f14c95a96dedbfda32a7b02d94d9f2}} 
+\index{IO@{IO}!tables\_HE@{tables\_HE}}
+\index{tables\_HE@{tables\_HE}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{tables\_HE}{tables\_HE}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$std\+::vector$<$std\+::vector$<$double$>$ $>$ $>$ $>$ I\+O\+::tables\+\_\+\+HE}
+
+\mbox{\Hypertarget{class_i_o_abb939263e352fb61e877e259c0dbf677}\label{class_i_o_abb939263e352fb61e877e259c0dbf677}} 
+\index{IO@{IO}!tablesloaded@{tablesloaded}}
+\index{tablesloaded@{tablesloaded}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{tablesloaded}{tablesloaded}}
+{\footnotesize\ttfamily int I\+O\+::tablesloaded}
+
+\mbox{\Hypertarget{class_i_o_a3ee5533182fed7d49d1026dad0bbc79e}\label{class_i_o_a3ee5533182fed7d49d1026dad0bbc79e}} 
+\index{IO@{IO}!tides\_mode@{tides\_mode}}
+\index{tides\_mode@{tides\_mode}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{tides\_mode}{tides\_mode}}
+{\footnotesize\ttfamily std\+::string I\+O\+::tides\+\_\+mode}
+
+Formalism for DA and DE in tidal processes \mbox{\Hypertarget{class_i_o_a4ac766acaf307359f5facbf62bbf3f70}\label{class_i_o_a4ac766acaf307359f5facbf62bbf3f70}} 
+\index{IO@{IO}!winds\_mode@{winds\_mode}}
+\index{winds\_mode@{winds\_mode}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{winds\_mode}{winds\_mode}}
+{\footnotesize\ttfamily std\+::string I\+O\+::winds\+\_\+mode}
+
+Formalism for DA and DE in Winds accretion processes \mbox{\Hypertarget{class_i_o_ae94ed649736fdfb01ea7dcf41484cd47}\label{class_i_o_ae94ed649736fdfb01ea7dcf41484cd47}} 
+\index{IO@{IO}!Z@{Z}}
+\index{Z@{Z}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{Z}{Z}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ I\+O\+::Z}
+
+\mbox{\Hypertarget{class_i_o_ad894a210155a726d323b4f91fd114d55}\label{class_i_o_ad894a210155a726d323b4f91fd114d55}} 
+\index{IO@{IO}!Z\_HE@{Z\_HE}}
+\index{Z\_HE@{Z\_HE}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{Z\_HE}{Z\_HE}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ I\+O\+::\+Z\+\_\+\+HE}
+
+\mbox{\Hypertarget{class_i_o_a193891ac41ed11bffceae0b9ee0d9040}\label{class_i_o_a193891ac41ed11bffceae0b9ee0d9040}} 
+\index{IO@{IO}!zstring@{zstring}}
+\index{zstring@{zstring}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{zstring}{zstring}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ I\+O\+::zstring\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_o_a64d53b30721d067efe2fd1f4f407ee63}\label{class_i_o_a64d53b30721d067efe2fd1f4f407ee63}} 
+\index{IO@{IO}!zstring\_HE@{zstring\_HE}}
+\index{zstring\_HE@{zstring\_HE}!IO@{IO}}
+\doxysubsubsection{\texorpdfstring{zstring\_HE}{zstring\_HE}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ I\+O\+::zstring\+\_\+\+HE\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/\mbox{\hyperlink{_i_o_8h}{I\+O.\+h}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/src/general/\mbox{\hyperlink{_i_o_8cpp}{I\+O.\+cpp}}\end{DoxyCompactItemize}

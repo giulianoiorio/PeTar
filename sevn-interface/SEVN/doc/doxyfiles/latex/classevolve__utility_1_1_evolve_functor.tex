@@ -1,0 +1,110 @@
+\hypertarget{classevolve__utility_1_1_evolve_functor}{}\doxysection{evolve\+\_\+utility\+::Evolve\+Functor Class Reference}
+\label{classevolve__utility_1_1_evolve_functor}\index{evolve\_utility::EvolveFunctor@{evolve\_utility::EvolveFunctor}}
+
+
+{\ttfamily \#include $<$evolve.\+h$>$}
+
+Inheritance diagram for evolve\+\_\+utility\+::Evolve\+Functor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.244444cm]{classevolve__utility_1_1_evolve_functor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classevolve__utility_1_1_evolve_functor_a52da6485b55587031d36c174bf6725f1}{Evolve\+Functor}} (\mbox{\hyperlink{classsevnstd_1_1_sevn_logging}{Sevn\+Logging}} \&svlog, bool record\+\_\+state=true)
+\item 
+virtual \mbox{\hyperlink{classevolve__utility_1_1_evolve_functor_a10363af89bf2850fde40026e37a712c6}{$\sim$\+Evolve\+Functor}} ()=default
+\item 
+virtual int \mbox{\hyperlink{classevolve__utility_1_1_evolve_functor_a4102a35c461e68fb65ed5d9ed8d04d73}{operator()}} (\mbox{\hyperlink{class_binstar}{Binstar}} \&binary)=0
+\item 
+virtual int \mbox{\hyperlink{classevolve__utility_1_1_evolve_functor_a29a3aeb6f5fc928ae9af92b8822d874c}{operator()}} (\mbox{\hyperlink{class_star}{Star}} \&star)=0
+\item 
+virtual std\+::string \mbox{\hyperlink{classevolve__utility_1_1_evolve_functor_a2e879b095812d2c1fa89cd30fc77feac}{name}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsevnstd_1_1_sevn_logging}{Sevn\+Logging}} \& \mbox{\hyperlink{classevolve__utility_1_1_evolve_functor_a4d42779c8389317731ff89fc95922d50}{\+\_\+svlog}}
+\item 
+bool \mbox{\hyperlink{classevolve__utility_1_1_evolve_functor_a9bf3c80f4aefb3e1e47fef37c3cc0609}{\+\_\+record\+\_\+state}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract Base class for Evolve functions. The derived class needs to call the base constructor with parameters\+: 
+\begin{DoxyParams}{Parameters}
+{\em svlog,instance} & of class Svlogging \\
+\hline
+{\em record\+\_\+state,If} & true enable the state recording during the evolution (following the parameters in input) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classevolve__utility_1_1_evolve_functor_a52da6485b55587031d36c174bf6725f1}\label{classevolve__utility_1_1_evolve_functor_a52da6485b55587031d36c174bf6725f1}} 
+\index{evolve\_utility::EvolveFunctor@{evolve\_utility::EvolveFunctor}!EvolveFunctor@{EvolveFunctor}}
+\index{EvolveFunctor@{EvolveFunctor}!evolve\_utility::EvolveFunctor@{evolve\_utility::EvolveFunctor}}
+\doxysubsubsection{\texorpdfstring{EvolveFunctor()}{EvolveFunctor()}}
+{\footnotesize\ttfamily evolve\+\_\+utility\+::\+Evolve\+Functor\+::\+Evolve\+Functor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsevnstd_1_1_sevn_logging}{Sevn\+Logging}} \&}]{svlog,  }\item[{bool}]{record\+\_\+state = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classevolve__utility_1_1_evolve_functor_a10363af89bf2850fde40026e37a712c6}\label{classevolve__utility_1_1_evolve_functor_a10363af89bf2850fde40026e37a712c6}} 
+\index{evolve\_utility::EvolveFunctor@{evolve\_utility::EvolveFunctor}!````~EvolveFunctor@{$\sim$EvolveFunctor}}
+\index{````~EvolveFunctor@{$\sim$EvolveFunctor}!evolve\_utility::EvolveFunctor@{evolve\_utility::EvolveFunctor}}
+\doxysubsubsection{\texorpdfstring{$\sim$EvolveFunctor()}{~EvolveFunctor()}}
+{\footnotesize\ttfamily virtual evolve\+\_\+utility\+::\+Evolve\+Functor\+::$\sim$\+Evolve\+Functor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classevolve__utility_1_1_evolve_functor_a2e879b095812d2c1fa89cd30fc77feac}\label{classevolve__utility_1_1_evolve_functor_a2e879b095812d2c1fa89cd30fc77feac}} 
+\index{evolve\_utility::EvolveFunctor@{evolve\_utility::EvolveFunctor}!name@{name}}
+\index{name@{name}!evolve\_utility::EvolveFunctor@{evolve\_utility::EvolveFunctor}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily virtual std\+::string evolve\+\_\+utility\+::\+Evolve\+Functor\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classevolve__utility_1_1_evolve_b_l_c_a4593fba52a7fed266fe99d6134f3849c}{evolve\+\_\+utility\+::\+Evolve\+B\+LC}}, \mbox{\hyperlink{classevolve__utility_1_1_evolve_b_b_h_af503cd5e5f38f2d51c080f714f77e000}{evolve\+\_\+utility\+::\+Evolve\+B\+BH}}, \mbox{\hyperlink{classevolve__utility_1_1_evolve_binary_compact_a18e5ea0b9597d93d11899f1449940b52}{evolve\+\_\+utility\+::\+Evolve\+Binary\+Compact}}, and \mbox{\hyperlink{classevolve__utility_1_1_evolve_default_a0281d98a36cd2ee23ab3a31123ee4281}{evolve\+\_\+utility\+::\+Evolve\+Default}}.
+
+\mbox{\Hypertarget{classevolve__utility_1_1_evolve_functor_a4102a35c461e68fb65ed5d9ed8d04d73}\label{classevolve__utility_1_1_evolve_functor_a4102a35c461e68fb65ed5d9ed8d04d73}} 
+\index{evolve\_utility::EvolveFunctor@{evolve\_utility::EvolveFunctor}!operator()@{operator()}}
+\index{operator()@{operator()}!evolve\_utility::EvolveFunctor@{evolve\_utility::EvolveFunctor}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual int evolve\+\_\+utility\+::\+Evolve\+Functor\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_binstar}{Binstar}} \&}]{binary }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classevolve__utility_1_1_evolve_b_l_c_ad4f2c7fc7d3241218e0d8b8258addfe6}{evolve\+\_\+utility\+::\+Evolve\+B\+LC}}, \mbox{\hyperlink{classevolve__utility_1_1_evolve_b_b_h_af7e736b81010d015a60a132f1b2f844e}{evolve\+\_\+utility\+::\+Evolve\+B\+BH}}, \mbox{\hyperlink{classevolve__utility_1_1_evolve_binary_compact_a8fe748e318321238a847c8b987e73183}{evolve\+\_\+utility\+::\+Evolve\+Binary\+Compact}}, and \mbox{\hyperlink{classevolve__utility_1_1_evolve_default_aafa9ee25c024f434b147c4571b3a8fb6}{evolve\+\_\+utility\+::\+Evolve\+Default}}.
+
+\mbox{\Hypertarget{classevolve__utility_1_1_evolve_functor_a29a3aeb6f5fc928ae9af92b8822d874c}\label{classevolve__utility_1_1_evolve_functor_a29a3aeb6f5fc928ae9af92b8822d874c}} 
+\index{evolve\_utility::EvolveFunctor@{evolve\_utility::EvolveFunctor}!operator()@{operator()}}
+\index{operator()@{operator()}!evolve\_utility::EvolveFunctor@{evolve\_utility::EvolveFunctor}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual int evolve\+\_\+utility\+::\+Evolve\+Functor\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} \&}]{star }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classevolve__utility_1_1_evolve_b_l_c_aa06288df32671cfbc7a70f59f108c59b}{evolve\+\_\+utility\+::\+Evolve\+B\+LC}}, \mbox{\hyperlink{classevolve__utility_1_1_evolve_b_b_h_a43e150970a882e69cf9745c53bf6dbdb}{evolve\+\_\+utility\+::\+Evolve\+B\+BH}}, \mbox{\hyperlink{classevolve__utility_1_1_evolve_binary_compact_aa3c67ae4347fdfd4808aa47761d8ae84}{evolve\+\_\+utility\+::\+Evolve\+Binary\+Compact}}, and \mbox{\hyperlink{classevolve__utility_1_1_evolve_default_ae0bb3b8d879979f3656822024863f80e}{evolve\+\_\+utility\+::\+Evolve\+Default}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classevolve__utility_1_1_evolve_functor_a9bf3c80f4aefb3e1e47fef37c3cc0609}\label{classevolve__utility_1_1_evolve_functor_a9bf3c80f4aefb3e1e47fef37c3cc0609}} 
+\index{evolve\_utility::EvolveFunctor@{evolve\_utility::EvolveFunctor}!\_record\_state@{\_record\_state}}
+\index{\_record\_state@{\_record\_state}!evolve\_utility::EvolveFunctor@{evolve\_utility::EvolveFunctor}}
+\doxysubsubsection{\texorpdfstring{\_record\_state}{\_record\_state}}
+{\footnotesize\ttfamily bool evolve\+\_\+utility\+::\+Evolve\+Functor\+::\+\_\+record\+\_\+state\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classevolve__utility_1_1_evolve_functor_a4d42779c8389317731ff89fc95922d50}\label{classevolve__utility_1_1_evolve_functor_a4d42779c8389317731ff89fc95922d50}} 
+\index{evolve\_utility::EvolveFunctor@{evolve\_utility::EvolveFunctor}!\_svlog@{\_svlog}}
+\index{\_svlog@{\_svlog}!evolve\_utility::EvolveFunctor@{evolve\_utility::EvolveFunctor}}
+\doxysubsubsection{\texorpdfstring{\_svlog}{\_svlog}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsevnstd_1_1_sevn_logging}{Sevn\+Logging}}\& evolve\+\_\+utility\+::\+Evolve\+Functor\+::\+\_\+svlog\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/utils/\mbox{\hyperlink{evolve_8h}{evolve.\+h}}\end{DoxyCompactItemize}

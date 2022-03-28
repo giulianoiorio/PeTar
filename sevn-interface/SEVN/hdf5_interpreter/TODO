@@ -1,0 +1,8 @@
+- be less generic: write specific code for the stars.h5 file!!!
+- add a method to extract everything to a txt file
+- add a method to extract a specific dataset to a txt file
+- add a method to extract only specific columns from a specific dataset
+- write summary of the Groups, datasets and headers
+- add plot function with possibility of replotting plot(x, y1, y2, y3...)
+- extract(zams,rem,mhef,mcof....) for all stars in a specific file
+- plot(zams,mrem,mhef,mcof) should plot the vectors extracted through the extract(zams,rem,mhef,mcof....) method

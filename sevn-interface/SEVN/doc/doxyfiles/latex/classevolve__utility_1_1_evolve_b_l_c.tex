@@ -1,0 +1,76 @@
+\hypertarget{classevolve__utility_1_1_evolve_b_l_c}{}\doxysection{evolve\+\_\+utility\+::Evolve\+B\+LC Class Reference}
+\label{classevolve__utility_1_1_evolve_b_l_c}\index{evolve\_utility::EvolveBLC@{evolve\_utility::EvolveBLC}}
+
+
+{\ttfamily \#include $<$evolve.\+h$>$}
+
+Inheritance diagram for evolve\+\_\+utility\+::Evolve\+B\+LC\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classevolve__utility_1_1_evolve_b_l_c}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classevolve__utility_1_1_evolve_b_l_c_a5b9d7a4a877d644b0c597d924c62392a}{Evolve\+B\+LC}} (\mbox{\hyperlink{classsevnstd_1_1_sevn_logging}{Sevn\+Logging}} \&svlog, bool record\+\_\+state=true)
+\item 
+int \mbox{\hyperlink{classevolve__utility_1_1_evolve_b_l_c_ad4f2c7fc7d3241218e0d8b8258addfe6}{operator()}} (\mbox{\hyperlink{class_binstar}{Binstar}} \&binary) override
+\item 
+int \mbox{\hyperlink{classevolve__utility_1_1_evolve_b_l_c_aa06288df32671cfbc7a70f59f108c59b}{operator()}} (\mbox{\hyperlink{class_star}{Star}} \&star) override
+\item 
+std\+::string \mbox{\hyperlink{classevolve__utility_1_1_evolve_b_l_c_a4593fba52a7fed266fe99d6134f3849c}{name}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Evolve functor specialised for the analysis of stages of binary lifetime with a compact object plus a luminous variable (B\+LC). The evolution starts record the binary states (following the dtout option) when we enter in a phase with an unbroken binary containing a compact object plus a luminous star (\mbox{\hyperlink{class_phase}{Phase}}$<$7 or WD). The evolution is broken when a broken trigger is true or after we conclude a B\+LC phase since there is no way that a new B\+LC phase can occur. @\+Note The dtout end option means that only the start and the end of the B\+LC phase are printed; @\+Note This evolution can be used only with binaries, using it with stars raise a not implemented error. Evolve functor specialised for the analysis of stages of binary lifetime with a compact object plus a luminous variable (B\+LC). @record\+\_\+state\+\_\+policy The states start to be recorded when the binary enters the first time in a B\+LC phase (bound compact + Luminous star) The last record is got the first time the binary exits the B\+LC phase (e.\+g. the Luminous star becomes a compact object or a merger occurs). Inside this window the state are recorded following the dtout option. When dtout=end only the first (start of the B\+LC) and last (end of the B\+LC) states are recorded. @break\+\_\+evolve\+\_\+policy T\+The evolution is broken when a broken trigger is true (depending on the input tf) or after we conclude a B\+LC phase since there is no way that a new B\+LC phase can occur. @binstar\+\_\+evolve Yes @star\+\_\+evolve raise Not implemented error @catch sevnerr 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classevolve__utility_1_1_evolve_b_l_c_a5b9d7a4a877d644b0c597d924c62392a}\label{classevolve__utility_1_1_evolve_b_l_c_a5b9d7a4a877d644b0c597d924c62392a}} 
+\index{evolve\_utility::EvolveBLC@{evolve\_utility::EvolveBLC}!EvolveBLC@{EvolveBLC}}
+\index{EvolveBLC@{EvolveBLC}!evolve\_utility::EvolveBLC@{evolve\_utility::EvolveBLC}}
+\doxysubsubsection{\texorpdfstring{EvolveBLC()}{EvolveBLC()}}
+{\footnotesize\ttfamily evolve\+\_\+utility\+::\+Evolve\+B\+L\+C\+::\+Evolve\+B\+LC (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsevnstd_1_1_sevn_logging}{Sevn\+Logging}} \&}]{svlog,  }\item[{bool}]{record\+\_\+state = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classevolve__utility_1_1_evolve_b_l_c_a4593fba52a7fed266fe99d6134f3849c}\label{classevolve__utility_1_1_evolve_b_l_c_a4593fba52a7fed266fe99d6134f3849c}} 
+\index{evolve\_utility::EvolveBLC@{evolve\_utility::EvolveBLC}!name@{name}}
+\index{name@{name}!evolve\_utility::EvolveBLC@{evolve\_utility::EvolveBLC}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string evolve\+\_\+utility\+::\+Evolve\+B\+L\+C\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classevolve__utility_1_1_evolve_functor_a2e879b095812d2c1fa89cd30fc77feac}{evolve\+\_\+utility\+::\+Evolve\+Functor}}.
+
+\mbox{\Hypertarget{classevolve__utility_1_1_evolve_b_l_c_ad4f2c7fc7d3241218e0d8b8258addfe6}\label{classevolve__utility_1_1_evolve_b_l_c_ad4f2c7fc7d3241218e0d8b8258addfe6}} 
+\index{evolve\_utility::EvolveBLC@{evolve\_utility::EvolveBLC}!operator()@{operator()}}
+\index{operator()@{operator()}!evolve\_utility::EvolveBLC@{evolve\_utility::EvolveBLC}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int evolve\+\_\+utility\+::\+Evolve\+B\+L\+C\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_binstar}{Binstar}} \&}]{binary }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Evolve
+
+The special break condition is activated the first time both stars are compact and the system is not broken
+
+Implements \mbox{\hyperlink{classevolve__utility_1_1_evolve_functor_a4102a35c461e68fb65ed5d9ed8d04d73}{evolve\+\_\+utility\+::\+Evolve\+Functor}}.
+
+\mbox{\Hypertarget{classevolve__utility_1_1_evolve_b_l_c_aa06288df32671cfbc7a70f59f108c59b}\label{classevolve__utility_1_1_evolve_b_l_c_aa06288df32671cfbc7a70f59f108c59b}} 
+\index{evolve\_utility::EvolveBLC@{evolve\_utility::EvolveBLC}!operator()@{operator()}}
+\index{operator()@{operator()}!evolve\_utility::EvolveBLC@{evolve\_utility::EvolveBLC}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int evolve\+\_\+utility\+::\+Evolve\+B\+L\+C\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} \&}]{star }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classevolve__utility_1_1_evolve_functor_a29a3aeb6f5fc928ae9af92b8822d874c}{evolve\+\_\+utility\+::\+Evolve\+Functor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/utils/\mbox{\hyperlink{evolve_8h}{evolve.\+h}}\end{DoxyCompactItemize}

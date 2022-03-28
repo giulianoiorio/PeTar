@@ -1,0 +1,2 @@
+This example shows how to use RegEX to collect information in the logfile, in particular it shows how to get the modulethe number of CE for each events and add this information to all systems ending their evolution as binary of compact objects
+The output files are stored in ../sevn_outputs_example/sevn_output_single 

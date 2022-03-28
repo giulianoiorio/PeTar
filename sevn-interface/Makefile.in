@@ -1,0 +1,22 @@
+TARGET: libsevn.a
+
+CXX=@CXX@
+CC=@CC@
+
+SEVN_PATH=SEVN
+SEVN_INCLUDE_PATH= $(shell find $(SEVN_PATH)/include -type d )
+SEVN_INCLUDE = $(addprefix -I, $(SEVN_INCLUDE_PATH))
+
+CXXFLAGS += @CXXFLAGS@ @OPTFLAGS@
+CFLAGS += @CFLAGS@ @COPTFLAGS@ $(SEVN_INCLUDE)
+
+SRC:= $shell finf find SEVN/src \( -name "*.cpp"  ! -iname "H5*" \)
+OBJ:= $(SRC:.c=.o)
+
+libsevn.a: $(OBJ)
+	ar rcs $@ $^
+
+install:
+	install -d @prefix@/bin/
+clean: 
+	rm -f $(OBJ) libsevn.a

@@ -1,0 +1,138 @@
+\hypertarget{class_temperature}{}\doxysection{Temperature Class Reference}
+\label{class_temperature}\index{Temperature@{Temperature}}
+
+
+{\ttfamily \#include $<$property.\+h$>$}
+
+Inheritance diagram for Temperature\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_temperature}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_temperature_a412a3aa4a0aac9c8f83950fc9e3ce1ca}{Temperature}} (bool reg=true)
+\item 
+\mbox{\hyperlink{class_temperature}{Temperature}} $\ast$ \mbox{\hyperlink{class_temperature_a71ea958535d3c7acdc73a6c79e65b080}{Instance}} () override
+\item 
+std\+::string \mbox{\hyperlink{class_temperature_ae6dbe22cdba04a8090d944032880e788}{name}} () override
+\item 
+std\+::string \mbox{\hyperlink{class_temperature_a57d9a9b7585069bd0f5c4e9fdf2a5284}{units}} () override
+\item 
+void \mbox{\hyperlink{class_temperature_ab74555c502ccb52b12104d7cbb455a86}{set\+\_\+remnant}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+void \mbox{\hyperlink{class_temperature_a7e79b6f1c8b257760efe9acb9397ff0f}{evolve}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+void \mbox{\hyperlink{class_temperature_a0fefbfb012c965f85ee798a7c0dcdd4c}{changed\+\_\+track}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s, \mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s\+\_\+jtrack) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{class_temperature_a6dd975d0dce8dd11f73ec55e8a3ccf29}{ID}}
+\item 
+static \mbox{\hyperlink{class_temperature}{Temperature}} \mbox{\hyperlink{class_temperature_a8fba9e1bf553ae3b7cb9f2cb6208eaa5}{\+\_\+temperature}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_temperature_a412a3aa4a0aac9c8f83950fc9e3ce1ca}\label{class_temperature_a412a3aa4a0aac9c8f83950fc9e3ce1ca}} 
+\index{Temperature@{Temperature}!Temperature@{Temperature}}
+\index{Temperature@{Temperature}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{Temperature()}{Temperature()}}
+{\footnotesize\ttfamily Temperature\+::\+Temperature (\begin{DoxyParamCaption}\item[{bool}]{reg = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_temperature_a0fefbfb012c965f85ee798a7c0dcdd4c}\label{class_temperature_a0fefbfb012c965f85ee798a7c0dcdd4c}} 
+\index{Temperature@{Temperature}!changed\_track@{changed\_track}}
+\index{changed\_track@{changed\_track}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{changed\_track()}{changed\_track()}}
+{\footnotesize\ttfamily void Temperature\+::changed\+\_\+track (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s\+\_\+jtrack }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Handle the modification of the property after a track change. It does nothing by default. 
+\begin{DoxyParams}{Parameters}
+{\em s} & The star for which we are changing the tracks. \\
+\hline
+{\em s\+\_\+jtrack} & The star that we are using to get info of the new tracks. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_property_ab3b4070354b2cddcf25bb6bd7b845a86}{Property}}.
+
+\mbox{\Hypertarget{class_temperature_a7e79b6f1c8b257760efe9acb9397ff0f}\label{class_temperature_a7e79b6f1c8b257760efe9acb9397ff0f}} 
+\index{Temperature@{Temperature}!evolve@{evolve}}
+\index{evolve@{evolve}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{evolve()}{evolve()}}
+{\footnotesize\ttfamily void Temperature\+::evolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\hyperlink{class_temperature}{Temperature}} 
+
+Reimplemented from \mbox{\hyperlink{class_property_a12598e2ff736cc87a14ab24f03288bcd}{Property}}.
+
+\mbox{\Hypertarget{class_temperature_a71ea958535d3c7acdc73a6c79e65b080}\label{class_temperature_a71ea958535d3c7acdc73a6c79e65b080}} 
+\index{Temperature@{Temperature}!Instance@{Instance}}
+\index{Instance@{Instance}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_temperature}{Temperature}}$\ast$ Temperature\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a378a68a95da682a4247a4809e28a4d0c}{Property}}.
+
+\mbox{\Hypertarget{class_temperature_ae6dbe22cdba04a8090d944032880e788}\label{class_temperature_ae6dbe22cdba04a8090d944032880e788}} 
+\index{Temperature@{Temperature}!name@{name}}
+\index{name@{name}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string Temperature\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a6f2f260968b6780485004496e7c53063}{Property}}.
+
+\mbox{\Hypertarget{class_temperature_ab74555c502ccb52b12104d7cbb455a86}\label{class_temperature_ab74555c502ccb52b12104d7cbb455a86}} 
+\index{Temperature@{Temperature}!set\_remnant@{set\_remnant}}
+\index{set\_remnant@{set\_remnant}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{set\_remnant()}{set\_remnant()}}
+{\footnotesize\ttfamily void Temperature\+::set\+\_\+remnant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_ab7fb5c9c46521bf17bae1da3729a7004}{Property}}.
+
+\mbox{\Hypertarget{class_temperature_a57d9a9b7585069bd0f5c4e9fdf2a5284}\label{class_temperature_a57d9a9b7585069bd0f5c4e9fdf2a5284}} 
+\index{Temperature@{Temperature}!units@{units}}
+\index{units@{units}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{units()}{units()}}
+{\footnotesize\ttfamily std\+::string Temperature\+::units (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_ab890f984beaf68c49152cfec3943a784}{Property}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_temperature_a8fba9e1bf553ae3b7cb9f2cb6208eaa5}\label{class_temperature_a8fba9e1bf553ae3b7cb9f2cb6208eaa5}} 
+\index{Temperature@{Temperature}!\_temperature@{\_temperature}}
+\index{\_temperature@{\_temperature}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{\_temperature}{\_temperature}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_temperature}{Temperature}} Temperature\+::\+\_\+temperature\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_temperature_a6dd975d0dce8dd11f73ec55e8a3ccf29}\label{class_temperature_a6dd975d0dce8dd11f73ec55e8a3ccf29}} 
+\index{Temperature@{Temperature}!ID@{ID}}
+\index{ID@{ID}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily size\+\_\+t Temperature\+::\+ID\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/star/\mbox{\hyperlink{property_8h}{property.\+h}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/src/star/\mbox{\hyperlink{property_8cpp}{property.\+cpp}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/\mbox{\hyperlink{static__main_8h}{static\+\_\+main.\+h}}\end{DoxyCompactItemize}

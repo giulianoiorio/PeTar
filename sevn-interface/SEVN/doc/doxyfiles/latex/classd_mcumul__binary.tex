@@ -1,0 +1,116 @@
+\hypertarget{classd_mcumul__binary}{}\doxysection{d\+Mcumul\+\_\+binary Class Reference}
+\label{classd_mcumul__binary}\index{dMcumul\_binary@{dMcumul\_binary}}
+
+
+{\ttfamily \#include $<$property.\+h$>$}
+
+Inheritance diagram for d\+Mcumul\+\_\+binary\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classd_mcumul__binary}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classd_mcumul__binary_ae02816cd7962e20810746686a304ff7c}{d\+Mcumul\+\_\+binary}} (bool reg=true)
+\item 
+\mbox{\hyperlink{classd_mcumul__binary}{d\+Mcumul\+\_\+binary}} $\ast$ \mbox{\hyperlink{classd_mcumul__binary_a710e054b1e3ea5f901ea4ac10f92d67a}{Instance}} () override
+\item 
+std\+::string \mbox{\hyperlink{classd_mcumul__binary_a4bb7ac1f5501e2ccf3e38615b9ed9e42}{name}} () override
+\item 
+void \mbox{\hyperlink{classd_mcumul__binary_a3ab426b7ab38a002884da0501809b12b}{evolve}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+void \mbox{\hyperlink{classd_mcumul__binary_ab0d11a6def61fa76b16cad9e3e765b30}{changed\+\_\+track}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s, \mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s\+\_\+jtrack) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{classd_mcumul__binary_a73cefab0a5f323b7144a0680c015310d}{ID}}
+\item 
+static \mbox{\hyperlink{classd_mcumul__binary}{d\+Mcumul\+\_\+binary}} \mbox{\hyperlink{classd_mcumul__binary_a6945090dedcc677b9767e3443fb3f0cf}{\+\_\+d\+Mcumul\+\_\+binary}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This property stores the DM (positive or negative) accumulated in the stars from binary processeses. Note it does not store the mass lost from Wind because it is a single stellar process and it is already included in the track interpolation. However it stores the mass accreted from the Wind or R\+LO of the companion star and/or the mass lost in R\+LO. In the S\+SE it remains always set to 0. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classd_mcumul__binary_ae02816cd7962e20810746686a304ff7c}\label{classd_mcumul__binary_ae02816cd7962e20810746686a304ff7c}} 
+\index{dMcumul\_binary@{dMcumul\_binary}!dMcumul\_binary@{dMcumul\_binary}}
+\index{dMcumul\_binary@{dMcumul\_binary}!dMcumul\_binary@{dMcumul\_binary}}
+\doxysubsubsection{\texorpdfstring{dMcumul\_binary()}{dMcumul\_binary()}}
+{\footnotesize\ttfamily d\+Mcumul\+\_\+binary\+::d\+Mcumul\+\_\+binary (\begin{DoxyParamCaption}\item[{bool}]{reg = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classd_mcumul__binary_ab0d11a6def61fa76b16cad9e3e765b30}\label{classd_mcumul__binary_ab0d11a6def61fa76b16cad9e3e765b30}} 
+\index{dMcumul\_binary@{dMcumul\_binary}!changed\_track@{changed\_track}}
+\index{changed\_track@{changed\_track}!dMcumul\_binary@{dMcumul\_binary}}
+\doxysubsubsection{\texorpdfstring{changed\_track()}{changed\_track()}}
+{\footnotesize\ttfamily void d\+Mcumul\+\_\+binary\+::changed\+\_\+track (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s\+\_\+jtrack }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Handle the modification of the property after a track change. It does nothing by default. 
+\begin{DoxyParams}{Parameters}
+{\em s} & The star for which we are changing the tracks. \\
+\hline
+{\em s\+\_\+jtrack} & The star that we are using to get info of the new tracks. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_property_ab3b4070354b2cddcf25bb6bd7b845a86}{Property}}.
+
+\mbox{\Hypertarget{classd_mcumul__binary_a3ab426b7ab38a002884da0501809b12b}\label{classd_mcumul__binary_a3ab426b7ab38a002884da0501809b12b}} 
+\index{dMcumul\_binary@{dMcumul\_binary}!evolve@{evolve}}
+\index{evolve@{evolve}!dMcumul\_binary@{dMcumul\_binary}}
+\doxysubsubsection{\texorpdfstring{evolve()}{evolve()}}
+{\footnotesize\ttfamily void d\+Mcumul\+\_\+binary\+::evolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a12598e2ff736cc87a14ab24f03288bcd}{Property}}.
+
+\mbox{\Hypertarget{classd_mcumul__binary_a710e054b1e3ea5f901ea4ac10f92d67a}\label{classd_mcumul__binary_a710e054b1e3ea5f901ea4ac10f92d67a}} 
+\index{dMcumul\_binary@{dMcumul\_binary}!Instance@{Instance}}
+\index{Instance@{Instance}!dMcumul\_binary@{dMcumul\_binary}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classd_mcumul__binary}{d\+Mcumul\+\_\+binary}}$\ast$ d\+Mcumul\+\_\+binary\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a378a68a95da682a4247a4809e28a4d0c}{Property}}.
+
+\mbox{\Hypertarget{classd_mcumul__binary_a4bb7ac1f5501e2ccf3e38615b9ed9e42}\label{classd_mcumul__binary_a4bb7ac1f5501e2ccf3e38615b9ed9e42}} 
+\index{dMcumul\_binary@{dMcumul\_binary}!name@{name}}
+\index{name@{name}!dMcumul\_binary@{dMcumul\_binary}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string d\+Mcumul\+\_\+binary\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a6f2f260968b6780485004496e7c53063}{Property}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classd_mcumul__binary_a6945090dedcc677b9767e3443fb3f0cf}\label{classd_mcumul__binary_a6945090dedcc677b9767e3443fb3f0cf}} 
+\index{dMcumul\_binary@{dMcumul\_binary}!\_dMcumul\_binary@{\_dMcumul\_binary}}
+\index{\_dMcumul\_binary@{\_dMcumul\_binary}!dMcumul\_binary@{dMcumul\_binary}}
+\doxysubsubsection{\texorpdfstring{\_dMcumul\_binary}{\_dMcumul\_binary}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classd_mcumul__binary}{d\+Mcumul\+\_\+binary}} d\+Mcumul\+\_\+binary\+::\+\_\+d\+Mcumul\+\_\+binary\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classd_mcumul__binary_a73cefab0a5f323b7144a0680c015310d}\label{classd_mcumul__binary_a73cefab0a5f323b7144a0680c015310d}} 
+\index{dMcumul\_binary@{dMcumul\_binary}!ID@{ID}}
+\index{ID@{ID}!dMcumul\_binary@{dMcumul\_binary}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily size\+\_\+t d\+Mcumul\+\_\+binary\+::\+ID\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/star/\mbox{\hyperlink{property_8h}{property.\+h}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/\mbox{\hyperlink{static__main_8h}{static\+\_\+main.\+h}}\end{DoxyCompactItemize}

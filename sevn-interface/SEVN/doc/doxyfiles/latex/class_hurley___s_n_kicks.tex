@@ -1,0 +1,224 @@
+\hypertarget{class_hurley___s_n_kicks}{}\doxysection{Hurley\+\_\+\+S\+N\+Kicks Class Reference}
+\label{class_hurley___s_n_kicks}\index{Hurley\_SNKicks@{Hurley\_SNKicks}}
+
+
+{\ttfamily \#include $<$Orbit.\+h$>$}
+
+Inheritance diagram for Hurley\+\_\+\+S\+N\+Kicks\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_hurley___s_n_kicks}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_hurley___s_n_kicks_a6eaa798193808967ede377573d880eb6}{Hurley\+\_\+\+S\+N\+Kicks}} (bool reg=true)
+\item 
+\mbox{\hyperlink{class_hurley___s_n_kicks_a881e04c1602581a31bb8379376a22e8a}{$\sim$\+Hurley\+\_\+\+S\+N\+Kicks}} ()
+\item 
+\mbox{\hyperlink{class_hurley___s_n_kicks}{Hurley\+\_\+\+S\+N\+Kicks}} $\ast$ \mbox{\hyperlink{class_hurley___s_n_kicks_a29707dd43caa26afcafbcc08ac6f7875}{instance}} () override
+\item 
+std\+::string \mbox{\hyperlink{class_hurley___s_n_kicks_ae75ba2d22069b0382e89da3352aa373d}{name}} () override
+\item 
+void \mbox{\hyperlink{class_hurley___s_n_kicks_a8ecb6647430b695ffe0df9f38f61be30}{init}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$b) override
+\item 
+double \mbox{\hyperlink{class_hurley___s_n_kicks_a3ac735527e8258bcd71baa1e25d6c526}{DA}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$b, \mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} int proc\+ID) override
+\item 
+double \mbox{\hyperlink{class_hurley___s_n_kicks_a5583a9ee3a6d7f2074637e1645aa549c}{DE}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$b, \mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} int proc\+ID) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_hurley___s_n_kicks}{Hurley\+\_\+\+S\+N\+Kicks}} \mbox{\hyperlink{class_hurley___s_n_kicks_ab903f48cf1a9ab61d7d12d2d69099183}{\+\_\+\+Hurley\+\_\+\+S\+N\+Kicks}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_hurley___s_n_kicks_a9664b2779c71786a8a4668ef8422f6f6}{kick\+\_\+star}} (\mbox{\hyperlink{class_star}{Star}} $\ast$sn, \mbox{\hyperlink{class_star}{Star}} $\ast$other, \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$binstar, double \&a\+\_\+fin, double \&ecc\+\_\+fin)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const double \mbox{\hyperlink{class_hurley___s_n_kicks_a5a912750c4bed331208af93250b665e6}{G}} = utilities\+::G
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_hurley___s_n_kicks_a51c3cb2a8746d3407e0afdc74b990adf}{set\+\_\+\+DA}} (double \mbox{\hyperlink{class_hurley___s_n_kicks_a3ac735527e8258bcd71baa1e25d6c526}{DA}})
+\item 
+void \mbox{\hyperlink{class_hurley___s_n_kicks_a9a2599eb9401862ac1ceec07b0b1ce68}{set\+\_\+\+DE}} (double \mbox{\hyperlink{class_hurley___s_n_kicks_a5583a9ee3a6d7f2074637e1645aa549c}{DE}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::uniform\+\_\+real\+\_\+distribution$<$ double $>$ \mbox{\hyperlink{class_hurley___s_n_kicks_a3ac07d7f1501cb56ec71bd50f9128952}{\+\_\+uniform\+\_\+real}}
+\item 
+double \mbox{\hyperlink{class_hurley___s_n_kicks_a68cb7843fb16fa9fe9699a74cc374d6b}{\+\_\+\+DA}} = 0
+\item 
+double \mbox{\hyperlink{class_hurley___s_n_kicks_a8b76f9d5b02dbbe37667efc9d3347f18}{\+\_\+\+DE}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_hurley___s_n_kicks_a6eaa798193808967ede377573d880eb6}\label{class_hurley___s_n_kicks_a6eaa798193808967ede377573d880eb6}} 
+\index{Hurley\_SNKicks@{Hurley\_SNKicks}!Hurley\_SNKicks@{Hurley\_SNKicks}}
+\index{Hurley\_SNKicks@{Hurley\_SNKicks}!Hurley\_SNKicks@{Hurley\_SNKicks}}
+\doxysubsubsection{\texorpdfstring{Hurley\_SNKicks()}{Hurley\_SNKicks()}}
+{\footnotesize\ttfamily Hurley\+\_\+\+S\+N\+Kicks\+::\+Hurley\+\_\+\+S\+N\+Kicks (\begin{DoxyParamCaption}\item[{bool}]{reg = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_hurley___s_n_kicks_a881e04c1602581a31bb8379376a22e8a}\label{class_hurley___s_n_kicks_a881e04c1602581a31bb8379376a22e8a}} 
+\index{Hurley\_SNKicks@{Hurley\_SNKicks}!````~Hurley\_SNKicks@{$\sim$Hurley\_SNKicks}}
+\index{````~Hurley\_SNKicks@{$\sim$Hurley\_SNKicks}!Hurley\_SNKicks@{Hurley\_SNKicks}}
+\doxysubsubsection{\texorpdfstring{$\sim$Hurley\_SNKicks()}{~Hurley\_SNKicks()}}
+{\footnotesize\ttfamily Hurley\+\_\+\+S\+N\+Kicks\+::$\sim$\+Hurley\+\_\+\+S\+N\+Kicks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_hurley___s_n_kicks_a3ac735527e8258bcd71baa1e25d6c526}\label{class_hurley___s_n_kicks_a3ac735527e8258bcd71baa1e25d6c526}} 
+\index{Hurley\_SNKicks@{Hurley\_SNKicks}!DA@{DA}}
+\index{DA@{DA}!Hurley\_SNKicks@{Hurley\_SNKicks}}
+\doxysubsubsection{\texorpdfstring{DA()}{DA()}}
+{\footnotesize\ttfamily double Hurley\+\_\+\+S\+N\+Kicks\+::\+DA (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{b,  }\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} int}]{proc\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_orbital__change_ae7d7e0628e5047a3d810380afb079e14}{Orbital\+\_\+change}}.
+
+\mbox{\Hypertarget{class_hurley___s_n_kicks_a5583a9ee3a6d7f2074637e1645aa549c}\label{class_hurley___s_n_kicks_a5583a9ee3a6d7f2074637e1645aa549c}} 
+\index{Hurley\_SNKicks@{Hurley\_SNKicks}!DE@{DE}}
+\index{DE@{DE}!Hurley\_SNKicks@{Hurley\_SNKicks}}
+\doxysubsubsection{\texorpdfstring{DE()}{DE()}}
+{\footnotesize\ttfamily double Hurley\+\_\+\+S\+N\+Kicks\+::\+DE (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{b,  }\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} int}]{proc\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_orbital__change_adc54ac8c6290228dcec5d6dfdb9eec51}{Orbital\+\_\+change}}.
+
+\mbox{\Hypertarget{class_hurley___s_n_kicks_a8ecb6647430b695ffe0df9f38f61be30}\label{class_hurley___s_n_kicks_a8ecb6647430b695ffe0df9f38f61be30}} 
+\index{Hurley\_SNKicks@{Hurley\_SNKicks}!init@{init}}
+\index{init@{init}!Hurley\_SNKicks@{Hurley\_SNKicks}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Hurley\+\_\+\+S\+N\+Kicks\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Function that set all the variable needed in the estimate of DA, DE, DM 
+\begin{DoxyParams}{Parameters}
+{\em b} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_orbital__change_adeb58a2c147ad895d313159a59b24487}{Orbital\+\_\+change}}.
+
+\mbox{\Hypertarget{class_hurley___s_n_kicks_a29707dd43caa26afcafbcc08ac6f7875}\label{class_hurley___s_n_kicks_a29707dd43caa26afcafbcc08ac6f7875}} 
+\index{Hurley\_SNKicks@{Hurley\_SNKicks}!instance@{instance}}
+\index{instance@{instance}!Hurley\_SNKicks@{Hurley\_SNKicks}}
+\doxysubsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_hurley___s_n_kicks}{Hurley\+\_\+\+S\+N\+Kicks}}$\ast$ Hurley\+\_\+\+S\+N\+Kicks\+::instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_orbital__change___s_n_kicks_a4279e7b10188ffc6bff73936e48f8d85}{Orbital\+\_\+change\+\_\+\+S\+N\+Kicks}}.
+
+\mbox{\Hypertarget{class_hurley___s_n_kicks_a9664b2779c71786a8a4668ef8422f6f6}\label{class_hurley___s_n_kicks_a9664b2779c71786a8a4668ef8422f6f6}} 
+\index{Hurley\_SNKicks@{Hurley\_SNKicks}!kick\_star@{kick\_star}}
+\index{kick\_star@{kick\_star}!Hurley\_SNKicks@{Hurley\_SNKicks}}
+\doxysubsubsection{\texorpdfstring{kick\_star()}{kick\_star()}}
+{\footnotesize\ttfamily int Hurley\+\_\+\+S\+N\+Kicks\+::kick\+\_\+star (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{sn,  }\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{other,  }\item[{\mbox{\hyperlink{class_binstar}{Binstar}} $\ast$}]{binstar,  }\item[{double \&}]{a\+\_\+fin,  }\item[{double \&}]{ecc\+\_\+fin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Estimate the final orbital paratmers after a Sn kick using the Hurley+02 formalism (see Appendix A1) 
+\begin{DoxyParams}{Parameters}
+{\em sn} & Pointer to the star that is exploding as SN \\
+\hline
+{\em other} & Pointer to the other star \\
+\hline
+{\em binstar} & Pointer to the binary system \\
+\hline
+{\em a\+\_\+fin} & Variable where to store the final semimajor axis \\
+\hline
+{\em ecc\+\_\+fin} & Variable where to store the final eccentricity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+X\+I\+T\+\_\+\+S\+U\+C\+C\+E\+SS 
+\end{DoxyReturn}
+$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ Variables $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$///
+
+$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$///
+
+$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$///
+
+$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$///
+
+$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$///
+
+$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$///
+
+$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$///
+
+$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ Estimate new orbital parameters $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$/
+
+$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$///\mbox{\Hypertarget{class_hurley___s_n_kicks_ae75ba2d22069b0382e89da3352aa373d}\label{class_hurley___s_n_kicks_ae75ba2d22069b0382e89da3352aa373d}} 
+\index{Hurley\_SNKicks@{Hurley\_SNKicks}!name@{name}}
+\index{name@{name}!Hurley\_SNKicks@{Hurley\_SNKicks}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string Hurley\+\_\+\+S\+N\+Kicks\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_orbital__change___s_n_kicks_abe5216aaf21f3da037daa7f401f350ee}{Orbital\+\_\+change\+\_\+\+S\+N\+Kicks}}.
+
+\mbox{\Hypertarget{class_hurley___s_n_kicks_a51c3cb2a8746d3407e0afdc74b990adf}\label{class_hurley___s_n_kicks_a51c3cb2a8746d3407e0afdc74b990adf}} 
+\index{Hurley\_SNKicks@{Hurley\_SNKicks}!set\_DA@{set\_DA}}
+\index{set\_DA@{set\_DA}!Hurley\_SNKicks@{Hurley\_SNKicks}}
+\doxysubsubsection{\texorpdfstring{set\_DA()}{set\_DA()}}
+{\footnotesize\ttfamily void Hurley\+\_\+\+S\+N\+Kicks\+::set\+\_\+\+DA (\begin{DoxyParamCaption}\item[{double}]{DA }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_hurley___s_n_kicks_a9a2599eb9401862ac1ceec07b0b1ce68}\label{class_hurley___s_n_kicks_a9a2599eb9401862ac1ceec07b0b1ce68}} 
+\index{Hurley\_SNKicks@{Hurley\_SNKicks}!set\_DE@{set\_DE}}
+\index{set\_DE@{set\_DE}!Hurley\_SNKicks@{Hurley\_SNKicks}}
+\doxysubsubsection{\texorpdfstring{set\_DE()}{set\_DE()}}
+{\footnotesize\ttfamily void Hurley\+\_\+\+S\+N\+Kicks\+::set\+\_\+\+DE (\begin{DoxyParamCaption}\item[{double}]{DE }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_hurley___s_n_kicks_a68cb7843fb16fa9fe9699a74cc374d6b}\label{class_hurley___s_n_kicks_a68cb7843fb16fa9fe9699a74cc374d6b}} 
+\index{Hurley\_SNKicks@{Hurley\_SNKicks}!\_DA@{\_DA}}
+\index{\_DA@{\_DA}!Hurley\_SNKicks@{Hurley\_SNKicks}}
+\doxysubsubsection{\texorpdfstring{\_DA}{\_DA}}
+{\footnotesize\ttfamily double Hurley\+\_\+\+S\+N\+Kicks\+::\+\_\+\+DA = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_hurley___s_n_kicks_a8b76f9d5b02dbbe37667efc9d3347f18}\label{class_hurley___s_n_kicks_a8b76f9d5b02dbbe37667efc9d3347f18}} 
+\index{Hurley\_SNKicks@{Hurley\_SNKicks}!\_DE@{\_DE}}
+\index{\_DE@{\_DE}!Hurley\_SNKicks@{Hurley\_SNKicks}}
+\doxysubsubsection{\texorpdfstring{\_DE}{\_DE}}
+{\footnotesize\ttfamily double Hurley\+\_\+\+S\+N\+Kicks\+::\+\_\+\+DE = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_hurley___s_n_kicks_ab903f48cf1a9ab61d7d12d2d69099183}\label{class_hurley___s_n_kicks_ab903f48cf1a9ab61d7d12d2d69099183}} 
+\index{Hurley\_SNKicks@{Hurley\_SNKicks}!\_Hurley\_SNKicks@{\_Hurley\_SNKicks}}
+\index{\_Hurley\_SNKicks@{\_Hurley\_SNKicks}!Hurley\_SNKicks@{Hurley\_SNKicks}}
+\doxysubsubsection{\texorpdfstring{\_Hurley\_SNKicks}{\_Hurley\_SNKicks}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_hurley___s_n_kicks}{Hurley\+\_\+\+S\+N\+Kicks}} Hurley\+\_\+\+S\+N\+Kicks\+::\+\_\+\+Hurley\+\_\+\+S\+N\+Kicks\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_hurley___s_n_kicks_a3ac07d7f1501cb56ec71bd50f9128952}\label{class_hurley___s_n_kicks_a3ac07d7f1501cb56ec71bd50f9128952}} 
+\index{Hurley\_SNKicks@{Hurley\_SNKicks}!\_uniform\_real@{\_uniform\_real}}
+\index{\_uniform\_real@{\_uniform\_real}!Hurley\_SNKicks@{Hurley\_SNKicks}}
+\doxysubsubsection{\texorpdfstring{\_uniform\_real}{\_uniform\_real}}
+{\footnotesize\ttfamily std\+::uniform\+\_\+real\+\_\+distribution$<$double$>$ Hurley\+\_\+\+S\+N\+Kicks\+::\+\_\+uniform\+\_\+real\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_hurley___s_n_kicks_a5a912750c4bed331208af93250b665e6}\label{class_hurley___s_n_kicks_a5a912750c4bed331208af93250b665e6}} 
+\index{Hurley\_SNKicks@{Hurley\_SNKicks}!G@{G}}
+\index{G@{G}!Hurley\_SNKicks@{Hurley\_SNKicks}}
+\doxysubsubsection{\texorpdfstring{G}{G}}
+{\footnotesize\ttfamily const double Hurley\+\_\+\+S\+N\+Kicks\+::G = utilities\+::G\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/binstar/\mbox{\hyperlink{_orbit_8h}{Orbit.\+h}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/src/binstar/\mbox{\hyperlink{_orbit_8cpp}{Orbit.\+cpp}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/\mbox{\hyperlink{static__main_8h}{static\+\_\+main.\+h}}\end{DoxyCompactItemize}

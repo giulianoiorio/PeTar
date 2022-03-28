@@ -1,0 +1,186 @@
+\hypertarget{class_phase}{}\doxysection{Phase Class Reference}
+\label{class_phase}\index{Phase@{Phase}}
+
+
+{\ttfamily \#include $<$property.\+h$>$}
+
+Inheritance diagram for Phase\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_phase}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_phase_a3f0ce7d1088f6f52f7985a407bb791e7}{Phase}} (bool reg=true)
+\item 
+size\+\_\+t \mbox{\hyperlink{class_phase_a286025dc27db5839fdfaf7a937bf4d31}{Tab\+ID}} () override
+\item 
+\mbox{\hyperlink{class_phase}{Phase}} $\ast$ \mbox{\hyperlink{class_phase_aae6adbd69313dff535516feeba3cc93d}{Instance}} () override
+\item 
+std\+::string \mbox{\hyperlink{class_phase_a293fa423fce71eea0414f193e00a409b}{name}} () override
+\item 
+void \mbox{\hyperlink{class_phase_a1c37e1495ae092d9bc8b345747e1eb5d}{synch}} () override
+\item 
+void \mbox{\hyperlink{class_phase_a9eef5949e4f3c9110d38844e4da66069}{set\+\_\+remnant}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+void \mbox{\hyperlink{class_phase_a3b8e201da46440a0d2d02e72fd6a2908}{set\+\_\+empty}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+void \mbox{\hyperlink{class_phase_a174147f8c4de807c763848ea637c7ab0}{special\+\_\+evolve}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+void \mbox{\hyperlink{class_phase_ab316055dfa6542258e1ae63933b30662}{evolve}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+void \mbox{\hyperlink{class_phase_a2d4bb3039131428b090aa228a75cda6f}{evolve\+\_\+remnant}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+void \mbox{\hyperlink{class_phase_ab582098a21d5b9c4172732c467608425}{changed\+\_\+track}} (\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s, \mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$s\+\_\+jtrack) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{class_phase_a2a21ac78276e3f283adaaca38ccfae21}{ID}}
+\item 
+static \mbox{\hyperlink{class_phase}{Phase}} \mbox{\hyperlink{class_phase_add86a6a4e5b354b5581e83ba690eaf51}{\+\_\+phase}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_phase_a3f0ce7d1088f6f52f7985a407bb791e7}\label{class_phase_a3f0ce7d1088f6f52f7985a407bb791e7}} 
+\index{Phase@{Phase}!Phase@{Phase}}
+\index{Phase@{Phase}!Phase@{Phase}}
+\doxysubsubsection{\texorpdfstring{Phase()}{Phase()}}
+{\footnotesize\ttfamily Phase\+::\+Phase (\begin{DoxyParamCaption}\item[{bool}]{reg = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_phase_ab582098a21d5b9c4172732c467608425}\label{class_phase_ab582098a21d5b9c4172732c467608425}} 
+\index{Phase@{Phase}!changed\_track@{changed\_track}}
+\index{changed\_track@{changed\_track}!Phase@{Phase}}
+\doxysubsubsection{\texorpdfstring{changed\_track()}{changed\_track()}}
+{\footnotesize\ttfamily void Phase\+::changed\+\_\+track (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s\+\_\+jtrack }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Handle the modification of the property after a track change. It does nothing by default. 
+\begin{DoxyParams}{Parameters}
+{\em s} & The star for which we are changing the tracks. \\
+\hline
+{\em s\+\_\+jtrack} & The star that we are using to get info of the new tracks. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_property_ab3b4070354b2cddcf25bb6bd7b845a86}{Property}}.
+
+\mbox{\Hypertarget{class_phase_ab316055dfa6542258e1ae63933b30662}\label{class_phase_ab316055dfa6542258e1ae63933b30662}} 
+\index{Phase@{Phase}!evolve@{evolve}}
+\index{evolve@{evolve}!Phase@{Phase}}
+\doxysubsubsection{\texorpdfstring{evolve()}{evolve()}}
+{\footnotesize\ttfamily void Phase\+::evolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a12598e2ff736cc87a14ab24f03288bcd}{Property}}.
+
+\mbox{\Hypertarget{class_phase_a2d4bb3039131428b090aa228a75cda6f}\label{class_phase_a2d4bb3039131428b090aa228a75cda6f}} 
+\index{Phase@{Phase}!evolve\_remnant@{evolve\_remnant}}
+\index{evolve\_remnant@{evolve\_remnant}!Phase@{Phase}}
+\doxysubsubsection{\texorpdfstring{evolve\_remnant()}{evolve\_remnant()}}
+{\footnotesize\ttfamily void Phase\+::evolve\+\_\+remnant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a61c496fb99df9817f7880756596765c2}{Property}}.
+
+\mbox{\Hypertarget{class_phase_aae6adbd69313dff535516feeba3cc93d}\label{class_phase_aae6adbd69313dff535516feeba3cc93d}} 
+\index{Phase@{Phase}!Instance@{Instance}}
+\index{Instance@{Instance}!Phase@{Phase}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_phase}{Phase}}$\ast$ Phase\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a378a68a95da682a4247a4809e28a4d0c}{Property}}.
+
+\mbox{\Hypertarget{class_phase_a293fa423fce71eea0414f193e00a409b}\label{class_phase_a293fa423fce71eea0414f193e00a409b}} 
+\index{Phase@{Phase}!name@{name}}
+\index{name@{name}!Phase@{Phase}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string Phase\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a6f2f260968b6780485004496e7c53063}{Property}}.
+
+\mbox{\Hypertarget{class_phase_a3b8e201da46440a0d2d02e72fd6a2908}\label{class_phase_a3b8e201da46440a0d2d02e72fd6a2908}} 
+\index{Phase@{Phase}!set\_empty@{set\_empty}}
+\index{set\_empty@{set\_empty}!Phase@{Phase}}
+\doxysubsubsection{\texorpdfstring{set\_empty()}{set\_empty()}}
+{\footnotesize\ttfamily void Phase\+::set\+\_\+empty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_aacfbae3cf88d3410b265f632409c91ea}{Property}}.
+
+\mbox{\Hypertarget{class_phase_a9eef5949e4f3c9110d38844e4da66069}\label{class_phase_a9eef5949e4f3c9110d38844e4da66069}} 
+\index{Phase@{Phase}!set\_remnant@{set\_remnant}}
+\index{set\_remnant@{set\_remnant}!Phase@{Phase}}
+\doxysubsubsection{\texorpdfstring{set\_remnant()}{set\_remnant()}}
+{\footnotesize\ttfamily void Phase\+::set\+\_\+remnant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_ab7fb5c9c46521bf17bae1da3729a7004}{Property}}.
+
+\mbox{\Hypertarget{class_phase_a174147f8c4de807c763848ea637c7ab0}\label{class_phase_a174147f8c4de807c763848ea637c7ab0}} 
+\index{Phase@{Phase}!special\_evolve@{special\_evolve}}
+\index{special\_evolve@{special\_evolve}!Phase@{Phase}}
+\doxysubsubsection{\texorpdfstring{special\_evolve()}{special\_evolve()}}
+{\footnotesize\ttfamily void Phase\+::special\+\_\+evolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{property_8h_a44145f6f9805df57da735ea6ac0f1dbb}{\+\_\+\+U\+N\+U\+S\+ED}} \mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\hyperlink{class_phase}{Phase}} 
+
+Reimplemented from \mbox{\hyperlink{class_property_a04a08c722ceaf2cf3e31799ede681131}{Property}}.
+
+\mbox{\Hypertarget{class_phase_a1c37e1495ae092d9bc8b345747e1eb5d}\label{class_phase_a1c37e1495ae092d9bc8b345747e1eb5d}} 
+\index{Phase@{Phase}!synch@{synch}}
+\index{synch@{synch}!Phase@{Phase}}
+\doxysubsubsection{\texorpdfstring{synch()}{synch()}}
+{\footnotesize\ttfamily void Phase\+::synch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_af8b9f0a647e53f360aa924b89eaa4152}{Property}}.
+
+\mbox{\Hypertarget{class_phase_a286025dc27db5839fdfaf7a937bf4d31}\label{class_phase_a286025dc27db5839fdfaf7a937bf4d31}} 
+\index{Phase@{Phase}!TabID@{TabID}}
+\index{TabID@{TabID}!Phase@{Phase}}
+\doxysubsubsection{\texorpdfstring{TabID()}{TabID()}}
+{\footnotesize\ttfamily size\+\_\+t Phase\+::\+Tab\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_property_a5496b2bc47beb1dc748353a358fae0fb}{Property}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_phase_add86a6a4e5b354b5581e83ba690eaf51}\label{class_phase_add86a6a4e5b354b5581e83ba690eaf51}} 
+\index{Phase@{Phase}!\_phase@{\_phase}}
+\index{\_phase@{\_phase}!Phase@{Phase}}
+\doxysubsubsection{\texorpdfstring{\_phase}{\_phase}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_phase}{Phase}} Phase\+::\+\_\+phase\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_phase_a2a21ac78276e3f283adaaca38ccfae21}\label{class_phase_a2a21ac78276e3f283adaaca38ccfae21}} 
+\index{Phase@{Phase}!ID@{ID}}
+\index{ID@{ID}!Phase@{Phase}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily size\+\_\+t Phase\+::\+ID\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/star/\mbox{\hyperlink{property_8h}{property.\+h}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/src/star/\mbox{\hyperlink{property_8cpp}{property.\+cpp}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/\mbox{\hyperlink{static__main_8h}{static\+\_\+main.\+h}}\end{DoxyCompactItemize}

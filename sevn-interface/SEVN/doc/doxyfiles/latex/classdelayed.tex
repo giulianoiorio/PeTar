@@ -1,0 +1,113 @@
+\hypertarget{classdelayed}{}\doxysection{delayed Class Reference}
+\label{classdelayed}\index{delayed@{delayed}}
+
+
+{\ttfamily \#include $<$supernova.\+h$>$}
+
+Inheritance diagram for delayed\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classdelayed}
+\end{center}
+\end{figure}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdelayed_a05f485edd63f0beab6c86e5bf452ad11}{delayed}} (\mbox{\hyperlink{class_star}{Star}} $\ast$s=nullptr)
+\begin{DoxyCompactList}\small\item\em Delayed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdelayed_a68b66dcedda738841f620b16f159f223}{explosion}} (\mbox{\hyperlink{class_star}{Star}} $\ast$s) override
+\item 
+\mbox{\hyperlink{classdelayed}{delayed}} $\ast$ \mbox{\hyperlink{classdelayed_a85893461ab6cb1dd7e92d2ac52b22976}{instance}} (\mbox{\hyperlink{class_star}{Star}} $\ast$s)
+\item 
+std\+::string \mbox{\hyperlink{classdelayed_acd02951639edb43696da74139ce87583}{name}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classdelayed}{delayed}} \mbox{\hyperlink{classdelayed_aad773e2e91219abc77ef7f634b0f9d01}{\+\_\+delayed}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+H\+OW TO A\+DD A N\+EW SN M\+O\+D\+EL A SN class model need to have the following feature\+:
+\begin{DoxyItemize}
+\item Be a class derived from class supernova or one of its child
+\item Override of the method class$\ast$ \mbox{\hyperlink{classdelayed_a85893461ab6cb1dd7e92d2ac52b22976}{instance(\+Star $\ast$s)}} is mandatory.
+\item Override of the method inline std\+::string \mbox{\hyperlink{classdelayed_acd02951639edb43696da74139ce87583}{name()}} is mandatory.
+\item Override of the method void \mbox{\hyperlink{classdelayed_a68b66dcedda738841f620b16f159f223}{explosion(\+Star $\ast$s)}} is mandatory (it is a pure virtual function in the base class).
+\end{DoxyItemize}
+
+Implementation steps Assume we are implementing a new SN class dummy -\/1\+: Define and Implement the class constructor in \mbox{\hyperlink{supernova_8h}{supernova.\+h}}\+: dummy(\mbox{\hyperlink{class_star}{Star}} $\ast$s = nullptr) in \mbox{\hyperlink{supernova_8cpp}{supernova.\+cpp}}\+: dummy\+::dummy(\+Star $\ast$s) \+: \mbox{\hyperlink{classsupernova}{supernova(s)}}\{ if (s==nullptr) Register(this, name()); else\{ ... $\ast$\+Initialise class member parameters set Average\+\_\+ejected and Average\+\_\+remnant with set\+\_\+\+Average\+\_\+for\+\_\+\+Unified(s,default\+\_\+\+Average\+\_\+\+Mremnant,default\+\_\+\+Average\+\_\+\+Mejected) where default\+\_\+\+Average\+\_\+\+Mremnant and default\+\_\+\+Average\+\_\+\+Mejected should be given. If a negative value is given, we are de-\/facto disabling the \mbox{\hyperlink{class_unified}{Unified}} kick model that will return an error if chosen and default\+\_\+\+Average\+\_\+\+Mremnatn or default\+\_\+\+Average\+\_\+\+Mejected is negative or zero \} \} {\bfseries{N\+O\+T\+I\+CE}}\+:
+\begin{DoxyItemize}
+\item It is important calling the parent constructor supernova
+\end{DoxyItemize}
+
+-\/2\+: initialise the class static object (\mbox{\hyperlink{supernova_8h}{supernova.\+h}})\+: static dummy \+\_\+dummy; $\ast$the standard is to use as name of the member the name of the class (all lowercase) $\ast$with a an underscore as prefix.
+
+-\/3\+: override the method instance (\mbox{\hyperlink{supernova_8h}{supernova.\+h}})\+: dummy$\ast$ dummy(\+Star $\ast$s)\{ return (new dummy(s)); \}
+
+-\/4\+: override the method name (\mbox{\hyperlink{supernova_8h}{supernova.\+h}}) inline std\+::string \mbox{\hyperlink{classdelayed_acd02951639edb43696da74139ce87583}{name()}} override \{return \char`\"{}dummy\char`\"{};\} $\ast$$\ast$ N\+O\+T\+I\+CE\+: the chosen name is the one that will be used to set the SN model in the input binary list.
+
+-\/5\+: override, define (\mbox{\hyperlink{supernova_8h}{supernova.\+h}}) and implement (\mbox{\hyperlink{supernova_8cpp}{supernova.\+cpp}}) the method explosion void \mbox{\hyperlink{classdelayed_a68b66dcedda738841f620b16f159f223}{explosion(\+Star$\ast$)}}\{ $\ast$\+Here is mandatory to assign\+: $\ast$fallback\+\_\+frac $\ast$\+Mremnant $\ast$remnant\+\_\+type \}
+
+-\/6\+: Add the static class definition in \mbox{\hyperlink{static__main_8h}{static\+\_\+main.\+h}} dummy dummy\+::\+\_\+dummy; 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdelayed_a05f485edd63f0beab6c86e5bf452ad11}\label{classdelayed_a05f485edd63f0beab6c86e5bf452ad11}} 
+\index{delayed@{delayed}!delayed@{delayed}}
+\index{delayed@{delayed}!delayed@{delayed}}
+\doxysubsubsection{\texorpdfstring{delayed()}{delayed()}}
+{\footnotesize\ttfamily delayed\+::delayed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Delayed. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdelayed_a68b66dcedda738841f620b16f159f223}\label{classdelayed_a68b66dcedda738841f620b16f159f223}} 
+\index{delayed@{delayed}!explosion@{explosion}}
+\index{explosion@{explosion}!delayed@{delayed}}
+\doxysubsubsection{\texorpdfstring{explosion()}{explosion()}}
+{\footnotesize\ttfamily void delayed\+::explosion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+Set Remnant type
+
+Old implementation GI\+:13/12/2020
+
+Implements \mbox{\hyperlink{classsupernova_a3f9dd4c9349d4f8598927fc2a2cb5ca5}{supernova}}.
+
+\mbox{\Hypertarget{classdelayed_a85893461ab6cb1dd7e92d2ac52b22976}\label{classdelayed_a85893461ab6cb1dd7e92d2ac52b22976}} 
+\index{delayed@{delayed}!instance@{instance}}
+\index{instance@{instance}!delayed@{delayed}}
+\doxysubsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdelayed}{delayed}}$\ast$ delayed\+::instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdelayed_acd02951639edb43696da74139ce87583}\label{classdelayed_acd02951639edb43696da74139ce87583}} 
+\index{delayed@{delayed}!name@{name}}
+\index{name@{name}!delayed@{delayed}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string delayed\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsupernova_aae854ae2865c69c6b69aa793e724a17c}{supernova}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdelayed_aad773e2e91219abc77ef7f634b0f9d01}\label{classdelayed_aad773e2e91219abc77ef7f634b0f9d01}} 
+\index{delayed@{delayed}!\_delayed@{\_delayed}}
+\index{\_delayed@{\_delayed}!delayed@{delayed}}
+\doxysubsubsection{\texorpdfstring{\_delayed}{\_delayed}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdelayed}{delayed}} delayed\+::\+\_\+delayed\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/star/procs/\mbox{\hyperlink{supernova_8h}{supernova.\+h}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/src/star/procs/\mbox{\hyperlink{supernova_8cpp}{supernova.\+cpp}}\item 
+/\+Users/iogiul/\+S\+E\+V\+N\+\_\+dir/\+S\+E\+V\+N/include/general/\mbox{\hyperlink{static__main_8h}{static\+\_\+main.\+h}}\end{DoxyCompactItemize}
